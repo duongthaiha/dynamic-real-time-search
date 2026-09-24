@@ -1,0 +1,360 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Beacon Service API",
+    "version": "0.1.0",
+    "description": "Draft POC contract reconstructed from the complete beacon requests in the supplied Postman collection. Event names, nesting, and path are observed. Validation rules, optional eventId/orderId extensions, and responses are proposed. The source demonstrates no authentication for Beacon; this is not approval for unauthenticated production ingestion. See README.md in this directory."
+  },
+  "servers": [
+    { "url": "https://beacon.example.com", "description": "Placeholder; replace with your Beacon service URL." }
+  ],
+  "tags": [
+    { "name": "Beacon", "description": "Capture storefront activity for asynchronous processing." }
+  ],
+  "security": [],
+  "paths": {
+    "/v2/events": {
+      "post": {
+        "tags": ["Beacon"],
+        "operationId": "captureEvent",
+        "summary": "Capture one storefront event",
+        "description": "Accepts exactly one autoSearch, viewProduct, addToCart, or order event per request. The service validates and durably accepts the event for asynchronous processing; acceptance does not mean Fabric aggregation or Search ranking has changed. Optional eventId enables retry deduplication scoped by customer.id, customer.area, and eventId. Without it, duplicates cannot be reliably distinguished from repeated user actions. Authentication is unspecified by the source; decide the deployment ingress policy before public exposure.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/BeaconEvent" },
+              "examples": {
+                "autoSearch": {
+                  "summary": "Capture a search using the Search response ID",
+                  "value": {
+                    "eventId": "event-demo-search-001",
+                    "eventType": "autoSearch",
+                    "search": {
+                      "id": "search-demo-001",
+                      "origin": { "search": true, "sayt": false, "dym": false, "navigation": false, "autosearch": false, "collectionSwitcher": false, "recommendations": false, "conversation": false }
+                    },
+                    "clientVersion": { "raw": "1.0.0" },
+                    "customer": { "id": "demo-store", "area": "storefront" },
+                    "visit": {
+                      "customerData": { "sessionId": "session-demo", "visitorId": "visitor-demo" },
+                      "generated": { "uri": "https://shop.example.com/search", "timezoneOffset": 0, "localTime": "2026-09-24T09:00:00Z", "referer": "https://shop.example.com/" }
+                    },
+                    "metadata": [
+                      { "key": "searchAttributionToken", "value": "attribution-demo-001" }
+                    ]
+                  }
+                },
+                "viewProduct": {
+                  "summary": "Capture a product view",
+                  "value": {
+                    "eventId": "event-demo-view-001",
+                    "eventType": "viewProduct",
+                    "product": { "productId": "SKU-001", "title": "Blue cotton jacket", "price": 89.99, "currency": "GBP", "category": "jackets", "collection": "products" },
+                    "clientVersion": { "raw": "1.0.0" },
+                    "customer": { "id": "demo-store", "area": "storefront" },
+                    "visit": {
+                      "customerData": { "sessionId": "session-demo", "visitorId": "visitor-demo" },
+                      "generated": { "uri": "https://shop.example.com/products/SKU-001", "localTime": "2026-09-24T09:00:05Z" }
+                    }
+                  }
+                },
+                "addToCart": {
+                  "summary": "Capture products added in one cart action",
+                  "value": {
+                    "eventId": "event-demo-cart-001",
+                    "eventType": "addToCart",
+                    "cart": {
+                      "id": "cart-demo-001",
+                      "items": [
+                        { "productId": "SKU-001", "quantity": 1, "price": 89.99, "currency": "GBP", "collection": "products" },
+                        { "productId": "SKU-002", "quantity": 2, "price": 79.99, "currency": "GBP", "collection": "products" }
+                      ]
+                    },
+                    "clientVersion": { "raw": "1.0.0" },
+                    "customer": { "id": "demo-store", "area": "storefront" },
+                    "visit": {
+                      "customerData": { "sessionId": "session-demo", "visitorId": "visitor-demo" },
+                      "generated": { "uri": "https://shop.example.com/cart", "localTime": "2026-09-24T09:00:10Z" }
+                    }
+                  }
+                },
+                "order": {
+                  "summary": "Capture purchased items with an optional stable order ID",
+                  "value": {
+                    "eventId": "event-demo-order-001",
+                    "eventType": "order",
+                    "orderId": "order-demo-001",
+                    "searchAttributionToken": "attribution-demo-001",
+                    "cart": { "items": [{ "productId": "SKU-001", "quantity": 1, "price": 89.99, "currency": "GBP", "collection": "products" }] },
+                    "clientVersion": { "raw": "1.0.0" },
+                    "customer": { "id": "demo-store", "area": "storefront" },
+                    "visit": {
+                      "customerData": { "sessionId": "session-demo", "visitorId": "visitor-demo" },
+                      "generated": { "uri": "https://shop.example.com/confirmation", "localTime": "2026-09-24T09:00:20Z" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Proposed POC response: durably accepted for asynchronous processing, or an identical event was already accepted within the deduplication retention window. Does not confirm processing completion.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/EventAccepted" },
+                "example": { "eventId": "event-demo-view-001", "status": "accepted", "receivedAt": "2026-09-24T09:00:06Z" }
+              }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "409": { "$ref": "#/components/responses/Conflict" },
+          "413": { "$ref": "#/components/responses/TooLarge" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalError" },
+          "503": { "$ref": "#/components/responses/Unavailable" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BeaconEvent": {
+        "oneOf": [
+          { "$ref": "#/components/schemas/AutoSearchEvent" },
+          { "$ref": "#/components/schemas/ViewProductEvent" },
+          { "$ref": "#/components/schemas/AddToCartEvent" },
+          { "$ref": "#/components/schemas/OrderEvent" }
+        ],
+        "discriminator": {
+          "propertyName": "eventType",
+          "mapping": {
+            "autoSearch": "#/components/schemas/AutoSearchEvent",
+            "viewProduct": "#/components/schemas/ViewProductEvent",
+            "addToCart": "#/components/schemas/AddToCartEvent",
+            "order": "#/components/schemas/OrderEvent"
+          }
+        }
+      },
+      "EventBase": {
+        "type": "object",
+        "description": "Inferred common envelope. Unknown properties remain allowed for compatibility; they must not be trusted as catalog, identity, or authorization data.",
+        "required": ["eventType", "customer", "visit"],
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Optional POC extension, absent from the source. Client-generated ID unique per logical event, reused unchanged on retry. With the same scoped ID and parsed event body, return the original receipt with status=duplicate; a different body yields 409. Deduplication retention must be configured and published before deployment. If omitted, the server generates an ID but cannot deduplicate subsequent client retries."
+          },
+          "eventType": { "type": "string", "enum": ["autoSearch", "viewProduct", "addToCart", "order"] },
+          "clientVersion": {
+            "type": "object",
+            "required": ["raw"],
+            "properties": { "raw": { "type": "string", "minLength": 1 } }
+          },
+          "customer": { "$ref": "#/components/schemas/Customer" },
+          "visit": { "$ref": "#/components/schemas/Visit" },
+          "metadata": {
+            "type": "array",
+            "description": "Compatibility metadata such as conversationId, responseType, responseId, searchAttributionToken, or engineSource. Keys must be unique per event (service validation). Do not infer the POC search engine from a vendor-specific value.",
+            "items": { "$ref": "#/components/schemas/MetadataEntry" }
+          }
+        }
+      },
+      "AutoSearchEvent": {
+        "allOf": [
+          { "$ref": "#/components/schemas/EventBase" },
+          {
+            "type": "object",
+            "required": ["search"],
+            "properties": {
+              "eventType": { "type": "string", "enum": ["autoSearch"] },
+              "search": { "$ref": "#/components/schemas/SearchContext" }
+            }
+          }
+        ]
+      },
+      "ViewProductEvent": {
+        "allOf": [
+          { "$ref": "#/components/schemas/EventBase" },
+          {
+            "type": "object",
+            "required": ["product"],
+            "properties": {
+              "eventType": { "type": "string", "enum": ["viewProduct"] },
+              "product": { "$ref": "#/components/schemas/Product" }
+            }
+          }
+        ]
+      },
+      "AddToCartEvent": {
+        "allOf": [
+          { "$ref": "#/components/schemas/EventBase" },
+          {
+            "type": "object",
+            "required": ["cart"],
+            "properties": {
+              "eventType": { "type": "string", "enum": ["addToCart"] },
+              "cart": { "$ref": "#/components/schemas/Cart" }
+            }
+          }
+        ],
+        "description": "POC interpretation to confirm: cart.items contains additions for this action, not a full cart snapshot. cart.id identifies a cart, not an event; do not use it for deduplication."
+      },
+      "OrderEvent": {
+        "allOf": [
+          { "$ref": "#/components/schemas/EventBase" },
+          {
+            "type": "object",
+            "required": ["cart"],
+            "properties": {
+              "eventType": { "type": "string", "enum": ["order"] },
+              "cart": { "$ref": "#/components/schemas/Cart" },
+              "orderId": { "type": "string", "minLength": 1, "description": "Optional POC extension, absent from the source. Stable commerce order identifier needed for authoritative purchase reconciliation; not a substitute for eventId." },
+              "searchAttributionToken": { "type": "string", "minLength": 1, "description": "Opaque token from Search, if supplied. Prefer this field over the legacy metadata entry if both are present; record a mismatch diagnostically. Do not assume it equals search.id." }
+            }
+          }
+        ],
+        "description": "Reported purchase activity. Browser reports are not authoritative payment confirmation."
+      },
+      "Customer": {
+        "type": "object",
+        "required": ["id", "area"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1, "description": "Customer identifier matching Search x-customer-id. Client-supplied scope is not proof of authorization." },
+          "area": { "type": "string", "minLength": 1, "description": "Area matching the originating Search request." }
+        }
+      },
+      "Visit": {
+        "type": "object",
+        "required": ["customerData", "generated"],
+        "properties": {
+          "customerData": {
+            "type": "object",
+            "required": ["sessionId"],
+            "properties": {
+              "sessionId": { "type": "string", "minLength": 1 },
+              "visitorId": { "type": "string", "minLength": 1, "description": "Optional pseudonymous identifier subject to the site's consent policy." }
+            }
+          },
+          "generated": {
+            "type": "object",
+            "required": ["localTime"],
+            "properties": {
+              "uri": { "type": "string", "format": "uri", "description": "Page URL. Remove sensitive query values before collection." },
+              "timezoneOffset": { "type": "integer", "description": "Legacy client-reported offset in minutes. Sign convention is unresolved; do not apply it again to localTime, which already contains a time-zone offset." },
+              "localTime": { "type": "string", "format": "date-time", "description": "Client occurrence time as RFC 3339 with Z or explicit offset. Normalize to UTC internally; store server receipt time separately." },
+              "referer": { "type": "string", "format": "uri", "description": "Legacy spelling preserved. Remove sensitive URL data before collection." }
+            }
+          }
+        }
+      },
+      "SearchContext": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1, "description": "Copy the id from the Search response. Multiple different events may refer to the same search." },
+          "origin": {
+            "type": "object",
+            "description": "Observed flags are not mutually exclusive. Preserve their exact casing; autoSearch eventType does not imply origin.autosearch=true.",
+            "properties": {
+              "search": { "type": "boolean" },
+              "sayt": { "type": "boolean" },
+              "dym": { "type": "boolean" },
+              "navigation": { "type": "boolean" },
+              "autosearch": { "type": "boolean" },
+              "collectionSwitcher": { "type": "boolean" },
+              "recommendations": { "type": "boolean" },
+              "conversation": { "type": "boolean" }
+            }
+          }
+        }
+      },
+      "Product": {
+        "type": "object",
+        "required": ["productId"],
+        "properties": {
+          "productId": { "type": "string", "minLength": 1, "description": "Stable catalog identifier; preserve as a string, including numeric-looking IDs." },
+          "title": { "type": "string" },
+          "price": { "type": "number", "minimum": 0, "description": "Reported unit price; verify against trusted catalog/order data before authoritative use." },
+          "currency": { "type": "string", "pattern": "^[A-Z]{3}$", "description": "ISO 4217 currency code." },
+          "category": { "type": "string" },
+          "collection": { "type": "string", "minLength": 1 }
+        }
+      },
+      "CartItem": {
+        "allOf": [
+          { "$ref": "#/components/schemas/Product" },
+          {
+            "type": "object",
+            "required": ["quantity"],
+            "properties": { "quantity": { "type": "integer", "minimum": 1 } }
+          }
+        ]
+      },
+      "Cart": {
+        "type": "object",
+        "required": ["items"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1, "description": "Cart identifier when known. The observed order samples omit it." },
+          "items": { "type": "array", "minItems": 1, "items": { "$ref": "#/components/schemas/CartItem" } }
+        }
+      },
+      "MetadataEntry": {
+        "type": "object",
+        "required": ["key", "value"],
+        "properties": {
+          "key": { "type": "string", "minLength": 1 },
+          "value": { "type": "string" }
+        }
+      },
+      "EventAccepted": {
+        "type": "object",
+        "required": ["eventId", "status", "receivedAt"],
+        "properties": {
+          "eventId": { "type": "string", "minLength": 1 },
+          "status": { "type": "string", "enum": ["accepted", "duplicate"] },
+          "receivedAt": { "type": "string", "format": "date-time", "description": "UTC receipt time of the original accepted event." }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": ["code", "message"],
+        "properties": {
+          "code": { "type": "string", "minLength": 1 },
+          "message": { "type": "string", "minLength": 1 },
+          "requestId": { "type": "string", "description": "Server-generated diagnostic correlation ID." }
+        }
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "Proposed: malformed JSON, unsupported eventType, missing event-specific payload, duplicate metadata keys, or invalid field value.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "Conflict": {
+        "description": "Proposed: a scoped eventId was already accepted with a different event body within the deduplication retention window.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "TooLarge": {
+        "description": "Proposed: event exceeds the configured and published body-size limit.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "TooManyRequests": {
+        "description": "Proposed: ingestion rate exceeded; retry after the indicated number of seconds using the same eventId and body.",
+        "headers": { "Retry-After": { "schema": { "type": "integer", "minimum": 0 }, "description": "Delay in seconds." } },
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "InternalError": {
+        "description": "Proposed: unexpected server failure. Retry with the same eventId and body if the acceptance outcome is unknown.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "Unavailable": {
+        "description": "Proposed: durable ingestion dependency unavailable. Event acceptance is not confirmed; retry with the same eventId and body.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      }
+    }
+  }
+}

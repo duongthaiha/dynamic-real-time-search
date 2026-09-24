@@ -1,0 +1,282 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Search Service API",
+    "version": "0.1.0",
+    "description": "Draft POC contract reconstructed from the complete search requests in the supplied Postman collection. Request names and path are observed; required fields, validation constraints, and all responses are proposed, not verified against the original provider. See README.md in this directory. This service retrieves catalog items; Beacon separately captures shopper events."
+  },
+  "servers": [
+    { "url": "https://search.example.com", "description": "Placeholder; replace with your Search service URL." }
+  ],
+  "tags": [
+    { "name": "Search", "description": "Catalog search for storefront clients." }
+  ],
+  "security": [
+    { "ClientKey": [] }
+  ],
+  "paths": {
+    "/v1/search": {
+      "post": {
+        "tags": ["Search"],
+        "operationId": "searchProducts",
+        "summary": "Search the product catalog",
+        "description": "Returns matching products for one customer, area, and collection. Refinements constrain the eligible candidate set before ranking. The response shape is a POC proposal because the source has no saved responses. A successful search does not itself represent a shopper view or add-to-cart event.",
+        "parameters": [
+          {
+            "name": "x-customer-id",
+            "in": "header",
+            "required": true,
+            "description": "Customer scope. The service must authorize this scope against the supplied client credential.",
+            "schema": { "type": "string", "minLength": 1 },
+            "example": "demo-store"
+          },
+          {
+            "name": "x-groupby-skip-cache",
+            "in": "header",
+            "required": false,
+            "description": "Compatibility header observed in the source. Proposed POC behavior: true bypasses the response cache only for authorized diagnostic callers.",
+            "schema": { "type": "boolean" },
+            "example": false
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/SearchRequest" },
+              "examples": {
+                "basic": {
+                  "summary": "Search without refinements",
+                  "value": {
+                    "area": "storefront",
+                    "collection": "products",
+                    "query": "blue jacket",
+                    "skip": 0,
+                    "pageSize": 20,
+                    "sessionId": "session-demo",
+                    "visitorId": "visitor-demo"
+                  }
+                },
+                "refined": {
+                  "summary": "Search with value and numeric range refinements",
+                  "value": {
+                    "area": "storefront",
+                    "collection": "products",
+                    "query": "jacket",
+                    "skip": 0,
+                    "pageSize": 20,
+                    "refinements": [
+                      { "navigationName": "attributes.color", "type": "Value", "value": "blue", "or": true },
+                      { "navigationName": "price", "type": "Range", "low": 50, "high": 150, "or": true }
+                    ],
+                    "debug": false,
+                    "enableTopsort": false,
+                    "sessionId": "session-demo",
+                    "visitorId": "visitor-demo"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Proposed POC response, including search correlation and attribution. Not an observed provider response.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/SearchResponse" },
+                "example": {
+                  "id": "search-demo-001",
+                  "searchAttributionToken": "attribution-demo-001",
+                  "query": "blue jacket",
+                  "skip": 0,
+                  "pageSize": 20,
+                  "totalRecords": 1,
+                  "records": [
+                    {
+                      "productId": "SKU-001",
+                      "title": "Blue cotton jacket",
+                      "price": 89.99,
+                      "currency": "GBP",
+                      "category": "jackets",
+                      "collection": "products",
+                      "attributes": { "color": "blue" }
+                    }
+                  ],
+                  "degraded": false
+                }
+              }
+            }
+          },
+          "400": { "$ref": "#/components/responses/BadRequest" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "403": { "$ref": "#/components/responses/Forbidden" },
+          "422": { "$ref": "#/components/responses/UnsupportedOption" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
+          "500": { "$ref": "#/components/responses/InternalError" },
+          "503": { "$ref": "#/components/responses/Unavailable" }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ClientKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Authorization",
+        "description": "Observed wire format: Authorization: client-key <clientKey>. Supply the complete header value, not Bearer. Credential issuance and browser-safe scope are unresolved; do not embed a privileged service credential in storefront JavaScript."
+      }
+    },
+    "schemas": {
+      "SearchRequest": {
+        "type": "object",
+        "required": ["area", "collection", "query"],
+        "description": "Required fields and numeric constraints are inferred POC rules. Unknown properties remain allowed for compatibility but do not imply supported behavior.",
+        "properties": {
+          "area": { "type": "string", "minLength": 1 },
+          "collection": { "type": "string", "minLength": 1 },
+          "query": { "type": "string", "minLength": 1, "description": "Nonempty text search. Empty-query browsing is not defined by this draft." },
+          "skip": { "type": "integer", "minimum": 0, "default": 0, "description": "Offset pagination; live ranking does not guarantee a stable snapshot across pages. Nonzero hybrid offsets are unsupported until candidate-window pagination is implemented; return 422, do not silently return the first page." },
+          "pageSize": { "type": "integer", "minimum": 1, "description": "Positive result limit. Default and maximum must be configured and published before deployment; requests above the supported limit receive 422." },
+          "refinements": { "type": "array", "items": { "$ref": "#/components/schemas/Refinement" } },
+          "debug": { "type": "boolean", "description": "Compatibility option; diagnostics require authorization and must never expose secrets." },
+          "enableTopsort": { "type": "boolean", "description": "Observed vendor-specific option. Not a switch for POC trend ranking. If true and unsupported, return 422 rather than silently ignoring it." },
+          "sessionId": { "type": "string", "minLength": 1, "description": "Opaque pseudonymous session identifier shared with Beacon visit.customerData.sessionId." },
+          "visitorId": { "type": "string", "minLength": 1, "description": "Opaque pseudonymous visitor identifier, not authorization." },
+          "sponsoredRecords": { "$ref": "#/components/schemas/SponsoredRecords" }
+        }
+      },
+      "Refinement": {
+        "description": "POC semantics: AND across distinct navigationName fields. Within a field, or=true combines entries with OR and or=false with AND; omission means true. Reject mixed modes for the same field with 400. Validate field names against an allowlist. Range endpoints are inclusive, and low must not exceed high. count and pinned are compatibility metadata, not permission to broaden filters.",
+        "oneOf": [
+          { "$ref": "#/components/schemas/ValueRefinement" },
+          { "$ref": "#/components/schemas/RangeRefinement" }
+        ],
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "Value": "#/components/schemas/ValueRefinement",
+            "Range": "#/components/schemas/RangeRefinement"
+          }
+        }
+      },
+      "RefinementBase": {
+        "type": "object",
+        "required": ["navigationName", "type"],
+        "properties": {
+          "navigationName": { "type": "string", "minLength": 1 },
+          "type": { "type": "string", "enum": ["Value", "Range"] },
+          "or": { "type": "boolean", "default": true },
+          "count": { "type": "integer", "minimum": 0, "description": "Client-supplied facet count; never authoritative." },
+          "pinned": { "type": "boolean", "description": "Preserved UI metadata; no ranking effect is defined." }
+        }
+      },
+      "ValueRefinement": {
+        "allOf": [
+          { "$ref": "#/components/schemas/RefinementBase" },
+          {
+            "type": "object",
+            "required": ["value"],
+            "properties": {
+              "type": { "type": "string", "enum": ["Value"] },
+              "value": { "type": "string", "minLength": 1 }
+            }
+          }
+        ]
+      },
+      "RangeRefinement": {
+        "allOf": [
+          { "$ref": "#/components/schemas/RefinementBase" },
+          {
+            "type": "object",
+            "required": ["low", "high"],
+            "properties": {
+              "type": { "type": "string", "enum": ["Range"] },
+              "low": { "type": "number" },
+              "high": { "type": "number" }
+            }
+          }
+        ]
+      },
+      "SponsoredRecords": {
+        "type": "object",
+        "description": "Vendor-specific request preserved from the source. Unsupported sponsorship requests receive 422. Source examples request positions beyond pageSize, so no page-relative semantics or cross-field rule is assumed.",
+        "properties": {
+          "positions": { "type": "array", "items": { "type": "integer", "minimum": 0 } },
+          "count": { "type": "integer", "minimum": 0 }
+        }
+      },
+      "SearchResponse": {
+        "type": "object",
+        "description": "Proposed response contract; obtain real provider examples before treating this as a drop-in replacement.",
+        "required": ["id", "query", "skip", "pageSize", "totalRecords", "records", "degraded"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1, "description": "Search-generated correlation ID. Copy to Beacon autoSearch.search.id; it is not the beacon event ID." },
+          "searchAttributionToken": { "type": "string", "minLength": 1, "description": "Optional opaque attribution token. Copy unchanged to beacon attribution fields if present; do not manufacture it from id." },
+          "query": { "type": "string" },
+          "skip": { "type": "integer", "minimum": 0 },
+          "pageSize": { "type": "integer", "minimum": 1 },
+          "totalRecords": { "type": "integer", "minimum": 0, "description": "Number of matching catalog records before pagination, not merely the re-ranking candidate count." },
+          "records": { "type": "array", "items": { "$ref": "#/components/schemas/Product" } },
+          "degraded": { "type": "boolean", "description": "True when live ranking signals are unavailable and index-side order is returned." },
+          "degradationReason": { "type": "string", "description": "Safe diagnostic code when degraded=true, for example LIVE_SIGNALS_UNAVAILABLE." }
+        }
+      },
+      "Product": {
+        "type": "object",
+        "required": ["productId", "title"],
+        "properties": {
+          "productId": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "price": { "type": "number", "minimum": 0, "description": "Unit price in the supplied currency." },
+          "currency": { "type": "string", "pattern": "^[A-Z]{3}$", "description": "ISO 4217 currency code." },
+          "category": { "type": "string" },
+          "collection": { "type": "string" },
+          "imageUrl": { "type": "string", "format": "uri" },
+          "attributes": { "type": "object", "additionalProperties": true }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": ["code", "message"],
+        "properties": {
+          "code": { "type": "string", "minLength": 1 },
+          "message": { "type": "string", "minLength": 1 },
+          "requestId": { "type": "string", "description": "Server-generated diagnostic correlation ID." }
+        }
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "Proposed: malformed JSON, invalid fields, conflicting refinement modes, or invalid range.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "Unauthorized": {
+        "description": "Proposed: missing or invalid client credential.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "Forbidden": {
+        "description": "Proposed: caller cannot access the requested customer, collection, or diagnostic option.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "UnsupportedOption": {
+        "description": "Proposed: well-formed but unsupported option, pagination mode, or configured limit.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "TooManyRequests": {
+        "description": "Proposed: request rate exceeded; retry after the indicated number of seconds.",
+        "headers": { "Retry-After": { "schema": { "type": "integer", "minimum": 0 }, "description": "Delay in seconds." } },
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "InternalError": {
+        "description": "Proposed: unexpected server failure, without internal implementation details.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      },
+      "Unavailable": {
+        "description": "Proposed: Search dependency unavailable. Do not return an empty successful search.",
+        "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } }
+      }
+    }
+  }
+}
