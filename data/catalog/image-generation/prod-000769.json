@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000769",
+  "fingerprint": "0e623632f8d799bc17b4fa0171d752b65783c0a9de86ee0dad9a363d2f9c69e9",
+  "sha256": "1de3dde230f43c420c51521d7a5d9a65ced0db678fa40befdffd2c0ebcd41452",
+  "imagePath": "images/prod-000769.png",
+  "generatedAt": "2026-09-24T16:36:29.337188+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed coat made from cotton twill, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: relaxed. Material: cotton twill. Colour: Warm Cream (reference colour #D9CDB5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

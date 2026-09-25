@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000424",
+  "fingerprint": "4d5ef3a9539aa487317c97c9fbebd62b8007a18ee74d24918cf2d789e6e446ff",
+  "sha256": "e0297338a58f98a05f340045f3990f9559941eb47157d5db1c6e7f9c80830d97",
+  "imagePath": "images/prod-000424.png",
+  "generatedAt": "2026-09-24T15:38:19.214137+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized coat made from cotton twill, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: oversized. Material: cotton twill. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

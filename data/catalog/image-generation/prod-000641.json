@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000641",
+  "fingerprint": "9ea77b1e64c3a2f7b14df7a7016bded0ef8101a7c20f50d646937524a1d52c76",
+  "sha256": "af7a6a4c4291e89651d7ad449718b64c48c78b9ae742397608b75d1279735664",
+  "imagePath": "images/prod-000641.png",
+  "generatedAt": "2026-09-24T16:14:50.285124+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular shorts made from linen blend, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: regular. Material: linen blend. Colour: Jet Black (reference colour #242424). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

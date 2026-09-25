@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000133",
+  "fingerprint": "b1ed03c29d84aa10b0ea76b2c2908611008b21776b1ecd8022991e4a96036811",
+  "sha256": "e30d1758324c9035f3bc980052c8e3b6609197e1c77f78b1b95cd7f1e4498e08",
+  "imagePath": "images/prod-000133.png",
+  "generatedAt": "2026-09-24T14:44:43.334777+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A ankle boots made from textile and synthetic upper, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: ankle. Material: textile and synthetic upper. Colour: Jet Black (reference colour #242424). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000096",
+  "fingerprint": "9f1a496326faa7a3cb3e174fbce13ff4fa41a4303ee50a50badbb37bff32b0a5",
+  "sha256": "d212486d87e964ac3a87ace6cfdd316b1503d6187136d0663719a324e86362b6",
+  "imagePath": "images/prod-000096.png",
+  "generatedAt": "2026-09-25T08:19:50.247933+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: T-shirt. Style: slim. Material: cotton jersey. Colour: Warm Cream (#D9CDB5). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Harbour Standard slip dress in warm cream</title>
+  <desc id="desc">Synthetic catalog illustration of Warm Cream dress</desc>
+  <rect width="600" height="800" fill="#F4F1EA"/>
+  <rect x="36" y="36" width="528" height="590" rx="18" fill="#D9CDB5" opacity=".16"/>
+  <g fill="#D9CDB5" stroke="#202020" stroke-width="8" stroke-linejoin="round"><path d="M270 190h60l25 82-22 20 73 222H194l73-222-22-20z"/></g>
+  <text x="54" y="680" font-family="Arial, sans-serif" font-size="18" letter-spacing="3" fill="#555">DRESSES</text>
+  <text x="54" y="720" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202020">Harbour Standard</text>
+  <text x="54" y="755" font-family="Arial, sans-serif" font-size="20" fill="#444">Warm Cream</text>
+</svg>

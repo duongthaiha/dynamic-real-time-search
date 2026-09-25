@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000718",
+  "fingerprint": "4fbf303341390bca268b326f3a72e8e0921a9afdff3d1aadc9fb301a9ff1986f",
+  "sha256": "e546adb3f506b9da07da87aa239ff1582cb84c7a39908e95969a7da74e37c82d",
+  "imagePath": "images/prod-000718.png",
+  "generatedAt": "2026-09-24T16:27:49.007049+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A hiking-inspired boots made from faux leather, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: hiking-inspired. Material: faux leather. Colour: Butter Yellow (reference colour #D8BF63). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

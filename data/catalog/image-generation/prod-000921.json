@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000921",
+  "fingerprint": "29bfd53c18b04adbd418cfcee42e8ed7adebcafbbdb6195ddd462ae2dc5f9e6b",
+  "sha256": "9fff9fd04eb187314a8777f4687d6b2045690a3e3f795ebfbb47591e7701bdc9",
+  "imagePath": "images/prod-000921.png",
+  "generatedAt": "2026-09-25T08:40:21.295637+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: T-shirt. Style: regular. Material: organic cotton. Colour: Forest Green (#3E654A). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000259",
+  "fingerprint": "86ff804e6b33f06b6572ca63882007791bc637505d92bd5332470374a9b4bf44",
+  "sha256": "7fc9f63311e1d6ff7b2a26002adc9b6a79dd1e0796878f52e8118a405be877be",
+  "imagePath": "images/prod-000259.png",
+  "generatedAt": "2026-09-24T15:05:44.568042+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular coat made from recycled polyester, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: regular. Material: recycled polyester. Colour: Burnt Orange (reference colour #B76532). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

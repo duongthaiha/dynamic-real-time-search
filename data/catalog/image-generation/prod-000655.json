@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000655",
+  "fingerprint": "a8726c099a53c883d9a8cd15ad7816a2812db583f31f81799c03c04685e36720",
+  "sha256": "826b33afbac0d213f871075838695cff2617b8b3a5159de6f55685b9ae258266",
+  "imagePath": "images/prod-000655.png",
+  "generatedAt": "2026-09-25T08:32:30.421524+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: skirt. Style: A-line. Material: satin-look fabric. Colour: Butter Yellow (#D8BF63). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

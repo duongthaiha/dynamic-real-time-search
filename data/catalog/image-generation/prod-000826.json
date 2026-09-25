@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000826",
+  "fingerprint": "f86de1180cb12005e42b4be59c7dd19ced83b64225d43196db3e6ad9f0e823e3",
+  "sha256": "4515972f9c9b2c7909fec86847816c415e72f38ba163a31a04b657fe93e81605",
+  "imagePath": "images/prod-000826.png",
+  "generatedAt": "2026-09-24T16:46:41.215651+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tapered jeans made from recycled-cotton denim, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jeans. Fit/style: tapered. Material: recycled-cotton denim. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

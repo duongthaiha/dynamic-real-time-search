@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000940",
+  "fingerprint": "7ae272084dc6dfdc07204aeb0ef4f1d28bc1155d0c68232901389773502712a2",
+  "sha256": "688b4f89526b90df6df990f08867977bf78d27b11108c768a5bd93d915171d99",
+  "imagePath": "images/prod-000940.png",
+  "generatedAt": "2026-09-24T17:05:59.973452+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A pleated skirt made from satin-look fabric, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: skirt. Fit/style: pleated. Material: satin-look fabric. Colour: Jet Black (reference colour #242424). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

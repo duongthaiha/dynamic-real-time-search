@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000143",
+  "fingerprint": "7ffb8dc79bafbe3fe1cff38f4acc6f12e1bddccc33b4164a615ee601f88f55f8",
+  "sha256": "31bd2b75fe361697a1a676e4d8b03ecb12106f915e3c7ecf608e2ecdd5348750",
+  "imagePath": "images/prod-000143.png",
+  "generatedAt": "2026-09-25T08:20:11.027421+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: hoodie. Style: regular. Material: recycled-cotton blend. Colour: Stone Beige (#B8A58B). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

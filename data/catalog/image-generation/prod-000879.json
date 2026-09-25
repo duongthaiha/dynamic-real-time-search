@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000879",
+  "fingerprint": "0537d6354c422b3955ea96d59b536b936a8d61891c862076b93188491500d561",
+  "sha256": "ddae6e822a2ee04492ec173f8609f6e6afc15ab177d3de9bade3da2bee1da763",
+  "imagePath": "images/prod-000879.png",
+  "generatedAt": "2026-09-25T08:38:41.824565+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: dress. Style: slip. Material: satin-look fabric. Colour: Slate Grey (#777D84). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

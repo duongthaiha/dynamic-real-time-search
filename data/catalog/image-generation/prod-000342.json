@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000342",
+  "fingerprint": "1eac8c8e4e327cf6967927d3522fe100577555b6d1e4c93a0431c12aad8e23e0",
+  "sha256": "d692b5576a2081725409fa14c9d15283b9dff50eb070b94de5e3977b21584350",
+  "imagePath": "images/prod-000342.png",
+  "generatedAt": "2026-09-24T15:24:04.784473+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A retro trainers made from faux leather, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: retro. Material: faux leather. Colour: Dusty Pink (reference colour #C78F9C). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

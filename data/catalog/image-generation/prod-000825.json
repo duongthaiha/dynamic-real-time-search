@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000825",
+  "fingerprint": "2446647cabe0e7d307236ce03e3f659edcaf8bac6d4aa70b9e2446f3757f8cd2",
+  "sha256": "d78a7ec8b479062f8b5b5c35f987ccff112edb1369a74724fdf6fff09d023e29",
+  "imagePath": "images/prod-000825.png",
+  "generatedAt": "2026-09-25T08:37:01.675800+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: cap. Style: bucket. Material: recycled polyester. Colour: Soft White (#EDEBE5). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

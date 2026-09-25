@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000994",
+  "fingerprint": "8c45e3cfcc49cd04603cb9e54454846e2915ac58a7a98321565453dd40192ac6",
+  "sha256": "a3b17ec6ba8c6b0db9ffc9315ae89e1684506f0479aa2306225901a353b77804",
+  "imagePath": "images/prod-000994.png",
+  "generatedAt": "2026-09-24T17:15:10.925443+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular coat made from wool blend, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: regular. Material: wool blend. Colour: Dusty Pink (reference colour #C78F9C). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

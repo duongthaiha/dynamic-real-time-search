@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000549",
+  "fingerprint": "2ecf626e558eda410dfd2756f46f284ae59f4680466332e40f33a164b6947dc6",
+  "sha256": "1e5e128e3a31a616c825a5bb0bd32599b4c2845115c99495343f44decb999f3d",
+  "imagePath": "images/prod-000549.png",
+  "generatedAt": "2026-09-24T15:59:18.321518+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A wrap dress made from cotton poplin, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: wrap. Material: cotton poplin. Colour: Dusty Pink (reference colour #C78F9C). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

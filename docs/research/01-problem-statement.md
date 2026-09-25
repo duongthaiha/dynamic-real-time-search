@@ -42,6 +42,39 @@ e.g. per-colour or per-category) "momentum" scores and make them available
 to influence search ranking within **seconds to a few minutes**, not
 overnight.
 
+## Ingestion design: two separate Eventstreams
+
+Treat the two signal families as independent ingestion pipelines:
+
+1. **First-party behavior Eventstream:** receives normalized storefront and
+   commerce-backend events through Beacon/trusted producers. It feeds
+   deduplicated activity features such as views, bag additions, and purchases.
+2. **External-trend Eventstream:** receives normalized observations from a
+   synthetic or approved external adapter, such as TikTok-derived product or
+   colour/category trends. It handles provenance, confidence, revisions,
+   expiry, and retractions separately from shopper event counts.
+
+Use distinct Fabric items and source connections, not merely two branches
+inside one item. Land them in separate Eventhouse tables and combine their
+curated features in one versioned scoring snapshot. This enables independent
+schema changes, monitoring, and replay; shared Fabric capacity/Eventhouse
+remain shared failure and performance dependencies.
+
+The external stream can request work through Activator's **Run Notebook**
+action. Behavior initially contributes through periodic runs rather than
+launching jobs per shopper event. Both use the same Fabric notebook -> Azure
+ML job -> validated publication lifecycle selected in the
+[README](../../README.md#architecture). Its freshness is measured in the full
+asynchronous pipeline; fast query-time reads do not guarantee seconds-level
+score generation.
+
+The POC does not assume a native TikTok connector or permission to scrape.
+Use synthetic trend observations until a licensed/permitted provider
+integration is explicitly approved.
+
+See the [two-stream ingestion design](../architecture/eventstream-ingestion-design.md)
+for topology, event contracts, per-source readiness, security, and acceptance tests.
+
 ## Personas
 
 - **Shopper**: sees more relevant, "what's hot" results without doing

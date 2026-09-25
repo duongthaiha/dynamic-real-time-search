@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000502",
+  "fingerprint": "66717175231b36e79c7adc95b2b7e0fff7ae69f3aa23147be31000c049c5b9f6",
+  "sha256": "0668f65bb57284de2ee172da7352549fde68749cca60967046f073127b99a3d4",
+  "imagePath": "images/prod-000502.png",
+  "generatedAt": "2026-09-24T15:51:28.768780+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular jumper made from recycled yarn, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jumper. Fit/style: regular. Material: recycled yarn. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

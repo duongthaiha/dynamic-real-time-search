@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000451",
+  "fingerprint": "eeb8e6b9a7c507a7b7e752b2e4d1ae276c95345e71dcecbba1d651ffdb75f821",
+  "sha256": "9dea203d89db7683a408b9162a3b5f36dd051520c0f7e122f0e6a1907be9e832",
+  "imagePath": "images/prod-000451.png",
+  "generatedAt": "2026-09-25T08:26:34.180407+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jeans. Style: wide-leg. Material: cotton denim. Colour: Jet Black (#242424). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

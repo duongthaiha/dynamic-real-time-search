@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000797",
+  "fingerprint": "011b607d2fcd188e90361bdfb5901da8f4afbf72c6f98748bf43906b4827a561",
+  "sha256": "8d24666949dfeb91d94d6028daa80e589fd30dc8eaec8fb7917207a4baa01557",
+  "imagePath": "images/prod-000797.png",
+  "generatedAt": "2026-09-24T16:41:45.804568+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tapered trousers made from recycled polyester, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trousers. Fit/style: tapered. Material: recycled polyester. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

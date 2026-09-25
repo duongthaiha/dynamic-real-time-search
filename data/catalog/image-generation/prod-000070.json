@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000070",
+  "fingerprint": "663d2162b4795d7474fedfaab1ae1738eab4d6077a0dcdb52aa0d51e3a9b8ee8",
+  "sha256": "c9b8fbc5b7163eb3b92799b6ec3c42e9dcdbc50efafdf00da3d5e8b3eac1495e",
+  "imagePath": "images/prod-000070.png",
+  "generatedAt": "2026-09-24T14:34:13.602401+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A wrap skirt made from denim, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: skirt. Fit/style: wrap. Material: denim. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

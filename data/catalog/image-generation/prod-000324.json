@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000324",
+  "fingerprint": "93af20d47ada9ab5c20740bd8b16b1244f12ac8f4114d77e89d8ba5cad18068a",
+  "sha256": "1e3942d6eac05e9622c2dc773e4934f69761ad3369d0ee4a3f9f9f4bc42956fe",
+  "imagePath": "images/prod-000324.png",
+  "generatedAt": "2026-09-24T15:19:06.810325+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A bodycon dress made from cotton poplin, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: bodycon. Material: cotton poplin. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

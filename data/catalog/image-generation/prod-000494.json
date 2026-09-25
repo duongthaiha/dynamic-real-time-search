@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000494",
+  "fingerprint": "01d3e2dbc6b22b17c624dc9d1c28defa4b94eafd43806e741d1fb7ece4420aba",
+  "sha256": "e9306493365ba0d5ba3be5e3ec23bdb991580682a974b1fc0bec4152c8c438a7",
+  "imagePath": "images/prod-000494.png",
+  "generatedAt": "2026-09-25T08:27:50.323330+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: bag. Style: backpack. Material: faux leather. Colour: Slate Grey (#777D84). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

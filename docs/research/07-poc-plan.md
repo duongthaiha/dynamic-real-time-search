@@ -1,5 +1,12 @@
 # POC implementation plan
 
+The original phase outline below is research history. For current execution,
+follow the [README](../../README.md#architecture),
+[notebook/ML architecture](../architecture/option-c-hybrid-detailed-design.md),
+and [two-stream ingestion design](../architecture/eventstream-ingestion-design.md).
+In particular, the selected action is Run Notebook, not the original
+Power Automate fast path.
+
 ## Phase 0 — Foundations (setup)
 
 - Provision (Bicep, per repo convention): Azure AI Search service, a
@@ -16,9 +23,14 @@
 
 ## Phase 1 — Event ingestion + aggregation (Fabric)
 
-- Create an Eventstream with two Custom App sources (or one, with an
-  `eventType` discriminator): behavioral events and external trend events.
-- Land raw events into an Eventhouse `RawEvents` table.
+- Create two separate Eventstream items with independent Custom endpoint
+  sources/connections: behavioral events and external trend observations.
+- Land them into `BehaviorRawEvents` and `ExternalRawEvents`, with separate
+  rejection tables. Deduplicate behavior before counting; resolve latest
+  external revisions/retractions before eligibility and catalog mapping.
+- Verify per-source readiness and freeze a joined feature snapshot before
+  submitting notebook/ML work; external Activator delivery may precede
+  Eventhouse visibility.
 - Build KQL update policies / materialized views for
   `ProductSignals1Min/5Min` and `AttributeTrend5Min`.
 - Build a KQL queryset implementing the `trendingScore` formula

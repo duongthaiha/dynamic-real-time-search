@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000285",
+  "fingerprint": "b2fd83ba22d95abb6141f6bcc800b2ea7a5d4d56c63a616c6bb91a9a2f02a595",
+  "sha256": "f4569cba62932e4ea1acf5928b6807db9424e24c55bda5a67b2742803e81c03f",
+  "imagePath": "images/prod-000285.png",
+  "generatedAt": "2026-09-24T15:10:03.163218+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A bucket cap made from recycled polyester, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: cap. Fit/style: bucket. Material: recycled polyester. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

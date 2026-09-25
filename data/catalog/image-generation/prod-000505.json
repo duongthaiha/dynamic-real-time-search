@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000505",
+  "fingerprint": "9dc58f3200c409d4ed6a16e9f48838499b12ae9d97254008d43ce7233eb0037f",
+  "sha256": "20974632c239442743de4daea7a74890fc8d765711544ec20fda487d4fbd6e0d",
+  "imagePath": "images/prod-000505.png",
+  "generatedAt": "2026-09-24T15:51:58.342884+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A column skirt made from satin-look fabric, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: skirt. Fit/style: column. Material: satin-look fabric. Colour: Sky Blue (reference colour #77AEDD). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

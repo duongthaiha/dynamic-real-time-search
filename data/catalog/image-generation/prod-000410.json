@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000410",
+  "fingerprint": "f6e3e4d4db7e2e3806c68e259d00ecfb5b4c7b9bb15fa4f5078e34dfe45bf113",
+  "sha256": "dd0cda609e0566367b22999e7cd708d3655e4f048b3e894c27460448464a6857",
+  "imagePath": "images/prod-000410.png",
+  "generatedAt": "2026-09-24T15:36:00.714869+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slim shirt made from organic cotton, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shirt. Fit/style: slim. Material: organic cotton. Colour: Cherry Red (reference colour #A73538). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000555",
+  "fingerprint": "d98b0959e475ed51a24fc029762f7a12cdff718b4c02f8c48460b1d75c71d56b",
+  "sha256": "373dac9fec1d7abc56848ce4b612c4bf9768b053a740ecae45f77c4386a41efb",
+  "imagePath": "images/prod-000555.png",
+  "generatedAt": "2026-09-24T16:00:19.287885+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A beanie cap made from recycled polyester, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: cap. Fit/style: beanie. Material: recycled polyester. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

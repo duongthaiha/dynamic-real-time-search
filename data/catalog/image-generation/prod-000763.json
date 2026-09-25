@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000763",
+  "fingerprint": "5e768da9c9d327dcd86d013641a8fd899bea2dadb605cae42acb67fff989f9b3",
+  "sha256": "73bf7f117bed91bc8c696693bd519cde7dd1e98f917f8d0104be976ca32daf04",
+  "imagePath": "images/prod-000763.png",
+  "generatedAt": "2026-09-24T16:35:28.668262+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A Chelsea boots made from faux leather, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: Chelsea. Material: faux leather. Colour: Midnight Navy (reference colour #253451). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

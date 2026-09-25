@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000223",
+  "fingerprint": "cc54caca799b3cb8276d24dd11b5e0e053d2db6b170ad2c210dc9b65cf7d0cd8",
+  "sha256": "266f339458abcb2e074f791ba9c13b0bdb348b7bb02ec47ea79550d6b46390b5",
+  "imagePath": "images/prod-000223.png",
+  "generatedAt": "2026-09-24T14:59:42.652446+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A Chelsea boots made from suede-look fabric, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: Chelsea. Material: suede-look fabric. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

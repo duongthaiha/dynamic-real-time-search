@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000286",
+  "fingerprint": "324c25281bf4223b9d0ca6c82f7741cf9424b3983078f6c63b6789ce5d2f9066",
+  "sha256": "95f971f0b379f40aff1c1efa9f928fc3a73640aea036b80e18f841f0794fd3c0",
+  "imagePath": "images/prod-000286.png",
+  "generatedAt": "2026-09-24T15:10:14.169707+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slim jeans made from stretch denim, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jeans. Fit/style: slim. Material: stretch denim. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000726",
+  "fingerprint": "95f4e959b98305e19cbb02af6db9fd031cea96b1604517538f5e3862ee05da0d",
+  "sha256": "5c9ec13e141392070cfa1a5becd157837417f7658a07e7000af960a08d3b629c",
+  "imagePath": "images/prod-000726.png",
+  "generatedAt": "2026-09-24T16:29:08.872463+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized T-shirt made from cotton jersey, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: oversized. Material: cotton jersey. Colour: Jet Black (reference colour #242424). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

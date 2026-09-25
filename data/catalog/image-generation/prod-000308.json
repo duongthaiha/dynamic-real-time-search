@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000308",
+  "fingerprint": "a1346d84667cce39d7a3e026e3980a03c09cdf515ec1b898a710d803701ff2c5",
+  "sha256": "89df1cb777e25f875f271af130e54e8f7641aaa0fa38eb6c046de281b8279527",
+  "imagePath": "images/prod-000308.png",
+  "generatedAt": "2026-09-24T15:13:52.994652+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized hoodie made from cotton fleece, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: hoodie. Fit/style: oversized. Material: cotton fleece. Colour: Cherry Red (reference colour #A73538). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

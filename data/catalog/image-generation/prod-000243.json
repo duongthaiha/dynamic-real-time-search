@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000243",
+  "fingerprint": "c23e50f76a3f9ab1163be07b4324220a5ee72210365e3750a6974c2e639dbec1",
+  "sha256": "165353659ecba6a5483b618916b9e3678c164e323b2ad5aa98da18e696b0b3f6",
+  "imagePath": "images/prod-000243.png",
+  "generatedAt": "2026-09-25T08:22:11.154485+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: regular. Material: faux leather. Colour: Forest Green (#3E654A). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000331",
+  "fingerprint": "271b962d082bd951b1161804fb2b5b2b739d368e83e40f9761a81fd735007fac",
+  "sha256": "fc58e4dad82d7b39eae5881db668555e9327947308325e27069feeed65793f34",
+  "imagePath": "images/prod-000331.png",
+  "generatedAt": "2026-09-25T08:24:24.974692+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jeans. Style: slim. Material: stretch denim. Colour: Warm Cream (#D9CDB5). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

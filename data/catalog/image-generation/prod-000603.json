@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000603",
+  "fingerprint": "f185f1ab8f0878b4f7574ea9e234a7ef3d21f30df52f82520dc1107a407ee811",
+  "sha256": "c6d0c83023f2c76573ad9e0baa816b239da38678fd582eb83a26c1244d15fddb",
+  "imagePath": "images/prod-000603.png",
+  "generatedAt": "2026-09-24T16:08:31.385222+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed jacket made from recycled polyester, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: relaxed. Material: recycled polyester. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

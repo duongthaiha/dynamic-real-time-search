@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000035",
+  "fingerprint": "2eb7e6c946e6635cdecbb70c96a753c8506524160f39c9fab7936dbda6cedb03",
+  "sha256": "8fea6da2916b46aa0cb8722d79eda1506bdeca0de82a9e918d28aa76c6fe1592",
+  "imagePath": "images/prod-000035.png",
+  "generatedAt": "2026-09-24T14:28:23.825742+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular shirt made from organic cotton, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shirt. Fit/style: regular. Material: organic cotton. Colour: Chocolate Brown (reference colour #654536). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

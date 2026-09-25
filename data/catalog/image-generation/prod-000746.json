@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000746",
+  "fingerprint": "c224fbf507a4dae2fc3c3e2c92472105246683c5eb7912190df97ad6d92f4e3a",
+  "sha256": "af9a691b5eb967986eb2b79ec0b59a65931dc122e5f0666c109b034d5374a502",
+  "imagePath": "images/prod-000746.png",
+  "generatedAt": "2026-09-24T16:32:46.016106+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed shorts made from linen blend, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: relaxed. Material: linen blend. Colour: Sky Blue (reference colour #77AEDD). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

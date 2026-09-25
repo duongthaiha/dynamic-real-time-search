@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000237",
+  "fingerprint": "43ceaa72904073a36e756a4b40b3ea926aa856d0e5d0330fa7dc8085f1b02df4",
+  "sha256": "8a00e39ac904cd8c2532a96d8dfed8fb7fde32f8e07353d88635ce1411280763",
+  "imagePath": "images/prod-000237.png",
+  "generatedAt": "2026-09-24T15:02:04.044290+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A retro trainers made from faux leather, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: retro. Material: faux leather. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

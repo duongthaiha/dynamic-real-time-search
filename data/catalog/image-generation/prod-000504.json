@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000504",
+  "fingerprint": "cee5e4f7b71343f407d0941884a4888d46ad04bd10526175e300d91d9b72aa53",
+  "sha256": "db0657559f6af0d3db66e714cb1cc7f76b35b4b91f6f5ffd5f706f522d58dce4",
+  "imagePath": "images/prod-000504.png",
+  "generatedAt": "2026-09-24T15:51:48.861312+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slip dress made from cotton poplin, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: slip. Material: cotton poplin. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

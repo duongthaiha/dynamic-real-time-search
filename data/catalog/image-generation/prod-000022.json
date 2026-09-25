@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000022",
+  "fingerprint": "ee60a9b0c440ffebb4683e939571b63d5fde7980dc441f6106706db9f4547df4",
+  "sha256": "3ce223d67348693071d9806f359681ae46f9ea9898024f3eb977fac283a55992",
+  "imagePath": "images/prod-000022.png",
+  "generatedAt": "2026-09-25T08:17:40.224949+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jumper. Style: cropped. Material: cotton knit. Colour: Slate Grey (#777D84). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

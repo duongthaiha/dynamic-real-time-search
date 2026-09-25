@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000529",
+  "fingerprint": "2b52d351e44d4b4b2b8e7a526f6d92e989ffcb3911303f6d8462c25b5c13514f",
+  "sha256": "98b1f90d6602a825d834bbbb3c7a898918738b94918a176e28daf3d7ac891cb0",
+  "imagePath": "images/prod-000529.png",
+  "generatedAt": "2026-09-24T15:56:02.790755+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed coat made from cotton twill, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: relaxed. Material: cotton twill. Colour: Midnight Navy (reference colour #253451). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

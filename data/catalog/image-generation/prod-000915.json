@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000915",
+  "fingerprint": "5e03acb0a6dd78dd5d61e5eddef252ce9ee0d1735d4c9289db28903dd762595e",
+  "sha256": "4a4f7858496c9f5f1c9a70b12b3ad94c8150e8d0c754b8aa17ec3d85c894d8bb",
+  "imagePath": "images/prod-000915.png",
+  "generatedAt": "2026-09-25T08:40:10.065330+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: cap. Style: five-panel. Material: organic cotton. Colour: Cherry Red (#A73538). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

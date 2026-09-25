@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000338",
+  "fingerprint": "4c32389111bc8353b930e6c73c86753b718ab3c478d2b3ef7b4f6c585b81f140",
+  "sha256": "98cad3b156bbca9978e1860505d91440068b2c39e796a7cad81d02dfd462beab",
+  "imagePath": "images/prod-000338.png",
+  "generatedAt": "2026-09-24T15:23:25.135784+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular hoodie made from cotton fleece, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: hoodie. Fit/style: regular. Material: cotton fleece. Colour: Sky Blue (reference colour #77AEDD). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

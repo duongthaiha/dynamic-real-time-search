@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000821",
+  "fingerprint": "ed3397617761bb01510c8ab1f1af77bb556090dcc80911aaa4f168e448a255d6",
+  "sha256": "c29d2758a16cc010466306b5f8d05f341ab7575110080a24de9c35e47b69c4e0",
+  "imagePath": "images/prod-000821.png",
+  "generatedAt": "2026-09-24T16:46:07.622973+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed shorts made from linen blend, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: relaxed. Material: linen blend. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

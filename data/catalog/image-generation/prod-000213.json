@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000213",
+  "fingerprint": "afaccb92e2a39b718ec6656a1b90dfbf5b1b9ed392d3691a0c1797efea17c5fc",
+  "sha256": "1fd773acfc5787854ca2c4e3f85ce5353eec31becb79230c0fd4a2cdf3f466c3",
+  "imagePath": "images/prod-000213.png",
+  "generatedAt": "2026-09-24T14:58:04.971388+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed jacket made from denim, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: relaxed. Material: denim. Colour: Stone Beige (reference colour #B8A58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

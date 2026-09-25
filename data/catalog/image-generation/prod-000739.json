@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000739",
+  "fingerprint": "fd6298882023c13e949ad32fd85eadb89944cf9133b283f115d378f0df2bfdcc",
+  "sha256": "0276ad36f88631989265bd9497989c32e1a67750b880cfb475825f4aa5a4ba5a",
+  "imagePath": "images/prod-000739.png",
+  "generatedAt": "2026-09-25T08:34:40.539209+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: coat. Style: regular. Material: recycled polyester. Colour: Chocolate Brown (#654536). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

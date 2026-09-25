@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000092",
+  "fingerprint": "6fcc85995c63088b1462292203acc90edd288e93747650a2992e6e70ecde9a1f",
+  "sha256": "0a705ce9d32723fdfc7266babfffb43084d321804b52ff40d06e3c08c595be6f",
+  "imagePath": "images/prod-000092.png",
+  "generatedAt": "2026-09-24T14:37:54.702235+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A wide-leg trousers made from recycled polyester, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trousers. Fit/style: wide-leg. Material: recycled polyester. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

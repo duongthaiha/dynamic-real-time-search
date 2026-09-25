@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000799",
+  "fingerprint": "bbf9e5aa29d13c65525a6635c75ec8a00c297557ca52b25f1b2e238283c81634",
+  "sha256": "018d5da58459dd4f0dee2750ac041af072bd1da670276a2acfb6eccf047069db",
+  "imagePath": "images/prod-000799.png",
+  "generatedAt": "2026-09-25T08:36:31.445136+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: coat. Style: oversized. Material: recycled polyester. Colour: Warm Cream (#D9CDB5). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

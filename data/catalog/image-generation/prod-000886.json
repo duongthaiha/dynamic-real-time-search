@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000886",
+  "fingerprint": "e2a7dd20b5afbd78dadc2c65db0d7dc473c92a1b911bd314b4aa4659fb154f08",
+  "sha256": "6d575725b30a0c5270fcbffc699dd66a98d6d9527d97bdeac0ed31b896644111",
+  "imagePath": "images/prod-000886.png",
+  "generatedAt": "2026-09-24T16:56:50.594585+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A wide-leg jeans made from recycled-cotton denim, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jeans. Fit/style: wide-leg. Material: recycled-cotton denim. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

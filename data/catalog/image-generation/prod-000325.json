@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000325",
+  "fingerprint": "17e6ac4bde95de4a28a318efa5b5eaa007fa69386006f1f90716edb920eb0f87",
+  "sha256": "a5500a344879989c1798dce0b50ab1f58b4d054b9742785e6eaf27aa664af86a",
+  "imagePath": "images/prod-000325.png",
+  "generatedAt": "2026-09-25T08:24:00.309432+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: skirt. Style: pleated. Material: satin-look fabric. Colour: Dark Wash Blue (#315C86). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000749",
+  "fingerprint": "cdab62dd8aec813ca603ed1d731ee3b6e1ed295b9605748e7128b73f6b1fca4f",
+  "sha256": "c2fda8f11670c3a9c21a962a04cf5f7a443c20a86e7aa9be30a33e78411a086c",
+  "imagePath": "images/prod-000749.png",
+  "generatedAt": "2026-09-24T16:33:10.599500+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A shoulder bag made from recycled polyester, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: bag. Fit/style: shoulder. Material: recycled polyester. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

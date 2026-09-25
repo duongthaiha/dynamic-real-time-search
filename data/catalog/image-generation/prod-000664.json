@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000664",
+  "fingerprint": "e5ef61f3def6b6096d3f7804adaa31d9e89b4648806cc006afe9f6024e2a6322",
+  "sha256": "de0246b3389b0e5db602560fe9a11e58adcba228572a204c5e99646b727e7f4d",
+  "imagePath": "images/prod-000664.png",
+  "generatedAt": "2026-09-24T16:18:48.555725+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A longline coat made from recycled polyester, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: longline. Material: recycled polyester. Colour: Jet Black (reference colour #242424). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

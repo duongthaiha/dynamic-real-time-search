@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000221",
+  "fingerprint": "70d8f088c39efd4c374db89c4496c199de2b2c056e031d0e76f92d07b1ec1f86",
+  "sha256": "9fd5af27f76472b13d4687368fd35029724e991bc78cd88dcae0426abe6098be",
+  "imagePath": "images/prod-000221.png",
+  "generatedAt": "2026-09-24T14:59:24.037905+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tailored shorts made from linen blend, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: tailored. Material: linen blend. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

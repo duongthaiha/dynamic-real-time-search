@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000822",
+  "fingerprint": "047506f727841d15094d1716bd0fea61d1f3b5378ea9713f189d71477f5a4444",
+  "sha256": "49f151f59470df8d8c466c92d2ba32c3733b34de4cd18e8017a86a19a03305ae",
+  "imagePath": "images/prod-000822.png",
+  "generatedAt": "2026-09-24T16:46:04.462517+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A chunky trainers made from textile and synthetic upper, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: chunky. Material: textile and synthetic upper. Colour: Warm Cream (reference colour #D9CDB5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

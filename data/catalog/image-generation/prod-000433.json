@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000433",
+  "fingerprint": "b86d184f0cbf2d371844f0ad5bc8a47cc69530d8412fdac413c41f9030494e6c",
+  "sha256": "4cb48e3db4db0c53def22d4df11ceea3c21cb2e6657859ac354072e9b48568bb",
+  "imagePath": "images/prod-000433.png",
+  "generatedAt": "2026-09-24T15:39:48.266723+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A Chelsea boots made from textile and synthetic upper, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: Chelsea. Material: textile and synthetic upper. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

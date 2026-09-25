@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Studio Thread crossbody bag in stone beige</title>
+  <desc id="desc">Synthetic catalog illustration of Stone Beige bag</desc>
+  <rect width="600" height="800" fill="#F4F1EA"/>
+  <rect x="36" y="36" width="528" height="590" rx="18" fill="#B8A58B" opacity=".16"/>
+  <g fill="#B8A58B" stroke="#202020" stroke-width="8" stroke-linejoin="round"><rect x="175" y="260" width="250" height="220" rx="25"/><path d="M235 270c0-105 130-105 130 0" fill="none" stroke="#fff" stroke-width="24"/></g>
+  <text x="54" y="680" font-family="Arial, sans-serif" font-size="18" letter-spacing="3" fill="#555">BAGS</text>
+  <text x="54" y="720" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202020">Studio Thread</text>
+  <text x="54" y="755" font-family="Arial, sans-serif" font-size="20" fill="#444">Stone Beige</text>
+</svg>

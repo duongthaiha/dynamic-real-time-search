@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000510",
+  "fingerprint": "134a120fb3948f33bfb90e79a2708d5577a3e1fda7a6a6d6670ed299a5d5f20a",
+  "sha256": "babcff39a2dce697b145dfcc415e59c879bcdb1c62add1ad2161866b4fe330bf",
+  "imagePath": "images/prod-000510.png",
+  "generatedAt": "2026-09-24T15:52:48.457505+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A beanie cap made from recycled polyester, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: cap. Fit/style: beanie. Material: recycled polyester. Colour: Chocolate Brown (reference colour #654536). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

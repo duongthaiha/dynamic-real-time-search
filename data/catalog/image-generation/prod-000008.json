@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000008",
+  "fingerprint": "ad9737f7e5e94ec385ba2d1a906a37250969e0f4b627c9267a98fe2628be75a2",
+  "sha256": "d4aab42a83eb0a5985dcc18cae0c48094f65308d32a46a8da21d81c86823d066",
+  "imagePath": "images/prod-000008.png",
+  "generatedAt": "2026-09-25T08:16:53.341777+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: hoodie. Style: oversized. Material: cotton fleece. Colour: Chocolate Brown (#654536). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

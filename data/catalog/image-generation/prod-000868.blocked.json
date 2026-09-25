@@ -1,0 +1,18 @@
+{
+  "productId": "PROD-000868",
+  "status": "blocked",
+  "reason": "Content safety blocked output; request ID 47cec7aa-14e0-4560-ad30-7734ce01dc25",
+  "recordedAt": "2026-09-24T16:53:37.652087+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A lace-up boots made from suede-look fabric, finished with contrast stitching. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: lace-up. Material: suede-look fabric. Colour: Jet Black (reference colour #242424). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

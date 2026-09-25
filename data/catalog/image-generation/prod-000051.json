@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000051",
+  "fingerprint": "087ca2df4c9cf42ce9f540cb91ac0ce05fecb62a27ddabf72facabf9c6c37526",
+  "sha256": "036ecedbb27186d5db84324bfde971d893d8440163a26b3a7b7221988b18b6a9",
+  "imagePath": "images/prod-000051.png",
+  "generatedAt": "2026-09-25T08:19:02.326546+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: T-shirt. Style: regular. Material: recycled-cotton blend. Colour: Forest Green (#3E654A). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

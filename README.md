@@ -26,7 +26,7 @@ These are targets to measure, not platform guarantees.
 
 ### Scope
 
-- A reproducible synthetic catalog of 50-200 products.
+- A reproducible synthetic catalog of 1,000 products with variants and images.
 - Behavioral events: `search`, `view_product`, `add_to_bag`,
   `remove_from_bag`, and `purchase`.
 - Simulated product-level virality and compound attribute trends, such as
@@ -44,6 +44,20 @@ initially runs the deterministic scoring baseline; a learned trend model
 can follow only with defined training data and evaluation criteria. Start
 with keyword search; vector and semantic search are optional extensions.
 No generative model or agent is required for the core POC.
+
+Generate the catalog with:
+
+```powershell
+python src\load-generator\generate_catalog.py
+```
+
+See [the synthetic catalog guide](docs/catalog-data.md) for the product shape,
+generated images, Azure AI Search batches, and optional image-generation
+prompts.
+The [MAI image workflow](docs/catalog-data.md#mai-image-26-photographs)
+can replace the SVG illustrations with resumable, description-based PNG
+photographs using an existing deployment; this optional step consumes model
+quota and does not provision resources.
 
 ## Service API contracts
 
@@ -69,12 +83,25 @@ generation and live-store re-ranking. This revision replaces the
 Power Automate action with Activator's native **Run Notebook** action.
 It is not the original seconds-level fast path.
 
+Use **two separate Fabric Eventstream items**: one for first-party behavior
+from Beacon/backend producers and one for external trends from a synthetic or
+approved provider adapter (for example, TikTok-derived observations).
+They have independent endpoints, contracts, routing, and replay controls,
+then meet as curated features in the shared Eventhouse/notebook pipeline.
+Separate items still share workspace/capacity limits. See the
+[two-stream ingestion design](docs/architecture/eventstream-ingestion-design.md)
+for engineering contracts, revisions/retractions, readiness, and failure handling.
+
 ```mermaid
 flowchart LR
-    GEN[Synthetic catalog and event generator] --> ES[Fabric Eventstream]
-    ES --> EH[Eventhouse / KQL database]
+    GEN[Synthetic behavior generator] --> BES[Behavior Eventstream]
+    EXT[Synthetic or approved external adapter] --> XES[External-trend Eventstream]
+    BES --> BR[(BehaviorRawEvents)]
+    XES --> XR[(ExternalRawEvents)]
+    BR --> EH[Eventhouse curated features]
+    XR --> EH
     EH -->|Windowed features| NB[Fabric orchestration notebook]
-    ES --> ACT[Activator spike rule]
+    XES -->|Qualified hints and retractions| ACT[Activator external-trend rules]
     ACT -->|Run Notebook| NB
     SCHED[Periodic schedule] --> NB
     NB -->|Submit via Azure ML SDK/API| JOB[Azure ML scoring job]
@@ -84,7 +111,7 @@ flowchart LR
     PUB -->|Versioned score snapshots| STORE[Live signal store]
     CLIENT[Demo client] --> API[Search service / re-ranking API]
     CLIENT --> BEACON[Beacon service / event normalization]
-    BEACON --> ES
+    BEACON --> BES
     API -->|Filtered candidates| IDX
     API -->|Batch signal reads| STORE
     EH --> DASH[Real-Time dashboard]
@@ -93,16 +120,18 @@ flowchart LR
 Activator's rule input must contain the fields needed by the rule. A
 behavioral-window rule requires an explicitly wired aggregate feed; landing
 raw events in Eventhouse alone does not implement this connection. Start
-event-triggered runs with explicit synthetic `external_trend` events and
-verify that the required feature window is available before submitting a
-job. Periodic runs handle steady traffic, decay, and clearing expired
+event-triggered runs with explicit synthetic `external_trend` events from the
+external item and verify per-source readiness and the trigger revision in
+Eventhouse before submitting a job. Behavior initially uses periodic runs.
+Periodic runs handle steady traffic, decay, and clearing expired
 boosts even when no spike occurs.
 
 | Component | Responsibility |
 |---|---|
 | Generator | Seeded catalog, baseline traffic, product spikes, attribute spikes, and replayable event IDs |
 | Beacon service | Capture storefront events, deduplicate and normalize the public payload into the internal event envelope |
-| Eventstream | Ingest and route validated event envelopes to Eventhouse and Activator |
+| Behavior Eventstream | Route validated Beacon/backend events to separate behavior tables; no per-click notebook launch |
+| External-trend Eventstream | Route approved adapter observations to external tables and qualified hints/retractions to Activator |
 | Eventhouse | Raw event history, deduplication, catalog lookup, rolling features, and the initial deterministic score baseline |
 | Activator | Detect qualifying conditions and trigger a Fabric notebook, subject to run deduplication and cooldown |
 | Fabric notebook | Select a bounded feature snapshot, submit an Azure ML job, and persist its correlation and job ID |
@@ -300,7 +329,7 @@ longer the selected implementation.
 
 | Phase | Deliverables | Exit gate |
 |---|---|---|
-| 0 - Foundations | Runtime choice, configuration template, Azure/Fabric setup, Azure ML workspace/compute/environment, catalog/index seed | Baseline queries work against 50-200 SKUs; notebook-to-ML permissions and feature/output access are verified; setup and cleanup are reproducible |
+| 0 - Foundations | Runtime choice, configuration template, Azure/Fabric setup, Azure ML workspace/compute/environment, catalog/index seed | Baseline queries work against the 1,000-product synthetic catalog; notebook-to-ML permissions and feature/output access are verified; setup and cleanup are reproducible |
 | 1 - Ingest and aggregate | Event validation, seeded generator, Eventstream routing, KQL tables/queries and score tests | A known event sequence yields expected deduplicated per-product scores, including compound attributes |
 | 2 - Index-side MVP | Scoring profile, scheduled score writer, partial-failure handling, expiry/reset | A relevant SKU moves within 1-5 minutes of injection and settles after expiry; record the actual sync cadence |
 | 3 - Azure ML and hybrid | Activator Run Notebook, scheduled orchestration, reproducible scoring job, durable run ledger, publication, versioned store, re-ranking API | One bounded logical run per submission key; only successful valid outputs publish; stale jobs cannot overwrite newer windows; latency is measured and equal snapshots do not double-boost |

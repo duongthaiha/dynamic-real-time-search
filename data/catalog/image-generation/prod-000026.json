@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000026",
+  "fingerprint": "f98f33ef004e3540836f1286a5ec629977fa1d7dd6e09fe6228a9ed33ea0bf15",
+  "sha256": "f6da562b58230e827521945f9f567c8cd0a38c672fd13386c77df15ef93eccd0",
+  "imagePath": "images/prod-000026.png",
+  "generatedAt": "2026-09-25T08:18:37.808511+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: shorts. Style: regular. Material: linen blend. Colour: Deep Plum (#664A70). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

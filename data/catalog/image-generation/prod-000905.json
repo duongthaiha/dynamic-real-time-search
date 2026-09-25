@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000905",
+  "fingerprint": "a1089339b6c150a3be4d2e7ffa343df1dd142ed7d4662faef5405ed264ff9149",
+  "sha256": "997b85cef75361e616c2f9b363de9096f763d0a1775b83569428ef2714b06b31",
+  "imagePath": "images/prod-000905.png",
+  "generatedAt": "2026-09-25T08:40:01.344536+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: shirt. Style: regular. Material: viscose. Colour: Dusty Pink (#C78F9C). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

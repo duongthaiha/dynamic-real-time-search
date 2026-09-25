@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000429",
+  "fingerprint": "1b671b347be46a05d48929348dd57e3663f305aaccc254603a6c4e800d8f8b76",
+  "sha256": "9b05c91cfcd66286a5241abd851bd453fbf6a12385ea2f07cdf42cfd0d6e62a7",
+  "imagePath": "images/prod-000429.png",
+  "generatedAt": "2026-09-24T15:39:09.900547+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slip dress made from satin-look fabric, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: slip. Material: satin-look fabric. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

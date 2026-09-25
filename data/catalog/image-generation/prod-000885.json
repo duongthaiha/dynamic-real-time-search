@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000885",
+  "fingerprint": "fc11656d053f4aa6f8d416fc1951864c4d35a35841bc0ffc08f113bae38049b6",
+  "sha256": "7eb560a445ce19d4482b3ac4d294d97a400580cf87202b367f456b921dab80f8",
+  "imagePath": "images/prod-000885.png",
+  "generatedAt": "2026-09-24T16:56:39.757917+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A five-panel cap made from cotton twill, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: cap. Fit/style: five-panel. Material: cotton twill. Colour: Warm Cream (reference colour #D9CDB5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

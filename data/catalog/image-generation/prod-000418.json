@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000418",
+  "fingerprint": "67af64807230a319789a0ed40393a634600108a29a5e8692137daded65526cb2",
+  "sha256": "4053e068ed56e92ed15588f5e89d80a42c5e4ef95fc1472edabaf2eb202f83fb",
+  "imagePath": "images/prod-000418.png",
+  "generatedAt": "2026-09-24T15:37:19.235493+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A lace-up boots made from faux leather, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: lace-up. Material: faux leather. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

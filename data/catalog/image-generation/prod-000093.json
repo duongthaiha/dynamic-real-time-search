@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000093",
+  "fingerprint": "7d7b3381f07725e049746e95f8e4b0c1afa1bd810918146a4962c5c2a8d3331c",
+  "sha256": "01e13252b148cf6e93c32791876471366374f89d01e42d0260d92aa40719504f",
+  "imagePath": "images/prod-000093.png",
+  "generatedAt": "2026-09-24T14:38:03.973106+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A cropped jacket made from recycled polyester, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: cropped. Material: recycled polyester. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

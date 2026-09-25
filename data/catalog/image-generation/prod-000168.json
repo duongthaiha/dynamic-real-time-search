@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000168",
+  "fingerprint": "c6f125d84430907ee9a1eca8d8e4370c7ceeaac8ace4cf7aba76e1b58515b6af",
+  "sha256": "5eec7daad7ccac552e75ed36e505e88a10570e521d094608736d9f9feb99cbc8",
+  "imagePath": "images/prod-000168.png",
+  "generatedAt": "2026-09-25T08:20:41.075766+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: regular. Material: denim. Colour: Slate Grey (#777D84). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

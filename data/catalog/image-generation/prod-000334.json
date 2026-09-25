@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000334",
+  "fingerprint": "227301d72ac46914c166281f947df30d1880f4d912c423ca63a47835cb0d7b88",
+  "sha256": "5cc0fa008045abcc3eeb72573741dd93fdf5edee602b05b838cf9875597c1b86",
+  "imagePath": "images/prod-000334.png",
+  "generatedAt": "2026-09-24T15:22:34.425360+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized coat made from recycled polyester, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: oversized. Material: recycled polyester. Colour: Chocolate Brown (reference colour #654536). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

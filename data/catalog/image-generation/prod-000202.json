@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000202",
+  "fingerprint": "1c575172043c2c91bc71acb1443a87f3d1ece438066b9344c6852c382de6e1c5",
+  "sha256": "6203194468f2cb4a8d59fca055be6d17fe3b62c538b891c99c6961d5b389a816",
+  "imagePath": "images/prod-000202.png",
+  "generatedAt": "2026-09-24T14:56:13.554786+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A cropped jumper made from recycled yarn, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jumper. Fit/style: cropped. Material: recycled yarn. Colour: Jet Black (reference colour #242424). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

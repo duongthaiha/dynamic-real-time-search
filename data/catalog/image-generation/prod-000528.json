@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000528",
+  "fingerprint": "a57bb352b5afc358f32bd19db33a58576a3fbe43e5af2a12655bd5a8b8d705bf",
+  "sha256": "098376471cc0b90e04069421252e1d4ae36668488026e6c859b6213f4792d426",
+  "imagePath": "images/prod-000528.png",
+  "generatedAt": "2026-09-24T15:55:49.410386+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized jacket made from recycled polyester, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: oversized. Material: recycled polyester. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

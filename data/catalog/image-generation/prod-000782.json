@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000782",
+  "fingerprint": "9865981a0c56023c07986c6a125b01e4eca1419925e7e83114dfdc957372ce2f",
+  "sha256": "76251f50e17a4c4d427170438cdf9615614909d29c63de1d18ff9fabd8c87140",
+  "imagePath": "images/prod-000782.png",
+  "generatedAt": "2026-09-24T16:38:51.087293+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tapered trousers made from recycled polyester, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trousers. Fit/style: tapered. Material: recycled polyester. Colour: Burnt Orange (reference colour #B76532). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

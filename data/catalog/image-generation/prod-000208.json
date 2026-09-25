@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000208",
+  "fingerprint": "d603a6e5f37196eb803d591aa2ec50aa4c4f88ebba006725085da3ad69a8d97c",
+  "sha256": "14642f668a0437563235c333952fa3cbf9dd9eaf2f7ef36dffed01e937e9f98a",
+  "imagePath": "images/prod-000208.png",
+  "generatedAt": "2026-09-24T14:57:13.420116+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A lace-up boots made from suede-look fabric, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: lace-up. Material: suede-look fabric. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

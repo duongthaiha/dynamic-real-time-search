@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000944",
+  "fingerprint": "1ab9bfa8cfa635b03b1d531d2717c13d1ab0aa0380737dfdd4dfc26d2c4fe9d2",
+  "sha256": "42e197d2de0e20b586c83543b0383341572302fad47ef02cbdf65ac085bd0c33",
+  "imagePath": "images/prod-000944.png",
+  "generatedAt": "2026-09-25T08:40:59.969955+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: bag. Style: crossbody. Material: cotton canvas. Colour: Jet Black (#242424). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

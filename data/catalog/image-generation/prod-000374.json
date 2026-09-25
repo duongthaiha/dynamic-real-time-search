@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000374",
+  "fingerprint": "27fe0fe810f5bdcea96fead4d238feb8ed0cc8d0f33dbb2b2767a17fe06cd91e",
+  "sha256": "417a6923a6ff55431bace9d3d050ab1bdc8f6181415523646ea1d0c29e8bb1da",
+  "imagePath": "images/prod-000374.png",
+  "generatedAt": "2026-09-24T15:29:25.290515+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A shoulder bag made from faux leather, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: bag. Fit/style: shoulder. Material: faux leather. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

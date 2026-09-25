@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000701",
+  "fingerprint": "00f2a8df7b94f1312a6f8dd2f151672f00a0b9efed6e0ba6be745c7c3415f00e",
+  "sha256": "34061d396efa68eb9f4efc4eb343d2610c326a3c3a8b5b7b00e8611d98f22cc7",
+  "imagePath": "images/prod-000701.png",
+  "generatedAt": "2026-09-24T16:25:00.208084+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tailored shorts made from linen blend, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: tailored. Material: linen blend. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

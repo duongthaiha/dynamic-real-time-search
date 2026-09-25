@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000927",
+  "fingerprint": "c78c628f90d81f997d784e45f43abf594cc5d5cbe3fdbbbfda7cb481ac2fdd1f",
+  "sha256": "170d31d35209d0bbe2855d692bd12e5205c274b2b7f5674ec75c2fd15fa18f91",
+  "imagePath": "images/prod-000927.png",
+  "generatedAt": "2026-09-24T17:03:50.107262+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A chunky trainers made from textile and synthetic upper, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: chunky. Material: textile and synthetic upper. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

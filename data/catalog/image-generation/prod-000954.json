@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000954",
+  "fingerprint": "48108ab9ba7478ccefe9619fe5b9cd4fd13abf46b1cff00a74228baef487731a",
+  "sha256": "013192bcda496f775ceb52350843b3c86fb849e51163e1cdbf7aef9fb8572cca",
+  "imagePath": "images/prod-000954.png",
+  "generatedAt": "2026-09-24T17:08:21.772573+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed dress made from cotton poplin, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: relaxed. Material: cotton poplin. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000873",
+  "fingerprint": "e53190107155c55609da56e92a87db6f446e217b68f2f8bc1cda56d779fce58f",
+  "sha256": "fc93764d2925202bbcacc5bdfcff03b2575251cb6d155b98e164e5b7d8b06952",
+  "imagePath": "images/prod-000873.png",
+  "generatedAt": "2026-09-24T16:54:30.866363+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular jacket made from faux leather, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: regular. Material: faux leather. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

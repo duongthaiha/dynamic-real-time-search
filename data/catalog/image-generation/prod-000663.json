@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000663",
+  "fingerprint": "ed68ee101613097d3d4c2ed155817ab516a8dfc0e718ab9f14e0ba311de3c605",
+  "sha256": "2753826bd077c8ca17626fbf6298d338ecf24e3abb92cf2ab42081bbcdd5921c",
+  "imagePath": "images/prod-000663.png",
+  "generatedAt": "2026-09-24T16:18:38.902402+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized jacket made from cotton twill, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: oversized. Material: cotton twill. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

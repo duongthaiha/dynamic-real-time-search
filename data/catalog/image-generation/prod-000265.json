@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000265",
+  "fingerprint": "66d7214f07eeb8980c34e34d520d95f79ed668e29f85ec5b11814cd8b8c2b083",
+  "sha256": "e70bc683a57c951929655d2577acbb2ffbf6fe93f117b0cdd94c4a8ceb58f535",
+  "imagePath": "images/prod-000265.png",
+  "generatedAt": "2026-09-24T15:06:44.015774+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A A-line skirt made from denim, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: skirt. Fit/style: A-line. Material: denim. Colour: Stone Beige (reference colour #B8A58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

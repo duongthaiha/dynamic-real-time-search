@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000981",
+  "fingerprint": "b50a316e50cf88159423ff2528425dfc1ed70424db7fbd16cd5cfb2609ae2acd",
+  "sha256": "70cc608740108fdf478d53baafcab752212589859921d55cf64cdd2678154261",
+  "imagePath": "images/prod-000981.png",
+  "generatedAt": "2026-09-25T08:41:41.643734+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: T-shirt. Style: regular. Material: recycled-cotton blend. Colour: Stone Beige (#B8A58B). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

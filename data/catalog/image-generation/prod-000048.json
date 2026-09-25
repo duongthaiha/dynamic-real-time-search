@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000048",
+  "fingerprint": "3b8109d04c7ddbe6ba3e870ca29b599108264337c03a94d2098e7271f5367bdd",
+  "sha256": "06dceba7590cf83dcfffc92388a09a98ad32f99f249a505c0ed309efa8c63121",
+  "imagePath": "images/prod-000048.png",
+  "generatedAt": "2026-09-24T14:30:32.917046+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular jacket made from denim, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: regular. Material: denim. Colour: Dusty Pink (reference colour #C78F9C). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

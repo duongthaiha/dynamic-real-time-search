@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000543",
+  "fingerprint": "de26b91145bc1f76cfa2defff5de16fefaedeb0175e5a686d8ebe6e46000f9be",
+  "sha256": "bf3bd30af2a876a30c08da5857b8f380f37308d7b922f02427fe66249b14bd55",
+  "imagePath": "images/prod-000543.png",
+  "generatedAt": "2026-09-25T08:29:20.422036+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: regular. Material: recycled polyester. Colour: Dark Wash Blue (#315C86). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

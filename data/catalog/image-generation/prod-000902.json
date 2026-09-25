@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000902",
+  "fingerprint": "5270a3d9335bb967ff67040918b00d51c00a4ac5899c846f008c4cdf3a00191b",
+  "sha256": "3cadb4be53a4c2614f06b2dba56cbc4ec39e3feabfb68ed369af6dd3824bfe71",
+  "imagePath": "images/prod-000902.png",
+  "generatedAt": "2026-09-25T08:39:40.117309+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trousers. Style: tailored. Material: recycled polyester. Colour: Chocolate Brown (#654536). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

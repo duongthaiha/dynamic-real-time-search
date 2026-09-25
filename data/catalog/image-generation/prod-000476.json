@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000476",
+  "fingerprint": "658ba8596e9f71099eb9ad2488fac386ab4e76aeed1b80b32da2ad6fda164cac",
+  "sha256": "ef69944594612793c354f5f0d8c3a9bc73cd6f87187bc163146893651143fa8a",
+  "imagePath": "images/prod-000476.png",
+  "generatedAt": "2026-09-25T08:27:10.514574+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: shorts. Style: regular. Material: cotton twill. Colour: Chocolate Brown (#654536). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

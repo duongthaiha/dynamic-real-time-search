@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000677",
+  "fingerprint": "a1e4c9f9eeaee3e5ecf681d1e12ef3dc397b0e2ded51da9cb843e600288843b2",
+  "sha256": "10935496eeccc91dec38e048eeeac467bb5eb88221d59d9eb8d7bde8d7c0bdad",
+  "imagePath": "images/prod-000677.png",
+  "generatedAt": "2026-09-25T08:33:20.941235+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trousers. Style: tailored. Material: linen blend. Colour: Dusty Pink (#C78F9C). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

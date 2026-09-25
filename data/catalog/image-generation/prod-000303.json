@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000303",
+  "fingerprint": "e5f3fc3d1c410a255d96d492cfc3a1ec8b8c1b65d79da85735424b8de949517f",
+  "sha256": "cf177c90f271f0653c049870b1ab0b884c46e2d66c17ceb7ad923585934c6734",
+  "imagePath": "images/prod-000303.png",
+  "generatedAt": "2026-09-24T15:13:03.473201+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A cropped jacket made from denim, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: cropped. Material: denim. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000666",
+  "fingerprint": "de2c3a28351203cd4884cbdee34947c9f09bd4a3848e70d9150dfc8f23f1068a",
+  "sha256": "1ffea3e7f2ff67212f442bfdc6dfdfdab11675a227f6c86816fdfb988f92f519",
+  "imagePath": "images/prod-000666.png",
+  "generatedAt": "2026-09-25T08:32:50.200108+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: T-shirt. Style: relaxed. Material: organic cotton. Colour: Sky Blue (#77AEDD). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

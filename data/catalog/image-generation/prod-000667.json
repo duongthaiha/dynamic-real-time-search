@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000667",
+  "fingerprint": "fb8bf679377f3c9f1a94256bc472ad40170c665ee24937aef49492441e1d0cc6",
+  "sha256": "4f611e4fa395319bfb0c83776f4d249c258c2e7729ad6807670ade3516e98859",
+  "imagePath": "images/prod-000667.png",
+  "generatedAt": "2026-09-24T16:19:18.688997+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular jumper made from wool blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jumper. Fit/style: regular. Material: wool blend. Colour: Stone Beige (reference colour #B8A58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

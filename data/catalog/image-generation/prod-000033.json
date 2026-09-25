@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000033",
+  "fingerprint": "a600a5736eb023d6de8e577b72c194e32f3a98a0a780d5d90ce6034a7456df0d",
+  "sha256": "fbc8a74c5d2faf740030897c278b230600f941ce6edfd36d52be96c844418fb7",
+  "imagePath": "images/prod-000033.png",
+  "generatedAt": "2026-09-24T14:28:04.908799+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A cropped jacket made from cotton twill, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: cropped. Material: cotton twill. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

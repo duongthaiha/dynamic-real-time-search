@@ -1,8 +1,16 @@
 # Event schema
 
-All events are JSON, sent to Fabric Eventstream (Custom App source, an
-Event Hub-compatible endpoint). A common envelope keeps downstream KQL
-parsing simple; `payload` varies by `eventType`.
+All events are JSON, sent through **two separate Fabric Eventstream items**:
+first-party behavior and external trends. Each has its own Custom endpoint
+source and credentials. A common envelope keeps downstream KQL parsing
+consistent; `payload` and schema version vary by source family/event type.
+
+Examples below are the original abbreviated research contract. For the
+engineering extensions (`sourceFamily`, scoped identity, external signal
+revision/retraction, observation time and expiry), use the
+[two-stream ingestion design](../architecture/eventstream-ingestion-design.md).
+Do not count external observations as shopper behavior or sum cumulative
+provider snapshots on retries.
 
 ## Common envelope
 
@@ -97,10 +105,13 @@ Field notes:
 
 | Table | Grain | Purpose |
 |---|---|---|
-| `RawEvents` | 1 row per event | Full fidelity, source of truth, replay/debug |
+| `BehaviorRawEvents` | 1 row per delivered normalized behavior event | Separate landing; deduplicate before counts or purchase expansion |
+| `ExternalRawEvents` | 1 row per delivered external observation/revision | Separate landing; preserve revision and retraction history |
+| `RawEvents` (optional query) | Common projection of both raw tables | Diagnostic union, not another ingestion destination |
 | `ProductSignals1Min` / `5Min` | productId × window | Rolling counts: views, add-to-bag, purchases, external product-level trend magnitude |
-| `AttributeTrend5Min` | attribute key/value × window | Rolling external trend magnitude per colour/category/brand |
-| `ProductTrendingScore` (materialized view) | productId | Final normalized 0–100 `trendingScore`, `lastTrendingAt`, `trendingTags[]` — this is what gets pushed to AI Search / cache |
+| `ExternalLatestObservations` | scoped signal ID | Latest revision known at the snapshot cutoff; then apply expiry/retraction/eligibility |
+| `AttributeTrend5Min` | compound attribute predicate × window | Preserve conjunctions such as blue AND jackets |
+| `ProductTrendingScore` | productId | Final normalized 0–100 score and evidence; validated ML artifacts after the ML milestone, not an assumed automatic materialized-view computation |
 
 ## `trendingScore` formula (starting point for the POC, to be tuned)
 

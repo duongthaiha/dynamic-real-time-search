@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000379",
+  "fingerprint": "d02b1c37ad9154b93c69af807afaf7d1f0648b5cce8a18a4aeb4f73e9af768f3",
+  "sha256": "47dfc2e00433b5e3709c6f9839aea26f3d18fbe1c46c5b05d409eb68715cedc0",
+  "imagePath": "images/prod-000379.png",
+  "generatedAt": "2026-09-25T08:25:06.647527+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: coat. Style: oversized. Material: wool blend. Colour: Dusty Pink (#C78F9C). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

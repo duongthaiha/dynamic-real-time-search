@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000662",
+  "fingerprint": "83ea96293227163464dd682e38115f0f1d5d1846f17c5a1dc6009514f806ea18",
+  "sha256": "cb22bb9ab8cc525084c8d8b63866ea0b950e71e92988accd07442b2a28e1acf6",
+  "imagePath": "images/prod-000662.png",
+  "generatedAt": "2026-09-25T08:32:40.498999+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trousers. Style: tapered. Material: linen blend. Colour: Chocolate Brown (#654536). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

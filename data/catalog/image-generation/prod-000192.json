@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000192",
+  "fingerprint": "5edc3c204b32ddebb5e26826667406ec5c82cac41e8bfcb67b5cf5fbf4499399",
+  "sha256": "a6167a4f6d6e140e9315bcfa4ea2d79d471e697ac8262c1d97b0bb13613052fb",
+  "imagePath": "images/prod-000192.png",
+  "generatedAt": "2026-09-25T08:21:01.380719+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trainers. Style: low-profile. Material: faux leather. Colour: Forest Green (#3E654A). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

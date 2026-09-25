@@ -21,18 +21,24 @@ Activator, and a **custom endpoint** (so external apps/services can
 consume the processed stream directly, e.g. our re-ranking API could
 subscribe rather than poll a store).
 
-For this POC:
-- **Source**: a *Custom App* source (an Event Hub-compatible endpoint) that
-  the e-commerce backend (or a synthetic load generator) sends
-  `search` / `view_product` / `add_to_bag` / `purchase` events to, plus a
-  second Custom App source (or the same, tagged by `eventType`) for
-  external "viral signal" events.
-- **Processing**: light transformation (parse/validate JSON, enrich with a
-  `productId` join, maybe a first coarse windowed count) before landing in
-  Eventhouse.
-- **Destinations**: Eventhouse (for historical + KQL aggregation) and,
-  optionally, a **custom endpoint** or **Activator** for the lowest-latency
-  path to the signal store.
+For this POC, use **two separate Eventstream items**, each with a Custom
+endpoint source and independently scoped producer connection:
+- **Behavior item**: Beacon/backend or synthetic producers send
+  `search`, `view_product`, `add_to_bag`, `remove_from_bag`, and `purchase`.
+- **External-trend item**: a synthetic or approved provider adapter sends
+  normalized product/attribute observations, revisions, and retractions.
+  No native TikTok connector or scraping permission is assumed.
+- **Processing**: light field management/routing; deduplicate behavior before
+  counting and select latest external revisions before eligibility checks in
+  explicit curation queries. Preserve the distinct schemas.
+- **Destinations**: separate raw/rejected tables in a shared Eventhouse.
+  Qualified external hints/retractions also feed Activator's Run Notebook
+  action; behavior initially uses periodic feature snapshots.
+
+See the [two-stream ingestion design](../architecture/eventstream-ingestion-design.md)
+for contracts and operations. This selected ingestion/notebook route supersedes
+the original fast-path examples below; a notebook/ML job has measured
+asynchronous latency, not an automatic seconds-level response.
 
 ### Eventhouse (KQL Database)
 

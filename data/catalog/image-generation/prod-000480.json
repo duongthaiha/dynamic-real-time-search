@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000480",
+  "fingerprint": "2eca16518a34f42653fe0cb62a1adcb01230a3891f250e9a2d3727eaf381e7d1",
+  "sha256": "716f10594281865654a1a1e56ee71a36fc12bcf4d4596330df51379cbe01a282",
+  "imagePath": "images/prod-000480.png",
+  "generatedAt": "2026-09-24T15:47:49.054597+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A beanie cap made from recycled polyester, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: cap. Fit/style: beanie. Material: recycled polyester. Colour: Stone Beige (reference colour #B8A58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000489",
+  "fingerprint": "81b4ae0eaceb5f02439dbdf70e3e5c166a714ec9420a96f57e1808382d5ed262",
+  "sha256": "112f364b1d2eaa493b27161babba2c2767c58ec222f06d82fb1b1df9b25e7ef0",
+  "imagePath": "images/prod-000489.png",
+  "generatedAt": "2026-09-24T15:49:31.313807+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A bodycon dress made from viscose, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: bodycon. Material: viscose. Colour: Butter Yellow (reference colour #D8BF63). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

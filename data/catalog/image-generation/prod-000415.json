@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000415",
+  "fingerprint": "b561741a9fd3ea43206b860450f12fbc34a52e656e6d401e3c7fd698db2dcd69",
+  "sha256": "7d67d6d6308e8f723889840779e23a1d5f7d3fb29082bdbac2aeed38482bbcd2",
+  "imagePath": "images/prod-000415.png",
+  "generatedAt": "2026-09-24T15:36:48.878224+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A A-line skirt made from denim, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: skirt. Fit/style: A-line. Material: denim. Colour: Chocolate Brown (reference colour #654536). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

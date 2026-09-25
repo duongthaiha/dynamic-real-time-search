@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000877",
+  "fingerprint": "0b7a7ee9f1fbccaca666ac8f2c21aa5ef721b69dea40a092ba2e985d3e6003fa",
+  "sha256": "9df6d89b0558e101a592b21edc15ef82884b9946fe2922a34669886b702a481f",
+  "imagePath": "images/prod-000877.png",
+  "generatedAt": "2026-09-25T08:38:30.287888+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jumper. Style: cropped. Material: wool blend. Colour: Burnt Orange (#B76532). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

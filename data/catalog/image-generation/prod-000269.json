@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000269",
+  "fingerprint": "844f203b58d5f58cf872b48b2706842200528c50130f6f496adfe1fce621f296",
+  "sha256": "efb8ab40e3826782e184747740b7e4d6cb2ff6c1e640e57387f5520ba73590dc",
+  "imagePath": "images/prod-000269.png",
+  "generatedAt": "2026-09-24T15:07:25.056619+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A crossbody bag made from faux leather, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: bag. Fit/style: crossbody. Material: faux leather. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

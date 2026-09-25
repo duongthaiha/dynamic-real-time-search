@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000595",
+  "fingerprint": "2eabd86d1757afc487a36a9145152edbaae3493c53199c3f4b17e0c77b2f2ea1",
+  "sha256": "e13ea164fc67ae65a133aa08dedb0b82698ac500cd187d1f82f64eb4e299a884",
+  "imagePath": "images/prod-000595.png",
+  "generatedAt": "2026-09-24T16:07:09.732230+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A pleated skirt made from linen blend, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: skirt. Fit/style: pleated. Material: linen blend. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

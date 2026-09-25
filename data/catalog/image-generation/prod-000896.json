@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000896",
+  "fingerprint": "5ac791241361214cd69b1047a6555fdc726c8b8b8bb89998b3de9f9f0d9ef19f",
+  "sha256": "c820dbbee08a3b22a65a876dbc5b7c939e8057227eeebcf2801eea2b08771c6a",
+  "imagePath": "images/prod-000896.png",
+  "generatedAt": "2026-09-24T16:58:39.143072+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tailored shorts made from linen blend, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: tailored. Material: linen blend. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

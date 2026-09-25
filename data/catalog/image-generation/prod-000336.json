@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000336",
+  "fingerprint": "5f2b247a0ceeb1a87fc4f99e0531b590ed95e51bf0d89da407a03dfa685a0275",
+  "sha256": "bdfc085b090df95632cd22639db9c496a01a4b048b5ab613a47679f66794de93",
+  "imagePath": "images/prod-000336.png",
+  "generatedAt": "2026-09-24T15:22:55.795547+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed T-shirt made from recycled-cotton blend, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: relaxed. Material: recycled-cotton blend. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

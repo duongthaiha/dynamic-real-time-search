@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000197",
+  "fingerprint": "f922b22b0c4387c015b9e39c5d7cbece4c660106c540c6ad59a4bd566ef01478",
+  "sha256": "56ab75c0d149585eeddace292f69516ce50295c7af0c4e1ab064296021cdb090",
+  "imagePath": "images/prod-000197.png",
+  "generatedAt": "2026-09-25T08:21:11.822454+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trousers. Style: tailored. Material: linen blend. Colour: Cherry Red (#A73538). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -5,33 +5,49 @@
 This repository is a POC for event-driven product re-ranking with Azure AI
 Search and Microsoft Fabric Real-Time Intelligence.
 
-Read [README](../README.md) and the relevant research before changing code:
+Read [README](../README.md) and the relevant research, design, and contracts
+before changing code:
 
-- [Problem and non-goals](../docs/01-problem-statement.md)
-- [Search mechanisms](../docs/02-ai-search-primer.md)
-- [Fabric components](../docs/03-fabric-primer.md)
-- [Architecture trade-offs](../docs/04-architecture-options.md)
-- [Hybrid design](../docs/05-recommended-architecture.md)
-- [Event contract and scoring](../docs/06-event-schema.md)
-- [Implementation phases](../docs/07-poc-plan.md)
-- [Azure ML forecasting](../docs/08-azure-ml-forecasting.md)
+- [Problem and non-goals](../docs/research/01-problem-statement.md)
+- [Search mechanisms](../docs/research/02-ai-search-primer.md)
+- [Fabric components](../docs/research/03-fabric-primer.md)
+- [Architecture trade-offs](../docs/research/04-architecture-options.md)
+- [Original hybrid recommendation](../docs/research/05-recommended-architecture.md)
+- [Option C detailed design](../docs/architecture/option-c-hybrid-detailed-design.md)
+- [Two-stream ingestion design](../docs/architecture/eventstream-ingestion-design.md)
+- [Event contract and scoring](../docs/research/06-event-schema.md)
+- [Implementation phases](../docs/research/07-poc-plan.md)
+- [Azure ML forecasting](../docs/research/08-azure-ml-forecasting.md)
 - [Public API review and mapping](../docs/api/README.md)
 - [Search contract](../docs/api/search.openapi.json)
 - [Beacon contract](../docs/api/beacon.openapi.json)
 
-Use the README's explicit implementation clarifications when research
-examples are ambiguous. Verify platform details against current official
-Microsoft documentation and the selected SDK/API versions. Record a
-necessary deviation and its evidence; do not silently replace the design.
+The README's explicit architecture and implementation choices take
+precedence over conflicting research and the proposed Option C detailed
+design. The revised Option C design documents the selected Run Notebook ->
+Azure ML job -> validated publication lifecycle, plus compatible serving
+guardrails, observability, failure handling, and test scenarios. Do not
+restore the original research's Power Automate/webhook fast path or its
+seconds-level targets. Container Apps and Azure Managed Redis remain
+measurement-driven alternatives, not defaults. Internal API examples in the
+design do not supersede the public OpenAPI drafts.
+
+Verify platform details against current official Microsoft documentation
+and the selected SDK/API versions. Record a necessary deviation and its
+evidence; do not silently replace the design or treat proposed defaults,
+formulas, and SLOs as implemented or measured guarantees.
 
 ## Scope and implementation sequence
 
 - Implement Phase 0 foundations, then ingestion/aggregation, index-side MVP,
-  fast path, and demonstration/evaluation. Do not build the entire hybrid
-  stack before the index-side path is proven.
+  Azure ML job-based score generation, live-store re-ranking, and
+  demonstration/evaluation. Do not build the entire hybrid stack before
+  the index-side path is proven.
 - Proposed defaults are Azure Functions, Cosmos DB for NoSQL, Bicep for
-  supported Azure resources, and Fabric Eventstream/Eventhouse/KQL with a
-  notebook/pipeline synchronization experiment.
+  supported Azure resources, and Fabric Eventstream/Eventhouse/KQL.
+  Activator's native Run Notebook action or a periodic schedule invokes a
+  Fabric orchestration notebook, which submits Azure ML command/pipeline
+  jobs. Do not add Power Automate or a Function solely to launch those jobs.
 - No application language, runtime, dependency manager, or test framework
   exists yet. Choose and document these when scaffolding; thereafter follow
   the actual manifests and conventions rather than introducing another stack.
@@ -45,8 +61,50 @@ necessary deviation and its evidence; do not silently replace the design.
   or delete resources merely to edit documentation or run unit tests.
   Deploy only within an explicitly authorized scope.
 
+## Notebook and Azure ML job lifecycle
+
+- Activator targets a Fabric notebook, not an interactive Azure ML notebook.
+  Validate action availability and permissions in the target tenant.
+- Prove the deterministic baseline through the index-side MVP first, then
+  run the same versioned baseline in an Azure ML job before introducing a
+  learned model. Package automated scoring as scripts/components with
+  pinned environments; do not depend on interactive notebook state.
+- Coalesce triggers by customer/collection, feature window, and scoring
+  version. Apply cooldown and concurrency limits; never submit one notebook
+  or job per shopper event.
+- Prepare an immutable feature snapshot with its watermark and schema
+  version. Verify that the job identity can read it; do not assume automatic
+  access to Eventhouse or OneLake.
+- Persist submission keys and Azure ML job IDs in a durable run ledger.
+  Reconcile uncertain submissions before retrying. Submission success is
+  not scoring or publication success.
+- Track terminal success, failure, cancellation, and timeout through durable
+  scheduled reconciliation, not a notebook session kept alive indefinitely.
+  Surface failures and retain previous valid scores only until expiry.
+- Validate successful output artifacts for product keys, finite score
+  bounds, freshness, and scoring/model version before publication. Track
+  Search and live-store outcomes independently and retry partial publication
+  without recomputing the job.
+- Order state by feature-window/version semantics, not job completion time:
+  an older window must not overwrite a newer one just because it finishes
+  later. Scheduled and event-triggered runs use the same scoring policy.
+- Notebook startup, compute provisioning, job queues, and publication bound
+  signal freshness. Fast query-time reads do not make this a seconds-level
+  inference path. An Azure ML online endpoint is an optional, separately
+  designed and validated extension, not part of the default job lifecycle.
+
 ## Contracts and scoring invariants
 
+- Use separate behavior and external-trend Eventstream items, source
+  connections, and raw/rejection tables. Share curated features and the
+  notebook/ML lifecycle, not unrestricted source credentials.
+- External observations come through a synthetic or approved provider
+  adapter, not a presumed native TikTok connector or scraper. Resolve the
+  latest signal revision before expiry/eligibility checks; preserve
+  retractions and never count cumulative social snapshots as shopper events.
+- Validate per-source readiness and health before freezing features. Idle
+  external input is not an outage; missing behavior is not zero activity.
+  New input in an existing window needs a correction/input-set version.
 - Keep Search retrieval and Beacon event capture as separate service
   contracts. The OpenAPI drafts reconstruct an incomplete Postman export;
   responses and inferred validation rules are proposals, not verified
@@ -89,17 +147,25 @@ necessary deviation and its evidence; do not silently replace the design.
   `lastTrendingAt` merely because a synchronization job ran.
 - Store calculation time, version, and expiry alongside live scores.
   Prevent stale scheduled/duplicate/out-of-order writes from replacing newer
-  state; do not rely on unconditional last-writer-wins updates.
+  state using the selected store's conditional-write/concurrency mechanism;
+  do not rely on unconditional last-writer-wins updates. Live state is
+  reconstructable, not the only durable record.
 - Compare live state with indexed values actually returned with candidates,
   not a presumed last successful sync. Index acceptance is not visibility.
 - Apply only a capped incremental adjustment. Equal live/indexed snapshots
   must add no boost. Raw trend scores and Search scores are not comparable:
   document and test the blend, cap, negative deltas, and deterministic ties.
+  Reject expired/non-finite state and skip live adjustments for incompatible
+  scoring/model versions with explicit diagnostics. Do not assume a
+  rank-normalized delta exactly reverses Search's scoring-profile boost.
 - Preserve Search's order with explicit degraded-mode metadata and telemetry
   if the live store is unavailable or stale. Surface Search failures as
   errors, not successful empty results.
 - Batch live-state reads. Keep candidate count bounded and start with one
   result page; do not claim globally correct re-ranking or stable pagination.
+  If pagination is requested, use the detailed design's fixed ranking
+  snapshot and opaque signed cursor approach, bind it to query/filters and
+  caller scope, and define expiry and current-eligibility checks.
 - If semantic/vector search is added, verify score selection and candidate
   limits for that mode. Semantic scoring profiles can be applied after
   semantic ranking; do not assume `@search.score` is always the final score.
@@ -110,7 +176,9 @@ necessary deviation and its evidence; do not silently replace the design.
   the research cadences are targets, not guaranteed supported schedules.
 - Wire the actual input needed by Activator rules. Do not assume that an
   Eventhouse aggregate automatically feeds a rule or that a direct webhook
-  action exists. Validate the Power Automate/custom-endpoint route.
+  action exists. Use the selected Run Notebook route; begin with explicit
+  synthetic external-trend events and verify feature-window readiness before
+  submitting the scoring job.
 - Use supported KQL constructs. Do not assume a materialized view can
   implement every join, rolling window, or clock-driven decay calculation.
 - Separate Azure Bicep from supported Fabric APIs and manual setup/export
@@ -123,7 +191,9 @@ necessary deviation and its evidence; do not silently replace the design.
   authenticated ingress, and explicit failure reporting. Do not swallow
   exceptions or fabricate successful integration responses.
 - Trace event/correlation IDs, UTC stage times, product IDs, signal
-  versions, indexing results, rank changes, and degradation. Avoid logging
+  versions, feature snapshots, Azure ML job IDs/status, publication outcomes,
+  indexing results, rank changes, and degradation. Measure queue/startup,
+  execution, publication, and query latency separately. Avoid logging
   secrets or personal data.
 
 ## Validation and documentation
@@ -137,6 +207,9 @@ necessary deviation and its evidence; do not silently replace the design.
   compound attribute matching, score bounds/decay, clearing indexed boosts,
   partial indexing failure/retry, stale-write prevention, equal-score
   no-double-boost behavior, ties, filter preservation, and store outages.
+  Include duplicate/uncertain submissions, failed/cancelled/timed-out jobs,
+  out-of-order completions, invalid artifacts, version mismatches, and
+  publication recovery without rerunning scoring.
 - Prove the demo with before/during/after results for the same query and
   filters in all three modes, covering both SKU and attribute spikes.
   Record actual end-to-end latency, p50/p95 with sample counts, expiry,

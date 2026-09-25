@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000524",
+  "fingerprint": "f0eae22287253b65e4ca7a78b26fa24cf703ff033a5a3d24da98f3d85bab19c5",
+  "sha256": "4a1a346317396e47beedb441b9c28a45af3a4441dd67cab90ba21e8a41206bef",
+  "imagePath": "images/prod-000524.png",
+  "generatedAt": "2026-09-25T08:28:41.395188+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: bag. Style: crossbody. Material: cotton canvas. Colour: Burnt Orange (#B76532). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

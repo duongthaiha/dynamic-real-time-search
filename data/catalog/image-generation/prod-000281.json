@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000281",
+  "fingerprint": "c24733f249a4f4eaa53b4dff48f91af007f059718b899a4a1575e8a764f33e79",
+  "sha256": "69611da3b12cc0af9314a7a012c50d41387daddd453e4e8e0dec1cc3585a7eca",
+  "imagePath": "images/prod-000281.png",
+  "generatedAt": "2026-09-24T15:09:23.817593+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A longline shorts made from cotton twill, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: longline. Material: cotton twill. Colour: Cherry Red (reference colour #A73538). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

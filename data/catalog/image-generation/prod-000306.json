@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000306",
+  "fingerprint": "98e6d59737b6a70a0db5f649d2dc0f51e6114affc4bd65a53b248452a7f3cfa2",
+  "sha256": "2f6ea4f390e305cc8b1d7984f4327f58b792b625555ac10208fc4605b7be569e",
+  "imagePath": "images/prod-000306.png",
+  "generatedAt": "2026-09-24T15:13:32.631972+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slim T-shirt made from recycled-cotton blend, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: slim. Material: recycled-cotton blend. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

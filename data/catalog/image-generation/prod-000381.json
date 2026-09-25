@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000381",
+  "fingerprint": "dbdeaf437a59061c4bf702481cb015777ecd25e1051873a4a53974bbc758f310",
+  "sha256": "3ae8c5deea6e1a873182a1c52c14c7df6992b46e2807369f0617d61c15826dcb",
+  "imagePath": "images/prod-000381.png",
+  "generatedAt": "2026-09-24T15:30:44.255595+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular T-shirt made from recycled-cotton blend, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: regular. Material: recycled-cotton blend. Colour: Stone Beige (reference colour #B8A58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

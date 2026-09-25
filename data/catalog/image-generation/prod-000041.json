@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000041",
+  "fingerprint": "35d1473e1d0a06016f81aaea8af486ad6c2411a2f72436bd5e8ffc8d7b137f14",
+  "sha256": "993553811e8720ef1dc7d191c7617a2a30baae7435795a8c53d00085e50386a4",
+  "imagePath": "images/prod-000041.png",
+  "generatedAt": "2026-09-24T14:29:23.427764+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tailored shorts made from cotton twill, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: tailored. Material: cotton twill. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

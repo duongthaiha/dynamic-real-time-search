@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000430",
+  "fingerprint": "770cd1b27259e154fd03950e12df43d6a299f0934485844b4fb8faf25d3b56c0",
+  "sha256": "45c909503bb90fe2a332ecd4c17916388db28f439e25ccccb6c5b58982315de6",
+  "imagePath": "images/prod-000430.png",
+  "generatedAt": "2026-09-25T08:25:52.039336+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: skirt. Style: A-line. Material: linen blend. Colour: Sage Green (#8EA58B). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

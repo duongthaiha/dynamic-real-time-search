@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000366",
+  "fingerprint": "a762e1bb1d213e97403aaa86ab42aa4f5e3127ce051c2a6e004bffb19e0dbf4a",
+  "sha256": "7dbaf6703006df633b62708f76b4994be85bbe4eff3c2336c4f960fe3556af3d",
+  "imagePath": "images/prod-000366.png",
+  "generatedAt": "2026-09-24T15:28:05.952875+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized T-shirt made from recycled-cotton blend, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: oversized. Material: recycled-cotton blend. Colour: Burnt Orange (reference colour #B76532). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

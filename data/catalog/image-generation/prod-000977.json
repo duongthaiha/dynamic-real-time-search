@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000977",
+  "fingerprint": "91f41880145d28ff0a865d6dda3b24ebd8c8e198f7b7f49aec656caf8981a169",
+  "sha256": "62089371979a2454237afd907388482e8fecdc78f3e5d3c7ecf1988921b50003",
+  "imagePath": "images/prod-000977.png",
+  "generatedAt": "2026-09-25T08:41:31.953159+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trousers. Style: tailored. Material: linen blend. Colour: Dark Wash Blue (#315C86). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

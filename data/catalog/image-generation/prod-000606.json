@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000606",
+  "fingerprint": "0d3cc017f14e2013bcb40e629a0ac2134c63667577d378df0f124b2eaa2e2d02",
+  "sha256": "fb8801a08abc49ed4f3ec319b756ddac2c5e8dbb0b5acb537d8d5637b7e67fad",
+  "imagePath": "images/prod-000606.png",
+  "generatedAt": "2026-09-24T16:08:57.843988+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed T-shirt made from organic cotton, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: relaxed. Material: organic cotton. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

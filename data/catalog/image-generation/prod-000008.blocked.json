@@ -1,0 +1,9 @@
+{
+  "productId": "PROD-000008",
+  "status": "blocked",
+  "reason": "Response content blocked by label 'BingBlockList'.",
+  "requestId": "f9e2df75-494b-40ff-8308-a4e041b5aa41",
+  "model": "MAI-Image-2.6",
+  "modelVersion": "2026-07-31",
+  "recordedAt": "2026-09-24T14:22:00Z"
+}

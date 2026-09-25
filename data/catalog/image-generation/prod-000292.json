@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000292",
+  "fingerprint": "98eb68d6314e2e15b9fd2025be03b82215bbe2cdff47d41863161cd062cd01e0",
+  "sha256": "bfe087d3366da278bcb8790b81a06e70786ccc3aba576528f6a20759be9b8d2f",
+  "imagePath": "images/prod-000292.png",
+  "generatedAt": "2026-09-24T15:11:12.944424+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized jumper made from recycled yarn, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jumper. Fit/style: oversized. Material: recycled yarn. Colour: Cherry Red (reference colour #A73538). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

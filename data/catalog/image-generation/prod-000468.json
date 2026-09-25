@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000468",
+  "fingerprint": "334555adee85c4fdd1edf1cf12eee38ea6482733c36de50fce94f31fb6185877",
+  "sha256": "c4699a9e921a72becfa16c7a319afb126bdf1afc1e52b3696bdd424ab00712f6",
+  "imagePath": "images/prod-000468.png",
+  "generatedAt": "2026-09-25T08:27:01.178738+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: relaxed. Material: cotton twill. Colour: Burnt Orange (#B76532). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

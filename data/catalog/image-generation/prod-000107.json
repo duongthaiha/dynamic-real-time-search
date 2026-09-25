@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000107",
+  "fingerprint": "39d9a16ce4fe209f9e337fe537a27955753a7d3d70b217f97744967e69dd47e1",
+  "sha256": "addb81cafb4a505407ef92aa9a8c0493f61673e84fcc45c08f9510b211d0c00b",
+  "imagePath": "images/prod-000107.png",
+  "generatedAt": "2026-09-24T14:40:23.384724+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tapered trousers made from cotton twill, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trousers. Fit/style: tapered. Material: cotton twill. Colour: Butter Yellow (reference colour #D8BF63). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

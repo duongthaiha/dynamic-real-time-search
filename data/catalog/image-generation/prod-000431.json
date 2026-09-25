@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000431",
+  "fingerprint": "6eaf7aa18cce000685f509a8fadb419f624dbcd31bb2c19746b21ac99f0cdd1c",
+  "sha256": "9341a49efe31cfe14b060420e3013ad9b507e18ae4c3ced001c0e85ef1ae3f9b",
+  "imagePath": "images/prod-000431.png",
+  "generatedAt": "2026-09-24T15:39:30.156846+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tailored shorts made from cotton twill, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: tailored. Material: cotton twill. Colour: Midnight Navy (reference colour #253451). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000757",
+  "fingerprint": "9a70882e2b72a746ff1c5ee30ffcef40537c4e80bd1a15c9983b46e26c668fd8",
+  "sha256": "a33b77fa01f46dc3b04c65fc8eafd6340075fced48d67c4b1f41e0d8249d0e78",
+  "imagePath": "images/prod-000757.png",
+  "generatedAt": "2026-09-24T16:34:27.352730+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized jumper made from cotton knit, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jumper. Fit/style: oversized. Material: cotton knit. Colour: Cherry Red (reference colour #A73538). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

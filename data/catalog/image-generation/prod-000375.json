@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000375",
+  "fingerprint": "eed8866d18c6f3719c45742df3649e27219e1d6afff0287f91bc336374f07671",
+  "sha256": "65e6f049fde10ce50f9b8ec7debf17218d0614faf1b224cfc8059dc65e65e1bf",
+  "imagePath": "images/prod-000375.png",
+  "generatedAt": "2026-09-24T15:29:47.469341+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A bucket cap made from recycled polyester, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: cap. Fit/style: bucket. Material: recycled polyester. Colour: Chocolate Brown (reference colour #654536). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

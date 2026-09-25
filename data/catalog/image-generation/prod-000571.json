@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000571",
+  "fingerprint": "47c05185df5fd4476800a858f176b66896e60c52c98ff4f8e416480349270f48",
+  "sha256": "c9d354b2d982c41b8a4c3776bc2553b2f9bddf99b1fda6bf6559654561abf22b",
+  "imagePath": "images/prod-000571.png",
+  "generatedAt": "2026-09-24T16:03:09.054500+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A wide-leg jeans made from cotton denim, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jeans. Fit/style: wide-leg. Material: cotton denim. Colour: Cherry Red (reference colour #A73538). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

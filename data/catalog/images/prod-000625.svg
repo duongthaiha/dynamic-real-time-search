@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Kindred Works pleated skirt in dark wash blue</title>
+  <desc id="desc">Synthetic catalog illustration of Dark Wash Blue skirt</desc>
+  <rect width="600" height="800" fill="#F4F1EA"/>
+  <rect x="36" y="36" width="528" height="590" rx="18" fill="#315C86" opacity=".16"/>
+  <g fill="#315C86" stroke="#202020" stroke-width="8" stroke-linejoin="round"><path d="M258 205h84l57 309H201z"/></g>
+  <text x="54" y="680" font-family="Arial, sans-serif" font-size="18" letter-spacing="3" fill="#555">SKIRTS</text>
+  <text x="54" y="720" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202020">Kindred Works</text>
+  <text x="54" y="755" font-family="Arial, sans-serif" font-size="20" fill="#444">Dark Wash Blue</text>
+</svg>

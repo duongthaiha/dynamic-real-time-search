@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000687",
+  "fingerprint": "0bc0ed93ca1e570685f65e9a2cdc9b8716271f3f046ce98d6e90a40caa105208",
+  "sha256": "5df718c652bec12dc0ee1828ce26ecb9cba4c5c337da078a9fac84f738c6083a",
+  "imagePath": "images/prod-000687.png",
+  "generatedAt": "2026-09-24T16:22:38.811869+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A low-profile trainers made from recycled mesh, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: low-profile. Material: recycled mesh. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

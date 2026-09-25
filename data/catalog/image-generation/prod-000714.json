@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000714",
+  "fingerprint": "50a7cc722c48fd60c977606f42f76404b881ed218eadb188d550513e479b2f51",
+  "sha256": "9fa8b3d5c638fea8aa9b50ceec24127838fd8bb6334109c2ca551bcead51c63f",
+  "imagePath": "images/prod-000714.png",
+  "generatedAt": "2026-09-24T16:27:08.995240+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tea dress made from linen blend, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: tea. Material: linen blend. Colour: Midnight Navy (reference colour #253451). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

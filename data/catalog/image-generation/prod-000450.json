@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000450",
+  "fingerprint": "5e47f8634d360708e55b2bd9a119be223c7b2ffadb9ec8366c645c0180ec1d93",
+  "sha256": "17dc0597ce68346d2d5d40f4ee1f97017528955323064553fe8e50100ab5180c",
+  "imagePath": "images/prod-000450.png",
+  "generatedAt": "2026-09-25T08:26:19.265745+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: cap. Style: beanie. Material: cotton twill. Colour: Dusty Pink (#C78F9C). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

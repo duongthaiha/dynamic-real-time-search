@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000063",
+  "fingerprint": "4a3facb047af4474de9d05dbce9831d1c6335d1a37fcf2b2f4d658b593a89f6d",
+  "sha256": "2554892fcf319a3a403d8662e817f36f03ba87fa09933cc41e9b10d5e271328d",
+  "imagePath": "images/prod-000063.png",
+  "generatedAt": "2026-09-25T08:19:21.876811+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: regular. Material: cotton twill. Colour: Soft White (#EDEBE5). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

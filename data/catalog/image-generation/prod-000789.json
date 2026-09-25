@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000789",
+  "fingerprint": "ca293f02055cb3e7c67a87be4086f3225c5161bf8f8c698e755702147961f3a9",
+  "sha256": "192aec42c1d882316cd76c425523c83495a01819c40c6bb1e40781a45f427d29",
+  "imagePath": "images/prod-000789.png",
+  "generatedAt": "2026-09-25T08:35:42.510732+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: dress. Style: wrap. Material: viscose. Colour: Chocolate Brown (#654536). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

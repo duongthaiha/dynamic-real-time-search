@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000742",
+  "fingerprint": "3b842cca1f006b56b3198e9aefacd37420403259c6377562ec584e60c8c3fead",
+  "sha256": "59fc1e34eb1ae8c2a3efe62036aee13c3cf36e3122a6d6ed2ac701f9092a8022",
+  "imagePath": "images/prod-000742.png",
+  "generatedAt": "2026-09-25T08:34:50.211518+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jumper. Style: relaxed. Material: recycled yarn. Colour: Dark Wash Blue (#315C86). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

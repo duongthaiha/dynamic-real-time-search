@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000946",
+  "fingerprint": "8c40958a27ba904aded3be338931a2f5acafe0f7c78d57c1ef73547e646736ce",
+  "sha256": "8bbee084a7f426f523a8fe53f126ff45569fd69e87e02e0638d33d0eeccffcdc",
+  "imagePath": "images/prod-000946.png",
+  "generatedAt": "2026-09-25T08:41:10.171120+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jeans. Style: wide-leg. Material: cotton denim. Colour: Chocolate Brown (#654536). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000491",
+  "fingerprint": "d5efdb50c7f8d64e86cc71a2cc524a16dcb996dce79658e0ef5c49fbc1b9d095",
+  "sha256": "0fee5cdde1497e0e04d704a877cdc26e31fdd8df5cbf119501a3e493147c7d5d",
+  "imagePath": "images/prod-000491.png",
+  "generatedAt": "2026-09-24T15:49:39.666624+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A longline shorts made from linen blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: longline. Material: linen blend. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

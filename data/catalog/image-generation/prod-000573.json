@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000573",
+  "fingerprint": "23a85673718679add529993d6eca88bbe5555d316c1cc8742f5bb4c89ee192ee",
+  "sha256": "ace9e19ba99d45c9eeca3845f66655786f5628a686db4ea65a24485622bdd864",
+  "imagePath": "images/prod-000573.png",
+  "generatedAt": "2026-09-25T08:29:52.046233+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: oversized. Material: cotton twill. Colour: Stone Beige (#B8A58B). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

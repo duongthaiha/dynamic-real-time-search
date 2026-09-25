@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000703",
+  "fingerprint": "0e56a2695a76f0bc1b07c044d9d9ebbac963041796838d65ffafe35161feb3b5",
+  "sha256": "64230ca9a0fa46c44c34130a2da7b3af9e77b388630d336a03461b20f8d9fc53",
+  "imagePath": "images/prod-000703.png",
+  "generatedAt": "2026-09-24T16:25:18.968578+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A hiking-inspired boots made from faux leather, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: hiking-inspired. Material: faux leather. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

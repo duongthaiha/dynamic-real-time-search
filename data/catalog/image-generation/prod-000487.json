@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000487",
+  "fingerprint": "0c28c0eb80a733e921bc7f27f8b1278b7441b5621ad15c7d3a657ba5a11be371",
+  "sha256": "4c1268f40536fd15043a3c6093de75e6f9657e6d5e93a2c3ea842f8eac77cf2f",
+  "imagePath": "images/prod-000487.png",
+  "generatedAt": "2026-09-24T15:49:02.721335+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed jumper made from cotton knit, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jumper. Fit/style: relaxed. Material: cotton knit. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

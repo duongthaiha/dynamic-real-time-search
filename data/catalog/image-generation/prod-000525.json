@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000525",
+  "fingerprint": "1214a6fd030ea17c8f2a687983fd85b0f2bd3f5dcf0258917aacc0de557bb2a1",
+  "sha256": "0bdc4af6958c62d6096e3dd534f0f6a1e75e6834f88be85c1b3325cd6454b973",
+  "imagePath": "images/prod-000525.png",
+  "generatedAt": "2026-09-24T15:55:27.291030+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A bucket cap made from cotton twill, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: cap. Fit/style: bucket. Material: cotton twill. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

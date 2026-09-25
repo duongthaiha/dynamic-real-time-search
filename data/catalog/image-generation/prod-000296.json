@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000296",
+  "fingerprint": "6a62ee0a11bd93fef7cae4b957b3893a0cdd2f12b250758c927598ec095d693e",
+  "sha256": "cc9bcdca92ec9fb3177dc02ee5fc280f0c7ac8ec1569e3873c6e383041a7e7b0",
+  "imagePath": "images/prod-000296.png",
+  "generatedAt": "2026-09-24T15:11:54.753287+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular shorts made from denim, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: regular. Material: denim. Colour: Dusty Pink (reference colour #C78F9C). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

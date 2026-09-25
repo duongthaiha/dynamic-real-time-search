@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000900",
+  "fingerprint": "bdeb5bd566c57428706669c6d5e9071713e27d52e4d18f0945ffb07f50834a86",
+  "sha256": "30bc7745fce89659eab7fffefc48595aa76b03060a000503b389de3d3e87f839",
+  "imagePath": "images/prod-000900.png",
+  "generatedAt": "2026-09-25T08:39:30.761238+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: cap. Style: bucket. Material: cotton twill. Colour: Dusty Pink (#C78F9C). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

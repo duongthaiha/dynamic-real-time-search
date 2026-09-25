@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000601",
+  "fingerprint": "63b6dc56c79dde912d62ea6260fb9ac8d7811bd00e3c8394647fedab3d0d410d",
+  "sha256": "f70592ce76c81e44706e4e43dee89301b6a8a7984c6f7af2e04e22cd89924c6f",
+  "imagePath": "images/prod-000601.png",
+  "generatedAt": "2026-09-24T16:08:09.126010+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A baggy jeans made from recycled-cotton denim, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jeans. Fit/style: baggy. Material: recycled-cotton denim. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

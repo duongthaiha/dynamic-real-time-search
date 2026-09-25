@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000642",
+  "fingerprint": "2fb6cbfc6275f58c57e3fc6f4148e99023909e1db8ae605a2b7a6bdc5eef1b01",
+  "sha256": "2424411934c6af57d888c8708d81b016feddac3b84f9a08e377762f8a4865b7e",
+  "imagePath": "images/prod-000642.png",
+  "generatedAt": "2026-09-25T08:31:51.168865+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trainers. Style: chunky. Material: faux leather. Colour: Warm Cream (#D9CDB5). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

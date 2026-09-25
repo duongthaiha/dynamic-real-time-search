@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000210",
+  "fingerprint": "a5ccc98eb797ac631a15cf82e67769a22241d9293d27a0c98d7823fc97a709ef",
+  "sha256": "10cbed3b1fe1fe1679eddc1934a1390263ac177862f3422d92d6d6615aefae40",
+  "imagePath": "images/prod-000210.png",
+  "generatedAt": "2026-09-24T14:57:32.800093+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A bucket cap made from cotton twill, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: cap. Fit/style: bucket. Material: cotton twill. Colour: Sky Blue (reference colour #77AEDD). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

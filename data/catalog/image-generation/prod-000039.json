@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000039",
+  "fingerprint": "19a8c7b453c14b4c368a30fe1f175196f475de45f25e278b32e19537933fc8ad",
+  "sha256": "e1728a366372e5d201c0131b622fa895381e9c4e0c3816dd999433b363e1da99",
+  "imagePath": "images/prod-000039.png",
+  "generatedAt": "2026-09-24T14:29:03.804339+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A bodycon dress made from cotton poplin, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: bodycon. Material: cotton poplin. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}
