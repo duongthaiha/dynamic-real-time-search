@@ -398,6 +398,24 @@ using the correct units: Search capacity/indexing throughput, Cosmos DB
 RUs, Fabric capacity usage, Azure ML compute/storage (including idle compute
 or online deployments if enabled), and application request/runtime costs.
 
+## Commerce platform expansion research
+
+The current trend-ranking POC is the first delivery stage of a possible
+broader Azure commerce discovery platform:
+
+- [Google AI Commerce Search and Azure equivalence](docs/research/09-google-commerce-search-azure-equivalence.md)
+  compares search/browse, merchandising, recommendations and conversational
+  discovery, separating native Azure capabilities from custom engineering
+  and unverified parity.
+- [Azure commerce search platform design](docs/architecture/azure-commerce-search-platform-design.md)
+  proposes a single-retailer architecture, future SaaS boundaries, component
+  ownership, phased delivery and measurable acceptance gates.
+
+These are proposed expansion documents, not implemented features or a change
+to this POC's scope and phase order. Production personalization, a full
+recommendation engine and conversational discovery remain later stages.
+Cart/checkout agents require a separate design and authorization.
+
 ## Research and implementation references
 
 | Research | Read for |
