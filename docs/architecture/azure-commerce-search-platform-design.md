@@ -1,1361 +1,797 @@
-# Azure commerce search platform: proposed design
+# Commerce discovery platform: Cosmos DB target design
 
-**Status:** Proposed expansion blueprint; not implemented or benchmarked
+**Status:** Proposed replacement blueprint; not implemented or benchmarked
 
-**Reviewed:** 29 September 2026
-
-**Research:** [Google commerce search and Azure equivalence](../research/09-google-commerce-search-azure-equivalence.md)
+**Reviewed:** 5 October 2026
 
 **Repository guide:** [Selected architecture and local tooling](../../README.md#architecture)
 
 ## 1. Decision and boundaries
 
-Build a single-retailer commerce discovery platform using Azure AI Search for
-retrieval and Azure/Fabric services for commerce policy, events and ML. Aim for
-functional coverage of Google's commerce-search offering through staged
-evidence, not API compatibility or identical proprietary model behavior.
+Build a single-retailer commerce discovery platform with:
 
-This document **does not supersede the README's selected architecture**. It
-defines the product roadmap. Recommendations, personalization, embeddings, semantic
-retrieval and conversations are future capabilities, not newly implemented
-defaults. Cart/checkout actions and customer-service agents remain separate.
+- Azure Cosmos DB for NoSQL as the canonical operational data store.
+- Containerized, portable application services and workers.
+- OpenSearch as a replaceable keyword-search projection, not a source of truth.
+- Deterministic rules, aggregations and ranking only.
+- OpenTelemetry, OpenAPI, OCI images, Kubernetes and Helm for portable
+  interfaces and deployment artifacts.
 
-### Existing foundations versus proposed work
+Do not use Azure AI Search, Azure Machine Learning, Microsoft Foundry,
+Azure OpenAI, semantic or vector retrieval, embeddings, generative
+conversation, model-based extraction, or learned ranking/recommendations.
+Microsoft Fabric is also removed from the target because its Eventstream,
+Eventhouse, Activator and notebook path creates avoidable platform coupling.
 
-| Area | Repository evidence | Implication |
+Azure remains the initial hosting environment. Cosmos DB is an intentional
+Azure dependency selected by the customer. Managed identity, Key Vault,
+Azure Monitor and AKS may be used as hosting or operational integrations, but
+the domain and ranking code must not depend on them directly. Every such
+integration sits behind a narrow adapter with a documented portable
+alternative.
+
+This document replaces the service choices in the historical
+[Option C design](option-c-hybrid-detailed-design.md), the
+[Eventstream ingestion design](eventstream-ingestion-design.md), and the
+[Google equivalence research](../research/09-google-commerce-search-azure-equivalence.md).
+Those documents remain evidence of previous decisions only. Their enduring
+correctness rules are carried forward here where applicable.
+
+### 1.1 Existing foundations versus target work
+
+| Area | Repository evidence | Target implication |
 |---|---|---|
-| Catalog | [Synthetic catalog guide](../catalog-data.md), generator/test files and [index definition](../../src/load-generator/azure-search-index.json). | Reuse the seeded 1,000-product catalog. Its presence does not prove deployed search or end-to-end ranking. |
-| Public APIs | [Search and Beacon drafts](../api/README.md). | Preserve public event names and service separation. Responses and provider compatibility remain unverified proposals. |
-| Trend pipeline | [Option C detailed design](option-c-hybrid-detailed-design.md). | Keep deterministic index-side first, then notebook/ML jobs, validated publication and incremental live reranking. |
-| Source ingestion | [Two-stream design](eventstream-ingestion-design.md). | Separate behavior and external-trend Eventstream items; share curated features, not unrestricted credentials or event counts. |
-| Learning | [Forecasting research](../research/08-azure-ml-forecasting.md). | Forecasting is a later experiment, not an implemented recommender or search learning-to-rank system. |
-| Full commerce platform | This document. | Merchant controls, recommendations, consented profiles, conversation and production operations require further implementation. |
+| Catalog | [Synthetic catalog guide](../catalog-data.md), generator/tests and an Azure AI Search index file. | Reuse the synthetic products and generator. Replace the Azure AI Search batch/index output with Cosmos catalog documents and an OpenSearch projection in a separate implementation task. |
+| Public APIs | [Search and Beacon drafts](../api/README.md). | Preserve public camelCase fields, public event names and Search/Beacon separation. The storage and search engines remain internal. |
+| Ranking | Historical deterministic trend scoring, publication and live-reranking designs. | Preserve bounded scores, deduplication, revisions, expiry, conditional publication, explicit partial failure and deterministic ties. Remove all job/model lifecycle. |
+| Ingestion | Historical two-source separation and normalized event envelope. | Preserve source isolation and validation, but write accepted events to Cosmos through portable HTTP services and process them with containerized workers. |
+| Full platform | This document. | Search, browse, merchant policy, deterministic recommendations, privacy controls and operations require implementation. |
 
-### Scope
+### 1.2 Scope
 
-**In scope:** search/browse, product and SKU eligibility, facets/suggestions,
-merchant controls, behavioral ranking, recommendation families, experimentation,
-read-only conversational discovery, and a route to production.
+**In scope:** keyword search, browse, exact identifiers, product/SKU
+eligibility, filters, facets, prefix suggestions, merchant rules,
+deterministic trend and business factors, non-learned recommendations,
+experimentation, consented rule-based preferences, guided discovery and a
+route to production.
 
-**Out of current implementation scope:** Google Retail API emulation,
-production shopper-data collection, social scraping, checkout/payment tools,
-autonomous purchasing, SaaS tenant onboarding, global active-active deployment
-and any resource provisioning performed just to create these documents.
+**Out of scope:** AI services of any kind, model training/inference,
+embeddings, image understanding, free-form conversational discovery,
+autonomous agents, checkout/payment tools, social scraping, SaaS onboarding,
+global active-active deployment and resource provisioning performed merely to
+write this design.
 
-Use synthetic data for all current work. Any later real-data experiment needs
-separate authorization, privacy review and operational readiness.
+Use synthetic data for current work. Real shopper data, provider data, cloud
+mutations and paid calls require separate authorization, privacy review and
+operational readiness.
+
+### 1.3 Portability rules
+
+1. Domain services depend on application-owned ports such as `CatalogStore`,
+   `EventStore`, `PolicyStore`, `SearchProjection` and `TelemetrySink`.
+2. Cosmos-specific partition keys, `_etag`, continuation tokens, transactional
+   batches and change-feed leases remain inside the Cosmos adapter.
+3. Search requests use an application-owned query/filter AST. The OpenSearch
+   adapter translates only allow-listed operations; public clients never send
+   raw engine queries.
+4. Services ship as OCI images and receive configuration through environment
+   variables or mounted files. Health probes, graceful shutdown and
+   OpenTelemetry use vendor-neutral protocols.
+5. Kubernetes manifests and Helm values avoid AKS-only APIs unless a separate
+   optional overlay documents the dependency and fallback.
+6. Business workflows do not require the Azure portal. Infrastructure uses
+   declarative provisioning; operational runbooks use standard APIs and CLIs.
+7. Cosmos is not hidden behind a lowest-common-denominator abstraction.
+   Required concurrency and partition behavior are explicit, while the
+   domain contract remains portable.
 
 ## 2. Architecture and component ownership
 
-The default is a composed platform, not an all-LLM search engine. Query serving
-must not wait for a Fabric notebook or an Azure ML batch job.
-
 ```mermaid
 flowchart LR
-    subgraph Sources["Retailer sources"]
-        CAT["Catalog, price and inventory systems"]
-        COM["Sales, margin and inventory facts"]
+    subgraph Sources["Retailer and approved sources"]
+        CAT["Catalog, price and inventory"]
+        COM["Orders, revenue and margin"]
+        EXT["Synthetic or licensed structured trend feed"]
         SHOP["Storefront or backend-for-frontend"]
-        PROF["Consented profile service - later"]
-        EXT["Synthetic or approved trend provider"]
         MER["Merchandiser"]
     end
-    subgraph Serving["Discovery serving"]
-        API["Functions: Search and Browse"]
-        REC["Recommendation service - later"]
-        CONV["Conversation service - later"]
-        IDX[("Azure AI Search")]
-        STATE[("Cosmos DB: scoped serving state")]
-        LLM["Foundry / Azure OpenAI - optional"]
+
+    subgraph Services["Portable application services"]
+        API["Discovery API"]
+        BEA["Beacon API"]
+        ADMIN["Merchant Admin API"]
+        ING["Source adapters"]
+        AGG["Deterministic aggregation workers"]
+        PUB["Projection and publication workers"]
     end
-    subgraph Control["Configuration and catalog control"]
-        SYNC["Catalog projection and publisher"]
-        ADMIN["Merchant admin and approval - later"]
-        CFG[("Versioned policies and audit")]
+
+    subgraph Data["Operational data"]
+        COSMOS[("Cosmos DB for NoSQL\ncanonical store")]
+        SEARCH[("OpenSearch\nrebuildable projection")]
+        OBJ[("Object storage\noptional exports/backups")]
     end
-    subgraph Learning["Asynchronous features and scoring"]
-        BEA["Beacon validation"]
-        BES["Behavior Eventstream"]
-        EXTAD["Approved trend adapter and metadata extraction"]
-        XES["External-trend Eventstream"]
-        EH[("Eventhouse curated features")]
-        ACT["Activator Run Notebook"]
-        NB["Fabric orchestration notebook"]
-        SCHED["Periodic schedule"]
-        SNAP[("Immutable feature artifacts")]
-        ML["Azure ML jobs"]
-        LEDGER[("Durable run and publication ledger")]
-        PUB["Reconcile, validate and publish"]
+
+    subgraph Operations["Hosting and operations"]
+        K8S["Kubernetes / AKS"]
+        OTEL["OpenTelemetry Collector"]
+        OBS["Metrics, logs and traces"]
     end
-    CAT --> SYNC
-    SYNC --> IDX
-    SYNC --> EH
-    COM --> EH
-    MER --> ADMIN --> CFG
-    CFG --> API
-    CFG --> REC
-    PROF --> API
-    SHOP --> API --> IDX
-    API --> STATE
-    SHOP --> REC
-    REC --> STATE
-    REC --> IDX
-    SHOP --> CONV
-    CONV --> LLM
-    CONV --> API
-    CONV --> REC
-    SHOP --> BEA --> BES --> EH
-    EXT --> EXTAD --> XES --> EH
-    XES --> ACT --> NB
-    SCHED --> NB
-    EH --> NB --> SNAP --> ML
-    NB --> LEDGER
-    ML --> PUB
-    LEDGER --> PUB
-    PUB --> IDX
-    PUB --> STATE
+
+    CAT --> ING
+    COM --> ING
+    EXT --> ING
+    SHOP --> API
+    SHOP --> BEA
+    MER --> ADMIN
+    ING --> COSMOS
+    BEA --> COSMOS
+    ADMIN --> COSMOS
+    COSMOS --> AGG
+    AGG --> COSMOS
+    COSMOS --> PUB
+    PUB --> SEARCH
+    API --> SEARCH
+    API --> COSMOS
+    COSMOS --> OBJ
+    Services --- K8S
+    Services --> OTEL --> OBS
 ```
 
-The ML-to-publication edge represents **durable reconciliation**, not a native
-automatic callback or proof of successful completion. The diagram omits
-telemetry edges for readability. Emit correlated telemetry at each boundary.
+The data flow is deliberately asymmetric:
 
-| Component | Native service contribution | Custom responsibility |
+- Cosmos owns catalog, policy, event, factor, recommendation, profile and
+  control records.
+- OpenSearch owns no authoritative business state. It can be deleted and
+  rebuilt from a pinned Cosmos snapshot plus subsequent changes.
+- Search returns candidate IDs and indexed snapshots. The Discovery API
+  hydrates authoritative product data from Cosmos in bounded batches and
+  revalidates eligibility before returning results.
+- Workers perform deterministic aggregation and publication. There is no
+  notebook, training job, endpoint or generated-content path.
+
+| Component | Responsibility | Portability boundary |
 |---|---|---|
-| Azure AI Search | Keyword/vector retrieval, filters, facets, suggesters, scoring profiles and optional semantic ranker. | Catalog schema, query policy, field mappings, candidate limits and relevance evaluation. |
-| Azure Functions | API and background execution hosting. | Search/Beacon adapters, validated policy plans, registered batch factor providers, a factor-independent composer, catalog/score publication and explicit errors. Select hosting plan against latency/network requirements later. |
-| Cosmos DB for NoSQL | Serving/configuration storage and concurrency primitives. | Separate containers and schemas for live signals, durable ledgers, serving policies, recommendation lists and optional consented state. TTL is cleanup, not proof of freshness. |
-| Fabric Eventstream/Eventhouse | Event routing, raw history and KQL analytics. | Source contracts, deduplication, revisions, catalog joins, watermarks, readiness and feature queries. |
-| Commerce fact adapters | No assumption that revenue, margin or inventory systems share one schema or cadence. | Authenticate each source, preserve authoritative revisions/as-of times, normalize only approved aggregates, and keep financial detail and customer identity out of the Search index. |
-| External trend adapter/extractor | No native TikTok connector is assumed. An approved provider API supplies permitted content references and engagement observations; a versioned batch extractor may use an approved vision/text model. | Provider authentication and terms, deduplication, minimal media handling, feature extraction, confidence, vocabulary mapping, provenance, revisions/retractions and bounded normalized events. |
-| Activator and Fabric notebook | Qualified condition-to-notebook orchestration. | Trigger coalescing, immutable snapshot preparation, ML submission and durable correlation. No Function solely to launch ML jobs. |
-| Azure ML | Reproducible jobs and optional model/endpoint lifecycle. | Scoring/training code, task objectives, feature contracts, evaluation, promotion and rollback. |
-| Artifact storage | Durable feature/model/output artifacts through an explicitly selected supported storage path. | Snapshot manifest, immutable naming, hashes, access checks, retention and replay. OneLake access is not assumed for the ML identity. |
-| Foundry/Azure OpenAI, later | Supported language/embedding/multimodal models and applicable safety features. | Tool authorization, grounding, scoped conversation, quality evaluation, budgets and deterministic recovery. |
-| Entra ID, Key Vault, Azure Monitor/Application Insights | Workload identity, protected secrets and observability primitives. | Effective least privilege, consent policy, redaction, alert rules, service ownership and incident response. |
-| Merchant/experiment control plane | Cosmos configuration; optional App Configuration/feature-flag telemetry. | Authoring, approvals, factor registry and weight policies, preview, rule compiler, stable assignment, actual exposures and experiment analysis. |
+| Discovery API | Search/browse/suggestions, policy resolution, authoritative hydration, eligibility checks, bounded factor composition and response attribution. | Stateless OCI service; application-owned query and store interfaces. |
+| Beacon API | Authenticate/validate events, normalize public camelCase events into the internal envelope, reject or accept explicitly and persist idempotently. | HTTP/OpenAPI plus `EventStore`; no browser database credentials. |
+| Merchant Admin API | Draft, validate, preview, approve, activate and roll back immutable policies. | HTTP/OpenAPI plus policy and audit ports. |
+| Source adapters | Poll or receive catalog, commerce and structured trend data; preserve source revisions and retractions. | One adapter per source; no source-specific fields in ranking core. |
+| Aggregation workers | Deduplicate, close ready windows, compute deterministic features/factors/recommendations and expire obsolete state. | Containerized scheduled or continuously running workers; pure calculation library tested offline. |
+| Publication workers | Consume Cosmos changes, project documents to OpenSearch, inspect item-level bulk results and repair partial publication. | `SearchProjection` adapter; idempotent desired-state records in Cosmos. |
+| Cosmos DB for NoSQL | Canonical documents, optimistic concurrency, transactional batches within a partition, TTL cleanup and change feed. | Intentional Azure dependency isolated in a data adapter. TTL never proves business freshness. |
+| OpenSearch | BM25 keyword retrieval, exact fields, filters, facets, prefix completion and deterministic engine-side sorts. | Replaceable projection accessed only through `SearchProjection`. No vectors, neural plug-ins or generated queries. |
+| Kubernetes / AKS | Scheduling, scaling, probes, secrets mounting and network policy. | Standard Kubernetes first; AKS-specific identity/networking in overlays. |
+| OpenTelemetry | Vendor-neutral traces, metrics and log correlation. | Export destination is configuration, not domain code. |
+| Entra ID and Key Vault | Initial workload/user identity and protected secret integration. | OIDC/OAuth 2.0 and secrets-provider adapters; prefer workload identity. |
 
-**Not default additions:** Container Apps, Azure Managed Redis, a separate
-Event Hubs broker, API Management and Front Door/WAF. Evaluate them when
-hosting, ingress, quotas, networking, isolation or measured latency justify
-them. Do not add every service to the POC architecture.
-
-Production internet exposure still needs abuse controls and a justified edge
-design. "Not default" does not mean production security is optional.
-
-### Options considered
+### 2.1 Options considered
 
 | Option | Assessment |
 |---|---|
-| Azure AI Search alone | Good retrieval baseline; insufficient for a managed commerce learning loop, recommendation catalog or merchant workbench. |
-| Search plus the existing Fabric/ML composition | **Selected.** Reuses POC foundations and makes custom capability ownership explicit. |
-| Online ML for every request from the start | Defer. Adds availability, feature freshness and compute-cost dependencies before the batch baseline is proven. |
-| LLM generates or orders every product result | Reject as the core path. Hard eligibility, exact identifiers and deterministic serving should not depend on free-form generation. |
-| Azure AI Personalizer | Exclude: Microsoft's documented retirement date has passed. See the [research boundary analysis](../research/09-google-commerce-search-azure-equivalence.md#important-azure-boundaries). |
+| Cosmos DB only, including text retrieval | Reject for the target experience. Cosmos is the canonical store but is not the selected full-text relevance/faceting engine. Application-side scans are not acceptable. |
+| Cosmos DB plus OpenSearch | **Selected.** Cosmos remains authoritative while OpenSearch provides portable, rebuildable keyword retrieval. |
+| Azure AI Search or other AI-labeled search service | Excluded by customer decision, including use limited to lexical features. |
+| PostgreSQL as both store and search | Not selected because Cosmos DB is the required target store. |
+| Fabric/Eventhouse pipeline | Excluded. It is unnecessary for deterministic aggregation and increases platform coupling. |
+| Kubernetes-native Kafka/Flink from day one | Defer. It adds a large operational surface before throughput proves Cosmos change feed and workers insufficient. |
+| Generated conversation or learned ranking | Excluded. Guided facets and deterministic rules provide the supported discovery path. |
 
-## 3. Logical contracts and authoritative data
+## 3. Cosmos DB data design
 
-These are logical records to formalize when implementing each stage, not new
-OpenAPI schemas or claims that existing drafts already support them.
+### 3.1 Account, database and consistency
 
-| Record | Key/version information | Invariants |
-|---|---|---|
-| Catalog projection | Authorized retailer/collection, product ID, SKU/variant IDs, source revision, catalog/schema version and observation time. | Stable keys; declared market/currency; current searchable/stock eligibility; tombstones for removals. |
-| Serving policy | Scope, immutable policy ID/version, activation time and referenced index/model/rule/factor versions. | One validated active bundle per context; explicit rollback; no client-selected privileged configuration. |
-| Ranking factor definition | Stable factor ID/version, registered provider/version, typed feature references, normalizer, privacy class, freshness and contribution ceiling. | Immutable meaning; allow-listed implementation; weight belongs to a serving policy, not source data. See section 3.5. |
-| Product factor snapshot | Scope, product/variant ID, factor-set ID, factor/source revisions, value at its as-of time, expiry and evidence reference. | Point-in-time reproducible; no customer identity; retain unavailable status rather than inventing a measured zero. |
-| Customer preference state, later | Authorized profile key, consent purpose/version, explicit or inferred preferences, confidence, source time and expiry. | Never copied to the shared Search index; request-scoped use only; withdrawal/deletion enforced; selected filters override inferred preferences. |
-| Behavior event | Existing event envelope plus scoped event ID, schema version, occurrence/receipt times and known correlation. | Deduplicate before purchase expansion. Search, exposure, order and attribution identities are distinct. |
-| External trend observation | Scope, stable signal/content reference, provider revision, observed/published/expiry times, extractor and vocabulary versions, compound normalized attributes, confidence, magnitude and provenance. | Approved or synthetic source only; latest revision wins; retractions remain effective; finite bounded values; no raw social identity or media is required downstream. |
-| Exposure, later | Serving decision, displayed product/panel IDs, positions, filters, experiment assignment and purpose-limited visitor context. | A response is not an exposure. Capture what the UI actually displays under a documented exposure definition. |
-| Feature snapshot | Scope/window/correction, catalog version, input-set identity, source readiness and artifact reference/hash. | Immutable, point-in-time valid and readable by the job identity. |
-| Product trend | Existing canonical score/version/state/window/expiry and evidence references. | Finite `[0,100]`; preserve the existing version order and publication contract. |
-| Recommendation list | Scope, task, seed item or authorized profile key, model/policy/catalog versions, ordered candidate IDs and expiry. | Candidates are not guaranteed currently eligible; revalidate before serving. Never reuse lists across unauthorized identities. |
-| Training/model manifest | Task/objective, feature and label versions, dataset split, model asset, metrics and promotion decision. | No future labels in features; no automatic production promotion solely because a job succeeded. |
-| Conversation state, later | Authorized session, consent/purpose, validated constraints, product references, policy version and expiry. | History is not authorization; model-generated IDs/filters cannot bypass validation. |
+Start with one Cosmos DB for NoSQL account per environment and one operational
+database. Production topology, regions and capacity require measured workload
+evidence. Do not claim multi-region readiness from an account setting alone.
 
-### 3.1 Catalog and variant projection
+- Use session consistency by default. Carry the session token when a workflow
+  requires read-your-writes across service calls.
+- Use `_etag` with `If-Match` for conditional updates and ownership claims.
+- Use transactional batches only when all affected documents share a logical
+  partition key.
+- Do not implement cross-container transactions. Use durable intent/state
+  records and idempotent reconciliation.
+- Define request-unit, storage and hot-partition budgets per container.
+- Prefer autoscale for uncertain bursty workloads only after comparing its
+  minimum cost with measured provisioned demand.
+- Enable continuous backup for production if its recovery objectives and cost
+  are approved. Practice restore into a separate account.
 
-The retailer's product/inventory/pricing systems remain authoritative.
-Azure AI Search is a discovery projection. The synthetic catalog uses parent
-products, colourways and purchasable size variants; preserve their distinction.
+### 3.2 Container map
 
-For Stage B, propose a parent-result projection with correlated variant
-attributes sufficient for the promised filters. For example, size, stock and
-price must refer to the **same variant**, not independent flattened collections.
-Validate a supported complex-collection/filter representation and document-size
-limits before changing the index. If a catalog exceeds those limits, evaluate
-variant documents and explicit parent grouping as a separate schema decision.
+Names are logical and may be adjusted before provisioning. Every document has
+`id`, `schemaVersion`, `scopeId`, `partitionKey`, `createdAt` and `updatedAt`.
+Times are UTC ISO 8601 values. `partitionKey` is an application-computed,
+versioned routing value so the physical key strategy is visible and testable.
 
-The current flattened `availableSizes` and `isInStock` fields are not proof
-that a requested size is in stock at a particular price. Test a parent with
-one cheap unavailable variant and one expensive available variant to catch
-cross-variant false matches.
-
-Define:
-
-- Parent, colourway and SKU display/deduplication rules.
-- Localized searchable text and market-specific price/currency selection.
-- Attribute vocabulary, category hierarchy and normalized filter values.
-- Inventory/promotion freshness policy and authoritative hydration where the
-  experience promises current availability or pricing.
-- Full import, incremental revision, tombstone and source-reconciliation flows.
-- Catalog ownership of product fields versus score ownership of trend fields.
-
-Do not allow an independent full-document catalog upload to reset newer trend
-state. Route writes through coordinated publication ownership or reconstruct
-the complete desired document before replacement. Trend writes remain
-score-only `merge` operations; reserve full upserts for deliberate catalog
-changes. Use one action per document in an indexing batch and handle individual
-results. [Search indexing semantics](https://learn.microsoft.com/azure/search/search-how-to-load-search-index)
-
-For schema rebuilds, prepare a new versioned index, catch up catalog changes,
-apply the latest valid signals, validate queries and then switch the
-application's active index configuration. Preserve rollback data and reconcile
-deletions before activation. Do not claim an atomic transaction across index,
-policy, feature artifacts and Cosmos containers.
-
-### 3.2 Event and attribution evolution
-
-Keep `POST /v1/search` and `POST /v2/events` separate. Keep public `autoSearch`,
-`viewProduct`, `addToCart` and `order` payloads mapped through the existing
-[normalization adapter design](../api/README.md#mapping-to-the-pocs-internal-events).
-
-Before learned ranking, propose versioned exposure, filter-selection,
-recommendation-panel and authoritative order-outcome extensions. Resolve:
-
-- Actual display definition and whether an impression is viewable or rendered.
-- Cart deltas versus snapshots, event counts versus quantities, and returns.
-- Attribution window, competing exposures, duplicate orders and missing context.
-- Browser versus trusted backend ownership; client-reported prices/orders are
-  not proof of financial outcomes.
-- Consent state and retention at ingestion, training and serving time.
-
-A proposed opaque serving-decision token links to bounded server-side context
-and must be scoped, integrity-protected and expiring. It is not an event ID or
-authorization credential. Log unresolved attribution explicitly; never assign
-a query-only search event to every retrieved product.
-
-This Azure-native policy is not a claim to resolve the
-[Google attribution-documentation inconsistency](../research/09-google-commerce-search-azure-equivalence.md#attribution-and-privacy)
-for provider-compatible clients.
-
-### 3.3 Viral-content metadata extraction and catalog matching
-
-The TikTok-like use case is an **external aggregate trend**, not shopper
-personalization. The POC uses synthetic content observations. A real source
-must be an approved/licensed provider API or permitted TikTok integration with
-verified fields, rights, retention and quotas. Do not scrape public URLs, infer
-that a URL grants reuse rights, or assume Fabric has a native TikTok connector.
-
-Use this asynchronous flow:
-
-1. The external adapter receives a provider content ID, revision/cursor,
-   permitted caption/hashtag text, permitted media or provider-derived labels,
-   publish time and aggregate engagement observations. It authenticates the
-   source, rate-limits collection and persists its checkpoint only after the
-   normalized observation is acknowledged or durably buffered.
-2. Deduplicate by provider and stable content ID before extraction. A content
-   update creates a new revision; deletion, provider withdrawal or a failed
-   trust review creates a retraction. Reprocessing the same revision is
-   idempotent and does not refresh trend age.
-3. A versioned batch extractor derives only approved commerce features. Start
-   with caption/hashtag normalization and, if permitted, sampled video frames
-   through an evaluated vision model. Candidate dimensions can include
-   `colour`, `category`, `productType`, `fit`, `material`, `style`, `pattern`
-   and `occasion`, but enable only fields represented in the versioned catalog
-   projection. Store per-value confidence and evidence type, not an
-   unqualified free-text label. OCR, faces, creator identity and audio are
-   excluded unless separately justified and approved.
-4. Map candidates to the retailer's versioned catalog vocabulary. For example,
-   provider labels `navy`, `midnight blue` and `dark-blue` may map to catalog
-   colour `blue` under a recorded mapping version. Unknown values remain
-   reviewable evidence but contribute no score. Extraction and mapping
-   confidence are calibrated separately.
-5. Build one compound predicate from co-occurring evidence, such as
-   `colour=blue AND fit=oversized AND category=jackets`. Do not split this
-   into three independent trends. Require configured minimum confidence,
-   source trust and engagement/velocity evidence before emitting an eligible
-   `external_trend`; popularity alone does not prove an attribute.
-6. Resolve that predicate against the immutable catalog projection in
-   Eventhouse. Only exact normalized matches in the same catalog version
-   receive an external contribution. Record the matched product IDs and
-   catalog version in the feature snapshot so replay is deterministic.
-7. Feed confidence-weighted magnitude into the existing canonical `[0,100]`
-   score, then publish the validated per-product score through `merge` to
-   Search and conditionally to live state. Retraction, expiry or a corrected
-   predicate recomputes affected products and clears obsolete boosts.
-
-Example normalized payload after extraction and vocabulary mapping:
-
-```json
-{
-  "signalId": "tiktok-video-7312",
-  "revision": 4,
-  "operation": "upsert",
-  "signalType": "attribute",
-  "attributes": {
-    "colour": "blue",
-    "fit": "oversized",
-    "category": "jackets"
-  },
-  "attributeConfidence": {
-    "colour": 0.94,
-    "fit": 0.81,
-    "category": 0.96
-  },
-  "confidence": 0.83,
-  "magnitude": 0.62,
-  "source": "tiktok",
-  "sourceRef": "provider-content:7312",
-  "sourcePublishedAt": "2026-09-29T12:00:00Z",
-  "observedAt": "2026-09-29T12:05:00Z",
-  "validUntil": "2026-09-29T12:35:00Z",
-  "extractorVersion": "fashion-attributes-v1",
-  "vocabularyVersion": "catalog-fashion-v3"
-}
-```
-
-The schema above extends the existing external observation payload; formalize
-it in the source-family schema before implementation. Treat all strings and
-model output as untrusted input. Bound arrays and lengths, reject non-finite
-numbers, allow-list attribute keys, and keep provider credentials and raw
-licensed payloads out of Eventhouse and logs.
-
-Do not implement compound matching by passing the individual values to an
-Azure AI Search tag scoring function. The documented tag function boosts when
-**any** item in a string collection matches, which changes the intended AND
-semantics. Resolve membership before publication and use the numeric
-`trendingScore` magnitude profile. A canonical compound token could be
-evaluated later, but it still needs versioned vocabulary and expiry handling.
-[Azure AI Search scoring profiles](https://learn.microsoft.com/azure/search/index-add-scoring-profiles)
-are selected per query and can boost numeric fields or string collections;
-the baseline query must continue to omit the trend profile.
-
-### 3.4 Generalized multi-factor ranking policy
-
-Treat viral momentum as one factor in a governed ranking policy, not as the
-universal score for every business objective. Keep factor values separate
-through ingestion, storage, diagnostics and evaluation so a policy can change
-weights without rewriting source history or pretending that revenue, stock
-and customer affinity have the same meaning.
-
-A **dimension** is a business concept such as season, stock or customer fit;
-a **feature** is its typed source measurement; a **factor** turns permitted
-features into one bounded ranking contribution; a **policy** selects factors
-and their weights. Registering a dimension must not implicitly enable it.
-Sections 3.4-3.5 are a proposed Stage B/D extension, not an implementation or a
-replacement for Stage A's canonical trend score and three-mode benchmark.
-
-#### Factor classes
-
-| Factor | Example normalized meaning | Scope and freshness | Required guardrail |
+| Container | Typical records | Partition key strategy | Retention and notes |
 |---|---|---|---|
-| `viralTrend` | External-only momentum from `0` to `1` | Product; minutes | Preserve revision, expiry and compound attribute matching; do not include first-party behavior here. |
-| `behaviorMomentum` | Recent first-party activity relative to a comparable baseline from `0` to `1` | Product; minutes | Deduplicate first; do not turn search impressions into product actions. |
-| `canonicalTrend` | Existing versioned `trendingScore / 100` from `0` to `1` | Product; existing trend expiry | Compatibility adapter; cannot be enabled with its `viralTrend` or `behaviorMomentum` constituents. |
-| `inventoryPressure` | Approved sell-through objective from `-1` to `1`; positive can favor safe excess stock and negative can suppress shortage risk | Product or correlated variant; near-real-time policy | Out-of-stock and selected-size availability remain hard constraints, never boosts. |
-| `revenueVelocity` | Category/price-band-normalized recognized revenue velocity from `0` to `1` | Product; declared trailing window | Use authoritative completed-order facts, handle returns, and prevent rich-get-richer feedback from becoming an unreviewed objective. |
-| `commercialValue` | Approved normalized margin, promotion or strategic value from `-1` to `1` | Product/market; policy window | Do not substitute revenue for margin or expose confidential values in results or diagnostics. |
-| `profileColourAffinity` | Confidence-weighted match to a consented colour preference from `0` to `1` | Request/profile; expiring | Shared index stores no profile data; explicit query/filter choice wins. |
-| `profileSizeAvailability` | Preferred size is currently available on the same eligible variant from `0` to `1` | Request/profile plus current inventory | Never infer that an uncorrelated parent-level size and stock flag describe the same variant. |
-| `profileCategoryAffinity` | Consented category preference match from `0` to `1` | Request/profile; expiring | Apply support thresholds and provide an unpersonalized path. |
-| `merchantPriority` | Approved campaign or strategic adjustment from `-1` to `1` | Product/rule/market; activation window | Version, approve and audit; cannot bypass eligibility or explicit sort. |
+| `catalog` | Product aggregate, variants, tombstones and source revision. | `scopeId|productBucket`; bucket is stable from product ID. | No TTL for active products. Tombstones retained through projection/replay requirements. |
+| `events` | Normalized behavior and external observations. | `scopeId|yyyyMMdd|shard`; shard is stable from event ID. | TTL by approved raw-event retention. Business expiry is a field, not inferred from TTL. |
+| `serving-state` | Product factors, indexed snapshots, deterministic recommendation lists and expiry markers. | `scopeId|productBucket` for product state; task lists use a documented task bucket. | TTL may clean expired records after a safety interval. Readers always check `validUntil`. |
+| `policies` | Drafts, immutable approved bundles, active pointers, factor definitions and revocations. | `scopeId|policyDomain`. | Active pointer and activation audit share a partition when atomicity is required. |
+| `control` | Aggregation windows, checkpoints, leases, publication intent/result, rebuild epochs and idempotency records. | `scopeId|workflow|bucket`. | Retain through audit/replay objective; state machines use conditional writes. |
+| `profiles` | Optional consented preferences and deletion state. | `scopeId|profileBucket`. | Separate access policy; strict TTL/retention; never copied into shared search documents. |
+| `dead-letter` | Rejected records and bounded diagnostic metadata. | `scopeId|source|yyyyMMdd`. | No raw secrets or unnecessary personal payloads; replay is authorized and audited. |
+| `leases` | Cosmos change-feed processor leases. | Library-required key. | Operational only; isolate permissions from domain containers. |
 
-This registry is extensible, but adding a factor is a contract change. Define
-its owner, source of truth, units, time window, normalizer, confidence,
-freshness, privacy class, missing/stale behavior, allowed contexts and
-evaluation before it can receive a nonzero weight. For example, raw stock
-count, revenue in currency and trend magnitude must never enter one weighted
-sum without separate, versioned normalization.
+Do not create a container per tenant, factor or event type. Do not put every
+record under a single `scopeId` logical partition. Before implementation,
+estimate item sizes and request distribution, then load-test candidate keys
+for hot partitions and cross-partition query cost.
 
-Keep the canonical `trendingScore` and its `alpha=0.5` policy unchanged for
-Stage A. Independently weighting external and behavioral components requires
-separate versioned outputs in the later factor path, not reverse-engineering
-them from that combined score. Declare evidence lineage and mutually exclusive
-composites in the registry. The validator rejects composite-plus-constituent
-use; correlated objectives such as purchase momentum and revenue require
-explicit overlap review and ablation, not a claim of independent evidence.
+### 3.3 Document modeling rules
 
-#### Policy model
+- Store product and its bounded variant set as one aggregate only while item
+  size and update contention remain within measured limits. Split oversized
+  variant detail into colocated documents without losing the product/variant
+  correlation required for price, size and stock checks.
+- Duplicate only fields needed for bounded point reads or projections. Record
+  the source revision and projection version for every duplicate.
+- Use stable IDs. A source deletion creates a tombstone; absence from a poll
+  is not automatically a deletion.
+- Put discriminator and commonly filtered fields in each document. Exclude
+  large unused payloads from Cosmos indexing where this demonstrably reduces
+  write cost without harming operational queries.
+- Parameterize all queries. Prefer point reads when `id` and partition key are
+  known. Bound cross-partition queries and continuation pages.
+- Store money as integer minor units plus ISO currency. Reject non-finite
+  numeric inputs. Do not compare prices across currencies without an approved
+  conversion policy.
+- Store source occurrence time, receipt time and validity separately. Cosmos
+  `_ts` is service metadata, not a business event time.
+- TTL is physical cleanup only. Readers and workers enforce `validUntil`,
+  revision, revocation and source-readiness rules.
 
-An immutable policy selects enabled factors and their relative influence.
-Weights are nonnegative influence strengths. Each provider returns a finite
-`effectiveValue` in `[-1,1]` at the pinned request time, **after** its versioned
-normalization, confidence and decay policy. The composer does not apply
-confidence or decay again. In particular, the `canonicalTrend` adapter does
-not discount the already confidence-weighted, decayed score twice: it retains
-the published value until a validated update or expiry. It cannot reconstruct
-the components' different decay curves from one combined score.
+### 3.4 Change feed and projection checkpoints
 
-Let `E` be the configured enabled factors with positive weights. The weight
-denominator is fixed for the policy, including factors unavailable on this
-request. Missing, denied, stale, timed-out or invalid factors contribute zero
-with their explicit status; they do not donate their weight to other factors.
-Disabling a factor or rebalancing weights is a new policy version:
+Use the Cosmos change feed as the initial asynchronous transport between the
+canonical store and workers. A change-feed notification is at-least-once work,
+not evidence that every downstream destination is current.
+
+1. A writer conditionally commits a canonical or desired-state document.
+2. A worker receives one or more changes and validates their schema/version.
+3. The worker performs idempotent calculation or projection.
+4. For OpenSearch publication, record desired projection epoch and revision in
+   `control`, submit a bounded bulk request, and inspect every item result.
+5. Record successes and retry only failed items with bounded exponential
+   backoff. Do not recompute already validated factors merely to retry a
+   projection write.
+6. Advance the durable checkpoint only according to the change-feed processor
+   contract. Ambiguous external results remain reconcilable from desired state.
+7. A periodic reconciler compares desired and observed projection revisions,
+   repairs gaps and clears expired indexed boosts.
+
+Do not treat lease progress as proof of OpenSearch visibility. Measure
+canonical commit-to-query visibility separately.
+
+## 4. Logical contracts and authoritative data
+
+These records are logical contracts to formalize during implementation. They
+do not change the existing public OpenAPI drafts.
+
+| Record | Identity/version | Invariants |
+|---|---|---|
+| Catalog product | Scope, product ID, variant IDs, source revision, schema/catalog version and observed time. | Stable IDs; declared market/currency; same-variant price/size/stock; tombstone on removal. |
+| Search projection | Scope, product ID, catalog revision, projection schema/epoch and indexed factor versions. | Rebuildable from Cosmos; contains no profile data, confidential financial values or authority not present in canonical state. |
+| Serving policy | Scope, immutable policy ID/version, activation interval and referenced rule/factor/projection versions. | One validated active bundle per context; conditional activation; explicit rollback and revocation. |
+| Ranking factor definition | Stable factor/version, typed source features, normalizer, freshness, privacy class and contribution ceiling. | Immutable semantics; allow-listed evaluator; policy owns weight. |
+| Product factor snapshot | Scope, product/variant key, factor set, source revisions, finite value, `sourceAsOf` and `validUntil`. | Reproducible and nonpersonal; unavailable is not fabricated zero. |
+| Behavior event | Event ID, schema version, scope, occurrence/receipt times and distinct correlation/attribution IDs. | Validate and deduplicate before aggregation or purchase-item expansion. |
+| External trend observation | Stable source reference, revision, operation, structured catalog attributes, magnitude, provenance and validity. | Licensed or synthetic structured data only; latest revision wins; retractions remain effective. |
+| Exposure | Serving decision, displayed product/panel IDs, positions, filters and experiment assignment. | A response is not an exposure. Capture only what the UI actually displays. |
+| Aggregation window | Scope, feature window, correction/input-set revision, source readiness and status. | Immutable closed input set; ordering by window/correction semantics, not worker finish time. |
+| Recommendation list | Scope, deterministic task/seed, rule/catalog versions, candidate IDs and expiry. | Revalidate eligibility before serving; no unsupported personalized claim. |
+| Profile preference | Authorized profile key, consent purpose/version, explicit preference, source time and expiry. | Request-scoped use only; withdrawal/deletion enforced; explicit request filters win. |
+| Publication intent | Destination, entity key, desired revision/epoch, payload hash, attempts and result. | Idempotent retry; item-level outcomes; latest desired state wins. |
+
+### 4.1 Catalog and variant projection
+
+The searchable unit is normally a product with nested or flattened variant
+fields appropriate to the OpenSearch mapping. That projection must not break
+correlations between size, color, price and stock.
+
+For a selected market and variant, the API must verify:
+
+- the product and variant are active and authorized;
+- requested size/color belong to the same eligible variant;
+- the displayed price/currency and availability satisfy their freshness policy;
+- any indexed snapshot matches or precedes the hydrated canonical revision;
+- duplicates and tombstones are removed before response assembly.
+
+If OpenSearch cannot express a required same-variant predicate safely, retrieve
+a bounded superset and enforce the predicate after Cosmos hydration. Report
+facet/count semantics honestly when post-filtering can reduce displayed
+results.
+
+### 4.2 Event and attribution evolution
+
+Preserve the public camelCase event contract and normalize it at Beacon into a
+versioned internal envelope. Keep these identifiers distinct:
+
+- request/correlation ID for technical tracing;
+- event ID for idempotency;
+- serving-decision ID for the result configuration;
+- exposure ID for what was displayed;
+- order/transaction ID from the trusted commerce source;
+- experiment assignment ID.
+
+Deduplicate behavior events before expanding purchase line items. Never assign
+a query event to every retrieved product. Client order events are signals, not
+authoritative revenue. Backend-confirmed orders remain the commerce authority.
+
+### 4.3 Structured external trends
+
+External trend input must already contain licensed structured labels or a
+provider-approved taxonomy. No model extracts labels from text, images, audio
+or video.
+
+1. Authenticate and rate-limit the provider adapter.
+2. Validate stable source ID, revision/cursor, operation, publish/observe times,
+   expiry, bounded magnitude and structured attributes.
+3. Deduplicate by provider and stable source ID. Reprocessing a revision is
+   idempotent and does not refresh its age.
+4. Map provider values through a deterministic, versioned vocabulary table.
+   Unknown values remain reviewable evidence but contribute no score.
+5. Preserve one compound predicate such as `colour=blue AND fit=oversized AND
+   category=jackets`; do not split it into unrelated boosts.
+6. Resolve the predicate against a pinned catalog version, store matched IDs
+   and calculate the bounded contribution.
+7. A retraction, expiry or corrected mapping recomputes affected products and
+   publishes explicit clears.
+
+All strings are untrusted. Bound lengths and arrays, allow-list attribute keys,
+reject non-finite numbers, and keep raw licensed payloads and credentials out
+of general logs.
+
+## 5. Deterministic ranking policy
+
+### 5.1 Factor classes
+
+| Factor | Normalized meaning | Guardrail |
+|---|---|---|
+| `viralTrend` | Structured external momentum from `0` to `1`. | Preserve revision, compound match and expiry. |
+| `behaviorMomentum` | Deduplicated first-party activity relative to a comparable baseline from `0` to `1`. | Search responses are not product exposures; trusted outcomes remain distinct. |
+| `inventoryPressure` | Approved sell-through objective from `-1` to `1`. | Out-of-stock and selected-size availability are hard constraints. |
+| `revenueVelocity` | Category/price-band-normalized recognized revenue velocity from `0` to `1`. | Use completed-order facts, returns and explicit windows. |
+| `commercialValue` | Approved normalized margin/promotion value from `-1` to `1`. | Never expose source values in results or telemetry. |
+| `profilePreferenceMatch` | Explicit consented preference match from `0` to `1`. | Request filter wins; missing/withdrawn consent contributes zero. |
+| `merchantPriority` | Approved campaign adjustment from `-1` to `1`. | Immutable, authorized, time-bounded and unable to bypass eligibility/sort. |
+
+There are no learned factors. A new factor requires an owner, source, units,
+window, deterministic normalizer, freshness, privacy class, missing behavior,
+evaluation and maximum contribution. Raw stock, money and event counts never
+enter one sum without separate normalization.
+
+### 5.2 Composition
+
+The search engine retrieves eligible candidates using BM25 and mandatory
+filters without optional factor boosts. For a bounded candidate window, each
+factor evaluator returns `valid`, `missing`, `stale`, `notApplicable`, `denied`
+or `error`, plus a finite `effectiveValue` in `[-1,1]` only when valid.
 
 ```text
-weightTotal = sum(weight_i for i in E)
+weightTotal = sum(weight_i for configured enabled factors)
 
-rawContribution_i = 0 if result_i.status != valid, otherwise:
+rawContribution_i = 0 if status_i != valid, otherwise:
     maxFactorAdjustment
   * (weight_i / weightTotal)
-  * result_i.effectiveValue
+  * effectiveValue_i
 
 factorContribution_i =
-  clamp(
-    rawContribution_i,
-    -maxContribution_i,
-    maxContribution_i
-  )
+  clamp(rawContribution_i, -maxContribution_i, maxContribution_i)
 
 factorAdjustment =
-  clamp(
-    sum(factorContribution_i),
-    -maxFactorAdjustment,
-    maxFactorAdjustment
-  )
+  clamp(sum(factorContribution_i),
+        -maxFactorAdjustment,
+        maxFactorAdjustment)
 
-normalizedSearchRelevance =
+normalizedRetrievalRelevance =
   1 - (originalRank - 1) / max(candidateCount - 1, 1)
 
-finalScore = normalizedSearchRelevance + factorAdjustment
+finalScore = normalizedRetrievalRelevance + factorAdjustment
 ```
 
-Reject non-finite/out-of-range provider values rather than using clamping to
-hide a contract failure. The clamps above enforce contribution budgets only.
-Start `maxFactorAdjustment` no higher than the existing `0.20` normalized
-relevance cap and enforce the configured maximum rank movement and relevance
-floor. A multi-factor policy with no positive weights fails validation before
-division; an explicit `baseline` policy with no factors is valid and preserves
-Search order. A valid policy whose factors are all unavailable also preserves
-Search order, with degradation metadata, rather than dividing by available
-weight. Zero/one eligible candidate requires no reordering.
+Unavailable factors contribute zero and do not donate weight. Reject a policy
+with enabled factors but no positive weight. Reject invalid values rather than
+clamping them into apparent validity. Sort by final score, original retrieval
+rank and stable product ID. Enforce a relevance floor and a verified maximum
+rank movement. If constrained sorting cannot produce a valid permutation,
+preserve retrieval order with an explicit diagnostic.
 
-Sort by final score, original Search rank, then product key. Apply the
-relevance floor to positive adjustments and enforce absolute rank movement on
-the resulting permutation, not by independently clamping item positions
-(which can collide). If the constrained sorter cannot produce a verified
-permutation, retain Search order with a guardrail diagnostic. These rank-based
-limits are not guarantees of semantic relevance; evaluate on judged queries.
+No factor can add a product outside the retrieved set, undo a filter, override
+an explicit sort, revive an ineligible variant or apply after expiry.
 
-Keep execution modes explicit; the formula above is for `policy-hybrid` only:
+### 5.3 Extension contract
 
-- **`policy-hybrid`:** Search retrieves without an optional business/trend
-  profile or such a default profile. The API applies the complete factor
-  policy once to a bounded candidate window. This is the preferred extension
-  for dynamic weights and request-specific dimensions, not native vector
-  hybrid retrieval and not Option C's indexed/live trend delta.
-- **`index-policy`:** one named profile applies only explicitly supported
-  nonpersonal factors. Its versioned mapping must validate field types,
-  direction, ranges and expiry clearing; reject unsupported definitions
-  rather than approximating them silently. Native profile scoring is not
-  numerically equivalent to the formula and cannot enforce an API rank cap.
-  Do not add generic live factor deltas in this mode.
-- **Existing trend modes:** preserve Option C's separately evaluated
-  `trendingScore` profile and delta-only algorithm, comparing actual indexed
-  values returned by Search. Equal snapshots add no incremental boost.
+The composer knows factor results, weights and guardrails, not source-specific
+names. Providers:
 
-Azure AI Search supports multiple functions inside a scoring profile, but only
-one profile can be selected per query. Profile definitions and numeric boosts
-are index configuration, not a general per-request factor-weight API. Do not generate an
-unbounded profile for every customer or rely on preview-only function
-aggregation without explicit approval.
-[Azure AI Search scoring profile rules](https://learn.microsoft.com/azure/search/index-add-scoring-profiles#rules-for-scoring-profiles)
+- evaluate a bounded batch;
+- use already hydrated inputs;
+- cannot call one external service per candidate;
+- cannot return new candidates;
+- cannot invoke arbitrary code, formulas or URLs from a policy;
+- return every requested candidate/factor pair or a contract error.
 
-Example policy emphasizing viral momentum:
+Adding a factor with an existing evaluator changes definition, data and policy
+records only. A new source may require a reviewed adapter/evaluator, but it
+does not change the composer. Activate in this order: deploy readers, backfill
+versioned inputs, verify readiness, shadow, approve, conditionally switch the
+active pointer, monitor and retain rollback data.
 
-```json
-{
-  "schemaVersion": "ranking-policy-v1",
-  "policyId": "fashion-viral-led",
-  "version": "2026-09-29.1",
-  "factorSetId": "fashion-factors-v1",
-  "mode": "policy-hybrid",
-  "candidateWindow": 100,
-  "maxFactorAdjustment": 0.15,
-  "maxRankMovement": 12,
-  "positiveAdjustmentRelevanceFloor": 0.25,
-  "factors": [
-    { "id": "viralTrend", "version": "v1", "weight": 0.50, "maxContribution": 0.08 },
-    { "id": "revenueVelocity", "version": "v1", "weight": 0.15, "maxContribution": 0.03 },
-    { "id": "inventoryPressure", "version": "v1", "weight": 0.15, "maxContribution": 0.03 },
-    { "id": "profileColourAffinity", "version": "v1", "weight": 0.10, "maxContribution": 0.02 },
-    { "id": "profileSizeAvailability", "version": "v1", "weight": 0.10, "maxContribution": 0.02 }
-  ]
-}
-```
+## 6. Event, aggregation and publication lifecycle
 
-For a revenue-led variant, use weights `0.15 / 0.45 / 0.20 / 0.10 / 0.10` in
-the same factor order, with approved contribution caps
-`0.03 / 0.08 / 0.03 / 0.02 / 0.02`; the global cap stays `0.15`. With every
-effective value equal to `1`, viral's contribution changes from `0.075` to
-`0.0225`, and revenue's from `0.0225` to `0.0675`. Raising only revenue's weight
-while keeping a binding `0.03` cap would limit the intended change. Percent
-weights are shares of a bounded adjustment budget, not percentages of rank
-movement or expected revenue.
+1. Validate source-specific schema, scope, UTC times, ranges and product IDs.
+2. Persist accepted normalized events idempotently in Cosmos; route rejects
+   with bounded reasons to `dead-letter`.
+3. Resolve duplicates, latest revisions and retractions before aggregation.
+4. Close a window only when required source watermarks/readiness are known.
+   Healthy source idleness differs from a source outage.
+5. Calculate factors with pure deterministic code, fixed time and pinned
+   catalog/vocabulary/policy versions.
+6. Write immutable factor snapshots and a desired publication revision using
+   conditional Cosmos writes.
+7. Project changes to OpenSearch, inspect each bulk item result and retry only
+   failed items from the existing desired state.
+8. Order acceptance by feature window and correction revision, not completion
+   time. A late old worker cannot overwrite newer state.
+9. Run clock-driven expiry. Publish explicit zero/removal for obsolete indexed
+   boosts; Cosmos TTL does not clear OpenSearch fields.
+10. Reconcile checkpoints, desired revisions and query-visible projection
+    state. Quarantine invalid artifacts or incompatible schema versions.
 
-`factorSetId` pins exact factor/provider/feature/normalizer versions and
-compatible serving data. Policy validation rejects unknown/duplicate factors,
-invalid numbers, caps above factor/platform ceilings, unsupported modes,
-conflicting evidence and missing consent requirements. Policies are scoped by
-authorized collection, market and activation window. Resolve one approved
-bundle before the request; tie-breaking between campaigns/experiments is
-explicit. Shoppers cannot submit weights, provider references or privileged
-policy IDs. Activation uses the existing approval and rollback lifecycle.
+Scheduled workers are the initial trigger. Change feed reduces polling latency
+but does not create one job per click. Enforce concurrency, batch, retry and
+execution-time budgets.
 
-#### Customer preference handling
+## 7. Search, browse and deterministic recommendations
 
-Explicit request intent has higher authority than inferred profile state. A
-shopper filtering for red must not receive a blue preference boost, and a
-selected size is a hard same-variant availability constraint. Favorite colour,
-size or category can be a soft factor only when consent, purpose, confidence,
-freshness and profile scope are valid.
+### 7.1 Retrieval modes
 
-Fetch profile state in one authorized bounded read, calculate matches only for
-the retrieved candidates, and do not emit raw preferences in response
-diagnostics or metric dimensions. If consent is absent, withdrawn, stale or
-unavailable, personalized factors contribute zero without renormalizing the
-remaining weights. The response identifies an allowed unpersonalized mode
-without revealing why to another caller.
-Policy and experiment cache keys include the authorized profile/consent
-context; shared result caches cannot contain personalized order.
-
-### 3.5 Adding a dimension without changing the ranking core
-
-**Extension boundary:** the composer knows the result contract, weights and
-guardrails, not a switch statement for TikTok, revenue or the next dimension.
-Use a small registry of reviewed provider implementations inside the existing
-publisher/Search service. Do not build a dynamic plugin host, arbitrary formula
-language, new microservice per factor, or runtime-loaded scripts.
-
-| Change | Required work | Ranking core / Search schema |
+| Capability | Initial implementation | Explicit exclusion |
 |---|---|---|
-| Change an existing factor's weight, cap or activation schedule | New immutable policy; preview and approval | Neither changes |
-| Add a dimension using an existing provider and supported features | New factor definition, fixtures and factor-set/policy versions | Neither changes in `policy-hybrid` |
-| Add a genuinely new source or calculation | Authorized ingestion adapter/feature contract and, if needed, a reviewed provider implementation with tests | Composer unchanged if the result contract still fits |
-| Use a new catalog property | Populate/version the catalog projection and missing-value policy; revalidate compound/variant matching | Search schema changes only if retrieval, filters or an index profile need the property |
-| Add a hard eligibility rule or incompatible result type | Separate contract/design and migration review | Not disguised as a boost factor |
+| Search | BM25 keyword retrieval with allow-listed fields and analyzers. | Semantic ranking, vectors, embeddings and query generation. |
+| Exact lookup | Normalized SKU/product identifier path. | Fuzzy matching that can substitute a different identifier. |
+| Browse | Category/collection filter plus deterministic merchant/default sort. | Fabricated relevance for match-all requests. |
+| Suggestions | Prefix completion from product names and approved curated phrases. | Learned query suggestions or generated text. |
+| Recommendations | Rule-based similarity, co-view/co-purchase with support thresholds, popularity and recent history. | Model training, inference and personalized claims without consent/evidence. |
+| Guided discovery | Facets and approved decision-tree questions. | Free-form conversational or agentic interfaces. |
 
-#### Definition and evaluation contracts
-
-The following proposed contracts must be formalized with the chosen runtime;
-they do not imply that providers or a registry already exist:
-
-| Definition field group | Required semantics |
-|---|---|
-| Identity | `schemaVersion`, stable `factorId`, immutable `version`, owner and description. Never change the meaning of a published version. |
-| Inputs | Registered `providerRef`, exact typed `featureRefs` and `normalizationRef`. Each feature declares source, units/currency, grain, vocabulary/catalog version, scope and source-time semantics. No implicit type/variant coercion. |
-| Evaluation | `evaluationScope` (`product` or `request`), supported serving modes and `effective-signed-v1` result contract. Product factors are batch-prepared; request factors use already hydrated bounded features. |
-| Quality | Freshness/decay reference, maximum age and expiry rules; normalization, confidence and decay have one provider owner. A later query evaluates remaining decay from the snapshot's recorded as-of time, never refreshes age or compounds the same discount twice. |
-| Privacy and evidence | Nonpersonal versus consented profile class, confidentiality classification, required purpose, evidence families and mutually exclusive composites. Derived features inherit the most restrictive input classification; nonpersonal does not mean publicly disclosable. |
-| Limits and failure | Contribution ceiling, bounded input/result sizes, allowed request contexts and `omit-with-diagnostic` for optional signals. Mandatory eligibility checks stay outside this contract. |
-
-Keep input adapters separate from factor evaluators. A new raw source may
-need its own schema, rejection route, credentials and approval; a generic
-curated factor table is not permission to mix financial data into the existing
-behavior/external Eventstreams.
-
-The serving coordinator pins policy, scope, catalog/feature references and an
-injectable `requestAsOf`, hydrates shared inputs once, and calls a conceptual
-`evaluateBatch(definitions, candidates, authorizedContext, requestAsOf)`.
-Providers cannot call one external service per product, launch a scoring job,
-return new candidates, or invoke each other recursively. Compose dependencies
-as declared upstream features; validate the feature graph for cycles, versions,
-readiness and privacy before activation. New model inference on the request
-path still requires the separate online-serving design.
-
-For every requested factor/candidate pair, return:
-
-| Result field | Contract |
-|---|---|
-| Identity | Exact product/variant key and factor/version requested; authorized scope and input-set reference. |
-| `status` | `valid`, `missing`, `stale`, `notApplicable`, `denied` or `error`; include a bounded reason code. |
-| `effectiveValue` | Finite `[-1,1]` only for `valid`; otherwise `null`. A known no-match is `valid` with `0`, not a source outage. |
-| Time and lineage | UTC `sourceAsOf`, `evaluatedAt`, `validUntil` and source revision; catalog, provider and normalizer versions are pinned by input/factor-set references. Source metadata may be null for unavailable inputs, never fabricated. A valid value must be unexpired at `requestAsOf`; expiry is the earliest dependency/age deadline. |
-
-Validate outputs before composition. Unknown/duplicate candidate keys, omitted
-pairs, incompatible versions and invalid numeric values are provider contract
-failures, not successful empty results. Omit the affected factor batch and
-surface diagnostics; never insert a provider-supplied product into Search
-results. Do not fetch profile features without current authorization/consent,
-even if a provider would later return `denied`.
-
-Use one bounded candidate page and batch feature reads. As proposed starting
-limits, enable at most 16 factors over at most 100 candidates, with at most four
-concurrent provider batches. Require explicit per-provider and overall
-optional-evaluation deadlines in the serving bundle; select their values from
-the query-latency budget before deployment. These are application limits, not
-Azure quotas. Timeout contributes zero with a reason and no request-path retry
-storm. A core optional-state-store outage preserves Search order as required
-by the README; isolated factor failures leave other valid shares unchanged.
-
-#### Storage, versions and rollout
-
-Use a long-form **curated** analytical representation keyed by scope,
-product/variant, factor/version and source-window/correction. Source raw tables
-remain independent. Store compact nonpersonal product bundles in Cosmos keyed
-by scope, product and `factorSetId`, not a single unversioned `current` map.
-Bound bundle size and read only the factor set pinned by the request.
-
-Within a bundle, compare source-window/correction ordering per factor and
-conditionally merge changed entries with ETag retry; an inventory update
-cannot overwrite newer revenue/trend entries. Identical-version conflicting
-content is rejected. Publish explicit unavailable/retracted states and retain
-durable high-water marks so old replays cannot resurrect them. Keep old/new
-factor sets side by side during rollout and rollback; no transaction across
-Cosmos and Search is assumed.
-
-Add dedicated normalized Search fields only for approved `index-policy`
-projections. Such a mapping declares its exact compatible profile, validation,
-version diagnostics and indexed clearing behavior. Fields/profiles use a
-validated rollout; pure `policy-hybrid` factors need no Search schema update.
-Private/request-dependent results never enter global bundles or shared indexes.
-
-The compiler validates a proposed policy against registered capabilities and
-produces an immutable execution plan: factors, providers, data references,
-budgets, privacy requirements, mode and index/profile identity. No weight
-change requires recomputing source facts when definitions remain compatible.
-Deploy provider readers first, prepare/backfill versioned inputs, verify
-readiness, then shadow-evaluate before activating the plan. Activate the
-scope-bound pointer conditionally and pin it once per request.
-
-Rollback selects the previous still-valid plan **and** its compatible data,
-not just old weights against a new normalizer. Retire a factor by activating a
-policy that omits it; retain its definitions/data until referencing policies,
-in-flight requests and any ranking cursors expire. Then stop production and
-clean up authorized projections. Emergency revocation overrides cached plans:
-disable its contribution without redistributing weight, record the revocation
-version, and invalidate affected ranking snapshots/caches.
-
-#### Worked extension: seasonal affinity
-
-After the framework exists, add a nonpersonal `seasonalAffinity` dimension
-without editing the composer. Illustrative definition (not a deployed schema):
-
-```json
-{
-  "schemaVersion": "factor-definition-v1",
-  "factorId": "seasonalAffinity",
-  "version": "v1",
-  "owner": "commerce-search",
-  "description": "Match approved catalog season tags to the retailer season.",
-  "providerRef": "catalog-tag-match/v1",
-  "featureRefs": ["catalog.seasonTags/v1", "context.retailSeason/v1"],
-  "normalizationRef": "binary-membership/v1",
-  "evaluationScope": "request",
-  "servingModes": ["policy-hybrid"],
-  "resultContract": "effective-signed-v1",
-  "privacyClass": "nonpersonal",
-  "evidenceFamilies": ["catalog-season"],
-  "excludes": [],
-  "freshnessPolicyRef": "valid-until/v1",
-  "maxAgeSeconds": 86400,
-  "maxContributionCeiling": 0.03,
-  "failurePolicy": "omit-with-diagnostic"
-}
-```
-
-1. Populate approved season labels in the versioned catalog projection and a
-   server-derived retail calendar for the authorized market. Neither feature
-   nor `catalog-tag-match/v1` is implemented today; introduce the evaluator
-   once with tests, then reuse it for supported tag-match dimensions.
-2. Normalize both vocabularies. Return `1` for a match and `0` for a known
-   non-match; absent catalog/calendar data returns `missing` with `null`.
-   The binary provider has no additional confidence/decay multiplier; expiry
-   is the earlier of input validity and the configured age limit. No shopper
-   location or per-customer data is required.
-3. Register a new immutable factor set containing this definition and the
-   prior factors. Clone the viral-led policy into a new version, pin the new
-   `factorSetId`, set `viralTrend` weight to `0.40` and append the entry below,
-   keeping weight total `1.00` and the global cap `0.15`. Scope, effective dates
-   and approval belong to the policy bundle.
-
-```json
-{
-  "id": "seasonalAffinity",
-  "version": "v1",
-  "weight": 0.10,
-  "maxContribution": 0.02
-}
-```
-
-4. With `effectiveValue=1`, the seasonal contribution is `0.015`; no-match or
-   missing contributes zero, with different statuses. Shadow-test the new
-   bundle against the old one, canary the approved policy, then promote or
-   roll back. Registry addition alone must leave existing results unchanged.
-   No Search schema, public Search/Beacon contract or core composer change
-   is required for this request-time factor.
-
-## 4. Search and browse serving
-
-### 4.1 Configuration dimensions
-
-Keep these independent:
-
-| Dimension | Initial value | Later alternatives |
-|---|---|---|
-| Retrieval | Keyword search. | Keyword/vector hybrid, optional semantic reranking, exact-identifier path. |
-| Trend mode | Baseline, index-only or index/live hybrid comparison. | Same validated signal lifecycle under expanded retrieval modes. |
-| Factor policy | Trend-only while Stage A is proven. | Versioned index-policy or policy-hybrid bundles combining viral, behavior, inventory, revenue/commercial and merchant factors. |
-| Commerce policy | Required eligibility only for controlled POC comparisons. | Merchant controls, browse policy and explicit sort. |
-| Learned/personal mode | Disabled. | Evaluated task-specific ranking and request-scoped consented preference factors. |
-| Interface | Direct product results. | Guided facets or conversational wrapper using the same authorized APIs. |
-
-Native hybrid retrieval uses reciprocal rank fusion; it is not the live-store
-hybrid. Semantic ranking considers only the top 50 candidates and needs
-appropriate text. Do not blend semantic scores for 50 products with unrelated
-unreranked scores for another 150 as if they were one calibrated score family.
-Initially restrict a semantic reranking experiment to its evaluated semantic
-candidate set.
-
-When semantic scoring profiles apply, use the effective response order and
-configured score selection, including `@search.rerankerBoostedScore` where
-applicable. Agentic retrieval is not a transparent replacement for direct
-index queries with these scoring profiles.
-[Hybrid retrieval](https://learn.microsoft.com/azure/search/hybrid-search-overview);
-[semantic ranking](https://learn.microsoft.com/azure/search/semantic-search-overview);
-[scoring-profile behavior](https://learn.microsoft.com/azure/search/semantic-how-to-enable-scoring-profiles).
-
-### 4.2 Request sequence
+### 7.2 Request sequence
 
 ```mermaid
 sequenceDiagram
     participant UI as Storefront
-    participant API as Commerce API
-    participant Policy as Active policy
-    participant Search as Azure AI Search
-    participant State as Serving state
-    participant Beacon as Beacon
-    UI->>API: Query or category, refinements, caller context
-    API->>API: Authenticate, authorize scope, validate constraints
+    participant API as Discovery API
+    participant Policy as Cosmos policy
+    participant Search as OpenSearch projection
+    participant Data as Cosmos canonical data
+    participant Beacon as Beacon API
+    UI->>API: Query/browse, filters and caller context
+    API->>API: Authenticate, authorize and validate
     API->>Policy: Resolve immutable active bundle
-    Policy-->>API: Index, rules, factors, weights and experiment versions
-    API->>Search: Authorized filters and bounded retrieval
-    Search-->>API: Candidates, facets, order and indexed factor versions
-    opt Factor policy or live/learned mode enabled
-        API->>State: Bounded batch read
-        State-->>API: Versioned values or explicit failure
-    end
-    API->>API: Validate eligibility, versions and ordering policy
-    API-->>UI: Results, attribution and degraded-mode metadata
-    UI->>Beacon: Actual exposures and subsequent interactions
+    Policy-->>API: Rules, factors, limits and versions
+    API->>Search: Translated bounded query and filters
+    Search-->>API: Candidate IDs, facets, order and indexed revisions
+    API->>Data: Bounded hydration and factor reads
+    Data-->>API: Canonical products and versioned state
+    API->>API: Revalidate eligibility and compose ordering
+    API-->>UI: Results, attribution and degradation metadata
+    UI->>Beacon: Actual exposures and interactions
 ```
 
-Detailed ordering:
+Detailed order:
 
-1. Authenticate caller and authorize retailer/collection. Derive effective
-   scope from server-side identity, not an untrusted body/header alone.
-2. Validate the query, allowed refinement fields, market/currency, size and
-   request limits. Translate a validated filter structure; never concatenate
-   arbitrary client/model text into an unrestricted filter expression.
-3. Resolve an immutable compiled serving plan and stable experiment assignment.
-   Pin its versions, authorized context and request time; check revocations.
-   Apply authorized linguistic controls.
-4. Apply mandatory catalog, policy, stock/market and user-selected constraints
-   in Search retrieval. Validate redirect rules separately; an invalid or
-   disallowed redirect must not become an open redirect.
-5. Retrieve a bounded candidate set and needed indexed factor metadata.
-   Search failure is an error, not successful empty results.
-6. If enabled, batch-read compatible live product factors and authorized
-   consented profile state. Validate scope, factor/normalizer versions, finite
-   bounds, source times, freshness and expiry. Evaluate registered providers
-   within the plan's batch/deadline budgets and validate their result contracts.
-7. Revalidate any current commerce facts promised by this experience.
-   Remove now-ineligible candidates; do not insert products that Search did
-   not return. Return fewer results with explicit metadata if needed.
-8. Combine the providers' effective values once under the selected policy and
-   caps, then apply eligible pin constraints when allowed. Preserve original
-   order and product key for deterministic ties. Use the separate delta-only
-   algorithm instead when the plan selects an existing trend mode.
-9. Return products, facet/count semantics, configuration version, scoped
-   attribution and permitted degradation metadata. Do not expose raw profiles
-   or internal score evidence to unauthorized clients.
-10. Record actual displayed exposures separately through Beacon.
+1. Derive scope from authenticated server-side identity.
+2. Validate query length, locale, market/currency, paging, filters and limits.
+3. Resolve one immutable active policy and stable experiment assignment.
+4. Translate the validated AST into an OpenSearch query. Never concatenate
+   client text into raw JSON, scripts, regexes or field names.
+5. Retrieve a bounded candidate set. Search failure is an error, not empty
+   success.
+6. Batch-hydrate candidates and required factors from Cosmos using known
+   partition keys. Apply deadline and RU budgets.
+7. Validate catalog revision, market, same-variant price/size/stock, tombstone,
+   freshness, factor versions and expiry.
+8. Remove ineligible candidates; never insert products not returned by the
+   selected retrieval/recommendation candidate generator.
+9. Apply deterministic policy once, respecting explicit sort and rank caps.
+10. Return products, facet/count semantics, policy/projection versions,
+    attribution and permitted degradation metadata.
+11. Record actual displayed exposures through Beacon, not from API response.
 
-### 4.3 Ranking and factor guardrails
+### 7.3 Browse, facets, suggestions and pagination
 
-For Stage A and existing trend modes, retain the
-[existing ranking specification](option-c-hybrid-detailed-design.md#9-search-and-re-ranking-algorithm):
-the canonical `[0,100]` trend score, `1:2:3` behavioral starting weights,
-`alpha=0.5`, compatible state versions and bounded incremental adjustment.
-Compare live state with indexed values **returned by Search**, not the last
-accepted write. Equal snapshots add no trend boost; negative deltas support
-decay. The rank-based heuristic does not algebraically undo Search boosting.
+- Explicit price/date/user sorts disable optional factor reordering and pins
+  that contradict the chosen sort.
+- Query-dependent facets describe the OpenSearch candidate set. If Cosmos
+  eligibility post-filtering can change counts, label them as retrieval counts.
+- Suggestions have a separate bounded endpoint and rate limit. Curated phrases
+  are approved policy records; product prefixes come from active catalog data.
+- Use a signed, opaque cursor containing or referencing scope, query/filter
+  hash, policy version, projection epoch, sort values and expiry.
+- For factor-reordered results, freeze one bounded ranked snapshot in Cosmos
+  and page through it. Do not rerank independently for each offset.
+- Reject expired or incompatible cursors with an explicit restart response.
 
-Do not add raw trend, model probabilities or recommendation scores to BM25,
-RRF or semantic scores. New models need a separately versioned/calibrated
-ordering policy and evaluation. Audit feature ownership so a learned model
-does not consume trend features and then unintentionally apply the same trend
-again through a profile and live adjustment.
+### 7.4 Deterministic recommendation tasks
 
-For the three-mode benchmark, hold eligibility, query, catalog, candidate
-budget and non-ranking configuration constant. Baseline disables optional
-trend, personalized and merchant ranking boosts; no default scoring profile
-may accidentally activate them. Diagnostic metadata is required for degraded
-responses.
+| Task | Rule-based implementation |
+|---|---|
+| Similar products | Weighted exact catalog-attribute overlap within category, with stable ties. |
+| Frequently bought together | Deduplicated basket association with minimum support/confidence and variant exclusion. |
+| Others also viewed | Deduplicated co-view counts with bot filtering, minimum support and position-bias diagnostics. |
+| Popular in category | Time-windowed unique interactions and trusted purchases, normalized by category exposure. |
+| Recently viewed | Bounded, consented ordered history; no scoring model. |
+| Buy again | Explicit replenishable-category rules over authorized purchase history. |
+| On sale | Promotion-valid, market-correct products under deterministic merchant order. |
 
-"Slight boost" is an evaluation constraint, not a fixed multiplier claim.
-Keep the magnitude scoring profile opt-in, start with a low configured lift,
-and tune it against a frozen judged query set. Record rank deltas by query
-cohort and reject a policy that lets trend routinely displace clearly more
-relevant products. The API-side live delta remains capped; explicit sorts,
-filters, stock, policy and candidate eligibility always win. Index-only
-profile tuning and API-side caps are separate controls and must be evaluated
-independently.
+Lists are versioned in `serving-state`, expire explicitly and are filtered
+against current canonical eligibility. Missing lists may use an approved
+nonpersonal fallback with `fallbackReason`. Dependency failure is not an empty
+successful panel.
 
-For multi-factor policies, use the
-[bounded composition](#34-generalized-multi-factor-ranking-policy) and
-[extension contract](#35-adding-a-dimension-without-changing-the-ranking-core).
-Never combine the full API factor policy with an indexed profile or the
-legacy delta algorithm. Keep per-factor and combined caps, relevance floor and
-maximum rank movement independently configurable within approved ceilings.
-A missing optional factor contributes zero with diagnostics and no weight
-redistribution; missing mandatory eligibility data follows its failure policy.
+## 8. Merchant policy and administration
 
-### 4.4 Browse, facets, suggestions and pagination
+### 8.1 Rule precedence
 
-- **Browse:** use a category/collection-constrained query and a documented
-  deterministic business order first. Add measured aggregate/learned browse
-  ranking later. Do not invent text relevance for a match-all query.
-- **Explicit sort:** price/date/user-selected field order takes precedence
-  over optional ranking. Disable all optional factor adjustments and pins that
-  would contradict it; retain mandatory exclusions and stable key ties.
-- **Facets:** initially use Search's query-dependent buckets with a declared
-  scope. Label them as retrieval counts; downstream current-stock validation
-  can make displayed-result counts differ. Do not promise exact current
-  availability counts unless computed with the same eligibility snapshot.
-  OR within a selected attribute and AND across attributes is a proposed
-  native-platform convention, not a reinterpretation of the legacy draft.
-- **Learned facets:** learn which permitted fields/questions to present from
-  actual usage, while native Search still computes eligible bucket values.
-  Start with configured one-level facets; preview advanced facets are optional.
-- **Suggestions:** native product-prefix completion first; a later separate
-  query-suggestion index contains curated, sufficiently supported historical
-  queries, locale, popularity and validity. Exclude PII, unsafe/rare queries
-  and queries with no eligible results. Preserve prefix fallback when the
-  learned dataset is absent, with its source identified.
-- **Pagination:** keep the POC single-page. Stage B multi-page custom ordering
-  requires a fixed ranking snapshot and opaque signed cursor bound to
-  scope/query/filters/policy, with expiry and current-eligibility rechecks.
-  No fresh independent rerank for each offset page. Expired snapshots produce
-  an explicit restart response; do not silently substitute new ordering.
+1. Authorization, legal/catalog exclusion and current eligibility.
+2. User filters, category/market scope and validated linguistic policy.
+3. Approved redirect, if valid for the request.
+4. Explicit user sort.
+5. Otherwise BM25/default browse order plus bounded deterministic factors.
+6. Eligible pin placement when compatible with the sort.
 
-Current facts and exact-price promises require an available authoritative
-source or a validated freshness policy. If that condition cannot be met, do
-not label products as confirmed purchasable or fabricate a price.
+No boost or pin can widen filters, bypass stock rules or add an unrelated
+product. Conflicting rules are rejected at publication. Overlaps resolve by
+explicit priority then stable rule ID, never database enumeration order.
 
-## 5. Merchant policy and administration
-
-Treat the merchant workbench as a first-class **custom** capability. An Azure
-portal and a collection of scoring profiles do not provide it.
-
-### 5.1 Rule precedence
-
-Proposed Stage B precedence, evaluated against one policy version:
-
-1. Authorization, legal/catalog exclusions and current eligibility.
-2. User refinements, category/market scope and validated linguistic policy.
-3. Approved redirect, if allowed for this query/context.
-4. Explicit user sort, when supplied.
-5. Otherwise the configured relevance/browse/learned ordering with bounded
-   business, trend and consented-profile contributions.
-6. Eligible pin placement, only when compatible with the chosen sort mode.
-
-No boost/pin may undo an exclusion, widen a selected filter or create a
-product outside the retrieved candidate set. A missing pinned product is a
-visible rule non-application reason, not an invitation to fetch an unrelated
-item. This is a deliberate limit versus broader pinning expectations.
-
-Reject conflicting pins or invalid ranges at policy publication. Resolve
-overlapping nonconflicting rules by explicit priority and stable rule ID.
-Do not rely on database enumeration order. Limit compiled rule size and
-candidate operations; the exact limits must be configured and load-tested.
-
-### 5.2 Lifecycle
+### 8.2 Lifecycle
 
 `Draft -> Validated -> Previewed -> Approved -> Active -> Retired`
 
-- Merchandiser authors synonyms, facet choices, factor weights/caps, boosts,
-  exclusions, pins, redirect targets, time windows and approved clarification
-  questions.
-- Validator checks referenced catalog fields/products, allowed actions,
-  registered factor/provider/feature versions, weight/cap and execution bounds,
-  dependency cycles, evidence overlap, consent requirements, conflicting pins,
-  redirect hosts and effective market/scope. Unknown definitions or unsupported
-  execution modes block activation, even when a compiler could ignore them.
-- Preview runs a judged query set against the draft and current policy and
-  shows changed ranks, factor contributions, constraints and reason codes
-  without exposing confidential values or personal preferences.
-- A separately authorized approver activates an immutable policy bundle.
-  Record actor, reason, version and activation/audit evidence.
-- Reject activation until required indexes/models/artifacts are available.
-  Use the reader-first, versioned-data rollout in section 3.5. Roll back the
-  active pointer to a still-valid compatible plan and data on failure.
-- Cached configuration has a validity deadline. A last-known-good version
-  may be used only while valid; unknown mandatory eligibility policy fails
-  closed. Do not silently use an empty ruleset.
-
-Native synonym maps are referenced by index fields, not arbitrary per-request
-policy bundles. If an experiment requires incompatible synonym maps, plan
-separate index configurations or an explicitly tested application rewrite
-strategy; do not pretend version metadata makes mutable shared maps isolated.
-
-## 6. Event, feature and score lifecycle
-
-Retain [Option C](option-c-hybrid-detailed-design.md) and the
-[two-stream contract](eventstream-ingestion-design.md), including:
-
-1. Source-specific validation/rejection, behavior event deduplication before
-   item expansion, and external latest-revision resolution before eligibility.
-2. Whole attribute predicates: blue AND jackets, not independent boosts for
-   blue products and jackets.
-3. Per-source readiness and watermarks. Idle external input is not failure;
-   missing behavior is not a zero-activity feature. New inputs for a previous
-   window require a correction/input-set revision.
-4. Coalesced scheduled/Activator triggers by scope, window and scoring policy;
-   cooldown/concurrency limits, not one notebook or job per click.
-5. Immutable feature artifacts and an explicit ML-identity read check.
-6. Durable submission intent and stable job identity; reconcile an ambiguous
-   submission before retrying.
-7. Scheduled terminal-state reconciliation. Success, failure, cancellation,
-   timeout and unknown status have explicit outcomes; the notebook need not
-   remain running.
-8. Artifact validation and independent Search/live-store publication results.
-   Retry publication from the artifact without recomputing the ML job.
-9. Ordering by feature window and correction/policy semantics, not job finish
-   time. Cosmos uses conditional ownership/writes; Search publishing is
-   serialized/coordinated with latest-desired-state repair after ambiguous
-   outcomes, not assumed per-document compare-and-set.
-10. Clock-driven expiry and clearing of previously boosted Search documents.
-    Do not refresh `lastTrendingAt` merely because a job ran.
-
-Extend the same version/readiness discipline to aggregate product factors
-without mixing their semantics. Revenue, commercial value and inventory each
-retain their own source watermark, correction version, normalization window
-and expiry. Publish a factor snapshot only when its required sources are ready;
-do not turn a missing revenue feed into zero revenue or stale inventory into a
-current signal. Personalized factors are calculated at serving time from
-authorized profile state and are not added to shared feature artifacts.
-Use the per-factor conditional publication and side-by-side factor sets in
-section 3.5; do not replace the whole serving map when one new source updates.
-
-Activator's Run Notebook action is documented; parameter passing is preview.
-Validate actual parameter types and values at notebook entry. Use fixed,
-validated configuration plus the durable ledger or the periodic route if
-preview parameters are not approved. No guessed alert payloads or silent
-numeric/boolean defaults.
-[Official action guidance](https://learn.microsoft.com/fabric/real-time-intelligence/data-activator/activator-trigger-fabric-items)
-
-Behavior starts with periodic feature runs. External qualified hints can
-trigger the notebook but must wait for corresponding Eventhouse readiness.
-An Eventhouse aggregate does not automatically feed an Activator rule:
-explicitly configure the selected feed/query path and measure its cadence.
-
-Training is a separate workload from routine scoring. Admit training only
-after readiness checks and evaluation definitions exist. Keep its compute and
-concurrency budget from starving score publication.
-
-## 7. Recommendation and learned-ranking extensions
-
-### 7.1 Batch-first architecture
-
-Begin with reproducible non-personalized lists and transparent baselines:
-catalog-similar products, sufficiently supported co-view/co-purchase lists and
-category popularity. Azure ML jobs can later train task-specific models and
-publish versioned outputs to a **separate recommendation container**, not the
-canonical product-trend field.
-
-For query-conditioned learned ranking, Search still retrieves candidates.
-A custom model operates only on those eligible candidates under an explicit
-feature/ordering contract. Precomputed global scores alone do not reproduce
-query-conditioned ranking.
-
-For a standalone recommendation endpoint, the approved task defines its own
-candidate generator. Batch-hydrate/filter those candidate IDs through the
-catalog/Search eligibility path. This is not permission to inject recommended
-products into an unrelated Search result.
-
-```mermaid
-flowchart LR
-    HIST["Consented, deduplicated history and catalog"]
-    DATA["Point-in-time training/evaluation datasets"]
-    TRAIN["Azure ML task-specific training"]
-    EVAL["Quality, safety and coverage gates"]
-    REG["Approved immutable model/policy"]
-    SCORE["Batch candidate generation and scoring"]
-    LISTS[("Versioned recommendation lists")]
-    REQ["Authorized recommendation request"]
-    CHECK["Current eligibility and deduplication"]
-    OUT["Products, task/version and fallback reason"]
-    HIST --> DATA --> TRAIN --> EVAL --> REG --> SCORE --> LISTS
-    REQ --> LISTS --> CHECK --> OUT
-```
-
-This diagram describes custom orchestration, not a prebuilt Azure recommender.
-Training success does not activate a model. Validate outputs and use the
-durable publication/recovery discipline from the POC.
-
-### 7.2 Task-specific progression
-
-| Task | Baseline | Later learned capability / key gate |
-|---|---|---|
-| Similar products | Catalog attribute similarity. | Evaluated embeddings/multimodal similarity; compatible model/vector versions and relevance judgments. |
-| Others you may like | Co-view lists with support thresholds. | Context/sequence models; next-item metrics without time leakage. |
-| Frequently bought together | Deduplicated basket associations. | Complement ranking; exclude duplicate variants and account for order reversals. |
-| Recommended for you | Explicit non-personalized fallback. | Consented profile/session modeling with sufficient support and privacy checks. |
-| Buy again | Eligible purchase-history rules. | Recurrence model for suitable products; never assume every fashion item is replenishable. |
-| On-sale | Promotion-valid category lists. | Consented promotion ranking; authoritative price/market/date checks. |
-| Recently viewed | Bounded ordered history. | No model necessary; profile scope, expiry and deletion tests. |
-| Panel orchestration | Fixed panels, duplicate suppression. | Evaluated panel selection/order; actual panel exposures and bounded fan-out. |
-
-Define each objective independently: next click, purchase, complement
-relevance or repeat purchase. Do not interpret a click probability as expected
-revenue or optimize margin without an approved business policy.
-
-Use temporal train/validation/test separation, point-in-time catalog and
-features, exposure-aware negatives and cohort support reports. Treat position
-bias, feedback loops, bots and missing events as model-quality risks. A more
-complex model is promoted only when it improves declared metrics without
-violating eligibility, diversity or serving-cost guardrails.
-
-### 7.3 Fallback and optional online serving
-
-Missing/expired model lists may use an explicitly configured, eligible
-non-personalized baseline with `fallbackReason`. A valid list with no eligible
-products can yield an explicitly empty recommendation panel; a dependency
-failure is not silently classified as "no products."
-
-Do not manufacture "because you liked..." explanations on fallback.
-Recommendations must not prevent core search from serving when their optional
-dependency fails.
-
-Introduce an Azure ML online endpoint only if batch/context features miss a
-measured requirement. Design feature retrieval, capacity, request deadline,
-circuit breaking, shadow evaluation and fallback separately.
-[Online versus batch inference](https://learn.microsoft.com/azure/machine-learning/concept-endpoints?view=azureml-api-2)
-
-## 8. Governed conversational discovery
-
-Use the existing Search/Recommendation APIs as validated tools rather than
-granting an LLM direct database queries or broad catalog mutation permissions.
-Start with approved facet questions before generating free-form conversations.
-
-Proposed interaction:
-
-1. Authenticate/scope the session and load only permitted, unexpired context.
-2. Extract a proposed intent and structured constraints from the shopper text.
-3. Validate constraint names/types/ranges against a catalog vocabulary;
-   preserve explicit shopper restrictions and clarify conflicting constraints.
-4. Call the same authorized Search/Browse or Recommendation API. A model cannot
-   invent a retailer scope, bypass stock/market restrictions or widen filters
-   without a clear shopper decision.
-5. Generate an answer using only returned product IDs and current validated
-   facts. Comparisons link back to catalog products and evidence fields.
-6. Validate generated product references and material claims. Reject invented
-   prices, discounts, stock, attributes or product IDs.
-7. If facts are insufficient, ask a grounded clarification or show the
-   deterministic result list with an explicit generation failure/degradation.
-   If Search itself fails, surface the error rather than a fabricated answer.
-
-Use structured output/tool schemas where the selected model/API supports
-them. Schema validation is not factual validation. Treat descriptions,
-supplier text, reviews, external signals and tool responses as untrusted
-content, not instructions. Evaluate prompt injection, harmful text, irrelevant
-answers and unauthorized tool requests with application-level enforcement
-plus supported safety features.
-[Structured outputs](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/structured-outputs);
-[Prompt Shields](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/content-filter-prompt-shields).
-
-Set explicit configurable limits on turns retained, tokens, tool fan-out,
-candidate payload, request time and cost. Select the exact model/version,
-API, deployment type, region and retention settings before implementation;
-preview models/features need a separate approval and exit path.
-
-Optional image-led discovery requires a validated model and versioned catalog
-image representations. Do not infer searchable image embeddings from the
-existing optional image-generation workflow.
-
-**No transactional tools:** no add-to-cart, payment, checkout, loyalty mutation
-or purchase commitment in this design. A later extension needs explicit user
-confirmation, backend authorization, idempotency and transaction audit.
+- Author synonyms, facets, factor weights/caps, exclusions, pins, redirects,
+  deterministic recommendation rules and activation windows.
+- Validate fields/products, source readiness, factor versions, weight/cap
+  limits, cycles, evidence overlap, consent, redirect hosts and execution size.
+- Preview against a frozen query fixture and canonical snapshot.
+- Require a separately authorized approval. Store actor, reason, version and
+  audit evidence.
+- Activate the pointer and audit record in one logical partition transaction,
+  or use a conditional state machine when that cannot be colocated.
+- Roll back only to a still-valid policy with compatible factor/projection
+  versions. Unknown mandatory policy fails closed.
 
 ## 9. API evolution and client behavior
 
-| Surface | Proposed evolution | Compatibility boundary |
+| Surface | Direction | Boundary |
 |---|---|---|
-| Search | Existing endpoint plus a separately reviewed versioned capability plan for browse, policy and diagnostic metadata. | Do not silently change provider-facing response names or refinement semantics. |
-| Beacon | Existing event names normalized internally; future exposure/panel/filter/outcome schemas. | Distinguish client observations from backend-confirmed orders; explicitly negotiate new event versions. |
-| Suggestions | Separate read operation for prefix/product or curated-query suggestions. | Return suggestion type and safe filter intent; selecting a suggestion is not proof of purchase intent. |
-| Recommendations | Separate task/context operation with bounded result count and scoped attribution. | Recommendation candidates do not replace the Search candidate contract. |
-| Merchant administration | Authenticated draft/preview/approve/publish/rollback operations. | Never expose administrative credentials or rules mutation to shopper clients. |
-| Conversation | Separate session/turn interface wrapping discovery tools. | Preserve direct non-generative search; session IDs are not authority. |
+| Search | Preserve the existing endpoint; add separately reviewed browse, policy-version and degradation metadata. | Do not leak OpenSearch queries, Cosmos keys or internal factor evidence. |
+| Beacon | Preserve public event names and normalize internally. | Distinguish client observations from trusted backend orders. |
+| Suggestions | Separate prefix/product/curated-query read operation. | Return type and safe filter intent; selection is not purchase intent. |
+| Recommendations | Separate deterministic task/context operation. | Candidates do not replace the Search candidate contract. |
+| Merchant administration | Authenticated draft/preview/approve/activate/rollback operations. | Shopper clients receive no mutation authority. |
+| Guided discovery | Versioned facets and approved decision-tree questions. | No generated text or free-form agent/tool path. |
 
-These are conceptual surfaces, not new committed endpoint paths. Extend the
-OpenAPI drafts only in a dedicated contract task once behavior, defaults,
-limits, ingress trust and client migration are agreed.
+Extend OpenAPI only in a dedicated contract task after defaults, limits,
+authentication and migration behavior are agreed. Browser clients never
+receive Cosmos credentials, OpenSearch administrative credentials, provider
+credentials or backend signing secrets.
 
-Browser clients must not receive backend keys, Fabric source credentials,
-Search administrative credentials or model credentials. Resolve CORS and
-browser event transport deliberately; the service name Beacon does not
-guarantee compatibility with `navigator.sendBeacon()`.
+## 10. Identity, privacy and isolation
 
-## 10. Identity, privacy and future tenant isolation
+- Separate development, test and production accounts/clusters.
+- Use workload identity and least privilege where supported. Prefer managed
+  identity for Cosmos, Key Vault and Azure Monitor integrations.
+- Give each service only required container operations and partition scope
+  where enforceable. OpenSearch publishers do not need policy/profile reads.
+- Keep public services outside private data networks except through explicit,
+  authenticated paths. Apply rate limits, payload bounds and abuse controls.
+- Resolve retailer/collection/market scope server-side. Public customer or
+  visitor IDs are claims, not authorization.
+- Never log credentials, raw personal queries, profile values, confidential
+  margin/revenue or licensed provider payloads.
+- Encrypt in transit, define key/backup policy and test secret rotation.
 
-### Single-retailer starting point
+Before optional preference/history features, define lawful basis, consent,
+purpose, retention, access and deletion. Withdrawal disables serving and
+future ingestion use, invalidates affected caches/lists and creates auditable
+deletion work. Do not claim instant deletion where backups have approved
+retention.
 
-- Separate development/test/production resources and synthetic fixtures.
-- Use Entra identities and least-privilege roles where supported. Validate
-  notebook-to-ML, ML-to-artifact, publisher-to-Search/Cosmos and producer-to-
-  Eventstream access independently.
-- Separate source credentials and restrict writes by component ownership.
-  Prefer managed identity; approved unavoidable secrets live in Key Vault.
-- Resolve authorized collection/market scope server-side. Public customer IDs
-  and anonymous visitor IDs are claims, not access control.
-- Enforce browser abuse controls and trusted-backend validation for events
-  used as financial or recommendation labels.
-- Treat pseudonymous histories as privacy-sensitive. No secrets, raw personal
-  queries or unnecessary profiles in logs or notebook outputs.
+Profile state remains in the restricted `profiles` container and never enters
+OpenSearch, shared factor snapshots or metric dimensions. Cache keys include
+effective scope, locale/market, query/filters, policy, projection epoch and
+relevant consent/profile context. Shared caches cannot contain personalized
+ordering or another visitor's attribution token.
 
-### Consented state
-
-Before enabling personalization, define lawful basis, purpose and retention
-with the retailer. Provide an unpersonalized path; withdrawal disables use of
-profile features at serving and ingestion, not just in the UI.
-
-Track deletion/withdrawal through raw events, features, history stores,
-recommendation lists, conversation state and retained training artifacts.
-Document how already-trained models are handled, including retraining or
-unlearning decisions where required; do not promise instant removal from
-weights. Legal retention exceptions require an explicit policy.
-
-Treat favorite colour, size, category and inferred affinity as profile data,
-not harmless catalog metadata. Record whether each preference was explicit or
-inferred, its confidence, purpose, source time and expiry. Do not infer a
-sensitive trait from fashion preferences, use profile factors outside their
-consented purpose, or persist per-customer factor contributions in Search,
-Eventhouse aggregate tables, shared caches or general telemetry.
-
-An Entra OAuth consent grant authorizes API access; it is not sufficient
-evidence of shopper tracking/personalization consent.
-
-### Future SaaS boundary, not an onboarding implementation
-
-Carry authorized retailer/collection scope through keys, ledgers, artifacts,
-policies, quotas, caches and diagnostics now. Later compare index-per-tenant
-with service-per-tenant isolation, limits, noisy-neighbor exposure and cost.
-[Microsoft multitenant Search patterns](https://learn.microsoft.com/azure/search/search-modeling-multitenant-saas-applications)
-
-Do not silently convert the POC to a shared multi-tenant index. Shared
-resources require tested enforcement; separate indexes alone do not grant
-shoppers authorization. Training data, model artifacts and serving lists must
-not mix merchants unless separately authorized.
-
-Cache keys must include effective scope, locale/market, query/filters, policy,
-retrieval mode and relevant consent/profile context. Disable shared
-personalized-response caching; never replay another visitor's attribution
-token. Aggregate caches also need freshness/version and invalidation rules.
+The initial design is single-retailer, but `scopeId` is carried through keys,
+policies, events, telemetry and artifacts. This is preparation for isolation,
+not proof of safe multi-tenancy. A future SaaS design must choose account,
+database, container and cluster isolation from measured security/noisy-neighbor
+requirements.
 
 ## 11. Failure handling and operations
 
-| Condition | Required serving or pipeline outcome |
+| Condition | Required outcome |
 |---|---|
-| Search unavailable/timed out | Explicit service error; no fabricated empty success or LLM-invented products. |
-| Core optional state store unavailable | Preserve returned Search ordering without optional re-ranking; report degraded mode and age/reason. |
-| Unknown/incompatible indexed or live version | Skip optional adjustment with a diagnostic; do not guess the indexed score. |
-| Mandatory policy unavailable/expired | Fail closed; a still-valid approved bundle may be used with explicit version/degradation. |
-| Price/stock authority unavailable | Apply the declared freshness policy; suppress unsupported current-fact claims or fail the operation if current eligibility is mandatory. |
-| ML submission uncertain | Reconcile durable submission/job identity before creating another attempt. |
-| Job failed/cancelled/timed out | Mark ineligible for publication; retain prior valid output only until its own expiry. |
-| Invalid artifact or older completion | Reject/quarantine with reason; never publish because completion was recent. |
-| Partial Search/Cosmos publication | Track destinations independently and retry from validated artifacts under latest-state ownership. |
-| External signal idle or retracted | Distinguish healthy idleness from outage; resolve latest revision and clear affected boosts. |
-| Individual optional factor stale/unavailable | Set only its contribution to zero with a reason; keep the configured denominator and other valid shares unchanged. Never reuse it beyond expiry. |
-| Required stock/eligibility authority stale or unavailable | Fail or suppress current-availability claims according to the mandatory freshness policy; never reinterpret it as an optional factor outage. |
-| Profile absent, stale, unauthorized or consent withdrawn | Zero personal contributions without redistributing their weights; prevent personalized cache reuse and do not reveal profile existence or preference values. |
-| Factor/policy/normalizer version mismatch | Skip the incompatible optional contribution and emit diagnostics; reject policy activation if the incompatibility is known in advance. |
-| New provider returns invalid values/keys or exceeds its deadline | Omit the affected factor batch with an explicit contract/timeout reason; do not silently repair values or retry per candidate. |
-| Factor revoked or rollout fails | Enforce revocation on cached plans; invalidate affected snapshots and roll back to a compatible approved plan/data set. Do not redistribute the disabled factor's share. |
-| Recommendation list absent/expired | Declared eligible baseline or explicit unavailable panel; record fallback, not synthetic personalization. |
-| Learned suggestions absent | Labeled product-prefix completion if its dependency is healthy. |
-| Conversation/model failure | Explicit deterministic discovery fallback if Search succeeded; otherwise a real error. |
-| Rate/capacity pressure | Bounded backoff and admission control; shed optional work before core search and never retry indefinitely. |
+| OpenSearch unavailable/timed out | Explicit service error; no fabricated empty success. |
+| Cosmos unavailable/throttled beyond budget | Bounded retry honoring retry-after; explicit error or documented optional-feature degradation. Never scan a fallback copy as authority. |
+| Projection lag or revision mismatch | Revalidate hydrated canonical state; expose bounded lag metadata; exclude unsafe candidates. Alert when freshness SLO is exceeded. |
+| Optional factor state unavailable | Preserve retrieval order for that contribution with explicit diagnostics; do not redistribute weight. |
+| Mandatory policy unavailable/expired | Fail closed, except a still-valid cached approved bundle may be used with its version and degradation marker. |
+| Price/stock authority stale | Apply the declared mandatory freshness policy; suppress unsupported claims or fail. |
+| Duplicate/late/retracted event | Resolve idempotently by event/source identity and revision; recompute affected windows when allowed. |
+| Invalid factor/provider output | Reject the affected batch or factor with bounded reason; do not repair non-finite or out-of-range values silently. |
+| Partial OpenSearch bulk result | Record each destination item, retry failed items from desired state and reconcile latest revision. |
+| Worker crash after side effect | Resume from lease/checkpoint and idempotency state; conditional writes prevent older state winning. |
+| Expired signal | Publish explicit removal/zero and verify query visibility; TTL alone is insufficient. |
+| Recommendation list missing/expired | Approved eligible fallback or explicit unavailable panel with reason. |
+| Profile absent/withdrawn | Zero preference contributions, prevent cache reuse and avoid revealing profile existence. |
+| Rate/capacity pressure | Admission control and bounded backoff; shed optional work before core retrieval; never retry indefinitely. |
 
-### Telemetry and recovery
+### 11.1 Telemetry
 
-Trace authorized scope, correlation/event IDs, catalog/feature/policy/model
-versions, job IDs/status, destination outcomes and sampled rank changes.
-Record:
+Trace scope, correlation/event/decision IDs, catalog/policy/factor/projection
+versions, worker window, lease/checkpoint, publication item outcomes and
+sampled rank changes. Measure:
 
-- Event occurrence to ingestion and Eventhouse visibility.
-- Feature-window readiness and notebook queue/startup.
-- ML queue/provisioning, execution and reconciliation delay.
-- Publication acceptance and actual query visibility.
-- Search, state reads, hydration, reranking, recommendation and conversation
-  latency separately, with p50/p95 and sample counts.
-- Active policy/factor/normalizer versions, per-factor availability and
-  freshness, provider latency/budget violations and cap/relevance-floor
-  reasons. Sample nonpersonal contributions and pre/post rank only under the
-  declared diagnostic privacy policy; do not log personal contributions,
-  customer preference values or confidential revenue/margin facts.
-- Source health, stale-state ratios, invalid artifacts, fallback/error rates,
-  cost drivers and retry amplification.
+- source occurrence to canonical acceptance;
+- canonical commit to worker observation;
+- window readiness and processing duration;
+- desired projection to OpenSearch query visibility;
+- OpenSearch retrieval, Cosmos hydration and reranking latency separately;
+- request units, throttles, item sizes and hot-partition indicators;
+- factor availability/freshness, cap reasons and fallback/error rates;
+- retry amplification, dead-letter volume and reconciliation age;
+- p50/p95/p99 with sample counts and cold/warm cases.
 
-Use bounded-cardinality metrics and sampled redacted traces. Keep an auditable
-control history without turning raw shopper text into metric dimensions.
+Use bounded-cardinality metrics and sampled redacted traces. Do not use product,
+query, profile or event IDs as unbounded metric dimensions.
 
-Rehearse rebuilding indexes/live lists from durable catalog and validated
-artifacts, restoring run/publication ledgers, replaying events without double
-counting, and rolling back model/policy versions. Define RPO/RTO with the
-retailer before production; none is established by this blueprint.
+### 11.2 Recovery
 
-### Deployment feasibility
+Rehearse:
 
-Before deployment, choose and record:
+- restoring Cosmos into a separate account and validating record counts,
+  revisions and access;
+- rebuilding a fresh OpenSearch index from a pinned Cosmos epoch, applying
+  subsequent changes, validating counts/golden queries and atomically switching
+  an alias;
+- replaying events without double counting;
+- repairing publication intent after ambiguous outcomes;
+- rolling back policy/factor/projection schema versions;
+- regional and cluster failure according to approved RPO/RTO.
 
-- Region/residency, data retention, supported model and non-preview/approved
-  preview features.
-- Search tier, Functions hosting/networking, Cosmos capacity/partitioning,
-  Fabric capacity and ML compute quotas.
-- Identity and network connectivity for each integration; private endpoints
-  do not automatically make cross-service notebook access work.
-- Owner, budget, environment boundaries, recovery and teardown procedures.
+No RPO, RTO or availability guarantee is established by this blueprint.
 
-Bicep covers supported Azure resources. Use supported Fabric APIs or explicit
-manual setup/exports for Fabric items; do not invent ARM types or deployment
-support. No resources are authorized by this design document alone.
+## 12. Delivery and acceptance
 
-## 12. Phased delivery and acceptance
-
-Delivery planning and acceptance gates live here, not in the repository guide.
-
-| Stage | Dependencies and deliverables | Exit evidence |
+| Stage | Deliverables | Exit evidence |
 |---|---|---|
-| **A: prove the existing POC** | Catalog/index setup, validated two-stream ingestion, synthetic TikTok-like metadata extraction and vocabulary mapping, deterministic aggregation, index-side expiry, then ML lifecycle and live delta. Verify notebook-to-ML permissions, feature/output access, and reproducible setup/cleanup. | Same query/filters/catalog before/during/after SKU and compound-attribute spikes in all three modes; extraction fixtures, conjunction matching, deduplication, score bounds, stale-job prevention, partial-write recovery and outage behavior verified. Report actual latency against existing targets. |
-| **B: commerce search foundation** | A provides a trusted baseline. Add variant-correct catalog projection, browse/sort/facets, native suggestions, the factor/provider contracts, nonpersonal revenue/inventory factors, merchant weight/cap controls and contract evolution. | Judged retrieval set; zero hard-filter/variant violations; extension tests in section 12.3 including a new dimension without composer changes; viral-led/revenue-led preview comparison; safe redirects; compatible policy/data rollback and stable paging within a bounded snapshot. |
-| **C: learning and recommendations** | B plus exposure/outcome schemas, readiness dashboard and point-in-time data. Build transparent recommendations, learned suggestions/facet selection, then evaluated recommendation/query-ranking models. | Task-specific held-out metrics beat the registered baseline without violating coverage/eligibility/cost guardrails; no future-data leakage; cold-start and partial-publication tests pass. Synthetic evaluation is labeled synthetic. |
-| **D: personalization and conversation** | C plus privacy/consent/deletion policy, sufficient authorized histories and exact supported model/API selection. Add request-scoped preference factors, scoped profiles, guided discovery and grounded conversations. | Explicit filters override preferences; same-variant size checks, unpersonalized fallback, no unauthorized cross-profile use and withdrawal are verified; generated product/fact validation, prompt-injection and model-outage tests pass; deterministic search remains independently available. |
-| **E: production hardening and expansion** | Prior capability gates plus real workload, region/SLO and budget decisions. Load/soak tests, edge/network controls, operational ownership, recovery and optional SaaS architecture. | Measured peak/steady latency and costs, incident/restore/rollback exercises, agreed SLOs and documented residual gaps. Multi-tenant onboarding or transactional agents require separate design approval. |
+| **A: canonical data foundation** | Cosmos containers, partition strategy, catalog/event schemas, source adapters, Beacon validation, idempotency and local deterministic calculations. | Emulator/offline contract tests; synthetic load confirms item size, RU and partition distribution assumptions; deduplication/retraction/expiry fixtures pass. |
+| **B: keyword discovery** | OpenSearch mapping/projection, Discovery API, exact lookup, filters, facets, browse, prefix suggestions and canonical hydration. | Judged keyword set; zero hard-filter/same-variant violations; rebuild and partial-bulk recovery proven; explicit datastore/search failure behavior. |
+| **C: deterministic ranking and merchant control** | Factor registry/composer, trend/inventory/revenue rules, admin lifecycle, preview, stable experiments and cursor snapshots. | Arithmetic/golden-rank fixtures, caps/ties/expiry, unavailable-factor behavior, policy rollback and no double application. |
+| **D: deterministic recommendations and consented preferences** | Rule-based lists, exposure capture, profile consent/deletion and guided discovery. | Support thresholds, current eligibility, fallback reasons, withdrawal/deletion and cache isolation tests. |
+| **E: production qualification** | Capacity, edge/network design, backup/restore, security review, runbooks and cost model. | Load/soak, chaos/failure, restore/rebuild, rollback and incident exercises against approved SLO/RPO/RTO. |
 
-Operational correctness must be built with each stage; Stage E is production
-qualification, not permission to defer authentication or data correctness.
-Semantic/vector and image experiments fit B/D only after keyword baselines
-exist and have an evaluation need. Model complexity is not itself an exit gate.
+Operational correctness is built in every stage. Stage E is not permission to
+defer authentication, privacy or data correctness.
 
 ### 12.1 Evaluation protocol
 
-Maintain immutable evaluation manifests: catalog seed/version, query set,
-labels, event scenarios, policy/model versions, request counts and run identity.
-Include exact SKUs, head/tail queries, synonyms/typos, compound attributes,
-category browse, price/size constraints, no-result queries and supported
-locale examples.
+Use immutable manifests containing catalog seed/version, query set, labels,
+event scenarios, policy/factor/projection versions, request counts and run ID.
+Include exact SKUs, head/tail terms, synonyms/typos, compound attributes,
+browse, price/size constraints, no-result queries and supported locales.
 
-| Area | Proposed measurement | Acceptance rule |
+| Area | Measurement | Acceptance rule |
 |---|---|---|
-| Retrieval | Recall@50 for the semantic candidate experiment; NDCG@10 for judged first-page ranking, with counts and query cohorts. | Register baseline and non-regression threshold before tuning. Do not claim superiority without identical eligible data and a frozen holdout. |
-| Hard correctness | Product/variant filter checks, authorization, price/market consistency, duplicate IDs and expired-state use. | Zero violations in the acceptance fixtures; investigate every production violation rather than averaging it into relevance. |
-| Trend POC | Before/during/after movement, equal-state no-double-boost, expiry, ties and duplicate/late/retracted events. | Preserve current deterministic invariants and report misses against the README targets. |
-| Multi-factor policy | Normalization/freshness/availability, weight/cap sensitivity, rank movement, relevance loss and stock/revenue cohort metrics. | Verify expected individual contributions before caps, saturation at caps and fixed-denominator failure behavior; do not promise monotonic final rank under competing factors. No double application or constraint breach; commercial lift requires a controlled real experiment. |
-| Personal factors | Explicit-versus-inferred preference conflicts, consent/withdrawal, profile outage, same-variant size availability, cache separation and cohort quality. | Explicit intent always wins; unauthorized/stale state contributes zero; zero cross-profile/cache leakage in fixtures; report quality and coverage by consented cohort. |
-| Recommendations | Recall@10/NDCG@10 by task, catalog coverage, diversity, valid-list rate and cold-start cohorts. | Improve the declared task baseline without introducing ineligible items or unsupported personalized claims. |
-| Conversation | Valid product-ID rate, grounded price/attribute checks, clarification/task completion, refusal/error/fallback rate and adversarial scenarios. | Zero invented IDs/prices in the release fixtures; all unauthorized tool attempts denied; report measured grounding failures, not a blanket safety guarantee. |
-| Latency/freshness | End-to-end and per-stage p50/p95, sample count, errors and cold/warm cases. | POC retains its 1-5 minute index-side target and other existing budgets. Production SLOs require workload approval; job freshness is not online latency. |
-| Economics | Full infrastructure cost per 1,000 completed discovery requests, plus training and engineering cost reported separately. | Budget agreed before deployment; include idle capacity, optional model calls, retries and peak-load headroom. |
+| Retrieval | Recall@50 and NDCG@10 on judged keyword queries, by cohort. | Register baseline/non-regression thresholds before tuning; use identical eligible data. |
+| Hard correctness | Authorization, product/variant filters, currency/price, duplicate IDs and expired-state use. | Zero fixture violations; investigate every production violation. |
+| Projection | Commit-to-query lag, missing/duplicate/stale documents, rebuild parity and partial-write recovery. | All golden records converge to latest desired revision within the approved threshold. |
+| Ranking | Per-factor normalization, missing/freshness state, caps, rank movement and relevance loss. | Expected contributions and fixed denominator reproduce exactly; no constraint breach or double application. |
+| Recommendations | Support/confidence, valid-list rate, catalog coverage, diversity and cold-start fallback. | No ineligible item or unsupported personalized explanation; deterministic replay. |
+| Privacy | Consent/withdrawal, deletion, cache separation and access denial. | Zero cross-profile leakage in fixtures; all unauthorized reads denied. |
+| Performance | End-to-end and component p50/p95/p99, RU, errors and projection freshness. | Meet workload-approved budgets; synthetic tests are not production guarantees. |
+| Economics | Cost per 1,000 completed discovery requests plus baseline cluster/storage cost. | Approved budget includes idle capacity, backups, retries and peak headroom. |
 
-Metrics with a cutoff use fewer results when the eligible set is smaller;
-record that denominator and the fraction of affected cases. An empty judged
-set is not a perfect score.
+### 12.2 Required failure tests
 
-### 12.2 Experiments and commercial evidence
+- Duplicate behavior event before purchase expansion.
+- Late external revision and explicit retraction.
+- Missing source watermark versus healthy idle source.
+- Concurrent aggregation workers with older completion last.
+- Partial OpenSearch bulk success and ambiguous timeout.
+- Expired factor cleared from both Cosmos serving state and OpenSearch.
+- Equal indexed/canonical factor revision adds no duplicate adjustment.
+- Cosmos 429 responses honoring retry-after and request deadline.
+- Hot-partition detection under representative event/catalog keys.
+- OpenSearch outage returns error; optional factor outage preserves base order.
+- Same parent product with size and stock on different variants is rejected.
+- Explicit sort remains unchanged by optional factors and pins.
+- Policy activation conflict and rollback with incompatible data.
+- Cursor after projection epoch or policy expiry requires restart.
+- Profile withdrawal prevents future use and shared cache reuse.
+- OpenSearch deletion followed by complete rebuild from Cosmos.
 
-Use stable, scope-bound assignment at the chosen shopper/session unit. Record
-assignment, actual exposure, policy/model version and outcomes separately.
-Feature-flag evaluation telemetry alone does not prove that a recommendation
-was seen.
-[Feature-flag telemetry](https://learn.microsoft.com/azure/azure-app-configuration/howto-telemetry)
+## 13. Deployment, cost and open decisions
 
-Before a real experiment, preregister its primary metric, attribution window,
-sample-size/power assumptions, stopping rule and guardrails. Inspect assignment
-imbalance, bot traffic, novelty effects, page latency and category cohorts.
-Do not stop at the first positive result or substitute revenue forecasts for
-observed incremental revenue.
+### 13.1 Initial deployment shape
 
-The synthetic POC can validate experiment plumbing, not conversion or revenue
-lift. A Google comparison needs an authorized comparable test environment,
-identical catalog/query eligibility and documented configuration/readiness
-differences; no provider resources are assumed available here.
+- AKS hosts the Discovery, Beacon, Admin, adapter, aggregation and publication
+  containers plus OpenSearch.
+- Standard Kubernetes resources, Helm charts, pod disruption budgets,
+  network policies, persistent volume claims and topology spread are the
+  baseline. AKS workload identity and Azure disks are optional Azure overlays.
+- Cosmos DB, Key Vault and Azure Monitor remain managed Azure dependencies.
+- Use private connectivity only after validating DNS, developer access,
+  OpenSearch administration, backup and recovery paths.
+- Bicep may provision Azure resources. Helm/Kubernetes manifests provision the
+  portable workload. No resources are authorized by this document.
 
-### 12.3 Dimension-extension acceptance tests
+Before implementation, select and record an LTS service runtime and supported
+Cosmos/OpenSearch client versions. Keep runtime choice consistent across new
+services unless a measured requirement justifies deviation.
 
-Implement these as offline contract and golden-ranking tests when scaffolding
-the factor path; they are design requirements, not tests already in the
-repository. Use a seeded catalog, fixed clock and immutable input manifests.
+### 13.2 Cost model
 
-| Scenario | Required evidence |
+Estimate the entire system:
+
+- Cosmos request units by operation/container, storage, analytical exports if
+  any, backup and additional regions.
+- AKS node pools, system overhead, autoscaling floor and upgrade surge.
+- OpenSearch data/master nodes, persistent disks, snapshots and rebuild
+  headroom.
+- Network egress, private connectivity, load balancers and ingress.
+- Telemetry ingestion/retention and high-cardinality controls.
+- Engineering and on-call cost for self-operated OpenSearch/Kubernetes.
+
+Reducing proprietary services can increase operational ownership. Compare
+that cost explicitly; do not present portability as automatically cheaper.
+
+### 13.3 Decisions required before build
+
+| Decision | Required owner/evidence |
 |---|---|
-| Add a registered dimension with an existing provider | Add `seasonalAffinity` through definition/data/policy only; no edits to the composer, Search index schema or public API. An unused registry entry changes no existing result. |
-| Unsupported extension | Unknown factor/provider, unsupported mode/result version, missing typed feature, dependency cycle or excessive factor/batch budget blocks activation with a reason. No arbitrary code or URL in a policy is executable. |
-| Weight, cap and missing-data arithmetic | Reproduce the viral/revenue and seasonal contribution examples in section 3.4-3.5. Missing season gives `0`, not a larger revenue share; a tighter contribution cap saturates even when weight increases. |
-| Distinguish absence from zero | Known no-match is `valid/0`; absent input is `missing/null`; non-finite/out-of-range values, duplicate keys and omitted pairs yield a contract error. No stale or invalid output is treated as a successful measurement. |
-| Confidence, decay and evidence counted once | Fixed-time fixtures prove one quality/decay application; `canonicalTrend` cannot coexist with either constituent. No Search profile plus full-factor application; equal legacy indexed/live snapshots still add no delta. |
-| Concurrent publishers and schema evolution | Inventory update leaves newer revenue intact; older corrections and equal-version conflicts cannot win. Old and new factor sets coexist; rollback reads the matching normalizer/data rather than relabeling new data. |
-| Availability and bounds | All factors unavailable preserves Search order with diagnostics; one failed factor does not redistribute weight. Core optional-store outage preserves order. Provider timeouts respect budgets and cause no per-product retry fan-out. |
-| Membership, ties and movement | Zero/one/many candidates, ties, signed contributions, relevance floor and both rank-movement directions; output is a permutation of eligible candidates with no duplicates/cap breach. Explicit sort disables conflicting adjustments. |
-| Profile/variant isolation | Missing consent prevents profile fetch/use; explicit colour/size wins; matching size and stock refer to the same eligible variant. Derived personal factors cannot be reclassified as global or cached across callers. |
-| Activation, withdrawal and removal | Requests pin one plan during pointer changes. A never-enabled factor is inert; removal stops its use; emergency revocation overrides cached plans/cursors. Only unreferenced retired projections are cleaned up. |
-
-Shadow and canary reports must include judged relevance, feature coverage,
-factor timeouts, p50/p95 with sample counts, and policy/factor-set identity.
-Enabling a new dimension is gated on those results; synthetic tests prove
-mechanics, not sales lift or a cloud latency guarantee.
-
-## 13. Cost model and open decisions
-
-Estimate the composition, not only Azure AI Search. Use the
-[research economics model](../research/09-google-commerce-search-azure-equivalence.md#economics-and-operating-comparison)
-to capture:
-
-- Search capacity and enabled semantic/vector-related processing/storage.
-- Fabric capacity, event retention and always-active query/aggregation cost.
-- ML training/scoring and optional online endpoint idle capacity.
-- Functions, Cosmos reads/writes/storage, artifacts and telemetry.
-- Optional embeddings/conversations, safety/evaluation, ingress and networking.
-- Merchant UI/model lifecycle implementation and on-call ownership.
-
-Report a workload-based range rather than choosing the cheapest isolated
-service price. Existing enterprise capacity is not automatically free:
-distinguish marginal spend from consumed capacity and opportunity cost.
-The costing baseline is a supported Dedicated Search tier. The documented
-Serverless Developer tier is preview with different compute/storage billing
-and no preview SLA; it is not a production-default shortcut around capacity
-planning. See [Search cost guidance](https://learn.microsoft.com/azure/search/search-sku-manage-costs).
-
-| Open decision | Owner / evidence needed before implementation |
-|---|---|
-| Retailer catalog/market scope and peak workload | Product/platform owner; product/variant counts, QPS, update rates, locales and payloads. |
-| Runtime/SDKs and hosting plan | Engineering; preserve existing generator tooling but choose service stack from supported versions and deployment needs. |
-| Ingress trust and real event collection | Security/commerce owner; authenticated backend/browser design and authoritative outcome source. |
-| Latency, freshness, availability, RPO/RTO | Product/SRE; measured POC and explicit production commitments. |
-| Price/stock freshness and variant schema | Commerce/search owner; correlated eligibility fixtures and authoritative-source availability. |
-| Consent, retention and deletion/model policy | Retailer privacy owner; purpose and lifecycle obligations, including later real-data use. |
-| ML objective, features, model and promotion thresholds | Search/ML owner; readiness and frozen evaluations, not model-name preference. |
-| Commercial ranking objectives and factor weights | Commerce/search owner; approved definitions for revenue, margin, inventory pressure, conflicts and experiment guardrails. |
-| Generative model/API/region and preview appetite | Platform/security owner; supported capability matrix, evaluations and data terms. |
-| Production edge, capacity and budget | Platform/SRE/finance; load measurements and dated regional pricing. |
-| SaaS or transactional expansion | Separate product/security decision; not implicitly approved by this blueprint. |
+| LTS language/runtime and web framework | Platform owner; support horizon, team skills, image/security tooling and benchmarks. |
+| OpenSearch version/topology and backup | Search/SRE; catalog size, query load, recovery and upgrade test. |
+| Cosmos partition keys/capacity mode | Data/SRE; synthetic load, RU estimates, item sizes and hot-partition evidence. |
+| Catalog aggregate split threshold | Catalog owner; variant cardinality and update contention. |
+| Change-feed versus queued transport threshold | Platform/SRE; measured lag, replay, backpressure and isolation needs. |
+| Region, consistency, backup and DR | Business/SRE; residency, SLO, RPO/RTO and budget. |
+| Price/stock authority and freshness | Commerce owner; source contract and failure policy. |
+| Event retention and consent | Privacy/legal; purpose, deletion and trusted outcome source. |
+| Edge/ingress and identity | Security/platform; threat model, clients, OIDC and network design. |
 
 ## 14. Documentation and implementation handoff
 
-Engineering tasks should follow the user's requested scope, formalize affected
-contracts, and add implementation/tests using the repository's actual tooling.
-Use the delivery guidance above when planning; do not scaffold all stages at once.
+Implementation work must:
 
-For capability evidence and known Google/Azure gaps, use the
-[comparison and source register](../research/09-google-commerce-search-azure-equivalence.md#source-register).
-For low-level trend, ingestion and publication contracts, use the existing
-[Option C](option-c-hybrid-detailed-design.md) and
-[two-stream](eventstream-ingestion-design.md) designs.
+1. Update the catalog tooling to emit Cosmos documents and OpenSearch bulk
+   projection fixtures while retaining the synthetic source data.
+2. Formalize Cosmos schemas, partition-key derivation, indexing policies,
+   retention and access matrix before provisioning.
+3. Version the internal normalized event, factor, policy, recommendation and
+   publication contracts with offline fixtures.
+4. Select and document the LTS runtime, Cosmos SDK, OpenSearch client,
+   Kubernetes/Helm versions and local development path.
+5. Keep unit/contract tests offline; use an emulator or test containers where
+   licensing and platform support permit.
+6. Add integration tests that prove item-level publication recovery,
+   OpenSearch rebuild from Cosmos and mandatory failure semantics.
+7. Update public OpenAPI contracts only in dedicated compatibility work.
+8. Record measured results and deviations. Do not claim deployed,
+   production-ready, portable or performant behavior from this design alone.
 
-Keep proposed, implemented and measured status separate as work progresses.
-Update install/run/test/demo/recovery instructions only when commands and
-behavior exist and have been verified.
+### References
+
+- [Azure Cosmos DB partitioning overview](https://learn.microsoft.com/azure/cosmos-db/partitioning-overview)
+- [Azure Cosmos DB consistency levels](https://learn.microsoft.com/azure/cosmos-db/consistency-levels)
+- [Azure Cosmos DB change feed](https://learn.microsoft.com/azure/cosmos-db/change-feed)
+- [Azure Cosmos DB transactional batch](https://learn.microsoft.com/azure/cosmos-db/nosql/transactional-batch)
+- [Azure Cosmos DB optimize cost](https://learn.microsoft.com/azure/cosmos-db/optimize-cost-reads-writes)
+- [OpenSearch documentation](https://docs.opensearch.org/latest/)
+- [OpenTelemetry documentation](https://opentelemetry.io/docs/)
+- [Kubernetes documentation](https://kubernetes.io/docs/home/)

@@ -1,9 +1,9 @@
 # Dynamic real-time search
 
-Azure commerce discovery using Azure AI Search, Microsoft Fabric Real-Time
-Intelligence, and Azure Machine Learning. The target includes search/browse,
-merchandising, recommendations, consented personalization, and read-only
-conversational discovery.
+Commerce discovery using Azure Cosmos DB as the canonical data store and
+portable, containerized application components. The target includes keyword
+search/browse, merchandising, deterministic recommendations, consented
+rule-based preferences and guided discovery without AI services.
 
 ## Repository contents
 
@@ -27,7 +27,8 @@ python -m unittest discover -s src\load-generator -p "test_*.py"
 Generation writes to `data\catalog\`. **Do not reseed a catalog containing
 image-generation state**; use a separate output directory. See the
 [catalog guide](docs/catalog-data.md) for options, data shape, indexing, and
-image hosting. Optional MAI image generation consumes model quota.
+image hosting. The catalog guide's legacy model-based image option is excluded
+from the target architecture and must not be used for this platform.
 
 ## Architecture
 
@@ -35,26 +36,27 @@ These are selected design choices, not deployed-resource claims:
 
 | Area | Approach |
 |---|---|
-| APIs | Separate Search/re-ranking and Beacon services on Azure Functions. |
-| Retrieval | Azure AI Search; baseline queries must not apply trend boosting. |
-| Ingestion | Separate behavior and external-trend Fabric Eventstream items/connections/raw tables, with shared Eventhouse curated features. |
-| Deterministic scoring | Eventhouse/KQL -> scheduled score publication -> Search. |
-| Job-based scoring | Activator Run Notebook or schedule -> Fabric notebook -> Azure ML job -> durable reconciliation -> validated publication. |
-| State | Cosmos DB for NoSQL for versioned per-product live scores/expiry and separate durable run/publication control. |
-| Deployment | Bicep for supported Azure resources; supported Fabric APIs or documented manual setup/export. |
+| APIs | Separate containerized Discovery, Beacon and Merchant Admin services with OpenAPI contracts. |
+| Canonical data | Azure Cosmos DB for NoSQL for catalog, events, policies, factors, recommendation lists, optional profiles and durable control state. |
+| Retrieval | OpenSearch keyword retrieval as a rebuildable projection of Cosmos data; no semantic, vector or generated-query path. |
+| Ingestion | Portable HTTP/source adapters write validated, deduplicated records to Cosmos; change-feed workers process them asynchronously. |
+| Deterministic scoring | Containerized workers compute versioned factors; the API applies a bounded factor policy to retrieved eligible candidates. |
+| Recommendations | Deterministic catalog, co-view, co-purchase, popularity and history rules only. |
+| Deployment | OCI images and standard Kubernetes/Helm on AKS initially; Bicep provisions supported Azure dependencies. |
 
-Prove deterministic index-side scoring before learned models or live re-ranking.
-Do not restore the Power Automate/webhook fast path or add a Function solely
-to launch ML jobs. Container Apps, Redis, online inference, and semantic/vector
-retrieval are alternatives requiring evidence, not defaults.
+Do not introduce Azure AI Search, Azure Machine Learning, Microsoft Foundry,
+Azure OpenAI, Fabric, embeddings, semantic/vector retrieval, model inference,
+generated conversation or learned ranking/recommendations. Historical research
+and designs describing those services are not the target architecture.
 
 Re-rank only eligible retrieved candidates, preserving filters and explicit
-sorts. Start with one bounded result page. Equal indexed/live snapshots add no
-boost; expiry must clear indexed fields. Search failures are errors, while
-optional live-store failures preserve Search order with explicit diagnostics.
+sorts. Start with one bounded result page. Hydrate authoritative product state
+from Cosmos, reject stale/incompatible factors and clear expired projection
+fields explicitly. Search failures are errors; optional factor failures
+preserve OpenSearch order with explicit diagnostics.
 
-The index-side experiment targets a 1-5 minute response; measure the full
-notebook/job path separately. Neither is a measured platform guarantee.
+Measure event-to-Cosmos, aggregation and Cosmos-to-OpenSearch visibility
+separately. No latency or freshness target is a measured platform guarantee.
 
 ## Contracts and references
 
@@ -65,11 +67,11 @@ Read only the documents relevant to the work:
 | [API review and mappings](docs/api/README.md) | Draft limitations, authentication decisions, and event normalization. |
 | [Search OpenAPI](docs/api/search.openapi.json) | `POST /v1/search` retrieval contract. |
 | [Beacon OpenAPI](docs/api/beacon.openapi.json) | `POST /v2/events` capture contract. |
-| [Platform design](docs/architecture/azure-commerce-search-platform-design.md) | Catalog, merchant controls, learning, privacy, and conversation. |
-| [Ranking/job design](docs/architecture/option-c-hybrid-detailed-design.md) | Scoring, job lifecycle, publication, re-ranking, and failure tests. |
-| [Ingestion design](docs/architecture/eventstream-ingestion-design.md) | Source isolation, revisions/retractions, readiness, and replay. |
+| [Platform design](docs/architecture/azure-commerce-search-platform-design.md) | **Current target:** Cosmos data design, portable services, keyword retrieval, deterministic ranking/recommendations, privacy and operations. |
+| [Ranking/job design](docs/architecture/option-c-hybrid-detailed-design.md) | Historical AI/Fabric design; retain only as prior research. The current platform design overrides it. |
+| [Ingestion design](docs/architecture/eventstream-ingestion-design.md) | Historical Fabric design; source isolation and revision concepts are carried into the current platform design. |
 | [Event schema/scoring](docs/research/06-event-schema.md) | Internal envelope, score bounds, weights, and decay. |
-| [Google-to-Azure research](docs/research/09-google-commerce-search-azure-equivalence.md) | Capability evidence, gaps, and official sources. |
+| [Google-to-Azure research](docs/research/09-google-commerce-search-azure-equivalence.md) | Historical capability research; not the selected service architecture. |
 
 The selected architecture above overrides conflicting historical research.
 API drafts do not prove provider compatibility; internal design examples do
@@ -80,7 +82,7 @@ not override them. Verify concrete SDK/API details against current official docs
 Use synthetic data and one-retailer scope. Real shopper data, SaaS onboarding,
 transactional shopping, and customer-service agents need separate approval/design.
 Authenticate ingress, derive authorization server-side, prefer managed identity
-and least privilege, and never commit credentials or sensitive notebook outputs.
+and least privilege, and never commit credentials or sensitive worker outputs.
 
 
 Keep unit tests offline; cloud mutations and paid calls need explicit scope
