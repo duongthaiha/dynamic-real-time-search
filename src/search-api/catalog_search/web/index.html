@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cosmos catalogue search</title>
+  <link rel="stylesheet" href="/demo/assets/demo.css">
+  <script src="/demo/assets/demo.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div><p class="eyebrow">COMMERCE DISCOVERY / LIVE POC</p><h1>Find your next favourite.</h1>
+      <p class="subtitle">Test keyword search against the real Cosmos catalogue and hosted product images.</p></div>
+      <span class="badge">1,000 synthetic products</span>
+    </header>
+    <form id="search-form" class="panel">
+      <label for="query">Search products or an exact product/SKU ID</label>
+      <div class="search-row"><input id="query" name="query" type="search" value="green jeans" placeholder="Try jacket, green jeans or PROD-000001" maxlength="512" required><button id="search-button" type="submit">Search catalogue</button></div>
+      <div class="filters">
+        <label>Category<select id="category"><option value="">Any category</option><option>jeans</option><option>trousers</option><option>jackets</option><option>coats</option><option>shirts</option><option>t-shirts</option><option>knitwear</option><option>hoodies</option><option>dresses</option><option>skirts</option><option>shorts</option><option>trainers</option><option>boots</option><option>bags</option><option>accessories</option></select></label>
+        <label>Colour<select id="color"><option value="">Any colour</option><option>black</option><option>blue</option><option>navy</option><option>white</option><option>cream</option><option>grey</option><option>green</option><option>brown</option><option>beige</option><option>red</option><option>pink</option><option>purple</option><option>orange</option><option>yellow</option></select></label>
+        <label>Size<input id="size" type="text" placeholder="M, UK 6, W30 L30" maxlength="64"></label>
+        <label>Min price (GBP)<input id="price-low" type="number" min="0" step="0.01" placeholder="20"></label>
+        <label>Max price (GBP)<input id="price-high" type="number" min="0" step="0.01" placeholder="100"></label>
+        <label>Per page<select id="page-size"><option>10</option><option selected>20</option><option>50</option><option>100</option></select></label>
+      </div>
+      <p class="hint">Price ranges need both bounds. Filters require the same in-stock variant; all prices are GBP.</p>
+    </form>
+    <section class="results-section" aria-label="Search results">
+      <div class="results-header"><div><h2 id="result-heading">Ready to search</h2><p id="status" class="muted" role="status" aria-live="polite"></p></div><span id="timing" class="timing"></span></div>
+      <div id="error" class="error" role="alert" hidden></div>
+      <div id="empty" class="empty" hidden>No matching products. Try a broader keyword or clear a filter.</div>
+      <div id="results" class="grid" aria-busy="false"></div>
+      <nav class="pagination" aria-label="Result pages"><button id="previous" type="button" disabled>Previous</button><span id="page-label">Page 1</span><button id="next" type="button" disabled>Next</button></nav>
+      <p id="request-id" class="request-id"></p>
+    </section>
+    <footer>Keyword/BM25 discovery POC. No learned personalization, recommendations or Google parity claim. Paging is bounded to 1,000 candidates and is not a frozen snapshot.</footer>
+  </main>
+</body>
+</html>

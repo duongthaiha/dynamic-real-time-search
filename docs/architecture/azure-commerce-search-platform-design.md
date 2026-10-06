@@ -1,10 +1,25 @@
 # Commerce discovery platform: Cosmos DB target design
 
-**Status:** Proposed replacement blueprint; not implemented or benchmarked
+**Status:** Proposed full-platform blueprint; the keyword Search POC exception is implemented and live-verified
 
 **Reviewed:** 5 October 2026
 
 **Repository guide:** [Selected architecture and local tooling](../../README.md#architecture)
+
+**Approved Search POC exception:** [Cosmos Search gap analysis and backlog](cosmos-search-poc-backlog.md)
+and [runtime runbook](../../src/search-api/README.md) define a local/containerized
+Python/FastAPI implementation of the existing Search contract using Cosmos
+native English full-text/BM25 rather than OpenSearch. It uses a dedicated,
+immutable 1,000-product synthetic import, parent-plus-variant documents and
+bounded paging. The [live verification evidence](../../infra/README.md#deployment-and-live-verification-evidence)
+covers synthetic import, real HTTP requests and bounded concurrent Cosmos
+queries; it does not establish the wider platform or production performance.
+The image-hosted `catalog-images-001` snapshot stores relative blob paths;
+the API resolves URLs from environment-specific storage configuration.
+Offline verification alone is not proof of cloud integration.
+Beacon, merchant administration and the broader pipeline below remain designs.
+An optional embedding/vector/hybrid experiment requires separate authorization
+and matching/count decisions; the baseline does not enable those capabilities.
 
 ## 1. Decision and boundaries
 

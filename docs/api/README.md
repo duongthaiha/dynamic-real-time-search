@@ -13,6 +13,25 @@ The example service hosts are reserved `example.com` placeholders. Replace
 them with each deployment's base URL. No requests were sent to the source
 provider, and the original download has not been edited.
 
+## Implemented Cosmos keyword POC
+
+The [Search service runbook](../../src/search-api/README.md) describes the
+Python/FastAPI implementation. This implements the draft, not verified Google
+or Rezolve provider compatibility. Keyword Search uses Cosmos full-text BM25,
+exact identifiers, correlated variant refinements and exact parent counts.
+Default pageSize is 20, maximum 100; skip + pageSize must not exceed 1,000.
+Unsupported limits/options return 422; malformed values return 400.
+
+Scoped client-key credentials are server-to-server/BFF only. The customer,
+area and collection must match the server-configured credential grant.
+All responses are no-store; diagnostic/cache-bypass requests require a
+diagnostic grant. There is no Topsort, sponsorship, live-factor ranking,
+attribution-token generation, personalization or implicit Beacon capture.
+Optional unknown fields have no defined effect. Hybrid is not a public mode.
+
+The [gap analysis/backlog](../architecture/cosmos-search-poc-backlog.md) tracks
+the missing wider commerce capabilities and live-integration gates.
+
 ## Review of the supplied file
 
 | Finding | Treatment in these drafts |

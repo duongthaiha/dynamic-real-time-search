@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Search API: local Cosmos demo",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}\\.venv-search\\Scripts\\python.exe",
+      "module": "uvicorn",
+      "args": [
+        "catalog_search.app:create_app",
+        "--factory",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8001",
+        "--no-access-log"
+      ],
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}\\.env.local",
+      "env": {
+        "PATH": "${workspaceFolder}\\.venv-azure\\Scripts;${env:PATH}"
+      },
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Search API: offline tests",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}\\.venv-search\\Scripts\\python.exe",
+      "module": "unittest",
+      "args": [
+        "discover",
+        "-s",
+        "${workspaceFolder}\\src\\search-api\\tests",
+        "-p",
+        "test_*.py"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

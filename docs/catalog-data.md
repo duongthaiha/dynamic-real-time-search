@@ -46,6 +46,18 @@ to the configured static host before displaying search results.
 
 ## Product shape
 
+For the approved Cosmos keyword POC, use the separate
+[Cosmos catalogue importer](../src/search-api/README.md#catalogue-export-and-import)
+against the existing products JSONL. It exports parent-plus-variant documents
+with integer minor-unit prices and an English full-text index policy. It does
+not regenerate products, rewrite Search batches, alter images or invoke image
+generation. The legacy Azure AI Search workflow below is not used by this POC.
+The active image-hosted snapshot uses `--image-container product-images` to
+store relative blob paths in Cosmos. Storage origin selection happens through
+the API's `CATALOG_IMAGE_BASE_URL`, so changing the dev/test/prod storage account
+does not rewrite product documents. The source catalogue itself retains its
+original image references and generation state.
+
 Each product contains:
 
 - stable `productId` and `colourWayId`;

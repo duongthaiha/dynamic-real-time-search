@@ -1,0 +1,76 @@
+[
+  {
+    "name": "exact-product",
+    "request": {"area": "storefront", "collection": "products", "query": "PROD-000001"},
+    "grades": {"PROD-000001": 3},
+    "expectedTotal": 1,
+    "expectedIds": ["PROD-000001"],
+    "exhaustiveJudgments": true
+  },
+  {
+    "name": "exact-instock-sku",
+    "request": {"area": "storefront", "collection": "products", "query": "SYN-000001-01"},
+    "grades": {"PROD-000001": 3},
+    "expectedTotal": 1,
+    "expectedIds": ["PROD-000001"],
+    "exhaustiveJudgments": true
+  },
+  {
+    "name": "out-of-stock-sku",
+    "request": {"area": "storefront", "collection": "products", "query": "SYN-000001-07"},
+    "expectedTotal": 0,
+    "expectedIds": []
+  },
+  {
+    "name": "inclusive-price",
+    "request": {
+      "area": "storefront", "collection": "products", "query": "PROD-000001",
+      "refinements": [{"navigationName": "price", "type": "Range", "low": 28.5, "high": 28.5}]
+    },
+    "expectedTotal": 1,
+    "expectedIds": ["PROD-000001"]
+  },
+  {
+    "name": "same-variant-out-of-stock-size",
+    "request": {
+      "area": "storefront", "collection": "products", "query": "PROD-000001",
+      "refinements": [{"navigationName": "attributes.size", "type": "Value", "value": "W38 L32"}]
+    },
+    "expectedTotal": 0,
+    "expectedIds": []
+  },
+  {
+    "name": "keyword-colour-category",
+    "request": {"area": "storefront", "collection": "products", "query": "green jeans"},
+    "grades": {"PROD-000001": 3},
+    "exhaustiveJudgments": false
+  },
+  {
+    "name": "keyword-brand-fit",
+    "request": {"area": "storefront", "collection": "products", "query": "Alder Studio wide-leg jeans"}
+  },
+  {
+    "name": "keyword-no-match",
+    "request": {"area": "storefront", "collection": "products", "query": "zzzxxyyqqnonexistent"},
+    "expectedTotal": 0,
+    "expectedIds": []
+  },
+  {
+    "name": "keyword-offset",
+    "request": {"area": "storefront", "collection": "products", "query": "jeans", "skip": 20, "pageSize": 20}
+  },
+  {
+    "name": "typo-baseline",
+    "request": {"area": "storefront", "collection": "products", "query": "jeens"}
+  },
+  {
+    "name": "full-catalog-count",
+    "request": {"area": "storefront", "collection": "products", "query": "synthetic", "pageSize": 100},
+    "expectedTotal": 1000
+  },
+  {
+    "name": "maximum-ranked-window",
+    "request": {"area": "storefront", "collection": "products", "query": "synthetic", "skip": 900, "pageSize": 100},
+    "expectedTotal": 1000
+  }
+]

@@ -1,0 +1,11 @@
+.venv-search/
+.venv-azure/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.env
+.env.local
+.local/
+data/cosmos-poc/

@@ -9,11 +9,16 @@ rule-based preferences and guided discovery without AI services.
 
 - [src/load-generator](src/load-generator/): Python catalog/image generators,
   offline unit tests, and a Search index definition for 1,000 synthetic products.
+- [src/search-api](src/search-api/): Python/FastAPI Cosmos keyword-search POC,
+  local browser demo, offline tests, safe catalogue importer and opt-in evaluation runner.
 - [docs](docs/): research, architecture, API drafts, and operating instructions.
 - [.github/copilot-instructions.md](.github/copilot-instructions.md): agent working rules.
 
-The APIs and end-to-end ranking pipeline are designed, not implemented.
-No API service runtime/framework or platform-wide build is configured.
+The Search keyword POC is implemented and verified over the synthetic catalogue
+against the authorized Azure Cosmos backend through real HTTP requests.
+See the [live verification evidence](infra/README.md#deployment-and-live-verification-evidence).
+Beacon, merchant APIs and the end-to-end ranking pipeline remain designs.
+There is no platform-wide build or production/Google-parity claim.
 
 ## Local commands
 
@@ -30,6 +35,22 @@ image-generation state**; use a separate output directory. See the
 image hosting. The catalog guide's legacy model-based image option is excluded
 from the target architecture and must not be used for this platform.
 
+For the Cosmos Search POC, use the separate [Search runbook](src/search-api/README.md)
+for installation, offline tests, dry-run export, scoped credentials and startup.
+The [local browser demo](src/search-api/README.md#local-browser-demo) provides a
+simple test page with live images, filters and paging; server-side credentials
+remain out of browser JavaScript.
+The [local debugging guide](src/search-api/README.md#debugging-locally-in-vs-code)
+covers F5 profiles, safe environment setup, breakpoints and browser diagnostics.
+Do not upload data or provision resources without explicit authorization.
+The approved isolated Azure backend is defined by
+[subscription-level Bicep](infra/main.bicep) and the
+[Cosmos module](infra/cosmos.bicep); see the [infrastructure runbook](infra/README.md).
+The [image Storage module](infra/storage.bicep) hosts the synthetic assets.
+The active Cosmos snapshot stores relative image paths; the API resolves their
+origin through `CATALOG_IMAGE_BASE_URL`, keeping dev/test/prod account names out
+of catalogue documents.
+
 ## Architecture
 
 These are selected design choices, not deployed-resource claims:
@@ -44,10 +65,18 @@ These are selected design choices, not deployed-resource claims:
 | Recommendations | Deterministic catalog, co-view, co-purchase, popularity and history rules only. |
 | Deployment | OCI images and standard Kubernetes/Helm on AKS initially; Bicep provisions supported Azure dependencies. |
 
+**Approved POC exception:** the [Cosmos Search backlog](docs/architecture/cosmos-search-poc-backlog.md)
+uses a dedicated Cosmos container for keyword/BM25 retrieval instead of
+OpenSearch, serving the existing Search contract over synthetic data. It uses
+Python 3.11+ / FastAPI and Entra Cosmos access. An optional vector/hybrid
+experiment is separately gated and not enabled or implemented in the baseline.
+The exception does not change the broader platform's service choices.
+
 Do not introduce Azure AI Search, Azure Machine Learning, Microsoft Foundry,
 Azure OpenAI, Fabric, embeddings, semantic/vector retrieval, model inference,
 generated conversation or learned ranking/recommendations. Historical research
 and designs describing those services are not the target architecture.
+The separately authorized POC experiment above is the only scoped exception.
 
 Re-rank only eligible retrieved candidates, preserving filters and explicit
 sorts. Start with one bounded result page. Hydrate authoritative product state
