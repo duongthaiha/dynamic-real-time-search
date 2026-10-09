@@ -1,0 +1,802 @@
+[
+  {
+    "name": "fashion-0501",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0502",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "skirts under gbp 80"
+    }
+  },
+  {
+    "name": "fashion-0503",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "pink wool blend coat"
+    }
+  },
+  {
+    "name": "fashion-0504",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "arc & loom red bag"
+    }
+  },
+  {
+    "name": "fashion-0505",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "daymark beige bucket hat"
+    }
+  },
+  {
+    "name": "fashion-0506",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "studio thread"
+    }
+  },
+  {
+    "name": "fashion-0507",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works skirt"
+    }
+  },
+  {
+    "name": "fashion-0508",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "beanie"
+    }
+  },
+  {
+    "name": "fashion-0509",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey trainers"
+    }
+  },
+  {
+    "name": "fashion-0510",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "coats for winter"
+    }
+  },
+  {
+    "name": "fashion-0511",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "alder studio hoodie"
+    }
+  },
+  {
+    "name": "fashion-0512",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "coat for women"
+    }
+  },
+  {
+    "name": "fashion-0513",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "orange shorts"
+    }
+  },
+  {
+    "name": "fashion-0514",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "knitwear under 30 pounds"
+    }
+  },
+  {
+    "name": "fashion-0515",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "northline ankle boots"
+    }
+  },
+  {
+    "name": "fashion-0516",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "green beanie"
+    }
+  },
+  {
+    "name": "fashion-0517",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shorts for festival"
+    }
+  },
+  {
+    "name": "fashion-0518",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "hoodies under gbp 50"
+    }
+  },
+  {
+    "name": "fashion-0519",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "pink tapered jeans"
+    }
+  },
+  {
+    "name": "fashion-0520",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "beige relaxed dress"
+    }
+  },
+  {
+    "name": "fashion-0521",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey column skirt"
+    }
+  },
+  {
+    "name": "fashion-0522",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "alder studio running-inspired trainers"
+    }
+  },
+  {
+    "name": "fashion-0523",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "alder studio shorts"
+    }
+  },
+  {
+    "name": "fashion-0524",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "navy low-profile trainers"
+    }
+  },
+  {
+    "name": "fashion-0525",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "women's jeans"
+    }
+  },
+  {
+    "name": "fashion-0526",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "mens jeans"
+    }
+  },
+  {
+    "name": "fashion-0527",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "slim jeans"
+    }
+  },
+  {
+    "name": "fashion-0528",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "orange beanie"
+    }
+  },
+  {
+    "name": "fashion-0529",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue viscose shirt"
+    }
+  },
+  {
+    "name": "fashion-0530",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "green cotton poplin dress"
+    }
+  },
+  {
+    "name": "fashion-0531",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "caps for weekend"
+    }
+  },
+  {
+    "name": "fashion-0532",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "green wide-leg jeans"
+    }
+  },
+  {
+    "name": "fashion-0533",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "green longline coat"
+    }
+  },
+  {
+    "name": "fashion-0534",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "alder studio"
+    }
+  },
+  {
+    "name": "fashion-0535",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "white sweater"
+    }
+  },
+  {
+    "name": "fashion-0536",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "student discount"
+    }
+  },
+  {
+    "name": "fashion-0537",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jean jacket"
+    }
+  },
+  {
+    "name": "fashion-0538",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "beige cotton twill beanie"
+    }
+  },
+  {
+    "name": "fashion-0539",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "white cotton knit jumper"
+    }
+  },
+  {
+    "name": "fashion-0540",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "harbour standard blue jumper"
+    }
+  },
+  {
+    "name": "fashion-0541",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey denim pants"
+    }
+  },
+  {
+    "name": "fashion-0542",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "hoodies for women"
+    }
+  },
+  {
+    "name": "fashion-0543",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "womens dresses"
+    }
+  },
+  {
+    "name": "fashion-0544",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black dreses"
+    }
+  },
+  {
+    "name": "fashion-0545",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "trousers size xl"
+    }
+  },
+  {
+    "name": "fashion-0546",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "coats between 70 and 100 pounds"
+    }
+  },
+  {
+    "name": "fashion-0547",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "navy slip dress"
+    }
+  },
+  {
+    "name": "fashion-0548",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "syn-000662-06"
+    }
+  },
+  {
+    "name": "fashion-0549",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black coat"
+    }
+  },
+  {
+    "name": "fashion-0550",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "arc & loom white bag"
+    }
+  },
+  {
+    "name": "fashion-0551",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "trousers between 30 and 60 pounds"
+    }
+  },
+  {
+    "name": "fashion-0552",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works shorts"
+    }
+  },
+  {
+    "name": "fashion-0553",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "mesh trainers"
+    }
+  },
+  {
+    "name": "fashion-0554",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black t-shirts size xxl"
+    }
+  },
+  {
+    "name": "fashion-0555",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jeans for men"
+    }
+  },
+  {
+    "name": "fashion-0556",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "coats under gbp 120"
+    }
+  },
+  {
+    "name": "fashion-0557",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "syn-000854-01"
+    }
+  },
+  {
+    "name": "fashion-0558",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "t-shirt for women"
+    }
+  },
+  {
+    "name": "fashion-0559",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue faux leather trainers"
+    }
+  },
+  {
+    "name": "fashion-0560",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works trainers"
+    }
+  },
+  {
+    "name": "fashion-0561",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue sweater"
+    }
+  },
+  {
+    "name": "fashion-0562",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "arc & loom tea dress"
+    }
+  },
+  {
+    "name": "fashion-0563",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jeans size w38 l32"
+    }
+  },
+  {
+    "name": "fashion-0564",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "red jumper"
+    }
+  },
+  {
+    "name": "fashion-0565",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "trousers under 50 pounds"
+    }
+  },
+  {
+    "name": "fashion-0566",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shirts between 40 and 70 pounds"
+    }
+  },
+  {
+    "name": "fashion-0567",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "red bag"
+    }
+  },
+  {
+    "name": "fashion-0568",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey pleated skirt"
+    }
+  },
+  {
+    "name": "fashion-0569",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shirts"
+    }
+  },
+  {
+    "name": "fashion-0570",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "field note green t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0571",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey recycled polyester bag"
+    }
+  },
+  {
+    "name": "fashion-0572",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "common form pink hoodie"
+    }
+  },
+  {
+    "name": "fashion-0573",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "caot"
+    }
+  },
+  {
+    "name": "fashion-0574",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "northline coat"
+    }
+  },
+  {
+    "name": "fashion-0575",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "orange denim jacket"
+    }
+  },
+  {
+    "name": "fashion-0576",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "men's trainers"
+    }
+  },
+  {
+    "name": "fashion-0577",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shirts under 40 pounds"
+    }
+  },
+  {
+    "name": "fashion-0578",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black booties"
+    }
+  },
+  {
+    "name": "fashion-0579",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "parallel supply trainers"
+    }
+  },
+  {
+    "name": "fashion-0580",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "arc & loom wide-leg trousers"
+    }
+  },
+  {
+    "name": "fashion-0581",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue baggy jeans"
+    }
+  },
+  {
+    "name": "fashion-0582",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black organic-cotton blend hoodie"
+    }
+  },
+  {
+    "name": "fashion-0583",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jeans for women"
+    }
+  },
+  {
+    "name": "fashion-0584",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "cap for women"
+    }
+  },
+  {
+    "name": "fashion-0585",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "oversized jacket"
+    }
+  },
+  {
+    "name": "fashion-0586",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "trousers for men"
+    }
+  },
+  {
+    "name": "fashion-0587",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "alder studio brown shirt"
+    }
+  },
+  {
+    "name": "fashion-0588",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jeans under gbp 50"
+    }
+  },
+  {
+    "name": "fashion-0589",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey suede-look boots"
+    }
+  },
+  {
+    "name": "fashion-0590",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "studio thread grey bag"
+    }
+  },
+  {
+    "name": "fashion-0591",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "parallel supply grey trousers"
+    }
+  },
+  {
+    "name": "fashion-0592",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "skirts under 80 pounds"
+    }
+  },
+  {
+    "name": "fashion-0593",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "parallel supply grey dress"
+    }
+  },
+  {
+    "name": "fashion-0594",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "dresses under gbp 110"
+    }
+  },
+  {
+    "name": "fashion-0595",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black skirt"
+    }
+  },
+  {
+    "name": "fashion-0596",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "trainers under gbp 130"
+    }
+  },
+  {
+    "name": "fashion-0597",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shorts"
+    }
+  },
+  {
+    "name": "fashion-0598",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "dinner shirts"
+    }
+  },
+  {
+    "name": "fashion-0599",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "prod-000677"
+    }
+  },
+  {
+    "name": "fashion-0600",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "brown shirt"
+    }
+  }
+]

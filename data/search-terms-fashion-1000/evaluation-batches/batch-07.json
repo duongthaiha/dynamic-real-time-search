@@ -1,0 +1,802 @@
+[
+  {
+    "name": "fashion-0601",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black shrots"
+    }
+  },
+  {
+    "name": "fashion-0602",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "faux leather bag"
+    }
+  },
+  {
+    "name": "fashion-0603",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "longline coat"
+    }
+  },
+  {
+    "name": "fashion-0604",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey denim jacket"
+    }
+  },
+  {
+    "name": "fashion-0605",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "smart casual trousers"
+    }
+  },
+  {
+    "name": "fashion-0606",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "evening out jackets"
+    }
+  },
+  {
+    "name": "fashion-0607",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "pink regular-fit shirt"
+    }
+  },
+  {
+    "name": "fashion-0608",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black dresses size uk 6"
+    }
+  },
+  {
+    "name": "fashion-0609",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "beige slim shirt"
+    }
+  },
+  {
+    "name": "fashion-0610",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "boots"
+    }
+  },
+  {
+    "name": "fashion-0611",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "yellow cotton twill skirt"
+    }
+  },
+  {
+    "name": "fashion-0612",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "red bodycon dress"
+    }
+  },
+  {
+    "name": "fashion-0613",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "green organic cotton t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0614",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "orange cropped jumper"
+    }
+  },
+  {
+    "name": "fashion-0615",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "prod-000346"
+    }
+  },
+  {
+    "name": "fashion-0616",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "womens shorts"
+    }
+  },
+  {
+    "name": "fashion-0617",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "dresses"
+    }
+  },
+  {
+    "name": "fashion-0618",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "recycled-cotton denim jeans"
+    }
+  },
+  {
+    "name": "fashion-0619",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "prod-000950"
+    }
+  },
+  {
+    "name": "fashion-0620",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "common form blue jacket"
+    }
+  },
+  {
+    "name": "fashion-0621",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "dress for women"
+    }
+  },
+  {
+    "name": "fashion-0622",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "orange cotton jersey t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0623",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "coats"
+    }
+  },
+  {
+    "name": "fashion-0624",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "navy trainers"
+    }
+  },
+  {
+    "name": "fashion-0625",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jackets between 50 and 80 pounds"
+    }
+  },
+  {
+    "name": "fashion-0626",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "layering knitwear"
+    }
+  },
+  {
+    "name": "fashion-0627",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shorts for men"
+    }
+  },
+  {
+    "name": "fashion-0628",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black shrit"
+    }
+  },
+  {
+    "name": "fashion-0629",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "chunky trainers"
+    }
+  },
+  {
+    "name": "fashion-0630",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "looking for hoodies for travel"
+    }
+  },
+  {
+    "name": "fashion-0631",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jacket for men"
+    }
+  },
+  {
+    "name": "fashion-0632",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black purse"
+    }
+  },
+  {
+    "name": "fashion-0633",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "harbour standard ankle boots in chocolate brown"
+    }
+  },
+  {
+    "name": "fashion-0634",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "tea dress"
+    }
+  },
+  {
+    "name": "fashion-0635",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "booots"
+    }
+  },
+  {
+    "name": "fashion-0636",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jackets for women"
+    }
+  },
+  {
+    "name": "fashion-0637",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black recycled polyester coat"
+    }
+  },
+  {
+    "name": "fashion-0638",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue recycled polyester trousers"
+    }
+  },
+  {
+    "name": "fashion-0639",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jeans"
+    }
+  },
+  {
+    "name": "fashion-0640",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "beige longline shorts"
+    }
+  },
+  {
+    "name": "fashion-0641",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "common form"
+    }
+  },
+  {
+    "name": "fashion-0642",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "women's shorts"
+    }
+  },
+  {
+    "name": "fashion-0643",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jackets size xl"
+    }
+  },
+  {
+    "name": "fashion-0644",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "orange cotton twill shorts"
+    }
+  },
+  {
+    "name": "fashion-0645",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works purple jacket"
+    }
+  },
+  {
+    "name": "fashion-0646",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "field note lace-up boots in stone beige"
+    }
+  },
+  {
+    "name": "fashion-0647",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "exchange an item"
+    }
+  },
+  {
+    "name": "fashion-0648",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "purple beanie"
+    }
+  },
+  {
+    "name": "fashion-0649",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "parallel supply cream shorts"
+    }
+  },
+  {
+    "name": "fashion-0650",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "green recycled yarn jumper"
+    }
+  },
+  {
+    "name": "fashion-0651",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "yellow boots"
+    }
+  },
+  {
+    "name": "fashion-0652",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "t-shirts under gbp 50"
+    }
+  },
+  {
+    "name": "fashion-0653",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "women's bags"
+    }
+  },
+  {
+    "name": "fashion-0654",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "daymark regular-fit t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0655",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jeans for weekend"
+    }
+  },
+  {
+    "name": "fashion-0656",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "orange hoodie"
+    }
+  },
+  {
+    "name": "fashion-0657",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jeans under 30 pounds"
+    }
+  },
+  {
+    "name": "fashion-0658",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "white purse"
+    }
+  },
+  {
+    "name": "fashion-0659",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "wrap dress"
+    }
+  },
+  {
+    "name": "fashion-0660",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "navy jeans"
+    }
+  },
+  {
+    "name": "fashion-0661",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works tailored shorts"
+    }
+  },
+  {
+    "name": "fashion-0662",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "yellow skirt"
+    }
+  },
+  {
+    "name": "fashion-0663",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "dreses"
+    }
+  },
+  {
+    "name": "fashion-0664",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "looking for t-shirts for weekend"
+    }
+  },
+  {
+    "name": "fashion-0665",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "t-shirts for men"
+    }
+  },
+  {
+    "name": "fashion-0666",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "daymark orange jacket"
+    }
+  },
+  {
+    "name": "fashion-0667",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "purple tailored shorts"
+    }
+  },
+  {
+    "name": "fashion-0668",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black hoodie"
+    }
+  },
+  {
+    "name": "fashion-0669",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue regular-fit shorts"
+    }
+  },
+  {
+    "name": "fashion-0670",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "syn-000290-04"
+    }
+  },
+  {
+    "name": "fashion-0671",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "mens shorts"
+    }
+  },
+  {
+    "name": "fashion-0672",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "contact customer service"
+    }
+  },
+  {
+    "name": "fashion-0673",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "dresses under 70 pounds"
+    }
+  },
+  {
+    "name": "fashion-0674",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black cotton twill five-panel cap"
+    }
+  },
+  {
+    "name": "fashion-0675",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "field note dress"
+    }
+  },
+  {
+    "name": "fashion-0676",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black coats size l"
+    }
+  },
+  {
+    "name": "fashion-0677",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "t-shirts under 20 pounds"
+    }
+  },
+  {
+    "name": "fashion-0678",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "harbour standard tapered jeans"
+    }
+  },
+  {
+    "name": "fashion-0679",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0680",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "field note wrap skirt"
+    }
+  },
+  {
+    "name": "fashion-0681",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "orange recycled polyester trousers"
+    }
+  },
+  {
+    "name": "fashion-0682",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works green hoodie"
+    }
+  },
+  {
+    "name": "fashion-0683",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "green a-line skirt"
+    }
+  },
+  {
+    "name": "fashion-0684",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shorts under gbp 60"
+    }
+  },
+  {
+    "name": "fashion-0685",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey pants"
+    }
+  },
+  {
+    "name": "fashion-0686",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black t-shirts size s"
+    }
+  },
+  {
+    "name": "fashion-0687",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "syn-000626-03"
+    }
+  },
+  {
+    "name": "fashion-0688",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "cream hoodie"
+    }
+  },
+  {
+    "name": "fashion-0689",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "beige t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0690",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "knitwear under gbp 30"
+    }
+  },
+  {
+    "name": "fashion-0691",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "recycled polyester coat"
+    }
+  },
+  {
+    "name": "fashion-0692",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "boots for women"
+    }
+  },
+  {
+    "name": "fashion-0693",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "cotton canvas bag"
+    }
+  },
+  {
+    "name": "fashion-0694",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "studio thread regular-fit jumper"
+    }
+  },
+  {
+    "name": "fashion-0695",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "hoodies between 30 and 60 pounds"
+    }
+  },
+  {
+    "name": "fashion-0696",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "white trousers"
+    }
+  },
+  {
+    "name": "fashion-0697",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "ankle boots"
+    }
+  },
+  {
+    "name": "fashion-0698",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "t-shirts size xl"
+    }
+  },
+  {
+    "name": "fashion-0699",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "mens trousers"
+    }
+  },
+  {
+    "name": "fashion-0700",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "beige textile trainers"
+    }
+  }
+]

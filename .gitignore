@@ -1,5 +1,6 @@
 .venv-search/
 .venv-azure/
+.venv-catalog/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -9,3 +10,5 @@ __pycache__/
 .env.local
 .local/
 data/cosmos-poc/
+data/catalog-expanded*/
+data/catalog-pilot*/

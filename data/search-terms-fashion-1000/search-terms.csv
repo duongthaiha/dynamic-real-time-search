@@ -1,0 +1,1001 @@
+queryId,query,intent,category,canonicalQuery
+fashion-0001,navy faux leather jacket,feature,jackets,navy faux leather jacket
+fashion-0002,skirts for holiday,use_case,skirts,skirts for holiday
+fashion-0003,blue relaxed shirt,feature,shirts,blue relaxed shirt
+fashion-0004,delivery charges,non_product,service,delivery charges
+fashion-0005,arc & loom pink coat,brand,coats,arc & loom pink coat
+fashion-0006,looking for bags for weekend,use_case,bags,looking for bags for weekend
+fashion-0007,blue sneakers,synonym,trainers,blue trainers
+fashion-0008,baseball cap,feature,accessories,baseball cap
+fashion-0009,parallel supply,brand,skirts,parallel supply
+fashion-0010,trousers under 90 pounds,price,trousers,trousers under 90 pounds
+fashion-0011,bags under gbp 50,price,bags,bags under gbp 50
+fashion-0012,kindred works orange jeans,brand,jeans,kindred works orange jeans
+fashion-0013,green recycled polyester trousers,feature,trousers,green recycled polyester trousers
+fashion-0014,arc & loom five-panel cap in sky blue,exact,accessories,arc & loom five-panel cap in sky blue
+fashion-0015,grey regular-fit hoodie,feature,hoodies,grey regular-fit hoodie
+fashion-0016,prod-000221,exact,shorts,PROD-000221
+fashion-0017,dresses for women,product_type,dresses,dresses for women
+fashion-0018,northline trousers,brand,trousers,northline trousers
+fashion-0019,common form tote bag in warm cream,exact,bags,common form tote bag in warm cream
+fashion-0020,field note longline coat in soft white,exact,coats,field note longline coat in soft white
+fashion-0021,pink chelsea boots,feature,boots,pink chelsea boots
+fashion-0022,travel bags,use_case,bags,travel bags
+fashion-0023,t-shirts under gbp 20,price,t-shirts,t-shirts under gbp 20
+fashion-0024,studio thread blue trainers,brand,trainers,studio thread blue trainers
+fashion-0025,coats under 70 pounds,price,coats,coats under 70 pounds
+fashion-0026,recycled polyester bag,feature,bags,recycled polyester bag
+fashion-0027,shirts under gbp 40,price,shirts,shirts under gbp 40
+fashion-0028,satin-look skirt,feature,skirts,satin-look skirt
+fashion-0029,black hoodies size m,size,hoodies,black hoodies size m
+fashion-0030,black basebal cap,typo,accessories,black baseball cap
+fashion-0031,low-profile trainers,feature,trainers,low-profile trainers
+fashion-0032,arc & loom shirt,brand,shirts,arc & loom shirt
+fashion-0033,skirt,product_type,skirts,skirt
+fashion-0034,recycled-cotton blend t-shirt,feature,t-shirts,recycled-cotton blend t-shirt
+fashion-0035,navy cotton jersey t-shirt,feature,t-shirts,navy cotton jersey t-shirt
+fashion-0036,field note relaxed jumper in dark wash blue,exact,knitwear,field note relaxed jumper in dark wash blue
+fashion-0037,field note slim t-shirt,brand,t-shirts,field note slim t-shirt
+fashion-0038,holiday skirts,use_case,skirts,holiday skirts
+fashion-0039,recycled polyester jacket,feature,jackets,recycled polyester jacket
+fashion-0040,blue trousers,feature,trousers,blue trousers
+fashion-0041,shorts under gbp 30,price,shorts,shorts under gbp 30
+fashion-0042,hoodies for cold weather,use_case,hoodies,hoodies for cold weather
+fashion-0043,black coats size xl,size,coats,black coats size xl
+fashion-0044,daymark relaxed coat,brand,coats,daymark relaxed coat
+fashion-0045,knitwear size xs,size,knitwear,knitwear size xs
+fashion-0046,purple cotton twill bucket hat,feature,accessories,purple cotton twill bucket hat
+fashion-0047,pink oversized coat,feature,coats,pink oversized coat
+fashion-0048,beige recycled polyester bag,feature,bags,beige recycled polyester bag
+fashion-0049,bags between 30 and 60 pounds,price,bags,bags between 30 and 60 pounds
+fashion-0050,recycled yarn jumper,feature,knitwear,recycled yarn jumper
+fashion-0051,knitwear,product_type,knitwear,knitwear
+fashion-0052,black hoddie,typo,hoodies,black hoodie
+fashion-0053,womens trousers,product_type,trousers,womens trousers
+fashion-0054,purple textile trainers,feature,trainers,purple textile trainers
+fashion-0055,prod-000753,exact,jackets,PROD-000753
+fashion-0056,syn-000781-06,exact,jeans,SYN-000781-06
+fashion-0057,red regular-fit shorts,feature,shorts,red regular-fit shorts
+fashion-0058,green longline shorts,feature,shorts,green longline shorts
+fashion-0059,green jacket,feature,jackets,green jacket
+fashion-0060,orange oversized hoodie,feature,hoodies,orange oversized hoodie
+fashion-0061,grey organic cotton t-shirt,feature,t-shirts,grey organic cotton t-shirt
+fashion-0062,northline beige hoodie,brand,hoodies,northline beige hoodie
+fashion-0063,grey faux leather bag,feature,bags,grey faux leather bag
+fashion-0064,common form white dress,brand,dresses,common form white dress
+fashion-0065,hiking-inspired boots,feature,boots,hiking-inspired boots
+fashion-0066,boots under 150 pounds,price,boots,boots under 150 pounds
+fashion-0067,pants,synonym,trousers,trousers
+fashion-0068,cold weather hoodies,use_case,hoodies,cold weather hoodies
+fashion-0069,yellow trousers,feature,trousers,yellow trousers
+fashion-0070,blue t-shirt,feature,t-shirts,blue t-shirt
+fashion-0071,looking for trainers for city break,use_case,trainers,looking for trainers for city break
+fashion-0072,black shirts size m,size,shirts,black shirts size m
+fashion-0073,relaxed jacket,feature,jackets,relaxed jacket
+fashion-0074,t-shirts between 20 and 50 pounds,price,t-shirts,t-shirts between 20 and 50 pounds
+fashion-0075,t-shirts for festival,use_case,t-shirts,t-shirts for festival
+fashion-0076,alder studio green coat,brand,coats,alder studio green coat
+fashion-0077,purple hiking-inspired boots,feature,boots,purple hiking-inspired boots
+fashion-0078,cream chunky trainers,feature,trainers,cream chunky trainers
+fashion-0079,winter coats,use_case,coats,winter coats
+fashion-0080,linen blend trousers,feature,trousers,linen blend trousers
+fashion-0081,white cotton poplin dress,feature,dresses,white cotton poplin dress
+fashion-0082,parallel supply green bucket hat,brand,accessories,parallel supply green bucket hat
+fashion-0083,navy shoulder bag,feature,bags,navy shoulder bag
+fashion-0084,daymark boots,brand,boots,daymark boots
+fashion-0085,black caot,typo,coats,black coat
+fashion-0086,brown cotton denim jeans,feature,jeans,brown cotton denim jeans
+fashion-0087,red relaxed hoodie,feature,hoodies,red relaxed hoodie
+fashion-0088,white jumper,feature,knitwear,white jumper
+fashion-0089,green cotton knit jumper,feature,knitwear,green cotton knit jumper
+fashion-0090,navy denim jacket,feature,jackets,navy denim jacket
+fashion-0091,casual wear trainers,use_case,trainers,casual wear trainers
+fashion-0092,arc & loom navy trousers,brand,trousers,arc & loom navy trousers
+fashion-0093,northline baseball cap,brand,accessories,northline baseball cap
+fashion-0094,black skirts size uk 18,size,skirts,black skirts size uk 18
+fashion-0095,navy pleated skirt,feature,skirts,navy pleated skirt
+fashion-0096,cotton knit jumper,feature,knitwear,cotton knit jumper
+fashion-0097,black cotton jersey t-shirt,feature,t-shirts,black cotton jersey t-shirt
+fashion-0098,date night dresses,use_case,dresses,date night dresses
+fashion-0099,alder studio wide-leg jeans,brand,jeans,alder studio wide-leg jeans
+fashion-0100,red ankle boots,feature,boots,red ankle boots
+fashion-0101,green pleated skirt,feature,skirts,green pleated skirt
+fashion-0102,studio thread shoulder bag,brand,bags,studio thread shoulder bag
+fashion-0103,linen blend dress,feature,dresses,linen blend dress
+fashion-0104,relaxed dress,feature,dresses,relaxed dress
+fashion-0105,green trousers,feature,trousers,green trousers
+fashion-0106,jackets under 140 pounds,price,jackets,jackets under 140 pounds
+fashion-0107,regular-fit jumper,feature,knitwear,regular-fit jumper
+fashion-0108,looking for coats for winter,use_case,coats,looking for coats for winter
+fashion-0109,jackets for commuting,use_case,jackets,jackets for commuting
+fashion-0110,jeens,typo,jeans,jeans
+fashion-0111,purple cotton twill skirt,feature,skirts,purple cotton twill skirt
+fashion-0112,black denim pants,synonym,jeans,black jeans
+fashion-0113,black jackets size xl,size,jackets,black jackets size xl
+fashion-0114,arc & loom regular coat in deep plum,exact,coats,arc & loom regular coat in deep plum
+fashion-0115,skirts for weekend,use_case,skirts,skirts for weekend
+fashion-0116,black crossbdy bag,typo,bags,black crossbody bag
+fashion-0117,coats for men,product_type,coats,coats for men
+fashion-0118,caps under 20 pounds,price,accessories,caps under 20 pounds
+fashion-0119,arc & loom,brand,jackets,arc & loom
+fashion-0120,textile trainers,feature,trainers,textile trainers
+fashion-0121,northline tea dress,brand,dresses,northline tea dress
+fashion-0122,booties,synonym,boots,ankle boots
+fashion-0123,bags under 30 pounds,price,bags,bags under 30 pounds
+fashion-0124,white denim pants,synonym,jeans,white jeans
+fashion-0125,green skirt,feature,skirts,green skirt
+fashion-0126,field note relaxed t-shirt,brand,t-shirts,field note relaxed t-shirt
+fashion-0127,white trainers,feature,trainers,white trainers
+fashion-0128,black shorts,feature,shorts,black shorts
+fashion-0129,crossbdy bag,typo,bags,crossbody bag
+fashion-0130,looking for skirts for holiday,use_case,skirts,looking for skirts for holiday
+fashion-0131,cream slip dress,feature,dresses,cream slip dress
+fashion-0132,party skirts,use_case,skirts,party skirts
+fashion-0133,sweater,synonym,knitwear,jumper
+fashion-0134,boots under gbp 50,price,boots,boots under gbp 50
+fashion-0135,orange organic-cotton blend hoodie,feature,hoodies,orange organic-cotton blend hoodie
+fashion-0136,jeans for concert,use_case,jeans,jeans for concert
+fashion-0137,shrots,typo,shorts,shorts
+fashion-0138,blue bag,feature,bags,blue bag
+fashion-0139,size guide,non_product,service,size guide
+fashion-0140,trainers between 80 and 110 pounds,price,trainers,trainers between 80 and 110 pounds
+fashion-0141,womens hoodies,product_type,hoodies,womens hoodies
+fashion-0142,organic cotton shirt,feature,shirts,organic cotton shirt
+fashion-0143,blue relaxed t-shirt,feature,t-shirts,blue relaxed t-shirt
+fashion-0144,bags under 100 pounds,price,bags,bags under 100 pounds
+fashion-0145,oversized hoodie,feature,hoodies,oversized hoodie
+fashion-0146,mens hoodies,product_type,hoodies,mens hoodies
+fashion-0147,red relaxed shirt,feature,shirts,red relaxed shirt
+fashion-0148,wide-leg jeans,feature,jeans,wide-leg jeans
+fashion-0149,daymark tea dress,brand,dresses,daymark tea dress
+fashion-0150,looking for bags for work,use_case,bags,looking for bags for work
+fashion-0151,blue satin-look skirt,feature,skirts,blue satin-look skirt
+fashion-0152,syn-000410-02,exact,shirts,SYN-000410-02
+fashion-0153,trainers size uk 7,size,trainers,trainers size uk 7
+fashion-0154,red linen blend shorts,feature,shorts,red linen blend shorts
+fashion-0155,looking for t-shirts for holiday,use_case,t-shirts,looking for t-shirts for holiday
+fashion-0156,men's boots,product_type,boots,men's boots
+fashion-0157,knitwear size m,size,knitwear,knitwear size m
+fashion-0158,women's shirt,product_type,shirts,women's shirt
+fashion-0159,tote bag,feature,bags,tote bag
+fashion-0160,cotton twill skirt,feature,skirts,cotton twill skirt
+fashion-0161,purple organic cotton shirt,feature,shirts,purple organic cotton shirt
+fashion-0162,knitwear size l,size,knitwear,knitwear size l
+fashion-0163,orange low-profile trainers,feature,trainers,orange low-profile trainers
+fashion-0164,looking for jeans for concert,use_case,jeans,looking for jeans for concert
+fashion-0165,black trainers size uk 4,size,trainers,black trainers size uk 4
+fashion-0166,blue denim pants,synonym,jeans,blue jeans
+fashion-0167,international shipping,non_product,service,international shipping
+fashion-0168,common form regular jacket in warm cream,exact,jackets,common form regular jacket in warm cream
+fashion-0169,beige slim t-shirt,feature,t-shirts,beige slim t-shirt
+fashion-0170,boots for autumn,use_case,boots,boots for autumn
+fashion-0171,black t shrit,typo,t-shirts,black t-shirt
+fashion-0172,lace-up boots,feature,boots,lace-up boots
+fashion-0173,common form shoulder bag in chocolate brown,exact,bags,common form shoulder bag in chocolate brown
+fashion-0174,trousers under 30 pounds,price,trousers,trousers under 30 pounds
+fashion-0175,northline yellow boots,brand,boots,northline yellow boots
+fashion-0176,trainers between 40 and 70 pounds,price,trainers,trainers between 40 and 70 pounds
+fashion-0177,blue cotton jersey t-shirt,feature,t-shirts,blue cotton jersey t-shirt
+fashion-0178,common form cream shorts,brand,shorts,common form cream shorts
+fashion-0179,womens bags,product_type,bags,womens bags
+fashion-0180,kindred works straight-leg jeans,brand,jeans,kindred works straight-leg jeans
+fashion-0181,knitwear under gbp 50,price,knitwear,knitwear under gbp 50
+fashion-0182,field note oversized jumper,brand,knitwear,field note oversized jumper
+fashion-0183,skirts for women,product_type,skirts,skirts for women
+fashion-0184,shrit,typo,shirts,shirt
+fashion-0185,black jumpr,typo,knitwear,black jumper
+fashion-0186,prod-000266,exact,shorts,PROD-000266
+fashion-0187,trousers for women,product_type,trousers,trousers for women
+fashion-0188,weekend caps,use_case,accessories,weekend caps
+fashion-0189,shirts for office,use_case,shirts,shirts for office
+fashion-0190,northline column skirt,brand,skirts,northline column skirt
+fashion-0191,grey sneakers,synonym,trainers,grey trainers
+fashion-0192,harbour standard shirt,brand,shirts,harbour standard shirt
+fashion-0193,looking for trousers for summer holiday,use_case,trousers,looking for trousers for summer holiday
+fashion-0194,blue cotton twill coat,feature,coats,blue cotton twill coat
+fashion-0195,common form running-inspired trainers in dark wash blue,exact,trainers,common form running-inspired trainers in dark wash blue
+fashion-0196,harbour standard cropped jumper,brand,knitwear,harbour standard cropped jumper
+fashion-0197,shirts under gbp 30,price,shirts,shirts under gbp 30
+fashion-0198,field note hiking-inspired boots,brand,boots,field note hiking-inspired boots
+fashion-0199,boots under 50 pounds,price,boots,boots under 50 pounds
+fashion-0200,cream five-panel cap,feature,accessories,cream five-panel cap
+fashion-0201,suede-look boots,feature,boots,suede-look boots
+fashion-0202,navy organic cotton shirt,feature,shirts,navy organic cotton shirt
+fashion-0203,regular-fit shirt,feature,shirts,regular-fit shirt
+fashion-0204,shirts size m,size,shirts,shirts size m
+fashion-0205,jeans between 30 and 60 pounds,price,jeans,jeans between 30 and 60 pounds
+fashion-0206,harbour standard t-shirt,brand,t-shirts,harbour standard t-shirt
+fashion-0207,men's caps,product_type,accessories,men's caps
+fashion-0208,skrit,typo,skirts,skirt
+fashion-0209,alder studio tapered trousers in sky blue,exact,trousers,alder studio tapered trousers in sky blue
+fashion-0210,white dress,feature,dresses,white dress
+fashion-0211,travel hoodies,use_case,hoodies,travel hoodies
+fashion-0212,women's t-shirts,product_type,t-shirts,women's t-shirts
+fashion-0213,trousres,typo,trousers,trousers
+fashion-0214,prod-000360,exact,accessories,PROD-000360
+fashion-0215,common form grey boots,brand,boots,common form grey boots
+fashion-0216,women's boots,product_type,boots,women's boots
+fashion-0217,t-shirts,product_type,t-shirts,t-shirts
+fashion-0218,jackets,product_type,jackets,jackets
+fashion-0219,kindred works regular t-shirt in forest green,exact,t-shirts,kindred works regular t-shirt in forest green
+fashion-0220,arc & loom blue five-panel cap,brand,accessories,arc & loom blue five-panel cap
+fashion-0221,boots for winter,use_case,boots,boots for winter
+fashion-0222,shirts for dinner,use_case,shirts,shirts for dinner
+fashion-0223,studio thread retro trainers in forest green,exact,trainers,studio thread retro trainers in forest green
+fashion-0224,organic cotton bucket hat,feature,accessories,organic cotton bucket hat
+fashion-0225,arc & loom blue shirt,brand,shirts,arc & loom blue shirt
+fashion-0226,linen blend skirt,feature,skirts,linen blend skirt
+fashion-0227,white bodycon dress,feature,dresses,white bodycon dress
+fashion-0228,green faux leather jacket,feature,jackets,green faux leather jacket
+fashion-0229,caps under 40 pounds,price,accessories,caps under 40 pounds
+fashion-0230,pink shirt,feature,shirts,pink shirt
+fashion-0231,men's jeans,product_type,jeans,men's jeans
+fashion-0232,black pants,synonym,trousers,black trousers
+fashion-0233,beige hoodie,feature,hoodies,beige hoodie
+fashion-0234,studio thread brown shirt,brand,shirts,studio thread brown shirt
+fashion-0235,green ankle boots,feature,boots,green ankle boots
+fashion-0236,harbour standard,brand,skirts,harbour standard
+fashion-0237,northline regular shorts in forest green,exact,shorts,northline regular shorts in forest green
+fashion-0238,blue cotton twill bucket hat,feature,accessories,blue cotton twill bucket hat
+fashion-0239,grey cotton canvas bag,feature,bags,grey cotton canvas bag
+fashion-0240,prod-000825,exact,accessories,PROD-000825
+fashion-0241,trainers for commuting,use_case,trainers,trainers for commuting
+fashion-0242,trainers size uk 11,size,trainers,trainers size uk 11
+fashion-0243,slim shirt,feature,shirts,slim shirt
+fashion-0244,bag,product_type,bags,bag
+fashion-0245,pink jacket,feature,jackets,pink jacket
+fashion-0246,commuting bags,use_case,bags,commuting bags
+fashion-0247,regular-fit t-shirt,feature,t-shirts,regular-fit t-shirt
+fashion-0248,navy regular-fit shorts,feature,shorts,navy regular-fit shorts
+fashion-0249,organic cotton t-shirt,feature,t-shirts,organic cotton t-shirt
+fashion-0250,brown wool blend jumper,feature,knitwear,brown wool blend jumper
+fashion-0251,mens boots,product_type,boots,mens boots
+fashion-0252,black sweater,synonym,knitwear,black jumper
+fashion-0253,black trousres,typo,trousers,black trousers
+fashion-0254,grey booties,synonym,boots,grey ankle boots
+fashion-0255,purple trousers,feature,trousers,purple trousers
+fashion-0256,jackets between 90 and 120 pounds,price,jackets,jackets between 90 and 120 pounds
+fashion-0257,looking for shirts for holiday,use_case,shirts,looking for shirts for holiday
+fashion-0258,cotton poplin dress,feature,dresses,cotton poplin dress
+fashion-0259,jacket for women,product_type,jackets,jacket for women
+fashion-0260,looking for coats for city break,use_case,coats,looking for coats for city break
+fashion-0261,parallel supply cream coat,brand,coats,parallel supply cream coat
+fashion-0262,green bag,feature,bags,green bag
+fashion-0263,travel trousers,use_case,trousers,travel trousers
+fashion-0264,purple cropped jacket,feature,jackets,purple cropped jacket
+fashion-0265,hoddie,typo,hoodies,hoodie
+fashion-0266,prod-000964,exact,coats,PROD-000964
+fashion-0267,boots for commuting,use_case,boots,boots for commuting
+fashion-0268,studio thread skirt,brand,skirts,studio thread skirt
+fashion-0269,blue booties,synonym,boots,blue ankle boots
+fashion-0270,looking for shorts for warm weather,use_case,shorts,looking for shorts for warm weather
+fashion-0271,blue oversized coat,feature,coats,blue oversized coat
+fashion-0272,kindred works regular shirt in sky blue,exact,shirts,kindred works regular shirt in sky blue
+fashion-0273,parallel supply regular hoodie in deep plum,exact,hoodies,parallel supply regular hoodie in deep plum
+fashion-0274,daymark jacket,brand,jackets,daymark jacket
+fashion-0275,white shorts,feature,shorts,white shorts
+fashion-0276,white t-shirt,feature,t-shirts,white t-shirt
+fashion-0277,weekend shorts,use_case,shorts,weekend shorts
+fashion-0278,beige oversized jacket,feature,jackets,beige oversized jacket
+fashion-0279,alder studio wide-leg jeans in cherry red,exact,jeans,alder studio wide-leg jeans in cherry red
+fashion-0280,kindred works a-line skirt in burnt orange,exact,skirts,kindred works a-line skirt in burnt orange
+fashion-0281,green hoodie,feature,hoodies,green hoodie
+fashion-0282,chelsea boots,feature,boots,chelsea boots
+fashion-0283,jackets size l,size,jackets,jackets size l
+fashion-0284,kindred works trousers,brand,trousers,kindred works trousers
+fashion-0285,tailored shorts,feature,shorts,tailored shorts
+fashion-0286,recycled polyester bucket hat,feature,accessories,recycled polyester bucket hat
+fashion-0287,brown oversized coat,feature,coats,brown oversized coat
+fashion-0288,coats for women,product_type,coats,coats for women
+fashion-0289,black jeans size w38 l32,size,jeans,black jeans size w38 l32
+fashion-0290,mens caps,product_type,accessories,mens caps
+fashion-0291,womens bag,product_type,bags,womens bag
+fashion-0292,yellow ankle boots,feature,boots,yellow ankle boots
+fashion-0293,common form jumper,brand,knitwear,common form jumper
+fashion-0294,pink hoodie,feature,hoodies,pink hoodie
+fashion-0295,trainers for men,product_type,trainers,trainers for men
+fashion-0296,pink cotton twill beanie,feature,accessories,pink cotton twill beanie
+fashion-0297,black shirts size xxl,size,shirts,black shirts size xxl
+fashion-0298,green trainers,feature,trainers,green trainers
+fashion-0299,men's t-shirts,product_type,t-shirts,men's t-shirts
+fashion-0300,knitwear for women,product_type,knitwear,knitwear for women
+fashion-0301,tapered trousers,feature,trousers,tapered trousers
+fashion-0302,blue recycled-cotton blend hoodie,feature,hoodies,blue recycled-cotton blend hoodie
+fashion-0303,prod-000906,exact,t-shirts,PROD-000906
+fashion-0304,field note running-inspired trainers,brand,trainers,field note running-inspired trainers
+fashion-0305,red boots,feature,boots,red boots
+fashion-0306,northline grey t-shirt,brand,t-shirts,northline grey t-shirt
+fashion-0307,daymark orange hoodie,brand,hoodies,daymark orange hoodie
+fashion-0308,brown tapered trousers,feature,trousers,brown tapered trousers
+fashion-0309,women's trainers,product_type,trainers,women's trainers
+fashion-0310,yellow baseball cap,feature,accessories,yellow baseball cap
+fashion-0311,common form trousers,brand,trousers,common form trousers
+fashion-0312,shirts under 70 pounds,price,shirts,shirts under 70 pounds
+fashion-0313,common form pink bag,brand,bags,common form pink bag
+fashion-0314,black skirts size uk 4,size,skirts,black skirts size uk 4
+fashion-0315,regular-fit coat,feature,coats,regular-fit coat
+fashion-0316,skirts between 40 and 70 pounds,price,skirts,skirts between 40 and 70 pounds
+fashion-0317,black tee,synonym,t-shirts,black t-shirt
+fashion-0318,black hoodies size s,size,hoodies,black hoodies size s
+fashion-0319,weekend knitwear,use_case,knitwear,weekend knitwear
+fashion-0320,recycled polyester baseball cap,feature,accessories,recycled polyester baseball cap
+fashion-0321,purple linen blend shirt,feature,shirts,purple linen blend shirt
+fashion-0322,shorts for beach,use_case,shorts,shorts for beach
+fashion-0323,field note white dress,brand,dresses,field note white dress
+fashion-0324,syn-000675-01,exact,accessories,SYN-000675-01
+fashion-0325,brown cotton twill coat,feature,coats,brown cotton twill coat
+fashion-0326,relaxed t-shirt,feature,t-shirts,relaxed t-shirt
+fashion-0327,caps for festival,use_case,accessories,caps for festival
+fashion-0328,field note regular t-shirt in butter yellow,exact,t-shirts,field note regular t-shirt in butter yellow
+fashion-0329,textile boots,feature,boots,textile boots
+fashion-0330,women's trousers,product_type,trousers,women's trousers
+fashion-0331,jackets for evening out,use_case,jackets,jackets for evening out
+fashion-0332,prod-000247,exact,knitwear,PROD-000247
+fashion-0333,blue organic cotton five-panel cap,feature,accessories,blue organic cotton five-panel cap
+fashion-0334,studio thread beige t-shirt,brand,t-shirts,studio thread beige t-shirt
+fashion-0335,knitwear for cold weather,use_case,knitwear,knitwear for cold weather
+fashion-0336,shorts between 30 and 60 pounds,price,shorts,shorts between 30 and 60 pounds
+fashion-0337,blue tee,synonym,t-shirts,blue t-shirt
+fashion-0338,dresses under gbp 70,price,dresses,dresses under gbp 70
+fashion-0339,harbour standard tailored trousers in forest green,exact,trousers,harbour standard tailored trousers in forest green
+fashion-0340,regular-fit shorts,feature,shorts,regular-fit shorts
+fashion-0341,everyday trainers,use_case,trainers,everyday trainers
+fashion-0342,looking for coats for commuting,use_case,coats,looking for coats for commuting
+fashion-0343,pink cotton knit jumper,feature,knitwear,pink cotton knit jumper
+fashion-0344,grey tee,synonym,t-shirts,grey t-shirt
+fashion-0345,trainers,product_type,trainers,trainers
+fashion-0346,coats for city break,use_case,coats,coats for city break
+fashion-0347,daymark regular jacket in butter yellow,exact,jackets,daymark regular jacket in butter yellow
+fashion-0348,summer caps,use_case,accessories,summer caps
+fashion-0349,returns policy,non_product,service,returns policy
+fashion-0350,purple ankle boots,feature,boots,purple ankle boots
+fashion-0351,purple trainers,feature,trainers,purple trainers
+fashion-0352,kindred works t-shirt,brand,t-shirts,kindred works t-shirt
+fashion-0353,trousers between 50 and 80 pounds,price,trousers,trousers between 50 and 80 pounds
+fashion-0354,hoodies size xl,size,hoodies,hoodies size xl
+fashion-0355,northline running-inspired trainers in chocolate brown,exact,trainers,northline running-inspired trainers in chocolate brown
+fashion-0356,syn-000321-03,exact,t-shirts,SYN-000321-03
+fashion-0357,yellow recycled polyester trousers,feature,trousers,yellow recycled polyester trousers
+fashion-0358,grey skirt,feature,skirts,grey skirt
+fashion-0359,white tee,synonym,t-shirts,white t-shirt
+fashion-0360,cream trainers,feature,trainers,cream trainers
+fashion-0361,purple wide-leg trousers,feature,trousers,purple wide-leg trousers
+fashion-0362,caps for holiday,use_case,accessories,caps for holiday
+fashion-0363,knitwear under 50 pounds,price,knitwear,knitwear under 50 pounds
+fashion-0364,denim shorts,feature,shorts,denim shorts
+fashion-0365,prod-000655,exact,skirts,PROD-000655
+fashion-0366,trainres,typo,trainers,trainers
+fashion-0367,red oversized jumper,feature,knitwear,red oversized jumper
+fashion-0368,cap,product_type,accessories,cap
+fashion-0369,holiday caps,use_case,accessories,holiday caps
+fashion-0370,trainers under gbp 40,price,trainers,trainers under gbp 40
+fashion-0371,common form hiking-inspired boots,brand,boots,common form hiking-inspired boots
+fashion-0372,green cotton twill coat,feature,coats,green cotton twill coat
+fashion-0373,prod-000448,exact,boots,PROD-000448
+fashion-0374,summer holiday shorts,use_case,shorts,summer holiday shorts
+fashion-0375,harbour standard purple jeans,brand,jeans,harbour standard purple jeans
+fashion-0376,purple linen blend trousers,feature,trousers,purple linen blend trousers
+fashion-0377,alder studio chelsea boots in slate grey,exact,boots,alder studio chelsea boots in slate grey
+fashion-0378,pink shorts,feature,shorts,pink shorts
+fashion-0379,women's bag,product_type,bags,women's bag
+fashion-0380,baggy jeans,feature,jeans,baggy jeans
+fashion-0381,common form beanie,brand,accessories,common form beanie
+fashion-0382,festival t-shirts,use_case,t-shirts,festival t-shirts
+fashion-0383,syn-000988-01,exact,boots,SYN-000988-01
+fashion-0384,purple shirt,feature,shirts,purple shirt
+fashion-0385,arc & loom five-panel cap,brand,accessories,arc & loom five-panel cap
+fashion-0386,kindred works jumper,brand,knitwear,kindred works jumper
+fashion-0387,cropped jacket,feature,jackets,cropped jacket
+fashion-0388,pink oversized t-shirt,feature,t-shirts,pink oversized t-shirt
+fashion-0389,denim skirt,feature,skirts,denim skirt
+fashion-0390,arc & loom wide-leg jeans,brand,jeans,arc & loom wide-leg jeans
+fashion-0391,brown running-inspired trainers,feature,trainers,brown running-inspired trainers
+fashion-0392,casual wear hoodies,use_case,hoodies,casual wear hoodies
+fashion-0393,crossbody bag,feature,bags,crossbody bag
+fashion-0394,common form dress,brand,dresses,common form dress
+fashion-0395,shorts under 60 pounds,price,shorts,shorts under 60 pounds
+fashion-0396,northline regular-fit hoodie,brand,hoodies,northline regular-fit hoodie
+fashion-0397,womens dress,product_type,dresses,womens dress
+fashion-0398,white relaxed coat,feature,coats,white relaxed coat
+fashion-0399,women's caps,product_type,accessories,women's caps
+fashion-0400,white coat,feature,coats,white coat
+fashion-0401,jeans for everyday,use_case,jeans,jeans for everyday
+fashion-0402,parallel supply jumper,brand,knitwear,parallel supply jumper
+fashion-0403,oversized coat,feature,coats,oversized coat
+fashion-0404,recycled polyester five-panel cap,feature,accessories,recycled polyester five-panel cap
+fashion-0405,red relaxed shorts,feature,shorts,red relaxed shorts
+fashion-0406,grey recycled polyester jacket,feature,jackets,grey recycled polyester jacket
+fashion-0407,gift cards,non_product,service,gift cards
+fashion-0408,hoodies between 50 and 80 pounds,price,hoodies,hoodies between 50 and 80 pounds
+fashion-0409,field note jacket,brand,jackets,field note jacket
+fashion-0410,oversized shirt,feature,shirts,oversized shirt
+fashion-0411,kindred works jeans,brand,jeans,kindred works jeans
+fashion-0412,shirts for women,product_type,shirts,shirts for women
+fashion-0413,kindred works chunky trainers,brand,trainers,kindred works chunky trainers
+fashion-0414,black dresses size uk 16,size,dresses,black dresses size uk 16
+fashion-0415,trousers under gbp 90,price,trousers,trousers under gbp 90
+fashion-0416,alder studio black bag,brand,bags,alder studio black bag
+fashion-0417,kindred works relaxed hoodie in chocolate brown,exact,hoodies,kindred works relaxed hoodie in chocolate brown
+fashion-0418,orange viscose dress,feature,dresses,orange viscose dress
+fashion-0419,black trousers size s,size,trousers,black trousers size s
+fashion-0420,studio thread tapered trousers in deep plum,exact,trousers,studio thread tapered trousers in deep plum
+fashion-0421,black shorts size s,size,shorts,black shorts size s
+fashion-0422,winter knitwear,use_case,knitwear,winter knitwear
+fashion-0423,harbour standard tote bag in slate grey,exact,bags,harbour standard tote bag in slate grey
+fashion-0424,blue jumper,feature,knitwear,blue jumper
+fashion-0425,skirt for women,product_type,skirts,skirt for women
+fashion-0426,hoodies for travel,use_case,hoodies,hoodies for travel
+fashion-0427,syn-000842-02,exact,trousers,SYN-000842-02
+fashion-0428,parallel supply hoodie,brand,hoodies,parallel supply hoodie
+fashion-0429,green tea dress,feature,dresses,green tea dress
+fashion-0430,shirts for men,product_type,shirts,shirts for men
+fashion-0431,women's skirt,product_type,skirts,women's skirt
+fashion-0432,white jean jacket,synonym,jackets,white denim jacket
+fashion-0433,blue jean jacket,synonym,jackets,blue denim jacket
+fashion-0434,beige recycled-cotton blend t-shirt,feature,t-shirts,beige recycled-cotton blend t-shirt
+fashion-0435,black dresses size uk 4,size,dresses,black dresses size uk 4
+fashion-0436,black jeens,typo,jeans,black jeans
+fashion-0437,viscose dress,feature,dresses,viscose dress
+fashion-0438,blue relaxed hoodie,feature,hoodies,blue relaxed hoodie
+fashion-0439,wedding guest dresses,use_case,dresses,wedding guest dresses
+fashion-0440,grey tailored trousers,feature,trousers,grey tailored trousers
+fashion-0441,daymark cream trainers,brand,trainers,daymark cream trainers
+fashion-0442,purple regular-fit shorts,feature,shorts,purple regular-fit shorts
+fashion-0443,cropped jumper,feature,knitwear,cropped jumper
+fashion-0444,field note t-shirt,brand,t-shirts,field note t-shirt
+fashion-0445,black shorts size xxl,size,shorts,black shorts size xxl
+fashion-0446,pink recycled polyester bag,feature,bags,pink recycled polyester bag
+fashion-0447,blue shirt,feature,shirts,blue shirt
+fashion-0448,men's jackets,product_type,jackets,men's jackets
+fashion-0449,women's dress,product_type,dresses,women's dress
+fashion-0450,winter boots,use_case,boots,winter boots
+fashion-0451,alder studio oversized jumper in butter yellow,exact,knitwear,alder studio oversized jumper in butter yellow
+fashion-0452,coats size m,size,coats,coats size m
+fashion-0453,kindred works boots,brand,boots,kindred works boots
+fashion-0454,grey cotton twill trousers,feature,trousers,grey cotton twill trousers
+fashion-0455,grey faux leather boots,feature,boots,grey faux leather boots
+fashion-0456,white cotton twill shorts,feature,shorts,white cotton twill shorts
+fashion-0457,column skirt,feature,skirts,column skirt
+fashion-0458,green oversized coat,feature,coats,green oversized coat
+fashion-0459,dresses for summer holiday,use_case,dresses,dresses for summer holiday
+fashion-0460,purple skirt,feature,skirts,purple skirt
+fashion-0461,tee,synonym,t-shirts,t-shirt
+fashion-0462,harbour standard slim jeans in jet black,exact,jeans,harbour standard slim jeans in jet black
+fashion-0463,dresses for party,use_case,dresses,dresses for party
+fashion-0464,office knitwear,use_case,knitwear,office knitwear
+fashion-0465,black skirts size uk 12,size,skirts,black skirts size uk 12
+fashion-0466,jumpr,typo,knitwear,jumper
+fashion-0467,pink jumper,feature,knitwear,pink jumper
+fashion-0468,jackets for autumn,use_case,jackets,jackets for autumn
+fashion-0469,arc & loom jeans,brand,jeans,arc & loom jeans
+fashion-0470,arc & loom tailored shorts in midnight navy,exact,shorts,arc & loom tailored shorts in midnight navy
+fashion-0471,northline navy skirt,brand,skirts,northline navy skirt
+fashion-0472,alder studio lace-up boots,brand,boots,alder studio lace-up boots
+fashion-0473,knitwear size xxl,size,knitwear,knitwear size xxl
+fashion-0474,brown recycled polyester trousers,feature,trousers,brown recycled polyester trousers
+fashion-0475,weekend jeans,use_case,jeans,weekend jeans
+fashion-0476,commuting jackets,use_case,jackets,commuting jackets
+fashion-0477,black crossbody bag,feature,bags,black crossbody bag
+fashion-0478,green dress,feature,dresses,green dress
+fashion-0479,boots size uk 12,size,boots,boots size uk 12
+fashion-0480,cotton denim jeans,feature,jeans,cotton denim jeans
+fashion-0481,black jackets size xs,size,jackets,black jackets size xs
+fashion-0482,green jeans,feature,jeans,green jeans
+fashion-0483,purse,synonym,bags,bag
+fashion-0484,alder studio coat,brand,coats,alder studio coat
+fashion-0485,field note regular-fit jumper,brand,knitwear,field note regular-fit jumper
+fashion-0486,black skrit,typo,skirts,black skirt
+fashion-0487,purple recycled polyester trousers,feature,trousers,purple recycled polyester trousers
+fashion-0488,field note cream coat,brand,coats,field note cream coat
+fashion-0489,syn-000413-02,exact,hoodies,SYN-000413-02
+fashion-0490,mens coat,product_type,coats,mens coat
+fashion-0491,blue purse,synonym,bags,blue bag
+fashion-0492,trousers,product_type,trousers,trousers
+fashion-0493,cotton twill trousers,feature,trousers,cotton twill trousers
+fashion-0494,t-shirts under 50 pounds,price,t-shirts,t-shirts under 50 pounds
+fashion-0495,studio thread oversized jumper,brand,knitwear,studio thread oversized jumper
+fashion-0496,women's skirts,product_type,skirts,women's skirts
+fashion-0497,blue recycled polyester coat,feature,coats,blue recycled polyester coat
+fashion-0498,arc & loom cropped jacket in deep plum,exact,jackets,arc & loom cropped jacket in deep plum
+fashion-0499,green oversized jacket,feature,jackets,green oversized jacket
+fashion-0500,commuting boots,use_case,boots,commuting boots
+fashion-0501,t-shirt,product_type,t-shirts,t-shirt
+fashion-0502,skirts under gbp 80,price,skirts,skirts under gbp 80
+fashion-0503,pink wool blend coat,feature,coats,pink wool blend coat
+fashion-0504,arc & loom red bag,brand,bags,arc & loom red bag
+fashion-0505,daymark beige bucket hat,brand,accessories,daymark beige bucket hat
+fashion-0506,studio thread,brand,t-shirts,studio thread
+fashion-0507,kindred works skirt,brand,skirts,kindred works skirt
+fashion-0508,beanie,feature,accessories,beanie
+fashion-0509,grey trainers,feature,trainers,grey trainers
+fashion-0510,coats for winter,use_case,coats,coats for winter
+fashion-0511,alder studio hoodie,brand,hoodies,alder studio hoodie
+fashion-0512,coat for women,product_type,coats,coat for women
+fashion-0513,orange shorts,feature,shorts,orange shorts
+fashion-0514,knitwear under 30 pounds,price,knitwear,knitwear under 30 pounds
+fashion-0515,northline ankle boots,brand,boots,northline ankle boots
+fashion-0516,green beanie,feature,accessories,green beanie
+fashion-0517,shorts for festival,use_case,shorts,shorts for festival
+fashion-0518,hoodies under gbp 50,price,hoodies,hoodies under gbp 50
+fashion-0519,pink tapered jeans,feature,jeans,pink tapered jeans
+fashion-0520,beige relaxed dress,feature,dresses,beige relaxed dress
+fashion-0521,grey column skirt,feature,skirts,grey column skirt
+fashion-0522,alder studio running-inspired trainers,brand,trainers,alder studio running-inspired trainers
+fashion-0523,alder studio shorts,brand,shorts,alder studio shorts
+fashion-0524,navy low-profile trainers,feature,trainers,navy low-profile trainers
+fashion-0525,women's jeans,product_type,jeans,women's jeans
+fashion-0526,mens jeans,product_type,jeans,mens jeans
+fashion-0527,slim jeans,feature,jeans,slim jeans
+fashion-0528,orange beanie,feature,accessories,orange beanie
+fashion-0529,blue viscose shirt,feature,shirts,blue viscose shirt
+fashion-0530,green cotton poplin dress,feature,dresses,green cotton poplin dress
+fashion-0531,caps for weekend,use_case,accessories,caps for weekend
+fashion-0532,green wide-leg jeans,feature,jeans,green wide-leg jeans
+fashion-0533,green longline coat,feature,coats,green longline coat
+fashion-0534,alder studio,brand,shirts,alder studio
+fashion-0535,white sweater,synonym,knitwear,white jumper
+fashion-0536,student discount,non_product,service,student discount
+fashion-0537,jean jacket,synonym,jackets,denim jacket
+fashion-0538,beige cotton twill beanie,feature,accessories,beige cotton twill beanie
+fashion-0539,white cotton knit jumper,feature,knitwear,white cotton knit jumper
+fashion-0540,harbour standard blue jumper,brand,knitwear,harbour standard blue jumper
+fashion-0541,grey denim pants,synonym,jeans,grey jeans
+fashion-0542,hoodies for women,product_type,hoodies,hoodies for women
+fashion-0543,womens dresses,product_type,dresses,womens dresses
+fashion-0544,black dreses,typo,dresses,black dresses
+fashion-0545,trousers size xl,size,trousers,trousers size xl
+fashion-0546,coats between 70 and 100 pounds,price,coats,coats between 70 and 100 pounds
+fashion-0547,navy slip dress,feature,dresses,navy slip dress
+fashion-0548,syn-000662-06,exact,trousers,SYN-000662-06
+fashion-0549,black coat,feature,coats,black coat
+fashion-0550,arc & loom white bag,brand,bags,arc & loom white bag
+fashion-0551,trousers between 30 and 60 pounds,price,trousers,trousers between 30 and 60 pounds
+fashion-0552,kindred works shorts,brand,shorts,kindred works shorts
+fashion-0553,mesh trainers,feature,trainers,mesh trainers
+fashion-0554,black t-shirts size xxl,size,t-shirts,black t-shirts size xxl
+fashion-0555,jeans for men,product_type,jeans,jeans for men
+fashion-0556,coats under gbp 120,price,coats,coats under gbp 120
+fashion-0557,syn-000854-01,exact,bags,SYN-000854-01
+fashion-0558,t-shirt for women,product_type,t-shirts,t-shirt for women
+fashion-0559,blue faux leather trainers,feature,trainers,blue faux leather trainers
+fashion-0560,kindred works trainers,brand,trainers,kindred works trainers
+fashion-0561,blue sweater,synonym,knitwear,blue jumper
+fashion-0562,arc & loom tea dress,brand,dresses,arc & loom tea dress
+fashion-0563,jeans size w38 l32,size,jeans,jeans size w38 l32
+fashion-0564,red jumper,feature,knitwear,red jumper
+fashion-0565,trousers under 50 pounds,price,trousers,trousers under 50 pounds
+fashion-0566,shirts between 40 and 70 pounds,price,shirts,shirts between 40 and 70 pounds
+fashion-0567,red bag,feature,bags,red bag
+fashion-0568,grey pleated skirt,feature,skirts,grey pleated skirt
+fashion-0569,shirts,product_type,shirts,shirts
+fashion-0570,field note green t-shirt,brand,t-shirts,field note green t-shirt
+fashion-0571,grey recycled polyester bag,feature,bags,grey recycled polyester bag
+fashion-0572,common form pink hoodie,brand,hoodies,common form pink hoodie
+fashion-0573,caot,typo,coats,coat
+fashion-0574,northline coat,brand,coats,northline coat
+fashion-0575,orange denim jacket,feature,jackets,orange denim jacket
+fashion-0576,men's trainers,product_type,trainers,men's trainers
+fashion-0577,shirts under 40 pounds,price,shirts,shirts under 40 pounds
+fashion-0578,black booties,synonym,boots,black ankle boots
+fashion-0579,parallel supply trainers,brand,trainers,parallel supply trainers
+fashion-0580,arc & loom wide-leg trousers,brand,trousers,arc & loom wide-leg trousers
+fashion-0581,blue baggy jeans,feature,jeans,blue baggy jeans
+fashion-0582,black organic-cotton blend hoodie,feature,hoodies,black organic-cotton blend hoodie
+fashion-0583,jeans for women,product_type,jeans,jeans for women
+fashion-0584,cap for women,product_type,accessories,cap for women
+fashion-0585,oversized jacket,feature,jackets,oversized jacket
+fashion-0586,trousers for men,product_type,trousers,trousers for men
+fashion-0587,alder studio brown shirt,brand,shirts,alder studio brown shirt
+fashion-0588,jeans under gbp 50,price,jeans,jeans under gbp 50
+fashion-0589,grey suede-look boots,feature,boots,grey suede-look boots
+fashion-0590,studio thread grey bag,brand,bags,studio thread grey bag
+fashion-0591,parallel supply grey trousers,brand,trousers,parallel supply grey trousers
+fashion-0592,skirts under 80 pounds,price,skirts,skirts under 80 pounds
+fashion-0593,parallel supply grey dress,brand,dresses,parallel supply grey dress
+fashion-0594,dresses under gbp 110,price,dresses,dresses under gbp 110
+fashion-0595,black skirt,feature,skirts,black skirt
+fashion-0596,trainers under gbp 130,price,trainers,trainers under gbp 130
+fashion-0597,shorts,product_type,shorts,shorts
+fashion-0598,dinner shirts,use_case,shirts,dinner shirts
+fashion-0599,prod-000677,exact,trousers,PROD-000677
+fashion-0600,brown shirt,feature,shirts,brown shirt
+fashion-0601,black shrots,typo,shorts,black shorts
+fashion-0602,faux leather bag,feature,bags,faux leather bag
+fashion-0603,longline coat,feature,coats,longline coat
+fashion-0604,grey denim jacket,feature,jackets,grey denim jacket
+fashion-0605,smart casual trousers,use_case,trousers,smart casual trousers
+fashion-0606,evening out jackets,use_case,jackets,evening out jackets
+fashion-0607,pink regular-fit shirt,feature,shirts,pink regular-fit shirt
+fashion-0608,black dresses size uk 6,size,dresses,black dresses size uk 6
+fashion-0609,beige slim shirt,feature,shirts,beige slim shirt
+fashion-0610,boots,product_type,boots,boots
+fashion-0611,yellow cotton twill skirt,feature,skirts,yellow cotton twill skirt
+fashion-0612,red bodycon dress,feature,dresses,red bodycon dress
+fashion-0613,green organic cotton t-shirt,feature,t-shirts,green organic cotton t-shirt
+fashion-0614,orange cropped jumper,feature,knitwear,orange cropped jumper
+fashion-0615,prod-000346,exact,jeans,PROD-000346
+fashion-0616,womens shorts,product_type,shorts,womens shorts
+fashion-0617,dresses,product_type,dresses,dresses
+fashion-0618,recycled-cotton denim jeans,feature,jeans,recycled-cotton denim jeans
+fashion-0619,prod-000950,exact,shirts,PROD-000950
+fashion-0620,common form blue jacket,brand,jackets,common form blue jacket
+fashion-0621,dress for women,product_type,dresses,dress for women
+fashion-0622,orange cotton jersey t-shirt,feature,t-shirts,orange cotton jersey t-shirt
+fashion-0623,coats,product_type,coats,coats
+fashion-0624,navy trainers,feature,trainers,navy trainers
+fashion-0625,jackets between 50 and 80 pounds,price,jackets,jackets between 50 and 80 pounds
+fashion-0626,layering knitwear,use_case,knitwear,layering knitwear
+fashion-0627,shorts for men,product_type,shorts,shorts for men
+fashion-0628,black shrit,typo,shirts,black shirt
+fashion-0629,chunky trainers,feature,trainers,chunky trainers
+fashion-0630,looking for hoodies for travel,use_case,hoodies,looking for hoodies for travel
+fashion-0631,jacket for men,product_type,jackets,jacket for men
+fashion-0632,black purse,synonym,bags,black bag
+fashion-0633,harbour standard ankle boots in chocolate brown,exact,boots,harbour standard ankle boots in chocolate brown
+fashion-0634,tea dress,feature,dresses,tea dress
+fashion-0635,booots,typo,boots,boots
+fashion-0636,jackets for women,product_type,jackets,jackets for women
+fashion-0637,black recycled polyester coat,feature,coats,black recycled polyester coat
+fashion-0638,blue recycled polyester trousers,feature,trousers,blue recycled polyester trousers
+fashion-0639,jeans,product_type,jeans,jeans
+fashion-0640,beige longline shorts,feature,shorts,beige longline shorts
+fashion-0641,common form,brand,shorts,common form
+fashion-0642,women's shorts,product_type,shorts,women's shorts
+fashion-0643,jackets size xl,size,jackets,jackets size xl
+fashion-0644,orange cotton twill shorts,feature,shorts,orange cotton twill shorts
+fashion-0645,kindred works purple jacket,brand,jackets,kindred works purple jacket
+fashion-0646,field note lace-up boots in stone beige,exact,boots,field note lace-up boots in stone beige
+fashion-0647,exchange an item,non_product,service,exchange an item
+fashion-0648,purple beanie,feature,accessories,purple beanie
+fashion-0649,parallel supply cream shorts,brand,shorts,parallel supply cream shorts
+fashion-0650,green recycled yarn jumper,feature,knitwear,green recycled yarn jumper
+fashion-0651,yellow boots,feature,boots,yellow boots
+fashion-0652,t-shirts under gbp 50,price,t-shirts,t-shirts under gbp 50
+fashion-0653,women's bags,product_type,bags,women's bags
+fashion-0654,daymark regular-fit t-shirt,brand,t-shirts,daymark regular-fit t-shirt
+fashion-0655,jeans for weekend,use_case,jeans,jeans for weekend
+fashion-0656,orange hoodie,feature,hoodies,orange hoodie
+fashion-0657,jeans under 30 pounds,price,jeans,jeans under 30 pounds
+fashion-0658,white purse,synonym,bags,white bag
+fashion-0659,wrap dress,feature,dresses,wrap dress
+fashion-0660,navy jeans,feature,jeans,navy jeans
+fashion-0661,kindred works tailored shorts,brand,shorts,kindred works tailored shorts
+fashion-0662,yellow skirt,feature,skirts,yellow skirt
+fashion-0663,dreses,typo,dresses,dresses
+fashion-0664,looking for t-shirts for weekend,use_case,t-shirts,looking for t-shirts for weekend
+fashion-0665,t-shirts for men,product_type,t-shirts,t-shirts for men
+fashion-0666,daymark orange jacket,brand,jackets,daymark orange jacket
+fashion-0667,purple tailored shorts,feature,shorts,purple tailored shorts
+fashion-0668,black hoodie,feature,hoodies,black hoodie
+fashion-0669,blue regular-fit shorts,feature,shorts,blue regular-fit shorts
+fashion-0670,syn-000290-04,exact,shirts,SYN-000290-04
+fashion-0671,mens shorts,product_type,shorts,mens shorts
+fashion-0672,contact customer service,non_product,service,contact customer service
+fashion-0673,dresses under 70 pounds,price,dresses,dresses under 70 pounds
+fashion-0674,black cotton twill five-panel cap,feature,accessories,black cotton twill five-panel cap
+fashion-0675,field note dress,brand,dresses,field note dress
+fashion-0676,black coats size l,size,coats,black coats size l
+fashion-0677,t-shirts under 20 pounds,price,t-shirts,t-shirts under 20 pounds
+fashion-0678,harbour standard tapered jeans,brand,jeans,harbour standard tapered jeans
+fashion-0679,grey t-shirt,feature,t-shirts,grey t-shirt
+fashion-0680,field note wrap skirt,brand,skirts,field note wrap skirt
+fashion-0681,orange recycled polyester trousers,feature,trousers,orange recycled polyester trousers
+fashion-0682,kindred works green hoodie,brand,hoodies,kindred works green hoodie
+fashion-0683,green a-line skirt,feature,skirts,green a-line skirt
+fashion-0684,shorts under gbp 60,price,shorts,shorts under gbp 60
+fashion-0685,grey pants,synonym,trousers,grey trousers
+fashion-0686,black t-shirts size s,size,t-shirts,black t-shirts size s
+fashion-0687,syn-000626-03,exact,shorts,SYN-000626-03
+fashion-0688,cream hoodie,feature,hoodies,cream hoodie
+fashion-0689,beige t-shirt,feature,t-shirts,beige t-shirt
+fashion-0690,knitwear under gbp 30,price,knitwear,knitwear under gbp 30
+fashion-0691,recycled polyester coat,feature,coats,recycled polyester coat
+fashion-0692,boots for women,product_type,boots,boots for women
+fashion-0693,cotton canvas bag,feature,bags,cotton canvas bag
+fashion-0694,studio thread regular-fit jumper,brand,knitwear,studio thread regular-fit jumper
+fashion-0695,hoodies between 30 and 60 pounds,price,hoodies,hoodies between 30 and 60 pounds
+fashion-0696,white trousers,feature,trousers,white trousers
+fashion-0697,ankle boots,feature,boots,ankle boots
+fashion-0698,t-shirts size xl,size,t-shirts,t-shirts size xl
+fashion-0699,mens trousers,product_type,trousers,mens trousers
+fashion-0700,beige textile trainers,feature,trainers,beige textile trainers
+fashion-0701,denim pants,synonym,jeans,jeans
+fashion-0702,black jeans size w32 l32,size,jeans,black jeans size w32 l32
+fashion-0703,black jacket,feature,jackets,black jacket
+fashion-0704,black boots size uk 7,size,boots,black boots size uk 7
+fashion-0705,black shirt,feature,shirts,black shirt
+fashion-0706,kindred works red shorts,brand,shorts,kindred works red shorts
+fashion-0707,beach shorts,use_case,shorts,beach shorts
+fashion-0708,blue hiking-inspired boots,feature,boots,blue hiking-inspired boots
+fashion-0709,black jumper,feature,knitwear,black jumper
+fashion-0710,red tailored shorts,feature,shorts,red tailored shorts
+fashion-0711,green cotton canvas bag,feature,bags,green cotton canvas bag
+fashion-0712,office trousers,use_case,trousers,office trousers
+fashion-0713,red baggy jeans,feature,jeans,red baggy jeans
+fashion-0714,pink slim t-shirt,feature,t-shirts,pink slim t-shirt
+fashion-0715,parallel supply pink jeans,brand,jeans,parallel supply pink jeans
+fashion-0716,brown tapered jeans,feature,jeans,brown tapered jeans
+fashion-0717,syn-000685-07,exact,skirts,SYN-000685-07
+fashion-0718,knitwear between 50 and 80 pounds,price,knitwear,knitwear between 50 and 80 pounds
+fashion-0719,harbour standard shorts,brand,shorts,harbour standard shorts
+fashion-0720,hoodies under gbp 30,price,hoodies,hoodies under gbp 30
+fashion-0721,studio thread baseball cap,brand,accessories,studio thread baseball cap
+fashion-0722,slip dress,feature,dresses,slip dress
+fashion-0723,green recycled polyester bag,feature,bags,green recycled polyester bag
+fashion-0724,men's trousers,product_type,trousers,men's trousers
+fashion-0725,trainers under 80 pounds,price,trainers,trainers under 80 pounds
+fashion-0726,syn-000742-04,exact,knitwear,SYN-000742-04
+fashion-0727,women's knitwear,product_type,knitwear,women's knitwear
+fashion-0728,daymark five-panel cap in dusty pink,exact,accessories,daymark five-panel cap in dusty pink
+fashion-0729,coats under 120 pounds,price,coats,coats under 120 pounds
+fashion-0730,white cotton twill five-panel cap,feature,accessories,white cotton twill five-panel cap
+fashion-0731,green relaxed hoodie,feature,hoodies,green relaxed hoodie
+fashion-0732,blue faux leather bag,feature,bags,blue faux leather bag
+fashion-0733,jakcet,typo,jackets,jacket
+fashion-0734,orange slim shirt,feature,shirts,orange slim shirt
+fashion-0735,blue regular-fit coat,feature,coats,blue regular-fit coat
+fashion-0736,arc & loom bodycon dress in dark wash blue,exact,dresses,arc & loom bodycon dress in dark wash blue
+fashion-0737,daymark green trousers,brand,trousers,daymark green trousers
+fashion-0738,white running-inspired trainers,feature,trainers,white running-inspired trainers
+fashion-0739,womens trainers,product_type,trainers,womens trainers
+fashion-0740,green organic-cotton blend hoodie,feature,hoodies,green organic-cotton blend hoodie
+fashion-0741,studio thread grey baseball cap,brand,accessories,studio thread grey baseball cap
+fashion-0742,alder studio slim shirt,brand,shirts,alder studio slim shirt
+fashion-0743,black boots size uk 8,size,boots,black boots size uk 8
+fashion-0744,dresses under gbp 30,price,dresses,dresses under gbp 30
+fashion-0745,common form regular jumper in deep plum,exact,knitwear,common form regular jumper in deep plum
+fashion-0746,black coats size s,size,coats,black coats size s
+fashion-0747,pink recycled-cotton denim jeans,feature,jeans,pink recycled-cotton denim jeans
+fashion-0748,commuting trainers,use_case,trainers,commuting trainers
+fashion-0749,stretch denim jeans,feature,jeans,stretch denim jeans
+fashion-0750,parallel supply yellow coat,brand,coats,parallel supply yellow coat
+fashion-0751,linen blend shirt,feature,shirts,linen blend shirt
+fashion-0752,wide-leg trousers,feature,trousers,wide-leg trousers
+fashion-0753,oversized jumper,feature,knitwear,oversized jumper
+fashion-0754,red relaxed trousers,feature,trousers,red relaxed trousers
+fashion-0755,trainers for women,product_type,trainers,trainers for women
+fashion-0756,boots size uk 8,size,boots,boots size uk 8
+fashion-0757,skirts under 40 pounds,price,skirts,skirts under 40 pounds
+fashion-0758,black t-shirts size xs,size,t-shirts,black t-shirts size xs
+fashion-0759,daymark pink trainers,brand,trainers,daymark pink trainers
+fashion-0760,boots between 90 and 120 pounds,price,boots,boots between 90 and 120 pounds
+fashion-0761,beige beanie,feature,accessories,beige beanie
+fashion-0762,bags,product_type,bags,bags
+fashion-0763,black boots size uk 9,size,boots,black boots size uk 9
+fashion-0764,cream oversized coat,feature,coats,cream oversized coat
+fashion-0765,shorts under 20 pounds,price,shorts,shorts under 20 pounds
+fashion-0766,white sneakers,synonym,trainers,white trainers
+fashion-0767,a-line skirt,feature,skirts,a-line skirt
+fashion-0768,cotton twill jacket,feature,jackets,cotton twill jacket
+fashion-0769,black jean jacket,synonym,jackets,black denim jacket
+fashion-0770,beige shirt,feature,shirts,beige shirt
+fashion-0771,grey wool blend jumper,feature,knitwear,grey wool blend jumper
+fashion-0772,shoulder bag,feature,bags,shoulder bag
+fashion-0773,pink jeans,feature,jeans,pink jeans
+fashion-0774,harbour standard oversized jacket,brand,jackets,harbour standard oversized jacket
+fashion-0775,grey lace-up boots,feature,boots,grey lace-up boots
+fashion-0776,blue wool blend coat,feature,coats,blue wool blend coat
+fashion-0777,beige recycled polyester jacket,feature,jackets,beige recycled polyester jacket
+fashion-0778,black pleated skirt,feature,skirts,black pleated skirt
+fashion-0779,brown cotton twill shorts,feature,shorts,brown cotton twill shorts
+fashion-0780,blue cotton twill skirt,feature,skirts,blue cotton twill skirt
+fashion-0781,hoodies under 80 pounds,price,hoodies,hoodies under 80 pounds
+fashion-0782,black jakcet,typo,jackets,black jacket
+fashion-0783,studio thread relaxed jumper,brand,knitwear,studio thread relaxed jumper
+fashion-0784,t-shirts for summer,use_case,t-shirts,t-shirts for summer
+fashion-0785,evening out boots,use_case,boots,evening out boots
+fashion-0786,northline tailored trousers,brand,trousers,northline tailored trousers
+fashion-0787,regular-fit hoodie,feature,hoodies,regular-fit hoodie
+fashion-0788,t shrit,typo,t-shirts,t-shirt
+fashion-0789,yellow trainers,feature,trainers,yellow trainers
+fashion-0790,daymark column skirt,brand,skirts,daymark column skirt
+fashion-0791,common form relaxed trousers,brand,trousers,common form relaxed trousers
+fashion-0792,caps,product_type,accessories,caps
+fashion-0793,green suede-look boots,feature,boots,green suede-look boots
+fashion-0794,red jeans,feature,jeans,red jeans
+fashion-0795,jackets for men,product_type,jackets,jackets for men
+fashion-0796,shirt for men,product_type,shirts,shirt for men
+fashion-0797,syn-000325-07,exact,skirts,SYN-000325-07
+fashion-0798,hoodies size xxl,size,hoodies,hoodies size xxl
+fashion-0799,green oversized hoodie,feature,hoodies,green oversized hoodie
+fashion-0800,trousers for smart casual,use_case,trousers,trousers for smart casual
+fashion-0801,wool blend coat,feature,coats,wool blend coat
+fashion-0802,sneakers,synonym,trainers,trainers
+fashion-0803,grey baggy jeans,feature,jeans,grey baggy jeans
+fashion-0804,yellow straight-leg jeans,feature,jeans,yellow straight-leg jeans
+fashion-0805,jeans size w28 l30,size,jeans,jeans size w28 l30
+fashion-0806,jeans under gbp 80,price,jeans,jeans under gbp 80
+fashion-0807,cream hiking-inspired boots,feature,boots,cream hiking-inspired boots
+fashion-0808,faux leather trainers,feature,trainers,faux leather trainers
+fashion-0809,women's jackets,product_type,jackets,women's jackets
+fashion-0810,black cotton knit jumper,feature,knitwear,black cotton knit jumper
+fashion-0811,grey jumper,feature,knitwear,grey jumper
+fashion-0812,orange satin-look dress,feature,dresses,orange satin-look dress
+fashion-0813,men's knitwear,product_type,knitwear,men's knitwear
+fashion-0814,cream linen blend dress,feature,dresses,cream linen blend dress
+fashion-0815,prod-000854,exact,bags,PROD-000854
+fashion-0816,pink retro trainers,feature,trainers,pink retro trainers
+fashion-0817,pink baseball cap,feature,accessories,pink baseball cap
+fashion-0818,cream relaxed hoodie,feature,hoodies,cream relaxed hoodie
+fashion-0819,parallel supply pink boots,brand,boots,parallel supply pink boots
+fashion-0820,looking for t-shirts for summer,use_case,t-shirts,looking for t-shirts for summer
+fashion-0821,organic-cotton blend hoodie,feature,hoodies,organic-cotton blend hoodie
+fashion-0822,white pants,synonym,trousers,white trousers
+fashion-0823,studio thread brown bag,brand,bags,studio thread brown bag
+fashion-0824,orange skirt,feature,skirts,orange skirt
+fashion-0825,field note white skirt,brand,skirts,field note white skirt
+fashion-0826,women's shirts,product_type,shirts,women's shirts
+fashion-0827,grey sweater,synonym,knitwear,grey jumper
+fashion-0828,pink faux leather boots,feature,boots,pink faux leather boots
+fashion-0829,black trainres,typo,trainers,black trainers
+fashion-0830,blue stretch denim jeans,feature,jeans,blue stretch denim jeans
+fashion-0831,holiday t-shirts,use_case,t-shirts,holiday t-shirts
+fashion-0832,women's dresses,product_type,dresses,women's dresses
+fashion-0833,pink t-shirt,feature,t-shirts,pink t-shirt
+fashion-0834,white skirt,feature,skirts,white skirt
+fashion-0835,field note tea dress in dusty pink,exact,dresses,field note tea dress in dusty pink
+fashion-0836,daymark,brand,accessories,daymark
+fashion-0837,studio thread cream hoodie,brand,hoodies,studio thread cream hoodie
+fashion-0838,beige bucket hat,feature,accessories,beige bucket hat
+fashion-0839,daymark white skirt,brand,skirts,daymark white skirt
+fashion-0840,grey jean jacket,synonym,jackets,grey denim jacket
+fashion-0841,basebal cap,typo,accessories,baseball cap
+fashion-0842,care instructions,non_product,service,care instructions
+fashion-0843,jeans under 50 pounds,price,jeans,jeans under 50 pounds
+fashion-0844,white booties,synonym,boots,white ankle boots
+fashion-0845,jackets under gbp 90,price,jackets,jackets under gbp 90
+fashion-0846,beige jacket,feature,jackets,beige jacket
+fashion-0847,kindred works purple shorts,brand,shorts,kindred works purple shorts
+fashion-0848,bags size one size,size,bags,bags size one size
+fashion-0849,pink regular-fit hoodie,feature,hoodies,pink regular-fit hoodie
+fashion-0850,cotton fleece hoodie,feature,hoodies,cotton fleece hoodie
+fashion-0851,casual wear caps,use_case,accessories,casual wear caps
+fashion-0852,looking for bags for commuting,use_case,bags,looking for bags for commuting
+fashion-0853,blue cotton poplin dress,feature,dresses,blue cotton poplin dress
+fashion-0854,kindred works red hoodie,brand,hoodies,kindred works red hoodie
+fashion-0855,trousers for travel,use_case,trousers,trousers for travel
+fashion-0856,red recycled yarn jumper,feature,knitwear,red recycled yarn jumper
+fashion-0857,beige straight-leg jeans,feature,jeans,beige straight-leg jeans
+fashion-0858,common form crossbody bag,brand,bags,common form crossbody bag
+fashion-0859,looking for trainers for everyday,use_case,trainers,looking for trainers for everyday
+fashion-0860,bags for commuting,use_case,bags,bags for commuting
+fashion-0861,t-shirts for women,product_type,t-shirts,t-shirts for women
+fashion-0862,syn-000826-07,exact,jeans,SYN-000826-07
+fashion-0863,shirts size l,size,shirts,shirts size l
+fashion-0864,jeans for travel,use_case,jeans,jeans for travel
+fashion-0865,weekend skirts,use_case,skirts,weekend skirts
+fashion-0866,cream tote bag,feature,bags,cream tote bag
+fashion-0867,purple textile boots,feature,boots,purple textile boots
+fashion-0868,black jeans size w30 l32,size,jeans,black jeans size w30 l32
+fashion-0869,longline shorts,feature,shorts,longline shorts
+fashion-0870,black booots,typo,boots,black boots
+fashion-0871,alder studio oversized shirt in chocolate brown,exact,shirts,alder studio oversized shirt in chocolate brown
+fashion-0872,kindred works shirt,brand,shirts,kindred works shirt
+fashion-0873,caps between 20 and 40 pounds,price,accessories,caps between 20 and 40 pounds
+fashion-0874,trousers size xs,size,trousers,trousers size xs
+fashion-0875,brown organic cotton shirt,feature,shirts,brown organic cotton shirt
+fashion-0876,pink bag,feature,bags,pink bag
+fashion-0877,syn-000828-01,exact,jackets,SYN-000828-01
+fashion-0878,looking for boots for evening out,use_case,boots,looking for boots for evening out
+fashion-0879,looking for dresses for summer holiday,use_case,dresses,looking for dresses for summer holiday
+fashion-0880,blue organic cotton shirt,feature,shirts,blue organic cotton shirt
+fashion-0881,recycled-cotton blend hoodie,feature,hoodies,recycled-cotton blend hoodie
+fashion-0882,northline longline coat,brand,coats,northline longline coat
+fashion-0883,blue retro trainers,feature,trainers,blue retro trainers
+fashion-0884,common form tapered trousers,brand,trousers,common form tapered trousers
+fashion-0885,blue trainers,feature,trainers,blue trainers
+fashion-0886,blue beanie,feature,accessories,blue beanie
+fashion-0887,jackets under gbp 140,price,jackets,jackets under gbp 140
+fashion-0888,black shorts size m,size,shorts,black shorts size m
+fashion-0889,denim jacket,feature,jackets,denim jacket
+fashion-0890,syn-000229-05,exact,coats,SYN-000229-05
+fashion-0891,graduation dresses,use_case,dresses,graduation dresses
+fashion-0892,city break coats,use_case,coats,city break coats
+fashion-0893,prod-000503,exact,hoodies,PROD-000503
+fashion-0894,prod-000379,exact,coats,PROD-000379
+fashion-0895,studio thread boots,brand,boots,studio thread boots
+fashion-0896,black jackets size m,size,jackets,black jackets size m
+fashion-0897,prod-000380,exact,shirts,PROD-000380
+fashion-0898,daymark bag,brand,bags,daymark bag
+fashion-0899,caps for men,product_type,accessories,caps for men
+fashion-0900,women's hoodie,product_type,hoodies,women's hoodie
+fashion-0901,men's shorts,product_type,shorts,men's shorts
+fashion-0902,parallel supply bag,brand,bags,parallel supply bag
+fashion-0903,hoodies size s,size,hoodies,hoodies size s
+fashion-0904,red hoodie,feature,hoodies,red hoodie
+fashion-0905,field note baseball cap in stone beige,exact,accessories,field note baseball cap in stone beige
+fashion-0906,black shorts size xl,size,shorts,black shorts size xl
+fashion-0907,studio thread longline coat,brand,coats,studio thread longline coat
+fashion-0908,grey boots,feature,boots,grey boots
+fashion-0909,daymark green trainers,brand,trainers,daymark green trainers
+fashion-0910,blue denim shorts,feature,shorts,blue denim shorts
+fashion-0911,oversized t-shirt,feature,t-shirts,oversized t-shirt
+fashion-0912,bags under gbp 30,price,bags,bags under gbp 30
+fashion-0913,pleated skirt,feature,skirts,pleated skirt
+fashion-0914,beige shoulder bag,feature,bags,beige shoulder bag
+fashion-0915,black trainers size uk 9,size,trainers,black trainers size uk 9
+fashion-0916,skirts,product_type,skirts,skirts
+fashion-0917,festival jackets,use_case,jackets,festival jackets
+fashion-0918,brown jeans,feature,jeans,brown jeans
+fashion-0919,womens jeans,product_type,jeans,womens jeans
+fashion-0920,recycled polyester trousers,feature,trousers,recycled polyester trousers
+fashion-0921,alder studio relaxed t-shirt in sky blue,exact,t-shirts,alder studio relaxed t-shirt in sky blue
+fashion-0922,mens jumper,product_type,knitwear,mens jumper
+fashion-0923,women's coats,product_type,coats,women's coats
+fashion-0924,kindred works jacket,brand,jackets,kindred works jacket
+fashion-0925,syn-000778-04,exact,boots,SYN-000778-04
+fashion-0926,black shirts size xl,size,shirts,black shirts size xl
+fashion-0927,purple oversized shirt,feature,shirts,purple oversized shirt
+fashion-0928,black t-shirt,feature,t-shirts,black t-shirt
+fashion-0929,red wool blend coat,feature,coats,red wool blend coat
+fashion-0930,wool blend jumper,feature,knitwear,wool blend jumper
+fashion-0931,shorts for women,product_type,shorts,shorts for women
+fashion-0932,cotton twill shorts,feature,shorts,cotton twill shorts
+fashion-0933,studio thread cream shirt,brand,shirts,studio thread cream shirt
+fashion-0934,looking for trainers for casual wear,use_case,trainers,looking for trainers for casual wear
+fashion-0935,prod-000924,exact,dresses,PROD-000924
+fashion-0936,grey purse,synonym,bags,grey bag
+fashion-0937,kindred works slip dress in dark wash blue,exact,dresses,kindred works slip dress in dark wash blue
+fashion-0938,syn-000237-10,exact,trainers,SYN-000237-10
+fashion-0939,track my order,non_product,service,track my order
+fashion-0940,caps under gbp 40,price,accessories,caps under gbp 40
+fashion-0941,white satin-look dress,feature,dresses,white satin-look dress
+fashion-0942,bags for travel,use_case,bags,bags for travel
+fashion-0943,white viscose dress,feature,dresses,white viscose dress
+fashion-0944,northline,brand,shorts,northline
+fashion-0945,field note,brand,accessories,field note
+fashion-0946,skirts size uk 10,size,skirts,skirts size uk 10
+fashion-0947,coats under gbp 180,price,coats,coats under gbp 180
+fashion-0948,black trousers size m,size,trousers,black trousers size m
+fashion-0949,alder studio pink dress,brand,dresses,alder studio pink dress
+fashion-0950,boots between 50 and 80 pounds,price,boots,boots between 50 and 80 pounds
+fashion-0951,womens boots,product_type,boots,womens boots
+fashion-0952,trainers under 40 pounds,price,trainers,trainers under 40 pounds
+fashion-0953,cotton jersey t-shirt,feature,t-shirts,cotton jersey t-shirt
+fashion-0954,cream denim jacket,feature,jackets,cream denim jacket
+fashion-0955,alder studio jacket,brand,jackets,alder studio jacket
+fashion-0956,cream coat,feature,coats,cream coat
+fashion-0957,mens trainers,product_type,trainers,mens trainers
+fashion-0958,caps under gbp 20,price,accessories,caps under gbp 20
+fashion-0959,studio thread running-inspired trainers,brand,trainers,studio thread running-inspired trainers
+fashion-0960,white jacket,feature,jackets,white jacket
+fashion-0961,prod-000696,exact,t-shirts,PROD-000696
+fashion-0962,looking for shirts for office,use_case,shirts,looking for shirts for office
+fashion-0963,looking for shirts for job interview,use_case,shirts,looking for shirts for job interview
+fashion-0964,bags under gbp 100,price,bags,bags under gbp 100
+fashion-0965,women's hoodies,product_type,hoodies,women's hoodies
+fashion-0966,womens jumper,product_type,knitwear,womens jumper
+fashion-0967,womens skirts,product_type,skirts,womens skirts
+fashion-0968,retro trainers,feature,trainers,retro trainers
+fashion-0969,relaxed trousers,feature,trousers,relaxed trousers
+fashion-0970,kindred works,brand,shirts,kindred works
+fashion-0971,dresses between 30 and 60 pounds,price,dresses,dresses between 30 and 60 pounds
+fashion-0972,red stretch denim jeans,feature,jeans,red stretch denim jeans
+fashion-0973,black dresses size uk 8,size,dresses,black dresses size uk 8
+fashion-0974,daymark cream dress,brand,dresses,daymark cream dress
+fashion-0975,daymark column skirt in slate grey,exact,skirts,daymark column skirt in slate grey
+fashion-0976,caps size one size,size,accessories,caps size one size
+fashion-0977,shirts under gbp 70,price,shirts,shirts under gbp 70
+fashion-0978,everyday jeans,use_case,jeans,everyday jeans
+fashion-0979,harbour standard regular-fit hoodie,brand,hoodies,harbour standard regular-fit hoodie
+fashion-0980,hoodies,product_type,hoodies,hoodies
+fashion-0981,blue five-panel cap,feature,accessories,blue five-panel cap
+fashion-0982,green jumper,feature,knitwear,green jumper
+fashion-0983,men's bag,product_type,bags,men's bag
+fashion-0984,skirts under gbp 40,price,skirts,skirts under gbp 40
+fashion-0985,knitwear for winter,use_case,knitwear,knitwear for winter
+fashion-0986,jackets under gbp 50,price,jackets,jackets under gbp 50
+fashion-0987,syn-000654-07,exact,dresses,SYN-000654-07
+fashion-0988,brown faux leather bag,feature,bags,brown faux leather bag
+fashion-0989,prod-000282,exact,trainers,PROD-000282
+fashion-0990,looking for shorts for festival,use_case,shorts,looking for shorts for festival
+fashion-0991,black sneakers,synonym,trainers,black trainers
+fashion-0992,blue pants,synonym,trousers,blue trousers
+fashion-0993,studio thread wrap skirt in slate grey,exact,skirts,studio thread wrap skirt in slate grey
+fashion-0994,t-shirts size l,size,t-shirts,t-shirts size l
+fashion-0995,beige cotton canvas bag,feature,bags,beige cotton canvas bag
+fashion-0996,looking for dresses for party,use_case,dresses,looking for dresses for party
+fashion-0997,spring jackets,use_case,jackets,spring jackets
+fashion-0998,arc & loom cropped jacket,brand,jackets,arc & loom cropped jacket
+fashion-0999,harbour standard jeans,brand,jeans,harbour standard jeans
+fashion-1000,faux leather jacket,feature,jackets,faux leather jacket

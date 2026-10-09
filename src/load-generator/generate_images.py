@@ -13,6 +13,7 @@ import subprocess
 import threading
 import time
 import zlib
+from collections.abc import Callable
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from datetime import UTC, datetime
 from pathlib import Path
@@ -142,12 +143,16 @@ class AzureCliToken:
 
 
 class MaiClient:
-    def __init__(self, endpoint: str, requests_per_minute: int) -> None:
+    def __init__(self, endpoint: str, requests_per_minute: int,
+                 before_request: Callable[[], None] | None = None,
+                 on_response: Callable[[dict[str, Any]], None] | None = None) -> None:
         self.endpoint = image_endpoint(endpoint)
         self.tokens = AzureCliToken()
         self.interval = 60 / requests_per_minute
         self.next_request = 0.0
         self.lock = threading.Lock()
+        self.before_request = before_request
+        self.on_response = on_response
 
     def generate(self, payload: dict[str, Any]) -> bytes:
         refreshed = False
@@ -161,9 +166,22 @@ class MaiClient:
                 headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}"},
                 method="POST",
             )
+            if self.before_request is not None:
+                self.before_request()
             try:
                 with urlopen(request, timeout=240) as response:
-                    result = json.load(response)
+                    response_bytes = response.read(32 * 1024 * 1024 + 1)
+                    if len(response_bytes) > 32 * 1024 * 1024:
+                        raise ValueError("Image response exceeds the 32 MiB limit")
+                    result = json.loads(response_bytes)
+                    if not isinstance(result, dict):
+                        raise ValueError("MAI response must be a JSON object")
+                    if self.on_response is not None:
+                        self.on_response({
+                            "requestId": response.headers.get("apim-request-id"),
+                            "usage": result.get("usage"),
+                            "receivedAt": datetime.now(UTC).isoformat(),
+                        })
             except HTTPError as error:
                 if error.code == 401 and not refreshed and attempt < 4:
                     self.tokens.invalidate()
@@ -197,7 +215,10 @@ class MaiClient:
                     f"Inspect deployment access, quota, or content filtering. Response: {body}"
                 ) from None
             items = result.get("data", [])
-            if len(items) != 1 or not isinstance(items[0].get("b64_json"), str):
+            if (
+                not isinstance(items, list) or len(items) != 1 or not isinstance(items[0], dict)
+                or not isinstance(items[0].get("b64_json"), str)
+            ):
                 raise ValueError("MAI response did not contain exactly one base64 image")
             data = base64.b64decode(items[0]["b64_json"], validate=True)
             validate_png(data, payload["width"], payload["height"])
@@ -238,7 +259,7 @@ def reviewed_spec(product: dict[str, Any], deployment: str, version: str, endpoi
 
 def generate_one(root: Path, product: dict[str, Any], spec: dict[str, Any], client: MaiClient) -> dict[str, Any]:
     product_id = product["productId"]
-    if not re.fullmatch(r"PROD-\d{6}", product_id):
+    if not re.fullmatch(r"PROD-(?:[0-9]{6}|1[0-9]{6}|2000000)", product_id) or product_id == "PROD-000000":
         raise ValueError(f"Unexpected product ID: {product_id}")
     path = root / "images" / f"{product_id.lower()}.png"
     receipt_path = root / "image-generation" / f"{product_id.lower()}.json"

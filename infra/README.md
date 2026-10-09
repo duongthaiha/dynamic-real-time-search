@@ -192,6 +192,40 @@ are excluded from the query metric. The API remains local/containerized; no
 Azure API hosting was provisioned. The generated evidence reports are under
 `data\cosmos-poc\`; rerun the authorized evaluation commands to refresh them.
 
+## Additive large-catalogue snapshot
+
+[catalog-snapshot.bicep](catalog-snapshot.bicep) targets the existing resource
+group/accounts, creating only a fresh Cosmos container, a versioned public
+synthetic-image container and container-scoped operator roles. Defaults are
+`catalog-scale-001` and `product-images-scale-001`; the existing
+`catalog-images-001`/`product-images` data must remain untouched.
+
+Unlike redeploying the original account modules, this template does not change
+Cosmos capacity mode, firewall rules, Storage account/network settings or model
+deployments. Shared-key access remains disabled. New public blobs must contain
+synthetic images only, not prompts, receipts or checkpoints.
+
+```powershell
+az bicep build --file infra\catalog-snapshot.bicep --stdout | Out-Null
+# After reviewing private parameter values and obtaining resource approval:
+# az deployment group what-if --resource-group rg-rezolve-search-poc-uks `
+#   --template-file infra\catalog-snapshot.bicep --parameters '@<private-parameters.json>'
+# Apply only after what-if confirms isolated new containers/scoped roles.
+```
+
+Use a private parameter file for `operatorPrincipalId`; do not commit operator
+identity data. Do not reuse a published container name or perform a full
+account redeployment merely to add an expanded snapshot.
+
+Retaining `/scopeId` is conditional on the
+[capacity/import gates](../src/search-api/README.md#large-catalogue-imports).
+Local Bicep compilation is not proof of permission, provider compatibility,
+model access, successful upload or query performance. The same documented
+Storage `2026-09-01` type-cache warning applies to this additive template.
+Set `includeCatalog=false` for a separately approved image-only pilot: no Cosmos
+container or Cosmos role is created in that mode. A later Cosmos deployment
+requires its own capacity review and explicit approval.
+
 ## Official references
 
 - [Cosmos serverless](https://learn.microsoft.com/azure/cosmos-db/serverless)

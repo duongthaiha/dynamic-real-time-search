@@ -25,7 +25,8 @@ python -m venv .venv-search
 .\.venv-search\Scripts\python.exe -m unittest discover -s src\search-api\tests -p "test_*.py"
 .\.venv-search\Scripts\python.exe -m ruff check src\search-api
 .\.venv-search\Scripts\python.exe -m pyright --project src\search-api\pyproject.toml --pythonpath .venv-search\Scripts\python.exe
-python -m unittest discover -s src\load-generator -p "test_*.py"
+# After installing the separate catalogue environment from docs/catalog-data.md:
+.\.venv-catalog\Scripts\python.exe -m unittest discover -s src\load-generator -p "test_*.py"
 ```
 
 Unit tests use injected fixtures/mocks, never Cosmos or model calls. There is
@@ -66,6 +67,67 @@ For example, the same Cosmos path resolves to either
 Only configuration changes between environments; documents do not.
 The public API still returns an absolute `imageUrl` as required by its contract.
 Relative snapshots fail readiness explicitly if the base URL is missing.
+
+### Large-catalogue imports
+
+The CLI now validates up to 2,000,000 products using a disk-backed SQLite snapshot
+and streaming hashes/export; it does not materialize the full catalogue in RAM.
+The legacy `load_catalog` helper remains bounded to 1,000 records for existing
+small-catalogue callers. Prices, UTC timestamps, per-item byte limits, global
+product/colourway/variant/SKU uniqueness and correlated variants remain validated.
+
+Start with the [offline expansion workflow](../../docs/catalog-data.md#large-catalogue-expansion).
+Its metadata-only output is suitable for this **offline** size preflight, not
+cloud publication:
+
+```powershell
+.\.venv-search\Scripts\python.exe -m catalog_search.importer `
+  --source data\catalog-expanded-v2\metadata\products.jsonl `
+  --epoch catalog-scale-001 --image-container product-images-scale-001
+```
+
+The report includes normalized document bytes, maximum document size, counts and
+hashes. A conservative 10 GiB document-data planning ceiling is enforced before
+any cloud write. Index overhead is **not** included: verify actual logical-partition
+headroom and serverless throughput, then measure broad/narrow queries and exact
+counts at staged sizes. Stop for a partition/retrieval redesign if approved
+capacity, RU or query budgets fail. Do not hide failures by widening deadlines,
+approximating counts or silently dropping eligibility predicates.
+
+Large writes additionally require:
+
+- A complete image-verified export manifest matching the exact input hash and
+  selected image container. Metadata-only, partial or changed exports are rejected.
+- A dedicated fresh Cosmos container and immutable epoch, provisioned through the
+  [additive snapshot template](../../infra/catalog-snapshot.bicep) after approval.
+- `--capacity-reviewed`, an explicitly approved `--max-request-units` allowance,
+  and the existing exact `--confirm-container`/epoch checks.
+- Bounded import workers (1 by default, at most 8). Every stored document is
+  verified; the ready marker appears only after complete count verification.
+
+The RU allowance stops new operations at the **observed** threshold; already
+submitted operations can exceed it. It is not an Azure billing cap. Resume using
+identical input and a newly approved allowance where needed; never repair a
+published ready catalogue in place.
+
+After approval, set the new container/epoch in the importer process only. Use
+the image-complete `publish\products.jsonl`, not `metadata\products.jsonl`:
+
+```powershell
+# $approvedImportRu must be agreed before execution; all cloud calls are billable.
+# .\.venv-search\Scripts\python.exe -m catalog_search.importer `
+#   --source data\catalog-expanded-v2\publish\products.jsonl `
+#   --epoch catalog-scale-001 --image-container product-images-scale-001 `
+#   --workers 4 --capacity-reviewed --max-request-units $approvedImportRu `
+#   --write --confirm-container catalog-scale-001
+```
+
+Validate a separately configured API instance against the new snapshot before
+changing the active demo's container/epoch. Check seven-digit product IDs/SKUs,
+categories, same-variant size/price/stock filters, exact totals, paging, hosted
+images and readiness in real HTTP/browser tests. Retain the current configuration
+and old containers for rollback. Catalogue size does not change the existing
+page-size maximum of 100 or the 1,000-result ranked window.
 
 ### Live prerequisites
 
@@ -299,7 +361,7 @@ For the debugger's general controls and configuration syntax, see the
 | Area | POC behavior |
 |---|---|
 | Matching | Nonempty normalized terms; FullTextContainsAll matching, BM25 ordering |
-| Identifier lookup | Exact case-normalized `PROD-######` or `SYN-######-##`, no fuzzy substitution |
+| Identifier lookup | Exact case-normalized product IDs/SKUs with six digits, or seven digits through 2000000; no fuzzy substitution |
 | Value refinements | attributes.color, attributes.size, category, brand, department, productType, attributes.fit, attributes.material |
 | Range refinements | price, inclusive GBP range, finite endpoints with magnitude <= 1e12 |
 | Combination | AND across fields; OR within a field by default, AND with or=false; mixed modes are 400 |

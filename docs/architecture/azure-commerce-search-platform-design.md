@@ -17,6 +17,12 @@ queries; it does not establish the wider platform or production performance.
 The image-hosted `catalog-images-001` snapshot stores relative blob paths;
 the API resolves URLs from environment-specific storage configuration.
 Offline verification alone is not proof of cloud integration.
+The separately approved catalogue expansion may use an existing MAI deployment
+for offline synthetic photographs only. It preserves the original catalogue and
+targets up to 2,000,000 parent products. Retaining the POC's `/scopeId` partition
+layout is conditional on capacity and query evidence; it does not override the
+production partitioning principles below. See the
+[expansion runbook](../catalog-data.md#large-catalogue-expansion).
 Beacon, merchant administration and the broader pipeline below remain designs.
 An optional embedding/vector/hybrid experiment requires separate authorization
 and matching/count decisions; the baseline does not enable those capabilities.
@@ -70,7 +76,7 @@ deterministic trend and business factors, non-learned recommendations,
 experimentation, consented rule-based preferences, guided discovery and a
 route to production.
 
-**Out of scope:** AI services of any kind, model training/inference,
+**Out of scope for serving:** AI services of any kind, model training/inference,
 embeddings, image understanding, free-form conversational discovery,
 autonomous agents, checkout/payment tools, social scraping, SaaS onboarding,
 global active-active deployment and resource provisioning performed merely to

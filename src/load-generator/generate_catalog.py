@@ -162,9 +162,11 @@ def product_image_svg(product: dict[str, Any], accent: str, icon: str) -> str:
 """
 
 
-def build_product(index: int, rng: random.Random, image_base_url: str) -> tuple[dict[str, Any], str, dict[str, Any]]:
+def build_product(
+    index: int, rng: random.Random, image_base_url: str, *, product_type: ProductType | None = None,
+) -> tuple[dict[str, Any], str, dict[str, Any]]:
     product_id = f"PROD-{index:06d}"
-    product_type = PRODUCT_TYPES[(index - 1) % len(PRODUCT_TYPES)]
+    product_type = product_type or PRODUCT_TYPES[(index - 1) % len(PRODUCT_TYPES)]
     brand = BRANDS[stable_int(f"{product_id}-brand", len(BRANDS))]
     colour, colour_name, hex_value = COLOURS[stable_int(f"{product_id}-colour", len(COLOURS))]
     fit = product_type.fits[stable_int(f"{product_id}-fit", len(product_type.fits))]

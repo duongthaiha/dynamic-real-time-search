@@ -1,0 +1,110 @@
+{
+  "datasetVersion": "synthetic-fashion-search-v1",
+  "researchDate": "2026-10-09",
+  "seed": 20261009,
+  "queryCount": 1000,
+  "uniqueQueryCount": 1000,
+  "language": "en-GB",
+  "currency": "GBP",
+  "synthetic": true,
+  "distribution": "Designed coverage quotas, not measured shopper traffic.",
+  "sourceProductCount": 1000,
+  "sourceProjectionSha256": "1c552882f34fc7fb2ef7e7c8332536dd12b0d6b1af852ee1024be27604b79b62",
+  "intentCounts": {
+    "brand": 150,
+    "exact": 80,
+    "feature": 350,
+    "non_product": 10,
+    "price": 80,
+    "product_type": 100,
+    "size": 60,
+    "synonym": 40,
+    "typo": 30,
+    "use_case": 100
+  },
+  "categoryCounts": {
+    "accessories": 61,
+    "bags": 67,
+    "boots": 69,
+    "coats": 63,
+    "dresses": 63,
+    "hoodies": 62,
+    "jackets": 70,
+    "jeans": 69,
+    "knitwear": 66,
+    "service": 10,
+    "shirts": 64,
+    "shorts": 63,
+    "skirts": 64,
+    "t-shirts": 70,
+    "trainers": 70,
+    "trousers": 69
+  },
+  "tokenCountHistogram": {
+    "1": 80,
+    "2": 272,
+    "3": 290,
+    "4": 241,
+    "5": 48,
+    "6": 34,
+    "7": 27,
+    "8": 7,
+    "9": 1
+  },
+  "researchSources": [
+    "https://baymard.com/research-articles/ecommerce-search-query-types",
+    "https://github.com/amazon-science/esci-data"
+  ],
+  "files": {
+    "evaluation-batches/batch-01.json": {
+      "sha256": "a428f9f2bf887520f72fcf28504d9c0cac49fe36b8ae68cc24ea8e04f922954c",
+      "bytes": 16655
+    },
+    "evaluation-batches/batch-02.json": {
+      "sha256": "6dfee0bd7dbdcfaa026fd9581fa5dfda89688d94d2f3cf9cfa815de23365d0e3",
+      "bytes": 16570
+    },
+    "evaluation-batches/batch-03.json": {
+      "sha256": "672d40b9f4f8d972f34caa267220cc526d403ce1f4a5857c285ec1f8b5b777d2",
+      "bytes": 16507
+    },
+    "evaluation-batches/batch-04.json": {
+      "sha256": "841142806b057ba6abfb1162b3bd9bcf84093de32f6d22d302bef85fad248776",
+      "bytes": 16600
+    },
+    "evaluation-batches/batch-05.json": {
+      "sha256": "bb442bdfadc015f5a89470e3a3c991022a218774b74a98d97d7d148863e372f1",
+      "bytes": 16605
+    },
+    "evaluation-batches/batch-06.json": {
+      "sha256": "39fcc7c192d85705ddf6ac14e9a616cbb4ecbe87fa74f7c04daa75e88f39229e",
+      "bytes": 16398
+    },
+    "evaluation-batches/batch-07.json": {
+      "sha256": "31dbc08c8a10ec4e704c6b181f15131fc259370abc4d5bd61fc7d18863345fe6",
+      "bytes": 16472
+    },
+    "evaluation-batches/batch-08.json": {
+      "sha256": "09e692387192a5e5790ccc082d694a4a38b7df1925793d80082ca9d8aa50a653",
+      "bytes": 16596
+    },
+    "evaluation-batches/batch-09.json": {
+      "sha256": "399519759af1a00a13a815b406e8a3c72eca4ebf78704f4f7956027c30f6ebb3",
+      "bytes": 16503
+    },
+    "evaluation-batches/batch-10.json": {
+      "sha256": "344b13be0d3723ba85796f22860706d8e7c976a7e9e815333624d359ae5e6a5e",
+      "bytes": 16502
+    },
+    "search-terms.csv": {
+      "sha256": "371267c5c9c61c1cc9d350cb35be47d67297595efe78ab0ff3376ccde83c3147",
+      "bytes": 69257
+    },
+    "search-terms.txt": {
+      "sha256": "f222d59a9005e93c1e383bb91f5c9b10aa5524e193ae8d8071f837e55c57a9cb",
+      "bytes": 21358
+    }
+  },
+  "relevanceJudgments": false,
+  "liveSearchVerified": false
+}

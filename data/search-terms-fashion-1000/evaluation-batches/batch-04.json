@@ -1,0 +1,802 @@
+[
+  {
+    "name": "fashion-0301",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "tapered trousers"
+    }
+  },
+  {
+    "name": "fashion-0302",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue recycled-cotton blend hoodie"
+    }
+  },
+  {
+    "name": "fashion-0303",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "prod-000906"
+    }
+  },
+  {
+    "name": "fashion-0304",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "field note running-inspired trainers"
+    }
+  },
+  {
+    "name": "fashion-0305",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "red boots"
+    }
+  },
+  {
+    "name": "fashion-0306",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "northline grey t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0307",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "daymark orange hoodie"
+    }
+  },
+  {
+    "name": "fashion-0308",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "brown tapered trousers"
+    }
+  },
+  {
+    "name": "fashion-0309",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "women's trainers"
+    }
+  },
+  {
+    "name": "fashion-0310",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "yellow baseball cap"
+    }
+  },
+  {
+    "name": "fashion-0311",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "common form trousers"
+    }
+  },
+  {
+    "name": "fashion-0312",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shirts under 70 pounds"
+    }
+  },
+  {
+    "name": "fashion-0313",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "common form pink bag"
+    }
+  },
+  {
+    "name": "fashion-0314",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black skirts size uk 4"
+    }
+  },
+  {
+    "name": "fashion-0315",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "regular-fit coat"
+    }
+  },
+  {
+    "name": "fashion-0316",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "skirts between 40 and 70 pounds"
+    }
+  },
+  {
+    "name": "fashion-0317",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black tee"
+    }
+  },
+  {
+    "name": "fashion-0318",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black hoodies size s"
+    }
+  },
+  {
+    "name": "fashion-0319",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "weekend knitwear"
+    }
+  },
+  {
+    "name": "fashion-0320",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "recycled polyester baseball cap"
+    }
+  },
+  {
+    "name": "fashion-0321",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "purple linen blend shirt"
+    }
+  },
+  {
+    "name": "fashion-0322",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shorts for beach"
+    }
+  },
+  {
+    "name": "fashion-0323",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "field note white dress"
+    }
+  },
+  {
+    "name": "fashion-0324",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "syn-000675-01"
+    }
+  },
+  {
+    "name": "fashion-0325",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "brown cotton twill coat"
+    }
+  },
+  {
+    "name": "fashion-0326",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "relaxed t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0327",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "caps for festival"
+    }
+  },
+  {
+    "name": "fashion-0328",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "field note regular t-shirt in butter yellow"
+    }
+  },
+  {
+    "name": "fashion-0329",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "textile boots"
+    }
+  },
+  {
+    "name": "fashion-0330",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "women's trousers"
+    }
+  },
+  {
+    "name": "fashion-0331",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jackets for evening out"
+    }
+  },
+  {
+    "name": "fashion-0332",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "prod-000247"
+    }
+  },
+  {
+    "name": "fashion-0333",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue organic cotton five-panel cap"
+    }
+  },
+  {
+    "name": "fashion-0334",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "studio thread beige t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0335",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "knitwear for cold weather"
+    }
+  },
+  {
+    "name": "fashion-0336",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shorts between 30 and 60 pounds"
+    }
+  },
+  {
+    "name": "fashion-0337",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue tee"
+    }
+  },
+  {
+    "name": "fashion-0338",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "dresses under gbp 70"
+    }
+  },
+  {
+    "name": "fashion-0339",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "harbour standard tailored trousers in forest green"
+    }
+  },
+  {
+    "name": "fashion-0340",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "regular-fit shorts"
+    }
+  },
+  {
+    "name": "fashion-0341",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "everyday trainers"
+    }
+  },
+  {
+    "name": "fashion-0342",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "looking for coats for commuting"
+    }
+  },
+  {
+    "name": "fashion-0343",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "pink cotton knit jumper"
+    }
+  },
+  {
+    "name": "fashion-0344",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey tee"
+    }
+  },
+  {
+    "name": "fashion-0345",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "trainers"
+    }
+  },
+  {
+    "name": "fashion-0346",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "coats for city break"
+    }
+  },
+  {
+    "name": "fashion-0347",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "daymark regular jacket in butter yellow"
+    }
+  },
+  {
+    "name": "fashion-0348",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "summer caps"
+    }
+  },
+  {
+    "name": "fashion-0349",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "returns policy"
+    }
+  },
+  {
+    "name": "fashion-0350",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "purple ankle boots"
+    }
+  },
+  {
+    "name": "fashion-0351",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "purple trainers"
+    }
+  },
+  {
+    "name": "fashion-0352",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0353",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "trousers between 50 and 80 pounds"
+    }
+  },
+  {
+    "name": "fashion-0354",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "hoodies size xl"
+    }
+  },
+  {
+    "name": "fashion-0355",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "northline running-inspired trainers in chocolate brown"
+    }
+  },
+  {
+    "name": "fashion-0356",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "syn-000321-03"
+    }
+  },
+  {
+    "name": "fashion-0357",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "yellow recycled polyester trousers"
+    }
+  },
+  {
+    "name": "fashion-0358",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey skirt"
+    }
+  },
+  {
+    "name": "fashion-0359",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "white tee"
+    }
+  },
+  {
+    "name": "fashion-0360",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "cream trainers"
+    }
+  },
+  {
+    "name": "fashion-0361",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "purple wide-leg trousers"
+    }
+  },
+  {
+    "name": "fashion-0362",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "caps for holiday"
+    }
+  },
+  {
+    "name": "fashion-0363",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "knitwear under 50 pounds"
+    }
+  },
+  {
+    "name": "fashion-0364",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "denim shorts"
+    }
+  },
+  {
+    "name": "fashion-0365",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "prod-000655"
+    }
+  },
+  {
+    "name": "fashion-0366",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "trainres"
+    }
+  },
+  {
+    "name": "fashion-0367",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "red oversized jumper"
+    }
+  },
+  {
+    "name": "fashion-0368",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "cap"
+    }
+  },
+  {
+    "name": "fashion-0369",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "holiday caps"
+    }
+  },
+  {
+    "name": "fashion-0370",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "trainers under gbp 40"
+    }
+  },
+  {
+    "name": "fashion-0371",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "common form hiking-inspired boots"
+    }
+  },
+  {
+    "name": "fashion-0372",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "green cotton twill coat"
+    }
+  },
+  {
+    "name": "fashion-0373",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "prod-000448"
+    }
+  },
+  {
+    "name": "fashion-0374",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "summer holiday shorts"
+    }
+  },
+  {
+    "name": "fashion-0375",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "harbour standard purple jeans"
+    }
+  },
+  {
+    "name": "fashion-0376",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "purple linen blend trousers"
+    }
+  },
+  {
+    "name": "fashion-0377",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "alder studio chelsea boots in slate grey"
+    }
+  },
+  {
+    "name": "fashion-0378",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "pink shorts"
+    }
+  },
+  {
+    "name": "fashion-0379",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "women's bag"
+    }
+  },
+  {
+    "name": "fashion-0380",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "baggy jeans"
+    }
+  },
+  {
+    "name": "fashion-0381",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "common form beanie"
+    }
+  },
+  {
+    "name": "fashion-0382",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "festival t-shirts"
+    }
+  },
+  {
+    "name": "fashion-0383",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "syn-000988-01"
+    }
+  },
+  {
+    "name": "fashion-0384",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "purple shirt"
+    }
+  },
+  {
+    "name": "fashion-0385",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "arc & loom five-panel cap"
+    }
+  },
+  {
+    "name": "fashion-0386",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works jumper"
+    }
+  },
+  {
+    "name": "fashion-0387",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "cropped jacket"
+    }
+  },
+  {
+    "name": "fashion-0388",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "pink oversized t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0389",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "denim skirt"
+    }
+  },
+  {
+    "name": "fashion-0390",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "arc & loom wide-leg jeans"
+    }
+  },
+  {
+    "name": "fashion-0391",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "brown running-inspired trainers"
+    }
+  },
+  {
+    "name": "fashion-0392",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "casual wear hoodies"
+    }
+  },
+  {
+    "name": "fashion-0393",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "crossbody bag"
+    }
+  },
+  {
+    "name": "fashion-0394",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "common form dress"
+    }
+  },
+  {
+    "name": "fashion-0395",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shorts under 60 pounds"
+    }
+  },
+  {
+    "name": "fashion-0396",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "northline regular-fit hoodie"
+    }
+  },
+  {
+    "name": "fashion-0397",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "womens dress"
+    }
+  },
+  {
+    "name": "fashion-0398",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "white relaxed coat"
+    }
+  },
+  {
+    "name": "fashion-0399",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "women's caps"
+    }
+  },
+  {
+    "name": "fashion-0400",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "white coat"
+    }
+  }
+]

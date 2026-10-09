@@ -85,6 +85,26 @@ and gallery paths; `CATALOG_IMAGE_BASE_URL` resolves the public API URLs.
 The original snapshot remains unchanged. Dev/test/prod storage names are
 deployment/configuration choices, not catalogue data or shopper state.
 
+### Approved catalogue expansion boundary
+
+The user approved tooling for up to 2,000,000 total parent products, preserving
+the original 1,000 in a separate expanded catalogue. Offline MAI-Image-2.6-Flash
+asset generation is now a scoped exception, not a serving/ranking feature.
+The new taxonomy includes modelled clothing/wearable accessories with diverse
+adult presentations and category-appropriate product-only imagery.
+
+Streaming expansion/import, durable image-request allowances, incremental
+verified Blob uploads and seven-digit identifiers support the expansion path.
+They do not establish two-million-product live performance. Paid generation,
+new resource mutations, ingestion and demo cutover remain separately gated.
+The original live evidence above stays historical until new measurements exist.
+See [catalogue operations](../catalog-data.md#large-catalogue-expansion) and
+[import capacity gates](../../src/search-api/README.md#large-catalogue-imports).
+
+The approved implementation retains `/scopeId` only if measured size, index/
+storage headroom, RU and query behavior pass. If they fail, stop for a separately
+approved partition/retrieval design rather than claiming production scale.
+
 ## Official references
 
 - [Cosmos full-text search](https://learn.microsoft.com/azure/cosmos-db/gen-ai/full-text-search)

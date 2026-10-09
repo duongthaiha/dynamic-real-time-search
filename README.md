@@ -8,7 +8,8 @@ rule-based preferences and guided discovery without AI services.
 ## Repository contents
 
 - [src/load-generator](src/load-generator/): Python catalog/image generators,
-  offline unit tests, and a Search index definition for 1,000 synthetic products.
+  offline unit tests, a legacy Search index definition, and a resumable expansion
+  pipeline for up to 2,000,000 synthetic products.
 - [src/search-api](src/search-api/): Python/FastAPI Cosmos keyword-search POC,
   local browser demo, offline tests, safe catalogue importer and opt-in evaluation runner.
 - [docs](docs/): research, architecture, API drafts, and operating instructions.
@@ -26,14 +27,19 @@ Run from the repository root using the Python environment for this repository:
 
 ```powershell
 python src\load-generator\generate_catalog.py
-python -m unittest discover -s src\load-generator -p "test_*.py"
+# Full generator tests include the optional image pipeline dependencies:
+python -m venv .venv-catalog
+.\.venv-catalog\Scripts\python.exe -m pip install -r src\load-generator\requirements-images.txt
+.\.venv-catalog\Scripts\python.exe -m unittest discover -s src\load-generator -p "test_*.py"
 ```
 
 Generation writes to `data\catalog\`. **Do not reseed a catalog containing
 image-generation state**; use a separate output directory. See the
 [catalog guide](docs/catalog-data.md) for options, data shape, indexing, and
-image hosting. The catalog guide's legacy model-based image option is excluded
-from the target architecture and must not be used for this platform.
+image hosting. The approved [large-catalogue workflow](docs/catalog-data.md#large-catalogue-expansion)
+preserves that source in a separate output, streams metadata into disk-backed
+checkpoints, and uploads generated images incrementally instead of retaining
+millions of photographs locally.
 
 For the Cosmos Search POC, use the separate [Search runbook](src/search-api/README.md)
 for installation, offline tests, dry-run export, scoped credentials and startup.
@@ -76,7 +82,13 @@ Do not introduce Azure AI Search, Azure Machine Learning, Microsoft Foundry,
 Azure OpenAI, Fabric, embeddings, semantic/vector retrieval, model inference,
 generated conversation or learned ranking/recommendations. Historical research
 and designs describing those services are not the target architecture.
-The separately authorized POC experiment above is the only scoped exception.
+**Approved offline image exception:** MAI may generate original synthetic catalogue
+assets using an existing, explicitly approved deployment. The current expansion
+targets MAI-Image-2.6-Flash with a read-only verified 6 RPM allowance. This is not
+authorization for uncapped model calls: cost/quota preflight, capped pilot approval,
+visual review and separately approved larger batches are required. No inference is
+introduced into Search, ranking or the serving application. The POC experiment
+above and this offline asset workflow are narrowly scoped exceptions.
 
 Re-rank only eligible retrieved candidates, preserving filters and explicit
 sorts. Start with one bounded result page. Hydrate authoritative product state

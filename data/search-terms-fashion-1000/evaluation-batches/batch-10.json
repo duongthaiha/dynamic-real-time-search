@@ -1,0 +1,802 @@
+[
+  {
+    "name": "fashion-0901",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "men's shorts"
+    }
+  },
+  {
+    "name": "fashion-0902",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "parallel supply bag"
+    }
+  },
+  {
+    "name": "fashion-0903",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "hoodies size s"
+    }
+  },
+  {
+    "name": "fashion-0904",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "red hoodie"
+    }
+  },
+  {
+    "name": "fashion-0905",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "field note baseball cap in stone beige"
+    }
+  },
+  {
+    "name": "fashion-0906",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black shorts size xl"
+    }
+  },
+  {
+    "name": "fashion-0907",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "studio thread longline coat"
+    }
+  },
+  {
+    "name": "fashion-0908",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey boots"
+    }
+  },
+  {
+    "name": "fashion-0909",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "daymark green trainers"
+    }
+  },
+  {
+    "name": "fashion-0910",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue denim shorts"
+    }
+  },
+  {
+    "name": "fashion-0911",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "oversized t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0912",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "bags under gbp 30"
+    }
+  },
+  {
+    "name": "fashion-0913",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "pleated skirt"
+    }
+  },
+  {
+    "name": "fashion-0914",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "beige shoulder bag"
+    }
+  },
+  {
+    "name": "fashion-0915",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black trainers size uk 9"
+    }
+  },
+  {
+    "name": "fashion-0916",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "skirts"
+    }
+  },
+  {
+    "name": "fashion-0917",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "festival jackets"
+    }
+  },
+  {
+    "name": "fashion-0918",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "brown jeans"
+    }
+  },
+  {
+    "name": "fashion-0919",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "womens jeans"
+    }
+  },
+  {
+    "name": "fashion-0920",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "recycled polyester trousers"
+    }
+  },
+  {
+    "name": "fashion-0921",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "alder studio relaxed t-shirt in sky blue"
+    }
+  },
+  {
+    "name": "fashion-0922",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "mens jumper"
+    }
+  },
+  {
+    "name": "fashion-0923",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "women's coats"
+    }
+  },
+  {
+    "name": "fashion-0924",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works jacket"
+    }
+  },
+  {
+    "name": "fashion-0925",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "syn-000778-04"
+    }
+  },
+  {
+    "name": "fashion-0926",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black shirts size xl"
+    }
+  },
+  {
+    "name": "fashion-0927",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "purple oversized shirt"
+    }
+  },
+  {
+    "name": "fashion-0928",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0929",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "red wool blend coat"
+    }
+  },
+  {
+    "name": "fashion-0930",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "wool blend jumper"
+    }
+  },
+  {
+    "name": "fashion-0931",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shorts for women"
+    }
+  },
+  {
+    "name": "fashion-0932",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "cotton twill shorts"
+    }
+  },
+  {
+    "name": "fashion-0933",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "studio thread cream shirt"
+    }
+  },
+  {
+    "name": "fashion-0934",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "looking for trainers for casual wear"
+    }
+  },
+  {
+    "name": "fashion-0935",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "prod-000924"
+    }
+  },
+  {
+    "name": "fashion-0936",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "grey purse"
+    }
+  },
+  {
+    "name": "fashion-0937",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works slip dress in dark wash blue"
+    }
+  },
+  {
+    "name": "fashion-0938",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "syn-000237-10"
+    }
+  },
+  {
+    "name": "fashion-0939",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "track my order"
+    }
+  },
+  {
+    "name": "fashion-0940",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "caps under gbp 40"
+    }
+  },
+  {
+    "name": "fashion-0941",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "white satin-look dress"
+    }
+  },
+  {
+    "name": "fashion-0942",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "bags for travel"
+    }
+  },
+  {
+    "name": "fashion-0943",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "white viscose dress"
+    }
+  },
+  {
+    "name": "fashion-0944",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "northline"
+    }
+  },
+  {
+    "name": "fashion-0945",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "field note"
+    }
+  },
+  {
+    "name": "fashion-0946",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "skirts size uk 10"
+    }
+  },
+  {
+    "name": "fashion-0947",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "coats under gbp 180"
+    }
+  },
+  {
+    "name": "fashion-0948",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black trousers size m"
+    }
+  },
+  {
+    "name": "fashion-0949",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "alder studio pink dress"
+    }
+  },
+  {
+    "name": "fashion-0950",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "boots between 50 and 80 pounds"
+    }
+  },
+  {
+    "name": "fashion-0951",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "womens boots"
+    }
+  },
+  {
+    "name": "fashion-0952",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "trainers under 40 pounds"
+    }
+  },
+  {
+    "name": "fashion-0953",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "cotton jersey t-shirt"
+    }
+  },
+  {
+    "name": "fashion-0954",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "cream denim jacket"
+    }
+  },
+  {
+    "name": "fashion-0955",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "alder studio jacket"
+    }
+  },
+  {
+    "name": "fashion-0956",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "cream coat"
+    }
+  },
+  {
+    "name": "fashion-0957",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "mens trainers"
+    }
+  },
+  {
+    "name": "fashion-0958",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "caps under gbp 20"
+    }
+  },
+  {
+    "name": "fashion-0959",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "studio thread running-inspired trainers"
+    }
+  },
+  {
+    "name": "fashion-0960",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "white jacket"
+    }
+  },
+  {
+    "name": "fashion-0961",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "prod-000696"
+    }
+  },
+  {
+    "name": "fashion-0962",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "looking for shirts for office"
+    }
+  },
+  {
+    "name": "fashion-0963",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "looking for shirts for job interview"
+    }
+  },
+  {
+    "name": "fashion-0964",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "bags under gbp 100"
+    }
+  },
+  {
+    "name": "fashion-0965",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "women's hoodies"
+    }
+  },
+  {
+    "name": "fashion-0966",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "womens jumper"
+    }
+  },
+  {
+    "name": "fashion-0967",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "womens skirts"
+    }
+  },
+  {
+    "name": "fashion-0968",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "retro trainers"
+    }
+  },
+  {
+    "name": "fashion-0969",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "relaxed trousers"
+    }
+  },
+  {
+    "name": "fashion-0970",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "kindred works"
+    }
+  },
+  {
+    "name": "fashion-0971",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "dresses between 30 and 60 pounds"
+    }
+  },
+  {
+    "name": "fashion-0972",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "red stretch denim jeans"
+    }
+  },
+  {
+    "name": "fashion-0973",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black dresses size uk 8"
+    }
+  },
+  {
+    "name": "fashion-0974",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "daymark cream dress"
+    }
+  },
+  {
+    "name": "fashion-0975",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "daymark column skirt in slate grey"
+    }
+  },
+  {
+    "name": "fashion-0976",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "caps size one size"
+    }
+  },
+  {
+    "name": "fashion-0977",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "shirts under gbp 70"
+    }
+  },
+  {
+    "name": "fashion-0978",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "everyday jeans"
+    }
+  },
+  {
+    "name": "fashion-0979",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "harbour standard regular-fit hoodie"
+    }
+  },
+  {
+    "name": "fashion-0980",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "hoodies"
+    }
+  },
+  {
+    "name": "fashion-0981",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue five-panel cap"
+    }
+  },
+  {
+    "name": "fashion-0982",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "green jumper"
+    }
+  },
+  {
+    "name": "fashion-0983",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "men's bag"
+    }
+  },
+  {
+    "name": "fashion-0984",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "skirts under gbp 40"
+    }
+  },
+  {
+    "name": "fashion-0985",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "knitwear for winter"
+    }
+  },
+  {
+    "name": "fashion-0986",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "jackets under gbp 50"
+    }
+  },
+  {
+    "name": "fashion-0987",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "syn-000654-07"
+    }
+  },
+  {
+    "name": "fashion-0988",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "brown faux leather bag"
+    }
+  },
+  {
+    "name": "fashion-0989",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "prod-000282"
+    }
+  },
+  {
+    "name": "fashion-0990",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "looking for shorts for festival"
+    }
+  },
+  {
+    "name": "fashion-0991",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "black sneakers"
+    }
+  },
+  {
+    "name": "fashion-0992",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "blue pants"
+    }
+  },
+  {
+    "name": "fashion-0993",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "studio thread wrap skirt in slate grey"
+    }
+  },
+  {
+    "name": "fashion-0994",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "t-shirts size l"
+    }
+  },
+  {
+    "name": "fashion-0995",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "beige cotton canvas bag"
+    }
+  },
+  {
+    "name": "fashion-0996",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "looking for dresses for party"
+    }
+  },
+  {
+    "name": "fashion-0997",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "spring jackets"
+    }
+  },
+  {
+    "name": "fashion-0998",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "arc & loom cropped jacket"
+    }
+  },
+  {
+    "name": "fashion-0999",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "harbour standard jeans"
+    }
+  },
+  {
+    "name": "fashion-1000",
+    "request": {
+      "area": "storefront",
+      "collection": "products",
+      "query": "faux leather jacket"
+    }
+  }
+]

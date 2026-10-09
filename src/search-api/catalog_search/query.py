@@ -93,8 +93,15 @@ def build_query(request: SearchRequest, scope: str, epoch: str) -> QueryPlan:
     ]
     variant = ["v.isInStock = true", "v.stockQuantity > 0", "v.currency = 'GBP'"]
     identifier = request.query.strip().upper()
-    is_product = re.fullmatch(r"PROD-\d{6}", identifier) is not None
-    is_sku = re.fullmatch(r"SYN-\d{6}-\d{2}", identifier) is not None
+    number = r"(?:[0-9]{6}|1[0-9]{6}|2000000)"
+    is_product = (
+        re.fullmatch(rf"PROD-{number}", identifier) is not None
+        and identifier != "PROD-000000"
+    )
+    is_sku = (
+        re.fullmatch(rf"SYN-{number}-[0-9]{{2}}", identifier) is not None
+        and not identifier.startswith("SYN-000000-")
+    )
     if is_product:
         parent.append(f"c.productId = {parameter(identifier)}")
     elif is_sku:
