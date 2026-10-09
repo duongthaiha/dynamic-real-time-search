@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000441",
+  "fingerprint": "08dce5f44da10d13e7d2ba998cf2cfa853d0a1664811dc419eae88dfbad12718",
+  "sha256": "ca9ab20583f1b3bab7fb3488f4f609db594655e78dc5658e572d7e7ce92da76a",
+  "imagePath": "images/prod-000441.png",
+  "generatedAt": "2026-09-25T08:26:09.759539+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: T-shirt. Style: oversized. Material: cotton jersey. Colour: Sky Blue (#77AEDD). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

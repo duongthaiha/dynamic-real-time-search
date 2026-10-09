@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000477",
+  "fingerprint": "e44699dcb90b4a2ef72553b615f1682c0acc1da9970c1c75bb0b6369697f676b",
+  "sha256": "8330eb31deaaacd2f09688592f4a987a6f1fe9d00505127b6d97e03976fd17ba",
+  "imagePath": "images/prod-000477.png",
+  "generatedAt": "2026-09-25T08:27:24.882156+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trainers. Style: chunky. Material: recycled mesh. Colour: Midnight Navy (#253451). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

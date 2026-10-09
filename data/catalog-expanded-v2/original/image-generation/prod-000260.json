@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000260",
+  "fingerprint": "a33dded030fcf426f3d7660d3375f028157d1a5654561f0eef7e00751e112ad8",
+  "sha256": "e7fa7400e9c1f9897b1c8c48f74354d50c5fc3cec4eae4f58f71cdf456aae7d2",
+  "imagePath": "images/prod-000260.png",
+  "generatedAt": "2026-09-24T15:05:53.574797+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slim shirt made from organic cotton, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shirt. Fit/style: slim. Material: organic cotton. Colour: Sky Blue (reference colour #77AEDD). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

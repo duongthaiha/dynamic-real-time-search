@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000057",
+  "fingerprint": "560ea5462fe2e84969227c830d979e327ef963189fd5c8a30733a301c02ba344",
+  "sha256": "0086f7bf9b6d1fd6fd4c4bd49190d10be1125a2b20fc16f831f1e9e42e48144a",
+  "imagePath": "images/prod-000057.png",
+  "generatedAt": "2026-09-24T14:32:04.955686+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A running-inspired trainers made from textile and synthetic upper, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: running-inspired. Material: textile and synthetic upper. Colour: Midnight Navy (reference colour #253451). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

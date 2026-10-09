@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000959",
+  "fingerprint": "612ca38c13794cecc539f57e077f114cfb01cf9c76e21da1af29711dfbc91afc",
+  "sha256": "4622d6d668e89dc692668cc5273ad20078b002aff5d652b8d97c4a4746772165",
+  "imagePath": "images/prod-000959.png",
+  "generatedAt": "2026-09-25T08:41:23.709658+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: bag. Style: backpack. Material: faux leather. Colour: Soft White (#EDEBE5). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

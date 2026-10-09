@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000354",
+  "fingerprint": "f07202b1225f06bc5dd66ffd505acc9e171ec1254384226696b45be78fdb6d85",
+  "sha256": "4d87650bd993b7d6a14c47a774412ef2219662a87dceb14b957962d8fdd7a678",
+  "imagePath": "images/prod-000354.png",
+  "generatedAt": "2026-09-24T15:26:05.490284+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tea dress made from viscose, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: tea. Material: viscose. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000074",
+  "fingerprint": "50e8bfed46ee0bda22352474b4502e5c17de82519e6dabb909416624a51d1654",
+  "sha256": "ddbaf98043e16f436b55dd7d7e0278a7d0c9b215c0b6560a9dc0c1036bd63b15",
+  "imagePath": "images/prod-000074.png",
+  "generatedAt": "2026-09-24T14:34:53.590961+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A shoulder bag made from cotton canvas, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: bag. Fit/style: shoulder. Material: cotton canvas. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

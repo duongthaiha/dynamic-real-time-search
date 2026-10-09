@@ -1,0 +1,206 @@
+{
+  "evidence": "live-http-listener-with-real-cosmos",
+  "checks": 28,
+  "failedChecks": 0,
+  "failedCases": [],
+  "results": [
+    {
+      "case": "exact-product",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 1,
+      "returnedRecords": 1,
+      "requestUnits": "8.190",
+      "elapsedMs": 115.45660009142011,
+      "errorCode": null
+    },
+    {
+      "case": "exact-instock-sku",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 1,
+      "returnedRecords": 1,
+      "requestUnits": "8.210",
+      "elapsedMs": 76.91730000078678,
+      "errorCode": null
+    },
+    {
+      "case": "out-of-stock-sku",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 0,
+      "returnedRecords": 0,
+      "requestUnits": "4.090",
+      "elapsedMs": 32.84499992150813,
+      "errorCode": null
+    },
+    {
+      "case": "inclusive-price",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 1,
+      "returnedRecords": 1,
+      "requestUnits": "8.410",
+      "elapsedMs": 62.057600007392466,
+      "errorCode": null
+    },
+    {
+      "case": "same-variant-out-of-stock-size",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 0,
+      "returnedRecords": 0,
+      "requestUnits": "4.520",
+      "elapsedMs": 32.31499996036291,
+      "errorCode": null
+    },
+    {
+      "case": "keyword-colour-category",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 9,
+      "returnedRecords": 9,
+      "requestUnits": "10.560",
+      "elapsedMs": 63.297800021246076,
+      "errorCode": null
+    },
+    {
+      "case": "keyword-brand-fit",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 3,
+      "returnedRecords": 3,
+      "requestUnits": "9.720",
+      "elapsedMs": 82.53389992751181,
+      "errorCode": null
+    },
+    {
+      "case": "keyword-no-match",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 0,
+      "returnedRecords": 0,
+      "requestUnits": "3.490",
+      "elapsedMs": 30.83229996263981,
+      "errorCode": null
+    },
+    {
+      "case": "keyword-offset",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 67,
+      "returnedRecords": 20,
+      "requestUnits": "20.320",
+      "elapsedMs": 91.33560000918806,
+      "errorCode": null
+    },
+    {
+      "case": "typo-baseline",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 0,
+      "returnedRecords": 0,
+      "requestUnits": "3.490",
+      "elapsedMs": 31.355699989944696,
+      "errorCode": null
+    },
+    {
+      "case": "full-catalog-count",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 1000,
+      "returnedRecords": 100,
+      "requestUnits": "118.350",
+      "elapsedMs": 94.84189993236214,
+      "errorCode": null
+    },
+    {
+      "case": "maximum-ranked-window",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 1000,
+      "returnedRecords": 100,
+      "requestUnits": "259.970",
+      "elapsedMs": 470.6278999801725,
+      "errorCode": null
+    },
+    {
+      "case": "error-401",
+      "passed": true,
+      "status": 401
+    },
+    {
+      "case": "error-403",
+      "passed": true,
+      "status": 403
+    },
+    {
+      "case": "error-400",
+      "passed": true,
+      "status": 400
+    },
+    {
+      "case": "error-422",
+      "passed": true,
+      "status": 422
+    },
+    {
+      "case": "error-422",
+      "passed": true,
+      "status": 422
+    },
+    {
+      "case": "error-422",
+      "passed": true,
+      "status": 422
+    },
+    {
+      "case": "same-field-or",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 1
+    },
+    {
+      "case": "same-field-and",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 0
+    },
+    {
+      "case": "across-fields-and",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 1
+    },
+    {
+      "case": "mixed-modes-error",
+      "passed": true,
+      "status": 400,
+      "totalRecords": null
+    },
+    {
+      "case": "same-variant-size-price",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 1
+    },
+    {
+      "case": "same-variant-stock-rejected",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 0
+    },
+    {
+      "case": "fractional-minor-unit-range",
+      "passed": true,
+      "status": 200,
+      "totalRecords": 0
+    },
+    {
+      "case": "unallowlisted-field",
+      "passed": true,
+      "status": 422,
+      "totalRecords": null
+    }
+  ]
+}

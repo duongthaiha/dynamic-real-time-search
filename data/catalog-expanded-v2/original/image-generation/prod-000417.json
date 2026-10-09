@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000417",
+  "fingerprint": "d14672310e24456d99bc62ba74a0cffdf1ccd6d3ad0c02a0288f477435c1f460",
+  "sha256": "403ba01e6ea4fda2c1fc5840663a160bcdbb6bded5255bd69570b30ecf17adf0",
+  "imagePath": "images/prod-000417.png",
+  "generatedAt": "2026-09-25T08:25:42.778572+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trainers. Style: low-profile. Material: faux leather. Colour: Soft White (#EDEBE5). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

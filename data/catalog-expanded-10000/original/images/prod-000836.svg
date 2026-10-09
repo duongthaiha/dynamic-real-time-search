@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Alder Studio longline shorts in jet black</title>
+  <desc id="desc">Synthetic catalog illustration of Jet Black shorts</desc>
+  <rect width="600" height="800" fill="#F4F1EA"/>
+  <rect x="36" y="36" width="528" height="590" rx="18" fill="#242424" opacity=".16"/>
+  <g fill="#242424" stroke="#202020" stroke-width="8" stroke-linejoin="round"><path d="M235 225h130l-14 190h-48l-3-94-3 94h-48z"/></g>
+  <text x="54" y="680" font-family="Arial, sans-serif" font-size="18" letter-spacing="3" fill="#555">SHORTS</text>
+  <text x="54" y="720" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202020">Alder Studio</text>
+  <text x="54" y="755" font-family="Arial, sans-serif" font-size="20" fill="#444">Jet Black</text>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "status": "offline-validated",
+  "productCount": 2000000,
+  "variantCount": 8224250,
+  "sourceSha256": "e51e4a19f172c51e23b12b1cf937a2302649aac9a363d2e050b41baf94d14964",
+  "contentSha256": "8725b94c521db9d3dbde54d945e4dc65d772895894d343d5bad1ccf2861333e8",
+  "documentBytes": 4585142967,
+  "maximumDocumentBytes": 3528,
+  "documentBudgetBytes": 10737418240,
+  "indexOverheadIncluded": false,
+  "cloudWrites": false,
+  "peakWorkingSetBytes": 36237312,
+  "memoryBudgetBytes": 536870912
+}

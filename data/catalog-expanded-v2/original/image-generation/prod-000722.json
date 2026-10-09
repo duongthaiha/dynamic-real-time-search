@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000722",
+  "fingerprint": "3258fdc023122f7bfe5d922d6b108bfd00049e15e64fcc1d4bf96fb6c39418e1",
+  "sha256": "d8224a27ec123e7107cf5a14346944a60840be85efab6af16eb9441cc04f0592",
+  "imagePath": "images/prod-000722.png",
+  "generatedAt": "2026-09-25T08:34:20.269893+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trousers. Style: wide-leg. Material: cotton twill. Colour: Slate Grey (#777D84). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

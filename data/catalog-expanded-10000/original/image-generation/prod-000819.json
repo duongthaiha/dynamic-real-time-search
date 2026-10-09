@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000819",
+  "fingerprint": "e89e683e74e38734c37241d6c46bb61c22325fede7772d3d1537d5b8f1e9aacc",
+  "sha256": "472a035e49f8d609cd7d821e7081d543a37d8904e73d5e6bccb092a2bb012bad",
+  "imagePath": "images/prod-000819.png",
+  "generatedAt": "2026-09-24T16:45:30.005662+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed dress made from cotton poplin, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: relaxed. Material: cotton poplin. Colour: Stone Beige (reference colour #B8A58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

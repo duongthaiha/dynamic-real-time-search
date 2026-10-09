@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000273",
+  "fingerprint": "08c9a2eebf09344c7ed44e9a77830faf0299a022c348bdbb0d3d5312a57e9998",
+  "sha256": "3e60527b6a70d15aac4b987ed381ee169ab4bcfd4c9e5183c8c8111588b9d0ef",
+  "imagePath": "images/prod-000273.png",
+  "generatedAt": "2026-09-24T15:08:03.631358+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized jacket made from cotton twill, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: oversized. Material: cotton twill. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

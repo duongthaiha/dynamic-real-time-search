@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000578",
+  "fingerprint": "f31b7f3526f99853d6112c1dece02b338a6d7a13a0b8c34a73820fc6fc61d94f",
+  "sha256": "2cbf9192b5dad51c977f6b334e9d06013821fc6c20ffbe1352fca2aa696ea539",
+  "imagePath": "images/prod-000578.png",
+  "generatedAt": "2026-09-24T16:04:18.330261+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized hoodie made from organic-cotton blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: hoodie. Fit/style: oversized. Material: organic-cotton blend. Colour: Warm Cream (reference colour #D9CDB5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

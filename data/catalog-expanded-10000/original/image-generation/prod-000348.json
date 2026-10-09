@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000348",
+  "fingerprint": "09d88cf93b3a73ade8e7fa00b5308a420d97a989b8ee014a2758ef47be55f9dd",
+  "sha256": "02b207875eb3724d8dbf79b0362d848945cfd871999bdadfe30affc495f1071a",
+  "imagePath": "images/prod-000348.png",
+  "generatedAt": "2026-09-25T08:24:40.273142+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: oversized. Material: denim. Colour: Dark Wash Blue (#315C86). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000225",
+  "fingerprint": "8632c5b880069da9e25259354270db0cb632f422d412df79836c084a29895d0d",
+  "sha256": "077ebfd5eb0c53af361c921c29d34a36da243818d23e9a7f8e49931839f3a908",
+  "imagePath": "images/prod-000225.png",
+  "generatedAt": "2026-09-24T15:00:03.148079+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A bucket cap made from organic cotton, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: cap. Fit/style: bucket. Material: organic cotton. Colour: Stone Beige (reference colour #B8A58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

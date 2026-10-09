@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000580",
+  "fingerprint": "e0c8b93518a73767503f500f4a8622501fc8bf895cf1f7c434b2e2bb461721ca",
+  "sha256": "9a1ea804f37e3032c4c24fd1e2409dadeede3ba3750da2cf3e74163fe5493e13",
+  "imagePath": "images/prod-000580.png",
+  "generatedAt": "2026-09-25T08:30:10.770079+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: skirt. Style: pleated. Material: satin-look fabric. Colour: Midnight Navy (#253451). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000533",
+  "fingerprint": "1afeaf7b269ab49fd503d7cc120c1a493522228c17e4147a55bbd54cf8042fee",
+  "sha256": "8d36451ccb705d8cf62755b43869c9af9a76c8adc3e0a034b1c9dcb5de24e790",
+  "imagePath": "images/prod-000533.png",
+  "generatedAt": "2026-09-24T15:56:39.091884+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular hoodie made from cotton fleece, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: hoodie. Fit/style: regular. Material: cotton fleece. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

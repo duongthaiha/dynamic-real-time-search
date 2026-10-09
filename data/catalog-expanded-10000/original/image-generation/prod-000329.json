@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000329",
+  "fingerprint": "44abb7edf385e4e93a49f3e05e9869732e2de259cd18797efa7bc8328919afcf",
+  "sha256": "8beb48c15b4e86b38414e93da8ebe43931f5e78987469e15d9ffc59ed1d94dc8",
+  "imagePath": "images/prod-000329.png",
+  "generatedAt": "2026-09-24T15:19:56.566738+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tote bag made from faux leather, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: bag. Fit/style: tote. Material: faux leather. Colour: Midnight Navy (reference colour #253451). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

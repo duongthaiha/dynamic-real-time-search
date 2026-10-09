@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000089",
+  "fingerprint": "c8cbf7e01d1f148a629f2f94f2c0f9d7ba3d11b13e81e8d4bbd3768bfe8dbc5a",
+  "sha256": "263c0b0663699a8bdefe597b95a39ca3105199d5a907bd018a54b15e4e9075e8",
+  "imagePath": "images/prod-000089.png",
+  "generatedAt": "2026-09-25T08:19:40.910085+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: bag. Style: tote. Material: recycled polyester. Colour: Burnt Orange (#B76532). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

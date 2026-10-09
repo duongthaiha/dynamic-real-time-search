@@ -1,0 +1,147 @@
+{
+  "newProductCount": 1999000,
+  "newCategoryCount": 27,
+  "presentationCounts": {
+    "modelled": 1850926,
+    "product-only": 148074
+  },
+  "perCategoryPresentationCounts": {
+    "bags": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "beanies": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "belts": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "boots": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "bracelets": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "caps": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "coats": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "dresses": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "earrings": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "gloves": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "hats": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "hoodies": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "jackets": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "jeans": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24680
+    },
+    "knitwear": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "necklaces": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "pouches": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "scarves": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "shirts": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "shorts": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "skirts": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "socks": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "sunglasses": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "t-shirts": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "trainers": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "trousers": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    },
+    "wallets": {
+      "man": 24679,
+      "non-binary adult with androgynous presentation": 24679,
+      "woman": 24679
+    }
+  },
+  "allCategoriesBalancedWithinOne": true,
+  "actualNewImagesGenerated": 0
+}

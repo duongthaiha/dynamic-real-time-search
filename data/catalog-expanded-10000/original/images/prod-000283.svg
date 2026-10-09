@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Alder Studio ankle boots in deep plum</title>
+  <desc id="desc">Synthetic catalog illustration of Deep Plum boots</desc>
+  <rect width="600" height="800" fill="#F4F1EA"/>
+  <rect x="36" y="36" width="528" height="590" rx="18" fill="#664A70" opacity=".16"/>
+  <g fill="#664A70" stroke="#202020" stroke-width="8" stroke-linejoin="round"><path d="M160 365c70 4 103-42 133-95 28 72 81 103 147 112 25 4 39 25 30 48-8 22-29 34-53 34H179c-38 0-55-18-54-48 1-29 13-53 35-51z"/></g>
+  <text x="54" y="680" font-family="Arial, sans-serif" font-size="18" letter-spacing="3" fill="#555">BOOTS</text>
+  <text x="54" y="720" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202020">Alder Studio</text>
+  <text x="54" y="755" font-family="Arial, sans-serif" font-size="20" fill="#444">Deep Plum</text>
+</svg>

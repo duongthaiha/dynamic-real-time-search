@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000618",
+  "fingerprint": "336c040ca40bc3c3b910cd1d3a05402586eefa00231d1e77a69f30b3d010b8b8",
+  "sha256": "063d6f990fa4bf9295c8b149b647acbe87212cf378e51800ad9ffb565927fbca",
+  "imagePath": "images/prod-000618.png",
+  "generatedAt": "2026-09-25T08:31:20.968022+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: cropped. Material: recycled polyester. Colour: Butter Yellow (#D8BF63). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

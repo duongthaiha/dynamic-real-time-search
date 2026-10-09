@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000654",
+  "fingerprint": "609f67988be8d1b2ec9bbee0d92be23369a1940e88276de98ad6865a2c769894",
+  "sha256": "02606b4f1da0ce3fee9e894b773e5f90ae1f2b8c999794b78ba961138165cc31",
+  "imagePath": "images/prod-000654.png",
+  "generatedAt": "2026-09-24T16:18:00.586588+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tea dress made from satin-look fabric, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: tea. Material: satin-look fabric. Colour: Warm Cream (reference colour #D9CDB5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000351",
+  "fingerprint": "fe04de2c77edefd7e455f9c76c1ac279234670657e748624e47aab908017e3e7",
+  "sha256": "7461166d11feced40e2159eb53743bb7581965bf61b5409687b358e0f54e8ece",
+  "imagePath": "images/prod-000351.png",
+  "generatedAt": "2026-09-24T15:25:34.866092+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular T-shirt made from recycled-cotton blend, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: regular. Material: recycled-cotton blend. Colour: Jet Black (reference colour #242424). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

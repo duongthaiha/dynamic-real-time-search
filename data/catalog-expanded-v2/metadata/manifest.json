@@ -1,0 +1,17 @@
+{
+  "catalogVersion": "synthetic-fashion-v2",
+  "productCount": 2000000,
+  "variantCount": 8224250,
+  "states": {
+    "pending": 1998999,
+    "staged": 999,
+    "verified": 2
+  },
+  "imageStorage": "remote-backed; only originals and staging are local",
+  "ready": false,
+  "contentSha256": "e51e4a19f172c51e23b12b1cf937a2302649aac9a363d2e050b41baf94d14964",
+  "metadataOnly": true,
+  "promptCount": 1999000,
+  "promptsSha256": "b7a06ac354e49ec0f737d9e7721a18ffd1109f9fa9bb86eea60cf68853e5d6f7",
+  "imageDestination": "strezolvefrv3w6fiiwjwi/product-images-scale-001"
+}

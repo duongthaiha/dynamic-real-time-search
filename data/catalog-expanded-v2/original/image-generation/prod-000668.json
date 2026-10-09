@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000668",
+  "fingerprint": "a13cd5a83f4ffe7c91eba34d4f4640893c6fc95d4d80850fca998cf5c24f3688",
+  "sha256": "dc0b9479e20104e2c95441f8fe7d73fb22fdfb149fc14f7860ab21117e23c352",
+  "imagePath": "images/prod-000668.png",
+  "generatedAt": "2026-09-24T16:19:28.850087+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized hoodie made from organic-cotton blend, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: hoodie. Fit/style: oversized. Material: organic-cotton blend. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

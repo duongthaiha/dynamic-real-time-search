@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000829",
+  "fingerprint": "0727e4aa6d30b97989401f3491027b508abbf94ad884915919af98a0543bf59a",
+  "sha256": "c56460fd945a56bf028efe9e07fb2182b8f923896cf1d6050c91f08f3cd5c036",
+  "imagePath": "images/prod-000829.png",
+  "generatedAt": "2026-09-24T16:47:10.361605+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized coat made from cotton twill, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: oversized. Material: cotton twill. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

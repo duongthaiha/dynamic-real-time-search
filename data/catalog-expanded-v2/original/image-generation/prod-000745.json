@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000745",
+  "fingerprint": "732e6f821431a500e1ab850fa99dcd96b59a6696bb209320c6e18d2984b909dc",
+  "sha256": "9a692bdc6ee7d378f1f43f65d2de724e115dd314aac37be0bb227a677f9479e9",
+  "imagePath": "images/prod-000745.png",
+  "generatedAt": "2026-09-25T08:35:01.032911+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: skirt. Style: column. Material: denim. Colour: Cherry Red (#A73538). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

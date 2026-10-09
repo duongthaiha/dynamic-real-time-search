@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000478",
+  "fingerprint": "67cf40cd661946566a73e75c22d111ba2f11a3a4b7d3d0f7e2ffbec26af3ba2f",
+  "sha256": "88c568bd4f659f88502b18515862d2e5b5d0074b75434b07c2032c970b9e3b76",
+  "imagePath": "images/prod-000478.png",
+  "generatedAt": "2026-09-24T15:47:29.827814+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A hiking-inspired boots made from textile and synthetic upper, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: hiking-inspired. Material: textile and synthetic upper. Colour: Stone Beige (reference colour #B8A58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

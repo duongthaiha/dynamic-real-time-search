@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000049",
+  "fingerprint": "17a84eab66604163686a3133d9ae8eb094d12ab55d0fa375ad43f59300d226c6",
+  "sha256": "633a241bea57f8b6c162aad6246d6ab46186f7093b1f2c74b64141314f3927cd",
+  "imagePath": "images/prod-000049.png",
+  "generatedAt": "2026-09-24T14:30:43.683114+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed coat made from cotton twill, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: relaxed. Material: cotton twill. Colour: Burnt Orange (reference colour #B76532). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

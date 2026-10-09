@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000676",
+  "fingerprint": "617b21e08491919d737668bbf8ebd7f8e8d657fe9e2ea369a22e1db9e9f4b814",
+  "sha256": "a8d79c905e2b1625f212f13cce47fa9798a2a2194ab0a9418a4260b98547b1e2",
+  "imagePath": "images/prod-000676.png",
+  "generatedAt": "2026-09-25T08:33:11.498496+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jeans. Style: baggy. Material: stretch denim. Colour: Sky Blue (#77AEDD). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000846",
+  "fingerprint": "48bd85ad8e8812365b142e5309c5f7617c2d5b1b59e7b7f82360afca25b26b2d",
+  "sha256": "1d58b7c60d45a5538542072627a40fe04570358db5e703918b16d4559f5c8781",
+  "imagePath": "images/prod-000846.png",
+  "generatedAt": "2026-09-24T16:50:10.480511+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular T-shirt made from cotton jersey, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: regular. Material: cotton jersey. Colour: Burnt Orange (reference colour #B76532). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

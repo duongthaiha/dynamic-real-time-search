@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000171",
+  "fingerprint": "5feb397b0ac648215ee6020745ea2d0fecd9b94220902600984108aba90c3ff6",
+  "sha256": "a619339ddf09f6b95bc03de5861850ce9c58cdee8efa5f0f21528cbfffaa7729",
+  "imagePath": "images/prod-000171.png",
+  "generatedAt": "2026-09-25T08:20:50.586974+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: T-shirt. Style: regular. Material: cotton jersey. Colour: Dusty Pink (#C78F9C). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

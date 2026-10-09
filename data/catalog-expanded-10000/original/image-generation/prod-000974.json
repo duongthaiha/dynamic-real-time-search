@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000974",
+  "fingerprint": "0e47cd3c4997e61a89f28932b369f5da1f0bfe6094982addaf51dbd1a273da4a",
+  "sha256": "e417c9d308c9addfa7fa225c42e6e5521b27e1db93e4e3fc2291692a7eda630a",
+  "imagePath": "images/prod-000974.png",
+  "generatedAt": "2026-09-24T17:11:49.580469+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A shoulder bag made from cotton canvas, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: bag. Fit/style: shoulder. Material: cotton canvas. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000597",
+  "fingerprint": "6ec7b694d0e9564308bb57d7391013af73090c17ffbfc5ea690280007ecfd42c",
+  "sha256": "5313a7ef3888f355140a7e9819370946a8d2adfd0b75098f7254998d693e7652",
+  "imagePath": "images/prod-000597.png",
+  "generatedAt": "2026-09-25T08:31:01.492748+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trainers. Style: low-profile. Material: textile and synthetic upper. Colour: Deep Plum (#664A70). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

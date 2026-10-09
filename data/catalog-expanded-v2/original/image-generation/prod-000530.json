@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000530",
+  "fingerprint": "4a186d574d4385a52f1206a32ab09a5d0f3dea002dd3fc8ec24d1be31062efdb",
+  "sha256": "c72ae99cdb89d63f4da76d582a39d2222474ee09c505c1aa658dcf9bb3584f4f",
+  "imagePath": "images/prod-000530.png",
+  "generatedAt": "2026-09-24T15:56:08.793091+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized shirt made from organic cotton, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shirt. Fit/style: oversized. Material: organic cotton. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

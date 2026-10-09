@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000479",
+  "fingerprint": "49799d76fa1da2932e10cbf9bf5119f27640e5d5ffbe70d4c2c485de87c44c01",
+  "sha256": "f049bac76adb0a3b6b702ea7c7d9a0028f058faf1c804d6fa6f53ca2b5ad77c7",
+  "imagePath": "images/prod-000479.png",
+  "generatedAt": "2026-09-25T08:27:31.250993+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: bag. Style: tote. Material: recycled polyester. Colour: Sage Green (#8EA58B). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

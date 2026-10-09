@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000507",
+  "fingerprint": "c38d89fd31981658665faeb0821df3621f08125a3e0b9ee175034cfbda0bd113",
+  "sha256": "e495e0c3973401b685e06ef4523be42d6812c59a1fc363132b2775e12a2158d1",
+  "imagePath": "images/prod-000507.png",
+  "generatedAt": "2026-09-25T08:28:11.437069+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trainers. Style: low-profile. Material: textile and synthetic upper. Colour: Jet Black (#242424). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

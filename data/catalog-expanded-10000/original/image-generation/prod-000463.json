@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000463",
+  "fingerprint": "d6642c94d26753c95de2393bfc39bf6df16c6bca18426e09b25ba265aaa19b28",
+  "sha256": "8d6a68bd077a2badb085e99c83fce0eb8ceca92409571423e61ea9bc2afad6e1",
+  "imagePath": "images/prod-000463.png",
+  "generatedAt": "2026-09-24T15:44:59.836531+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A hiking-inspired boots made from textile and synthetic upper, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: hiking-inspired. Material: textile and synthetic upper. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

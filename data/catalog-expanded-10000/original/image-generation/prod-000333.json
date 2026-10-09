@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000333",
+  "fingerprint": "5b3d444896456997416ae83a0c914b95b7ffd9c8d9ddfafa87475263d6ec9a1a",
+  "sha256": "0786639563093e1913d38db2beadea36eca14b935022b2eb129b78a5b2c22224",
+  "imagePath": "images/prod-000333.png",
+  "generatedAt": "2026-09-24T15:22:27.096915+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A cropped jacket made from recycled polyester, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: cropped. Material: recycled polyester. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

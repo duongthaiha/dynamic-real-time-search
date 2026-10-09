@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000619",
+  "fingerprint": "0ae5a71ce00eb39ad3d878ba60f51469cceab23e77f189131682643ed7f3aa25",
+  "sha256": "58218f6161364ef7a2d31cc9307ef8b5472caae258e9b9a3d7567467cfa07301",
+  "imagePath": "images/prod-000619.png",
+  "generatedAt": "2026-09-25T08:31:31.312824+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: coat. Style: oversized. Material: recycled polyester. Colour: Jet Black (#242424). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000539",
+  "fingerprint": "e060abf2d65347b564e29dd39604929782aeb99632b4dc7a6ba0781acfbd94ee",
+  "sha256": "e40c2fc2ac863b94e1a23fbc52a3f03d78b8630ad64a2114014ec8e129cd76e4",
+  "imagePath": "images/prod-000539.png",
+  "generatedAt": "2026-09-25T08:29:10.408106+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: bag. Style: crossbody. Material: recycled polyester. Colour: Forest Green (#3E654A). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

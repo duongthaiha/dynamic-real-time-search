@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000062",
+  "fingerprint": "34e39dad6144adf27eadd908d8cf4763ea9d454654035e10777a23b35f60c748",
+  "sha256": "627f0c7337f00fa44da00b8ece8dc0a3d4bbaa98ae166076b1142d220fa3f9ef",
+  "imagePath": "images/prod-000062.png",
+  "generatedAt": "2026-09-25T08:19:11.562569+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trousers. Style: tapered. Material: linen blend. Colour: Deep Plum (#664A70). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

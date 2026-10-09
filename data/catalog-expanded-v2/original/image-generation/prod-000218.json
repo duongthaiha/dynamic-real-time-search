@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000218",
+  "fingerprint": "783471bbfa65ef599fc2a47dacdb7fa0edb5ee4c750c49173b5e32b741b69c27",
+  "sha256": "7197b33b5e9d0df8decd3ed04e21e29f69a591cabf54a271348e7e324280e428",
+  "imagePath": "images/prod-000218.png",
+  "generatedAt": "2026-09-25T08:21:21.924636+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: hoodie. Style: regular. Material: cotton fleece. Colour: Jet Black (#242424). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000407",
+  "fingerprint": "b76bfe874c0ef0b75278e5ec2ce12992855a5f91677d3a2e29ef51d6d12eafcd",
+  "sha256": "40a7f4010e77fffc9877c522aefdd86d6c5d07a4b19240fa7c257b75321eedb7",
+  "imagePath": "images/prod-000407.png",
+  "generatedAt": "2026-09-25T08:25:30.855943+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trousers. Style: tailored. Material: cotton twill. Colour: Sage Green (#8EA58B). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

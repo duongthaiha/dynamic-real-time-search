@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000078",
+  "fingerprint": "e9836787cc8cc639c67e613da34863a5bc364878c28888bffc350dba659b02b7",
+  "sha256": "4cb9a5f6323e30a5463bc02d5b2fdc5e7404eef842b59ffed0930d36a167dbca",
+  "imagePath": "images/prod-000078.png",
+  "generatedAt": "2026-09-24T14:35:33.847262+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular jacket made from recycled polyester, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: regular. Material: recycled polyester. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

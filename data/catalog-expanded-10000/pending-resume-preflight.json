@@ -1,0 +1,17 @@
+{
+  "pendingPromptsVerified": 6516,
+  "protectedRowsSha256": "f3856450c7640c374afabe073e4715f49d34c6e6fe74fe96f70cb4413393945f",
+  "budgetBeforeResume": {
+    "name": "catalog-10000-images-001",
+    "limit_calls": 8999,
+    "used_calls": 2483
+  },
+  "requestAllowanceRemaining": 6516,
+  "blockedExcluded": 237,
+  "uncertainExcluded": [
+    "PROD-003475"
+  ],
+  "newRevision": "product-focused-v3",
+  "exportSha256": "a4e7d98850f3e0246ba2cb5926de98ae2c5e8b1a85e0e9905d7a446019067c3a",
+  "promptExportSha256": "659d46f38b750ae7860b675859e4f910348ec4042242fbb1d1cb2e1f3350914e"
+}

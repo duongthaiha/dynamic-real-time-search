@@ -1,0 +1,15 @@
+{
+  "targetTotalProducts": 10000,
+  "preservedOriginalProducts": 1000,
+  "preservedCalibrationProduct": "PROD-001001",
+  "approvedNewHttpRequests": 8999,
+  "approvalId": "catalog-10000-images-001",
+  "uploadOriginalsRemaining": 999,
+  "model": "MAI-Image-2.6-Flash",
+  "modelVersion": "2026-07-31",
+  "requestsPerMinute": 6,
+  "destination": "strezolvefrv3w6fiiwjwi/product-images-scale-001",
+  "cosmosWritesAuthorized": false,
+  "demoCutoverAuthorized": false,
+  "monetaryCap": false
+}

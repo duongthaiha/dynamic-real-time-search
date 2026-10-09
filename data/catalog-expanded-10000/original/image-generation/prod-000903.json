@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000903",
+  "fingerprint": "280c5cb66ec49c43c553e3be7f9045d5741d3947fb7bed489c3e7eb042793bc3",
+  "sha256": "d45fc103773ee156e671508f5ff864b0618f481481d15725fd20b699a7cfa34c",
+  "imagePath": "images/prod-000903.png",
+  "generatedAt": "2026-09-25T08:39:50.009570+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: relaxed. Material: denim. Colour: Burnt Orange (#B76532). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

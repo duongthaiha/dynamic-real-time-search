@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000930",
+  "fingerprint": "80a24432f4f191b26f3b884a8634da33e8b4441c4c542b8e599bd015ac868aea",
+  "sha256": "000050ea113d477f2f405ef1cdd9e737aa1cef153bd9c7a0f3312d6a9223be9f",
+  "imagePath": "images/prod-000930.png",
+  "generatedAt": "2026-09-24T17:04:19.741934+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A five-panel cap made from cotton twill, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: cap. Fit/style: five-panel. Material: cotton twill. Colour: Dusty Pink (reference colour #C78F9C). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

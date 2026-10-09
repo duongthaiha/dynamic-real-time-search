@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000828",
+  "fingerprint": "0e035f08cb10e1f45c39ea3c8a6c6d5e5b981eb21fa2ac775566a90a60527924",
+  "sha256": "11c50544ea0c06412daeb06ec3a5e03d45f0486ff4331fb7f38295cc5e820e35",
+  "imagePath": "images/prod-000828.png",
+  "generatedAt": "2026-09-24T16:47:01.047599+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A cropped jacket made from denim, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: cropped. Material: denim. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

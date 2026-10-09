@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000332",
+  "fingerprint": "d3475446111c2c32affd2147cf2b49e54f310530da6ba0fa3b50bc303f3e9974",
+  "sha256": "3ae9f0a1014a1e1ec7abb3a9e7efe4aaec113b6e3e088f0a5dd6c042b04e7cc6",
+  "imagePath": "images/prod-000332.png",
+  "generatedAt": "2026-09-25T08:24:30.894466+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trousers. Style: tailored. Material: linen blend. Colour: Soft White (#EDEBE5). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

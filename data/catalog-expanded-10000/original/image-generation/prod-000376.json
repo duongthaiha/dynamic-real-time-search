@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000376",
+  "fingerprint": "5a5422f265c381d41a19a79ac2a34044278db59878444c4dda75c9eb08a9ad5d",
+  "sha256": "8908c07c663254e6f864e3323e303ed0f03855a5115b8fa3bfe91321965046a5",
+  "imagePath": "images/prod-000376.png",
+  "generatedAt": "2026-09-25T08:24:52.219724+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jeans. Style: tapered. Material: cotton denim. Colour: Midnight Navy (#253451). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

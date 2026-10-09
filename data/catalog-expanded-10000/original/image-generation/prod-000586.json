@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000586",
+  "fingerprint": "140f5ac3ecdb0cb7b6e37fe250f2bbe0ac5d7b9e5eabd207d1c600f460dc0d7a",
+  "sha256": "f6d340d00e0a62402ba27fd6113b44511bdf4ede1cf3db7c59d2b4d7dfd79fa0",
+  "imagePath": "images/prod-000586.png",
+  "generatedAt": "2026-09-24T16:05:42.994387+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slim jeans made from recycled-cotton denim, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jeans. Fit/style: slim. Material: recycled-cotton denim. Colour: Cherry Red (reference colour #A73538). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

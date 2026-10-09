@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000150",
+  "fingerprint": "acdf9192f46e9b1259fe9e09897c79021f61129cd38dbb6f42646659efb5cf8e",
+  "sha256": "cdb9161066041b4c3f7d30a52da1a063f50b82d7373f72fb3d3c0562d1436e8c",
+  "imagePath": "images/prod-000150.png",
+  "generatedAt": "2026-09-25T08:20:21.689448+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: cap. Style: beanie. Material: organic cotton. Colour: Slate Grey (#777D84). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

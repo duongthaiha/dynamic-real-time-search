@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000593",
+  "fingerprint": "2c1315cea358892cb7fe7258162c63c9035f6bb3d45b2ffce808f166473e25e5",
+  "sha256": "e8ecfae42fdfb391e165321a6b1818b8b2f0d078d67f1771bac07c08740bc8f5",
+  "imagePath": "images/prod-000593.png",
+  "generatedAt": "2026-09-25T08:30:42.319054+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: hoodie. Style: relaxed. Material: organic-cotton blend. Colour: Jet Black (#242424). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

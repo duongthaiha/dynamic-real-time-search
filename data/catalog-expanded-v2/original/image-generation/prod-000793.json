@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000793",
+  "fingerprint": "6e769cb99e312debc45ac14b1b577fa12ccead235b91c3fb07bb5d8b9a8f8b06",
+  "sha256": "84440d8db03e0d1dcf982ff92c2c0b46367e3438645d0b3ac20182ec38252a0f",
+  "imagePath": "images/prod-000793.png",
+  "generatedAt": "2026-09-24T16:40:50.132043+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A lace-up boots made from faux leather, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: lace-up. Material: faux leather. Colour: Butter Yellow (reference colour #D8BF63). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

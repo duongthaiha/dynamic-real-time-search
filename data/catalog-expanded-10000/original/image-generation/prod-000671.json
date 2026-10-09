@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000671",
+  "fingerprint": "88784ac0d53c82f0674ebb8d3e486bec3c8e2a00ae9a17d64b4a56183efc7172",
+  "sha256": "b3293e207e9fe087c0e9d4747f7c36e2025ce6f95f45c3a47f3aa39411840466",
+  "imagePath": "images/prod-000671.png",
+  "generatedAt": "2026-09-24T16:19:58.866427+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A longline shorts made from linen blend, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: longline. Material: linen blend. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

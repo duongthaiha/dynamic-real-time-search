@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="title desc">
+  <title id="title">Daymark regular jacket in chocolate brown</title>
+  <desc id="desc">Synthetic catalog illustration of Chocolate Brown jacket</desc>
+  <rect width="600" height="800" fill="#F4F1EA"/>
+  <rect x="36" y="36" width="528" height="590" rx="18" fill="#654536" opacity=".16"/>
+  <g fill="#654536" stroke="#202020" stroke-width="8" stroke-linejoin="round"><path d="M220 245 278 190h44l58 55-34 72-26-18v215h-40V299l-26 18z"/><path d="M300 192v322" fill="none" stroke="#fff" stroke-width="7"/></g>
+  <text x="54" y="680" font-family="Arial, sans-serif" font-size="18" letter-spacing="3" fill="#555">JACKETS</text>
+  <text x="54" y="720" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202020">Daymark</text>
+  <text x="54" y="755" font-family="Arial, sans-serif" font-size="20" fill="#444">Chocolate Brown</text>
+</svg>

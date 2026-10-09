@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000833",
+  "fingerprint": "e6d8a4613df95127433469ecd2416b90e2257e54942fcf1cc5bb2c72c444df42",
+  "sha256": "23552900f0eebfb60f03e1e710d1ffe8f6dbaacc6b4a2f940e7abb12767a335e",
+  "imagePath": "images/prod-000833.png",
+  "generatedAt": "2026-09-24T16:47:54.390985+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed hoodie made from recycled-cotton blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: hoodie. Fit/style: relaxed. Material: recycled-cotton blend. Colour: Butter Yellow (reference colour #D8BF63). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000264",
+  "fingerprint": "5aa23724d73bbc8afac6fcb4bf511a2e7b38a729715ab6d17874eda218f08228",
+  "sha256": "b7caf3280d4ffe1ece58ee10062f2d0068c0c717a1841b218d8ba08b668aaded",
+  "imagePath": "images/prod-000264.png",
+  "generatedAt": "2026-09-24T15:06:33.582532+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tea dress made from linen blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: tea. Material: linen blend. Colour: Chocolate Brown (reference colour #654536). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

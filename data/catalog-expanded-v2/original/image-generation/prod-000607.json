@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000607",
+  "fingerprint": "1ccef13e343c93d6e61bdc09dac5e9d9ff38d70556fd685530cfd88387cce43b",
+  "sha256": "b2d579c7ed1e3e273050986e1924478ecc0bac2970cdb0bdb858011c952b13eb",
+  "imagePath": "images/prod-000607.png",
+  "generatedAt": "2026-09-24T16:09:09.445663+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular jumper made from wool blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jumper. Fit/style: regular. Material: wool blend. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

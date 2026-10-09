@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000910",
+  "fingerprint": "b93dd1f31f22a2b533ef3d079b7bad08594c88801aa59e30b0c26356cb2bca2d",
+  "sha256": "3130233bdd75cfa51e16442c7a860ae014ed375cd3836852238c187c63f8af4e",
+  "imagePath": "images/prod-000910.png",
+  "generatedAt": "2026-09-24T17:01:00.237713+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A pleated skirt made from linen blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: skirt. Fit/style: pleated. Material: linen blend. Colour: Midnight Navy (reference colour #253451). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

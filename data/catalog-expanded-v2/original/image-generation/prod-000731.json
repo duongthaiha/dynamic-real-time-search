@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000731",
+  "fingerprint": "538912ffbcb34e37175deae73860e65e7ca7176badd51be3f420544d6e622328",
+  "sha256": "b7468eb73c8277cf176567847158301e270fcbab0d6da13c556d825378397332",
+  "imagePath": "images/prod-000731.png",
+  "generatedAt": "2026-09-25T08:34:30.731043+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: shorts. Style: regular. Material: linen blend. Colour: Dark Wash Blue (#315C86). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

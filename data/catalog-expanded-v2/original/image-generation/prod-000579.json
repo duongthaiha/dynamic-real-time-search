@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000579",
+  "fingerprint": "f2456f2c2cbb47452e417a59ca4b6f41a082cbe0faa2aa15d01f24c3c2ea7645",
+  "sha256": "b1c10d33a1e21a0ecad416188d33167d237ff9af72681f87c5707671bf7b4bec",
+  "imagePath": "images/prod-000579.png",
+  "generatedAt": "2026-09-25T08:30:01.951559+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: dress. Style: relaxed. Material: viscose. Colour: Sage Green (#8EA58B). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

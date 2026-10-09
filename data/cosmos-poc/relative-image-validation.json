@@ -1,0 +1,12 @@
+{
+  "evidence": "live-cosmos-relative-paths-and-anonymous-blob-read",
+  "products": 1000,
+  "variants": 6136,
+  "relativeImagePathsVerified": 1000,
+  "allReferencedImagesPubliclyReadable": true,
+  "sampleDownloadChecksumsVerified": 4,
+  "anonymousListingDenied": true,
+  "anonymousWriteDenied": true,
+  "imageBaseConfiguredOutsideCosmos": "https://strezolvefrv3w6fiiwjwi.blob.core.windows.net",
+  "cosmosContainer": "catalog-images-001"
+}

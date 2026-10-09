@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000972",
+  "fingerprint": "36343702b7f88a2d96739407851cf23ed7979a123274f12cd528fb22ef2a233b",
+  "sha256": "8216bcc114bde988188f91ea48d4bc76e07840b478fe20fdc7478aa6ea1f6983",
+  "imagePath": "images/prod-000972.png",
+  "generatedAt": "2026-09-24T17:11:30.405739+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A low-profile trainers made from faux leather, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: low-profile. Material: faux leather. Colour: Sky Blue (reference colour #77AEDD). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000564",
+  "fingerprint": "29717e79d078624ba65dafe6f0bc4aac7e50e4e1ae010a9a9b3e5d0b6d7ba174",
+  "sha256": "3ca5002e4f70fe084ebc7b2ee361780cf08815cfb54207df21c0b081c373ed44",
+  "imagePath": "images/prod-000564.png",
+  "generatedAt": "2026-09-24T16:02:01.164287+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A wrap dress made from linen blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: wrap. Material: linen blend. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

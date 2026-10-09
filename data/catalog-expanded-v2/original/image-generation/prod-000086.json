@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000086",
+  "fingerprint": "7e937627ac58516ff0c56d78b1a91b28c4ed21680ec4a306654ab958ab84b0ca",
+  "sha256": "ecc8a9faed6c6f21f4955573c111b8d27a04c7b165ec5752410099dd8359d8bb",
+  "imagePath": "images/prod-000086.png",
+  "generatedAt": "2026-09-24T14:36:53.729354+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular shorts made from cotton twill, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: regular. Material: cotton twill. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

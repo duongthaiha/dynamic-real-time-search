@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000628",
+  "fingerprint": "0e91ec960343b98e81be92f1311578bff07a4c91afc9bd7113574baeb006b32b",
+  "sha256": "9c4c03e73d2d55e37116b60cf00f0a39667ffa653fef9599030dce3f37294bff",
+  "imagePath": "images/prod-000628.png",
+  "generatedAt": "2026-09-25T08:31:39.962461+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: boots. Style: ankle. Material: suede-look fabric. Colour: Forest Green (#3E654A). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

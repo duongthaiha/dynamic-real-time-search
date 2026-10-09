@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000013",
+  "fingerprint": "a06cfcaf8a52f61cfba3f158e48c2ce046d13c63e1b650ad821f28d1b9111213",
+  "sha256": "d4bc9de678c674df2d6bf70e911adbbc98d2360b26faa8457cecd0d7a87fa8e0",
+  "imagePath": "images/prod-000013.png",
+  "generatedAt": "2026-09-25T08:17:17.428195+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: boots. Style: lace-up. Material: suede-look fabric. Colour: Soft White (#EDEBE5). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

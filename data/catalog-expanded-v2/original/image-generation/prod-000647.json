@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000647",
+  "fingerprint": "b41bb5e0152b72da67042ac9d9849cbe51fa61edd7c9e21237c9e6d0d79cb975",
+  "sha256": "804f82fbdfdf9acd3e534d23f310625169d125a609fdaaf244b8813397853fc0",
+  "imagePath": "images/prod-000647.png",
+  "generatedAt": "2026-09-24T16:15:50.130954+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A wide-leg trousers made from linen blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trousers. Fit/style: wide-leg. Material: linen blend. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

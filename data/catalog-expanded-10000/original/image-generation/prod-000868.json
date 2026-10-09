@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000868",
+  "fingerprint": "a4378f59e7f79a34ef7cf880812990f2326023228a36f64995cf8a4889fd4c2e",
+  "sha256": "89cb3635b1c2907b36e1642a1cac4141cf7698ba69676e6d32417c98f2efc749",
+  "imagePath": "images/prod-000868.png",
+  "generatedAt": "2026-09-25T08:38:10.434911+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: boots. Style: lace-up. Material: suede-look fabric. Colour: Jet Black (#242424). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

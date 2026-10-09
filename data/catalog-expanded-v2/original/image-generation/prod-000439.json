@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000439",
+  "fingerprint": "f2c9e0a5a7426a3cc9079d889fd51928cf1aac030cad8d4ffd2ee40408c8ac60",
+  "sha256": "1f4bdd8025a9aa88b3a1ce7b51d6de7177f07c6f5494f0c93a2b223711c7552e",
+  "imagePath": "images/prod-000439.png",
+  "generatedAt": "2026-09-25T08:26:01.200168+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: coat. Style: oversized. Material: wool blend. Colour: Sage Green (#8EA58B). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

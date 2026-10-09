@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000631",
+  "fingerprint": "e7eba016488945da3567a0e9e4465bda1b44e1bee20bcac7e743c1a573af8aea",
+  "sha256": "dc8c25b6176e7192094ece1c18ad8986cf159fa768ec7b92734641331c0112f4",
+  "imagePath": "images/prod-000631.png",
+  "generatedAt": "2026-09-24T16:13:28.505954+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slim jeans made from stretch denim, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jeans. Fit/style: slim. Material: stretch denim. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

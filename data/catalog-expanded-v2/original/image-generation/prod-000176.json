@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000176",
+  "fingerprint": "5776cbd0963f4d3b975775e641b56c2c97239a2c8d7cf4c19cf7a6b045e8e7ce",
+  "sha256": "16098d81b698e4374ac615ca1c4ca05028152bfa377a0f7ee70d1374dc8600b9",
+  "imagePath": "images/prod-000176.png",
+  "generatedAt": "2026-09-24T14:51:53.782153+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular shorts made from linen blend, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: regular. Material: linen blend. Colour: Midnight Navy (reference colour #253451). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

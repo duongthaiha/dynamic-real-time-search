@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000594",
+  "fingerprint": "9c821e47bf3c734f82b1b89bfd4a48995dbc0cbe43f2dd3dc3a4da6a73182a06",
+  "sha256": "f863b9148fae2a14222abece05ea0c54bdf4117c6d834b5eccd728655c197873",
+  "imagePath": "images/prod-000594.png",
+  "generatedAt": "2026-09-25T08:31:00.199554+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: dress. Style: slip. Material: viscose. Colour: Warm Cream (#D9CDB5). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

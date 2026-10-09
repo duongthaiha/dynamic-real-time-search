@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000446",
+  "fingerprint": "450fad034cabfda78934879634608af542d3ae1c586212152aa1c07e3f7dddc8",
+  "sha256": "a1a9d008e65135ba8ad1c26e3d1d284643a26accdf5e2dbc3622ac8f679667b5",
+  "imagePath": "images/prod-000446.png",
+  "generatedAt": "2026-09-24T15:42:08.708483+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A longline shorts made from cotton twill, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: longline. Material: cotton twill. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

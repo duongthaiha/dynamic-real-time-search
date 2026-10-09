@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000775",
+  "fingerprint": "41e33fd4b55b2d35b3abf9380cc9b6aaae320b0b1ebd8bce0d7d9bf8cd5db812",
+  "sha256": "984cf16b07b8002ead5b50780467f505cba642da1cdddd96e2bdcd4bde756f2e",
+  "imagePath": "images/prod-000775.png",
+  "generatedAt": "2026-09-24T16:37:32.677287+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A pleated skirt made from satin-look fabric, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: skirt. Fit/style: pleated. Material: satin-look fabric. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

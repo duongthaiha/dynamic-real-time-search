@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000708",
+  "fingerprint": "b57cda464f8c1f8c8d09e89c4ca9221c523921ec088105dda3576641f82fd5cd",
+  "sha256": "afb2b47302147544bb4f996141b703a58b774673d660788dd9af6cd962531447",
+  "imagePath": "images/prod-000708.png",
+  "generatedAt": "2026-09-25T08:34:09.884083+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: relaxed. Material: denim. Colour: Butter Yellow (#D8BF63). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

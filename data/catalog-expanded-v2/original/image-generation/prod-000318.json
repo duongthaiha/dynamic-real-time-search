@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000318",
+  "fingerprint": "38e810148c7943060271e963fca91765a26a6ab323b105d9509fd17d2a34a10f",
+  "sha256": "d5806d3b664513d98a0ac56d95a1ef5187f29f158a1683e2ff491f2192434f91",
+  "imagePath": "images/prod-000318.png",
+  "generatedAt": "2026-09-25T08:23:51.324167+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: relaxed. Material: faux leather. Colour: Dusty Pink (#C78F9C). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

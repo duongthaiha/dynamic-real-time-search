@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000389",
+  "fingerprint": "f3d2058546908ddd58907a1503afe472c5a0897173102d467a623c4d38f276ec",
+  "sha256": "f589c1470b2d80a95cb0a762cc9cdd1e6e993febfa1ebc48305bf90b2a6b81a0",
+  "imagePath": "images/prod-000389.png",
+  "generatedAt": "2026-09-24T15:32:07.687850+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A crossbody bag made from faux leather, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: bag. Fit/style: crossbody. Material: faux leather. Colour: Chocolate Brown (reference colour #654536). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

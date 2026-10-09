@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000369",
+  "fingerprint": "ff189017a4ce3771c11b679913f9e636daafc3ae178d0392c2e856f43d20d8e8",
+  "sha256": "c5cdded366e72a6fca181c803c911d0d550645f1addb21a34333bbaecce59362",
+  "imagePath": "images/prod-000369.png",
+  "generatedAt": "2026-09-24T15:28:36.362372+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A bodycon dress made from satin-look fabric, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: dress. Fit/style: bodycon. Material: satin-look fabric. Colour: Butter Yellow (reference colour #D8BF63). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

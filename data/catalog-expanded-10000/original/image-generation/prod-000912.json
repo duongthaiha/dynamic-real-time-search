@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000912",
+  "fingerprint": "223c4962e07141cb7d73f1db7da9e48002d8688428a62d5dd4d24c22f22cd2e4",
+  "sha256": "5fca6b71c17b9c7d8c45c2af89f72b7a1ac8c819bcb94d4d7329c1af96b0b4f9",
+  "imagePath": "images/prod-000912.png",
+  "generatedAt": "2026-09-24T17:01:19.209192+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A retro trainers made from faux leather, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: retro. Material: faux leather. Colour: Burnt Orange (reference colour #B76532). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

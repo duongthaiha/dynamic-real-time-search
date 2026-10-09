@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000890",
+  "fingerprint": "f72c979a0c8a0767a7fea67a1e0e3c45819747bc0ee4fe485f254993f346fea1",
+  "sha256": "38ec8c2174b616d3dcc7062398ade757993bbf73223b50ab542d539423e2def7",
+  "imagePath": "images/prod-000890.png",
+  "generatedAt": "2026-09-25T08:39:10.836099+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: shirt. Style: oversized. Material: organic cotton. Colour: Sky Blue (#77AEDD). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

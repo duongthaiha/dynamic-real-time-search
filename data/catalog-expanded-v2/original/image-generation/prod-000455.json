@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000455",
+  "fingerprint": "a6effd08a0af24268901c4a72176721898896c6e9df3798416c4e414a05d4674",
+  "sha256": "b69a5f3e3410453f61614765f4823b2b6a99e1293370728d028ef83764940ec0",
+  "imagePath": "images/prod-000455.png",
+  "generatedAt": "2026-09-25T08:26:41.521802+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: shirt. Style: slim. Material: organic cotton. Colour: Jet Black (#242424). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

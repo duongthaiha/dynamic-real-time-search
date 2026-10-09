@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000521",
+  "fingerprint": "1986e77d25aded11b7484dd6267c89c0d0f12f02a3c1997faad2aa559c12485e",
+  "sha256": "8753f1493f3b02a4896f40d13db0168f2781ed040d581e2d557ce8077d97a077",
+  "imagePath": "images/prod-000521.png",
+  "generatedAt": "2026-09-25T08:28:31.458675+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: shorts. Style: regular. Material: linen blend. Colour: Dusty Pink (#C78F9C). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

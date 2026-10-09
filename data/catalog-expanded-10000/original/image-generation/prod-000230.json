@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000230",
+  "fingerprint": "5676a499557ad3b3db6038999b2cb17b0cd60e368f3a40794cca27c1b499afae",
+  "sha256": "a2a5a4dc51bd4225ed3740e74f1492b7347deb28c0baf4709b66e8163a02cb4d",
+  "imagePath": "images/prod-000230.png",
+  "generatedAt": "2026-09-24T15:00:53.828079+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slim shirt made from organic cotton, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shirt. Fit/style: slim. Material: organic cotton. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

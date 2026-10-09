@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000957",
+  "fingerprint": "9e57201d053fabeb1f8afa506b8185c86a67235f4eaed92bced16c4d03578f68",
+  "sha256": "8474f36243887916021928fba0571201132680e7a4d953bc4de90d9354b9cbcb",
+  "imagePath": "images/prod-000957.png",
+  "generatedAt": "2026-09-24T17:09:00.992586+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A low-profile trainers made from faux leather, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: low-profile. Material: faux leather. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

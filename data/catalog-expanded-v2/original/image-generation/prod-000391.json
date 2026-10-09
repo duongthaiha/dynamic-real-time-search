@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000391",
+  "fingerprint": "ac417810865e495f48746c74d989fd29d01632fed60fcf8527ca23041f0661d4",
+  "sha256": "faa26dc5d086289e36cdf134f777b83b961c17f9dd034b1c5b3e9d7c89677a12",
+  "imagePath": "images/prod-000391.png",
+  "generatedAt": "2026-09-25T08:25:22.101247+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jeans. Style: straight-leg. Material: cotton denim. Colour: Butter Yellow (#D8BF63). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

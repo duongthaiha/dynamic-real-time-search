@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000888",
+  "fingerprint": "24be568b1192c9a356f06eea9946ab6366d4b7a59ab1510c715d6d6273b76a94",
+  "sha256": "73a1fb6a5fbdf5809f6e1e2333cb133a8bd05b280e2dcde91b5da490858fc3fa",
+  "imagePath": "images/prod-000888.png",
+  "generatedAt": "2026-09-25T08:39:01.275195+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: oversized. Material: cotton twill. Colour: Slate Grey (#777D84). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

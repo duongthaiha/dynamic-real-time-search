@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000712",
+  "fingerprint": "52f8bc26ebc3db2711120c38aa1bc34f0fec998c7f3ddbeab8d7c0b5a527eb73",
+  "sha256": "d027c9c13e7a76e9b78976dc9c6d09a8cbe5aa0566eaf14169a1967b81bbecfd",
+  "imagePath": "images/prod-000712.png",
+  "generatedAt": "2026-09-24T16:27:09.524111+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular jumper made from recycled yarn, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jumper. Fit/style: regular. Material: recycled yarn. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

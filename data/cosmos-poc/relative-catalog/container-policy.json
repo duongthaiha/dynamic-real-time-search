@@ -1,0 +1,36 @@
+{
+  "partitionKey": {
+    "paths": [
+      "/scopeId"
+    ],
+    "kind": "Hash"
+  },
+  "fullTextPolicy": {
+    "defaultLanguage": "en-US",
+    "fullTextPaths": [
+      {
+        "path": "/searchText",
+        "language": "en-US"
+      }
+    ]
+  },
+  "indexingPolicy": {
+    "indexingMode": "consistent",
+    "automatic": true,
+    "includedPaths": [
+      {
+        "path": "/*"
+      }
+    ],
+    "excludedPaths": [
+      {
+        "path": "/\"_etag\"/?"
+      }
+    ],
+    "fullTextIndexes": [
+      {
+        "path": "/searchText"
+      }
+    ]
+  }
+}

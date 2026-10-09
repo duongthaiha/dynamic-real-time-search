@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000182",
+  "fingerprint": "73c1211fdeb7650ec72cf1dfee779894307663459e3fc4ddb4ea5c65d1e7bf0a",
+  "sha256": "9959a39b45634ee11cad5a70415183510ee5231ee14ff0c717e838abeaae98bf",
+  "imagePath": "images/prod-000182.png",
+  "generatedAt": "2026-09-24T14:52:54.282246+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tapered trousers made from recycled polyester, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trousers. Fit/style: tapered. Material: recycled polyester. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

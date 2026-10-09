@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000307",
+  "fingerprint": "1e97d666eee9da53597df2367ab81cb3cf3e762fa6ad8fa1e89776ba3c047aa5",
+  "sha256": "7c59bba2c5434e0e75112dad897ccaa4178723ac980ae2317f501f102400957e",
+  "imagePath": "images/prod-000307.png",
+  "generatedAt": "2026-09-25T08:23:21.183375+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jumper. Style: regular. Material: recycled yarn. Colour: Sage Green (#8EA58B). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

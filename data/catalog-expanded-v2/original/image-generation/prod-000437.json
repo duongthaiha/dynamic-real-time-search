@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000437",
+  "fingerprint": "1e42dd1839010a1f2772ea03e0646d06b1a59e1c682f2c013f75c430eeb1d600",
+  "sha256": "d0a948dd0d3eaeb83890ba12d756da1f907bea544bc2ddaacfa5496a00b21a74",
+  "imagePath": "images/prod-000437.png",
+  "generatedAt": "2026-09-24T15:40:28.975425+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A wide-leg trousers made from linen blend, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trousers. Fit/style: wide-leg. Material: linen blend. Colour: Burnt Orange (reference colour #B76532). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "productId": "PROD-001001",
+  "productTitle": "Field Note baggy jeans in dusty pink - wide stripe, minimal seams, cream accents",
+  "category": "jeans",
+  "photography": {
+    "revision": "adult-fashion-v1",
+    "presentation": "modelled",
+    "adultModel": "woman",
+    "skinTone": "deep brown",
+    "bodyType": "slender"
+  },
+  "state": "verified",
+  "sha256": "8b2d72a996abe55854a4e57a9ea0cd105a570ea9c1d3425c93eb801a7786c20b",
+  "imageBytes": 1210077,
+  "verifiedAt": "2026-10-07T23:19:13.888298+00:00",
+  "anonymousGetSha256Matches": true,
+  "contentType": "image/png",
+  "receipts": [
+    {
+      "requestId": "94cdb2e5-8a0b-4d97-a09f-0823a12ed8c2",
+      "usage": {
+        "num_output_tokens": 1024,
+        "num_input_text_tokens": 207,
+        "num_input_image_tokens": 0
+      },
+      "receivedAt": "2026-10-07T23:19:11.556200+00:00"
+    }
+  ],
+  "budgets": [
+    {
+      "name": "calibration-one-request-001",
+      "limit_calls": 1,
+      "used_calls": 1
+    },
+    {
+      "name": "calibration-original-upload-001",
+      "limit_calls": 0,
+      "used_calls": 0
+    }
+  ],
+  "imageUrl": "https://strezolvefrv3w6fiiwjwi.blob.core.windows.net/product-images-scale-001/prod-001001.png",
+  "estimatedModelCostUsd": "0.01981825",
+  "estimated80MoreAtSameUsageUsd": "1.58546000",
+  "estimated1999000AtSameUsageUsd": "39616.68175000",
+  "costIsRetailEstimateNotInvoice": true,
+  "visualReview": "Product fully framed, dusty pink baggy jeans and adult model; requested wide-stripe pattern is not clearly represented. Human product-fidelity approval pending.",
+  "anonymousListingDeniedStatus": 404,
+  "originalSourceUnchanged": true
+}

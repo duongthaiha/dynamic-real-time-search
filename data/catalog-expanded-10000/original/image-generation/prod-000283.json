@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000283",
+  "fingerprint": "5d8e8ece3a986e594df4694d183429d22d0992ad9a0db6fe2b5a5898bc3409b7",
+  "sha256": "7e57121c9a5fea629e8b46152929b1c8eae6574d3828deadd121b8d5e24ece76",
+  "imagePath": "images/prod-000283.png",
+  "generatedAt": "2026-09-25T08:22:49.726339+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: boots. Style: ankle. Material: suede-look fabric. Colour: Deep Plum (#664A70). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

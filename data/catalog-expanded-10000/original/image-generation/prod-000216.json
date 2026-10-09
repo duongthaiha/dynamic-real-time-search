@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000216",
+  "fingerprint": "363ed14333ffc1c6075aa2fad17a93eea61fb9884cac339316de490464c25089",
+  "sha256": "8717e40240ce43fad9ebe2de9ab83d5a3cd42ab9aba4ace39e34f38776105caf",
+  "imagePath": "images/prod-000216.png",
+  "generatedAt": "2026-09-24T14:58:35.413858+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slim T-shirt made from organic cotton, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: slim. Material: organic cotton. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

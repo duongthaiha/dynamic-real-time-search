@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000239",
+  "fingerprint": "f47d6740e6c8eda5f6b6e01ebbededb91d5be4a412af903121b209bc19730c8b",
+  "sha256": "a496435db4c237da75895b7dddfe69bfe8bb296d390add103fa1acdcbe57bb01",
+  "imagePath": "images/prod-000239.png",
+  "generatedAt": "2026-09-24T15:02:24.757689+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A backpack bag made from cotton canvas, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: bag. Fit/style: backpack. Material: cotton canvas. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

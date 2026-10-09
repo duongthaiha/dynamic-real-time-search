@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000046",
+  "fingerprint": "9b9ee1ce201fc9fb6f57fe7616c2ab3b681565da0e4f36f4347ff9a5e66320df",
+  "sha256": "01f326eb2617293afd0faea1efb1800b501a84741014c8310b062eeab56968ce",
+  "imagePath": "images/prod-000046.png",
+  "generatedAt": "2026-09-24T14:30:14.032092+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slim jeans made from recycled-cotton denim, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jeans. Fit/style: slim. Material: recycled-cotton denim. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

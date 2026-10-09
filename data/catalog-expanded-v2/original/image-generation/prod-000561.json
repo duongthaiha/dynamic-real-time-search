@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000561",
+  "fingerprint": "99c0665780b40bcf83893b24dc0a05bdd7e7226eba351da6ab892d9bc0ba078b",
+  "sha256": "4855227514d839bd92a0be25edf4fe5562801e36abf79db6ce14c6d1b663ac0c",
+  "imagePath": "images/prod-000561.png",
+  "generatedAt": "2026-09-24T16:02:19.024571+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized T-shirt made from recycled-cotton blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: oversized. Material: recycled-cotton blend. Colour: Warm Cream (reference colour #D9CDB5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

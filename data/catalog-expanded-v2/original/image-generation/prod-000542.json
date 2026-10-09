@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000542",
+  "fingerprint": "9d0b49e8289b55687e29c75c94343944a220d8ffdf2333f8c75540ef4f10274d",
+  "sha256": "cfb1f393b60a90a0dd7508122e1a0964a79e87376aa40cc0c38e07a0d03455de",
+  "imagePath": "images/prod-000542.png",
+  "generatedAt": "2026-09-24T15:58:09.107283+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A wide-leg trousers made from cotton twill, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trousers. Fit/style: wide-leg. Material: cotton twill. Colour: Butter Yellow (reference colour #D8BF63). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

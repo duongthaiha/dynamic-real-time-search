@@ -9,6 +9,4 @@ __pycache__/
 .env
 .env.local
 .local/
-data/cosmos-poc/
-data/catalog-expanded*/
-data/catalog-pilot*/
+

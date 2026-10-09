@@ -1,0 +1,21 @@
+{
+  "catalogVersion": "synthetic-fashion-v2",
+  "productCount": 2000000,
+  "variantCount": 8224250,
+  "states": {
+    "pending": 1999000,
+    "staged": 1000
+  },
+  "imageStorage": "remote-backed; only originals and staging are local",
+  "ready": false,
+  "peakWorkingSetBytes": 37675008,
+  "memoryBudgetBytes": 536870912,
+  "sourceSha256": "66a9569c301b28e82e3d6f3e073091eb7b09fa51d047aacc9b9001753aa2dd45",
+  "exportSha256": "e51e4a19f172c51e23b12b1cf937a2302649aac9a363d2e050b41baf94d14964",
+  "databaseBytes": 7818108928,
+  "exportBytes": 4537628987,
+  "promptCount": 1999000,
+  "promptsSha256": "1599a6a05067797f17ac754bde9a4693ed115ddaec914425f1949247b9a10da4",
+  "promptsBytes": 2366201719,
+  "cloudCalls": 0
+}

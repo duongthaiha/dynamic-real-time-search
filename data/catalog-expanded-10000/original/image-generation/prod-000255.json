@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000255",
+  "fingerprint": "356e52d3e4688a15d6599a7cc315503de9cf4497879c9662b2109d12cabea2b5",
+  "sha256": "3a38210e27090c66c5386cee0241b74fef78c572be1f83e1a3e9c28b042cfac5",
+  "imagePath": "images/prod-000255.png",
+  "generatedAt": "2026-09-25T08:22:09.804585+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: cap. Style: five-panel. Material: organic cotton. Colour: Chocolate Brown (#654536). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

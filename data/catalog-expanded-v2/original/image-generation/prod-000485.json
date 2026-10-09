@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000485",
+  "fingerprint": "26e57509c1ffd094a8f40c6eeab09a36a92b5c17c5699c0b945f387f3b3f8aa4",
+  "sha256": "0234573f1c0792893f303a3376e01dd727d0df02de43ab785ca9b9258faafe0b",
+  "imagePath": "images/prod-000485.png",
+  "generatedAt": "2026-09-25T08:27:41.274675+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: shirt. Style: regular. Material: organic cotton. Colour: Dusty Pink (#C78F9C). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

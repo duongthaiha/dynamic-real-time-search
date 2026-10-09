@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000632",
+  "fingerprint": "67da52ccb3c0ca950a3b8dafdc156941cfde881656c9729e7dbebc839d812779",
+  "sha256": "e2b081ba87edcf02ff9c349d03020987e365427b9c007430cd3ff6493204f96f",
+  "imagePath": "images/prod-000632.png",
+  "generatedAt": "2026-09-24T16:13:19.642068+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed trousers made from recycled polyester, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trousers. Fit/style: relaxed. Material: recycled polyester. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

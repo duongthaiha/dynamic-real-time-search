@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000532",
+  "fingerprint": "d52eb16f563dce93e0e242b5e82b6c346219d2b0693ff93ef3e5d473e60af94f",
+  "sha256": "83bd444b0b71d9b0804894441d155e71d4f92ca1629becb26c4474efd2aaf91e",
+  "imagePath": "images/prod-000532.png",
+  "generatedAt": "2026-09-25T08:29:05.298651+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jumper. Style: oversized. Material: recycled yarn. Colour: Deep Plum (#664A70). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

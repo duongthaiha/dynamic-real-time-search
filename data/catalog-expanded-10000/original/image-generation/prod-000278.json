@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000278",
+  "fingerprint": "f50d7fb8186fa27d17acaf25a5e0c105e37bb5e1c2e0d3b62356b6b6a3276c78",
+  "sha256": "db7c74566442b5789bcdc88c3eca7da37c03de643565dde93bc2805553884098",
+  "imagePath": "images/prod-000278.png",
+  "generatedAt": "2026-09-25T08:22:40.397307+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: hoodie. Style: regular. Material: organic-cotton blend. Colour: Slate Grey (#777D84). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

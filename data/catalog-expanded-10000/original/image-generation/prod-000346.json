@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000346",
+  "fingerprint": "f65703c47bd583f94bf3de68720024fa69f237430be2b355893aa9df009a1e0d",
+  "sha256": "d4b80ee3249254d1a1cd55c25bd25850a0bbe5f5d4e149b23296004b7bec5655",
+  "imagePath": "images/prod-000346.png",
+  "generatedAt": "2026-09-24T15:24:46.271530+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A baggy jeans made from stretch denim, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jeans. Fit/style: baggy. Material: stretch denim. Colour: Midnight Navy (reference colour #253451). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

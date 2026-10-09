@@ -1,0 +1,11 @@
+{
+  "importEpoch": "catalog-images-001",
+  "resourceGroup": "rg-rezolve-search-poc-uks",
+  "endpoint": "https://cosmos-rezolve-frv3w6fiiwjwi.documents.azure.com:443/",
+  "imageContainer": "product-images",
+  "container": "catalog-images-001",
+  "imageBaseUrl": "https://strezolvefrv3w6fiiwjwi.blob.core.windows.net/",
+  "database": "commerce-search-poc",
+  "storageAccount": "strezolvefrv3w6fiiwjwi",
+  "accountName": "cosmos-rezolve-frv3w6fiiwjwi"
+}

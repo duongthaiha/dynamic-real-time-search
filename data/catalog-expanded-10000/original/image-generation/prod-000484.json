@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000484",
+  "fingerprint": "85aacf99d652e3c17bedc3974beca177bbf4652c2dada9921cde991fb976dd2a",
+  "sha256": "49b63f0556a38020d6a27587d5b68f3dc70ca209f39ed31415c646b62437893c",
+  "imagePath": "images/prod-000484.png",
+  "generatedAt": "2026-09-24T15:48:29.554526+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed coat made from recycled polyester, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: relaxed. Material: recycled polyester. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

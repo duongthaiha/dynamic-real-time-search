@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000408",
+  "fingerprint": "453c0bd6920791c1290209faa451507371476757b1cb729fe7854fa91d723ee1",
+  "sha256": "0c32435bd048d5ff680bf0c1fda874cacfb531223ece9450d16d42a1d083023a",
+  "imagePath": "images/prod-000408.png",
+  "generatedAt": "2026-09-24T15:35:39.425784+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed jacket made from denim, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: relaxed. Material: denim. Colour: Slate Grey (reference colour #777D84). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

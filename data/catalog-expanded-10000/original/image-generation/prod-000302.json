@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000302",
+  "fingerprint": "6e87478d931546b848027263aed0b1edba5fd5d79c8e5580d4da25111d9dd997",
+  "sha256": "aeccfbeab10f0b520051525b5f53fef5a1389236dc9e008524a52e60b7c943e0",
+  "imagePath": "images/prod-000302.png",
+  "generatedAt": "2026-09-25T08:23:01.037220+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trousers. Style: tapered. Material: cotton twill. Colour: Warm Cream (#D9CDB5). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

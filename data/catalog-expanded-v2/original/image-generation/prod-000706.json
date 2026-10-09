@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000706",
+  "fingerprint": "92f6fce34bfbc33b6d5985596a81e45b4c168cc571cbe288841efb1859dd5ab1",
+  "sha256": "c1159949764b3a7d205f4a5c24064aeef2ff43ce61d13cb7a5e8872a2d031b7c",
+  "imagePath": "images/prod-000706.png",
+  "generatedAt": "2026-09-25T08:34:02.060440+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jeans. Style: baggy. Material: cotton denim. Colour: Slate Grey (#777D84). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

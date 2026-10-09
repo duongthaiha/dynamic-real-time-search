@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000161",
+  "fingerprint": "55dd9def9f8fad51666a8bf4260c142e0767180b04965833a36a3c12d41c9b0c",
+  "sha256": "f91e2dc43b6370780ce9f2cd27001261175052c59bbcff551db8785dda998687",
+  "imagePath": "images/prod-000161.png",
+  "generatedAt": "2026-09-24T14:49:23.476568+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed shorts made from cotton twill, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shorts. Fit/style: relaxed. Material: cotton twill. Colour: Warm Cream (reference colour #D9CDB5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

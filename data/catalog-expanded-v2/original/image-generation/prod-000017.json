@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000017",
+  "fingerprint": "c486b5781e22478b4ef3f0b72db593e7b7c9e1f7b9493d3b08390c5f95c45509",
+  "sha256": "4c2c64e61a09b10fce4624bd9a6e4c80da84e91c0b8eee92e2546f5f0e1c7e8c",
+  "imagePath": "images/prod-000017.png",
+  "generatedAt": "2026-09-24T14:25:40.425456+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tapered trousers made from recycled polyester, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trousers. Fit/style: tapered. Material: recycled polyester. Colour: Butter Yellow (reference colour #D8BF63). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

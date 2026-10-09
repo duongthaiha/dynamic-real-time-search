@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000177",
+  "fingerprint": "9bed1603ea84707e028bce4d2605242fdd7b1692720ea0cb2e705af9ed3ee1bd",
+  "sha256": "ec9bfadfd970c65c2b76c495a22ab13483983b5dc8dc1b524d5bdbdd2bfdd947",
+  "imagePath": "images/prod-000177.png",
+  "generatedAt": "2026-09-24T14:52:04.024876+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A low-profile trainers made from recycled mesh, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: low-profile. Material: recycled mesh. Colour: Cherry Red (reference colour #A73538). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

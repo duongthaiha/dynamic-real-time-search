@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000486",
+  "fingerprint": "b7429d80de4c7bfbb32e87d3ca1430afd2efff81cccff110795e7616e768df17",
+  "sha256": "2cbade40ba7219c4c26187cb4dac7748fa774cdcb47f2ea2b9585b36791c0345",
+  "imagePath": "images/prod-000486.png",
+  "generatedAt": "2026-09-24T15:48:49.315384+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A slim T-shirt made from cotton jersey, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: T-shirt. Fit/style: slim. Material: cotton jersey. Colour: Dusty Pink (reference colour #C78F9C). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

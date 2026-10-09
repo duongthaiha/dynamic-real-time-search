@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000808",
+  "fingerprint": "17c95265d6221b1c553ae493e9fa256d075697af580de5b87a71feb716b3266c",
+  "sha256": "a0e060652bdf32957c425ac82a96598c18baa938d3e2fa1f6ff45db645b48f32",
+  "imagePath": "images/prod-000808.png",
+  "generatedAt": "2026-09-24T16:43:40.390322+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A hiking-inspired boots made from faux leather, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: hiking-inspired. Material: faux leather. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

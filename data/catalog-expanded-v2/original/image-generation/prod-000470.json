@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000470",
+  "fingerprint": "7a5a8e82c52e545156828a7f9905f1f2cb6349908d05318130591987e8cf0d4b",
+  "sha256": "98edd6391ea9e44dc2de8aff82c7602f4eed659c06ef8d8ee5998651676c53ab",
+  "imagePath": "images/prod-000470.png",
+  "generatedAt": "2026-09-24T15:46:09.079058+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A relaxed shirt made from linen blend, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shirt. Fit/style: relaxed. Material: linen blend. Colour: Stone Beige (reference colour #B8A58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

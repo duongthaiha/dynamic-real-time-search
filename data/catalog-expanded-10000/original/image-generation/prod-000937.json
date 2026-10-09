@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000937",
+  "fingerprint": "f1cb5865c6d64705b14bfbf3dc2ae0d6a518ab0dfe54c102ba8b0e465c8031ab",
+  "sha256": "e13bb719ca7fdd3cdea2d8b58ec6c0cfcd9b278ab17148b1bd9746acead78a2a",
+  "imagePath": "images/prod-000937.png",
+  "generatedAt": "2026-09-24T17:05:29.574666+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A cropped jumper made from cotton knit, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jumper. Fit/style: cropped. Material: cotton knit. Colour: Soft White (reference colour #EDEBE5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

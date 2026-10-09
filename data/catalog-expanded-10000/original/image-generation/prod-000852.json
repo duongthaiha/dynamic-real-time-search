@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000852",
+  "fingerprint": "34529a22baa24ad74ca9aadf063237447b608db1425a33d788bd9dd3054b407d",
+  "sha256": "c140bee3084f656df980ff247a94d95690770914f197a16b15fc9637e9f8e945",
+  "imagePath": "images/prod-000852.png",
+  "generatedAt": "2026-09-25T08:37:51.506963+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trainers. Style: chunky. Material: recycled mesh. Colour: Sage Green (#8EA58B). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

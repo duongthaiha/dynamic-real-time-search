@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000372",
+  "fingerprint": "6612e73aa186ba92f69f788a45a3d0ef80d89838acb8264a25be8710948c84ac",
+  "sha256": "3ad9c9f5612cb836e3e536b336a5cf92fcec499541b0a748edf3b0b09552e37b",
+  "imagePath": "images/prod-000372.png",
+  "generatedAt": "2026-09-24T15:29:05.253908+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A running-inspired trainers made from textile and synthetic upper, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: running-inspired. Material: textile and synthetic upper. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000883",
+  "fingerprint": "8125ff1c2c6c3b12af8dea80e0817c7db0c84a5b0d0c53cefa6867a8f7de5aa7",
+  "sha256": "9d761212aa2e7762bdac93cf16222568aca5dbe200f1eab4fa7db28e730556e2",
+  "imagePath": "images/prod-000883.png",
+  "generatedAt": "2026-09-24T16:56:19.349193+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A Chelsea boots made from textile and synthetic upper, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: Chelsea. Material: textile and synthetic upper. Colour: Dark Wash Blue (reference colour #315C86). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

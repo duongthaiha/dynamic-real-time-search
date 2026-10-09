@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000142",
+  "fingerprint": "0a709da3374d83307898176130409120e6d92c10e3e3b50b51978cc1860fff25",
+  "sha256": "b79867558491a0783b3ffa87bc1cee09e3a3fa246d245fd4e4a131065fa9d6fb",
+  "imagePath": "images/prod-000142.png",
+  "generatedAt": "2026-09-25T08:20:19.006069+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jumper. Style: relaxed. Material: cotton knit. Colour: Deep Plum (#664A70). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

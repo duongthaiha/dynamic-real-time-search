@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000649",
+  "fingerprint": "c29972e7715d95e2291f49940de8ff4404a1a57652b853dee3a6c88c80b2c620",
+  "sha256": "02ce4f2072df65e6f82250441d57f8f5d25d887c1b123be973bb9c58753bd060",
+  "imagePath": "images/prod-000649.png",
+  "generatedAt": "2026-09-25T08:32:21.579842+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: coat. Style: regular. Material: cotton twill. Colour: Soft White (#EDEBE5). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000560",
+  "fingerprint": "fc31c5b409f166be5eccb1b228f1ad847164908164dc75a6626b17e203ce064a",
+  "sha256": "d453e286fa0fe211ed22a5f01fe74917f29ffdeaf8ce67e0215245fa97f8e521",
+  "imagePath": "images/prod-000560.png",
+  "generatedAt": "2026-09-25T08:29:33.366946+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: shirt. Style: oversized. Material: viscose. Colour: Chocolate Brown (#654536). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

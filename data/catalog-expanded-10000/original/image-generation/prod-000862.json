@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000862",
+  "fingerprint": "f59344a84aa19f0897416b596a561333c48ff86dd7fe436ef2aef7a38fc10b97",
+  "sha256": "626bea81db0f958a0eac67a9ed10d65af60ae2ee3084d7e0cf322142ddeca0c9",
+  "imagePath": "images/prod-000862.png",
+  "generatedAt": "2026-09-25T08:38:00.155714+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jumper. Style: cropped. Material: cotton knit. Colour: Dusty Pink (#C78F9C). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

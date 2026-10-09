@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000646",
+  "fingerprint": "28b6acabdd1038e1083d9e2aa7ce7c01eab18d724739753d9d9c2afab62fa7f2",
+  "sha256": "8b9c006dfc190958602aae9a07068fe11c583cdec153187dce6f1cebd96c2ab9",
+  "imagePath": "images/prod-000646.png",
+  "generatedAt": "2026-09-25T08:32:15.076805+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jeans. Style: slim. Material: recycled-cotton denim. Colour: Dusty Pink (#C78F9C). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

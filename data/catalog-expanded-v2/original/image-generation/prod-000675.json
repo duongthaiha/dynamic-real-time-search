@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000675",
+  "fingerprint": "52125f4626b327b50f428c4885d64ac350e655505eb9e8c3b09b6483c5d473b5",
+  "sha256": "f0d6239b85c022c9154d25ba7bb372faf92ce5fec5b0d97aa2efbf55ca6482d7",
+  "imagePath": "images/prod-000675.png",
+  "generatedAt": "2026-09-25T08:33:02.129227+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: cap. Style: beanie. Material: recycled polyester. Colour: Warm Cream (#D9CDB5). One complete item, fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

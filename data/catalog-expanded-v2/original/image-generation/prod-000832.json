@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000832",
+  "fingerprint": "70f68b90916197036678a193885c2d120ac395d5af042b268387828c0d680a8b",
+  "sha256": "033c6afdd136bc2e9c560435bd3d176f16db0e9bc9215379dcbd948e86e088a5",
+  "imagePath": "images/prod-000832.png",
+  "generatedAt": "2026-09-25T08:37:22.043296+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jumper. Style: oversized. Material: cotton knit. Colour: Butter Yellow (#D8BF63). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

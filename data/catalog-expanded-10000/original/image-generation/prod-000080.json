@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000080",
+  "fingerprint": "57092ecc3e0994f1748eb19126877a6594a1deced8014f49fd06696703ae7a70",
+  "sha256": "66faa4e0c3f1747bc4a0bbd3503d68bc154cd8cc2fe07fc965b71544fcbbb101",
+  "imagePath": "images/prod-000080.png",
+  "generatedAt": "2026-09-24T14:36:06.614670+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized shirt made from organic cotton, finished with everyday construction. Designed as a synthetic retail product for search and ranking demonstrations. Product type: shirt. Fit/style: oversized. Material: organic cotton. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

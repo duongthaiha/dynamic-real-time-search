@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000568",
+  "fingerprint": "7c803602e6a24e113a0df8f53b8f881679eb143ed7d320aefb4492fddefe735c",
+  "sha256": "f93a5d9b966bcf6520ec0309ed5d5eac68e69412d12ffef1f2e3625df425a93f",
+  "imagePath": "images/prod-000568.png",
+  "generatedAt": "2026-09-25T08:29:41.155070+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: boots. Style: Chelsea. Material: textile and synthetic upper. Colour: Sky Blue (#77AEDD). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

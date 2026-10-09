@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000274",
+  "fingerprint": "d5ee647fbfdf4d41963f4a2c4dfc66d2ea2105889505791e7da1f2c1be1855c4",
+  "sha256": "0b73da27c59497fdea44a375ed712a16cc2e97e52967690644f944550b56d55b",
+  "imagePath": "images/prod-000274.png",
+  "generatedAt": "2026-09-25T08:22:21.216831+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: coat. Style: longline. Material: wool blend. Colour: Midnight Navy (#253451). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

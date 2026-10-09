@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000387",
+  "fingerprint": "f5afab678718ad4402468097b7a1efa1d5e589c4970d9720ffb6f86b7f63ac8a",
+  "sha256": "e3e345cb988fc29ccf283159f0e70b9a5ab922e91f5f35e8479078cf2ed4eb30",
+  "imagePath": "images/prod-000387.png",
+  "generatedAt": "2026-09-25T08:25:12.715238+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: trainers. Style: low-profile. Material: textile and synthetic upper. Colour: Cherry Red (#A73538). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000843",
+  "fingerprint": "4253b66ff3857dffb946f842cd8181a458716683016a18932c643eef100f0cda",
+  "sha256": "ae931b181b18944e3c91c115c26eabb42acf3342d5de26691e9961aa3d506cc1",
+  "imagePath": "images/prod-000843.png",
+  "generatedAt": "2026-09-25T08:37:30.246270+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jacket. Style: cropped. Material: denim. Colour: Dark Wash Blue (#315C86). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000526",
+  "fingerprint": "e1935a6e500ac901e36347e44385cc7bf611656e457afea9b73db2f4ca3736e7",
+  "sha256": "3e8d906b58e88e62b2e6b1e4b88481f560dcf620653af17fc9dda57ce60c23fb",
+  "imagePath": "images/prod-000526.png",
+  "generatedAt": "2026-09-25T08:28:52.094467+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: jeans. Style: baggy. Material: recycled-cotton denim. Colour: Sage Green (#8EA58B). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

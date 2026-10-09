@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000313",
+  "fingerprint": "f259400fadcd4b5686354c7d9c803313853008a522f841a0a91cfcc8cd5295f1",
+  "sha256": "f4cba98b23afda9cee8c8cb5ab0e7fd12d136327c17180536f35836c4eb7700f",
+  "imagePath": "images/prod-000313.png",
+  "generatedAt": "2026-09-25T08:23:29.924661+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: boots. Style: Chelsea. Material: faux leather. Colour: Slate Grey (#777D84). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

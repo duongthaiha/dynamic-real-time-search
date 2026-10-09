@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000162",
+  "fingerprint": "0ffbc92c328599144708a4bf557470f3110b4869f90dbb5f9d76ac121ea9b15e",
+  "sha256": "6666740b58d69279a034780e05b610e7df6f3f13f1283e543a9097bbdbde484f",
+  "imagePath": "images/prod-000162.png",
+  "generatedAt": "2026-09-24T14:49:33.532448+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A running-inspired trainers made from faux leather, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: trainers. Fit/style: running-inspired. Material: faux leather. Colour: Butter Yellow (reference colour #D8BF63). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

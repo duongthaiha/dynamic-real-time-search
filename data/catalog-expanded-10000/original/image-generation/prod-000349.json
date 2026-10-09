@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000349",
+  "fingerprint": "d0955e01ae342086243fe94eeb8ad010d6e5d89ea8df70904064bff21f460192",
+  "sha256": "f3bf67d72c0244e3f8fdf2df9c525e5d9a862253b7a7d7a1e80b11b0eefd687e",
+  "imagePath": "images/prod-000349.png",
+  "generatedAt": "2026-09-24T15:25:15.071326+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized coat made from wool blend, finished with utility detailing. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: oversized. Material: wool blend. Colour: Cherry Red (reference colour #A73538). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

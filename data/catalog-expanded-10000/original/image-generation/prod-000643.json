@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000643",
+  "fingerprint": "f3248992111a4a91919b36ca4100d85aece057c88b8567ff6787f4250f655bd0",
+  "sha256": "14d1f7277c47cb19ef166aff593281acbd5f3f5b383fdbc7169f5c4fa4399afa",
+  "imagePath": "images/prod-000643.png",
+  "generatedAt": "2026-09-25T08:32:00.226740+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: boots. Style: Chelsea. Material: suede-look fabric. Colour: Jet Black (#242424). One matching pair of shoes, both fully visible in a single three-quarter view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

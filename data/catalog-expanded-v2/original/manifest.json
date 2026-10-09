@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "catalogVersion": "synthetic-fashion-v1",
+  "generatedAt": "2026-09-24T00:00:00Z",
+  "seed": 20260924,
+  "productCount": 1000,
+  "variantCount": 6136,
+  "imageCount": 1000,
+  "searchBatchCount": 10,
+  "searchBatchSize": 100,
+  "imageBaseUrl": "https://cdn.example.com/synthetic-products",
+  "files": {
+    "products": "products.jsonl",
+    "imagePrompts": "image-prompts.jsonl",
+    "images": "images/",
+    "searchBatches": "azure-search-batches/",
+    "imageGeneration": "image-generation/"
+  },
+  "photographicImageCount": 1000,
+  "blockedImageCount": 0
+}

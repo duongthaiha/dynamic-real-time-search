@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000939",
+  "fingerprint": "fdb91171b6f23053ac9840f53e11b6806b214e8f357e8e152d7a50dc9a02f6c7",
+  "sha256": "b4d11d6935e14c61293abf17021abc0a5ba58ffe72f0d3104bfe2fa43f2ee121",
+  "imagePath": "images/prod-000939.png",
+  "generatedAt": "2026-09-25T08:40:31.639750+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: dress. Style: tea. Material: cotton poplin. Colour: Midnight Navy (#253451). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

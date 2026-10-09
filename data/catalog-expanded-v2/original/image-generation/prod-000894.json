@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000894",
+  "fingerprint": "febb8c91325da0dcece1efe1920e70e5f05cefaeedd543f0c6091209b543044c",
+  "sha256": "b8fb8be0f5352a3218bbd723158227d8f63e6b1206cdae0d4f7e382b3405f7fc",
+  "imagePath": "images/prod-000894.png",
+  "generatedAt": "2026-09-25T08:39:20.448769+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: dress. Style: bodycon. Material: viscose. Colour: Warm Cream (#D9CDB5). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

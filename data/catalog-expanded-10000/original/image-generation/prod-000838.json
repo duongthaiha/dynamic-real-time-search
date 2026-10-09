@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000838",
+  "fingerprint": "c21dbd025722659a777c7e189db4f3decaf6a79a9e9e0f74770467b943106847",
+  "sha256": "8722e90d02e1af1f04ee51dfb726e8ddc7a2d829be57edca04be936c2c43e102",
+  "imagePath": "images/prod-000838.png",
+  "generatedAt": "2026-09-24T16:48:39.898082+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A lace-up boots made from suede-look fabric, finished with minimal styling. Designed as a synthetic retail product for search and ranking demonstrations. Product type: boots. Fit/style: lace-up. Material: suede-look fabric. Colour: Forest Green (reference colour #3E654A). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "promptRevisionCounts": {
+    "adult-fashion-v1": 1,
+    "product-fidelity-v2": 1998999
+  },
+  "everyProductHasOneImageSlot": true,
+  "completedCalibrationUnchanged": true,
+  "modelHttpAttemptsStill": 1,
+  "promptExportSha256": "b7a06ac354e49ec0f737d9e7721a18ffd1109f9fa9bb86eea60cf68853e5d6f7",
+  "newVisualQualityNotYetEvaluated": true
+}

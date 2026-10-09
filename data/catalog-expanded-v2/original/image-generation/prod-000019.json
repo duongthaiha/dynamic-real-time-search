@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000019",
+  "fingerprint": "b03cc317d2bd4f2e424413615380f54c695507511e26a431d93de4f611c10d06",
+  "sha256": "b36c11f32c16a78ac80506133a901145ecb31f08f98c90bff558dd0082b874cd",
+  "imagePath": "images/prod-000019.png",
+  "generatedAt": "2026-09-24T14:25:44.781707+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A oversized coat made from wool blend, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: coat. Fit/style: oversized. Material: wool blend. Colour: Warm Cream (reference colour #D9CDB5). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

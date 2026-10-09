@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000496",
+  "fingerprint": "37db5804d55a1af3594b0509d693cf243c304517f2c9e6d3ede856c551ae08db",
+  "sha256": "326d84b57bc54e5428da6dc3ca649c58181aa791f0cd77957cc23ff4b7b488b5",
+  "imagePath": "images/prod-000496.png",
+  "generatedAt": "2026-09-24T15:50:29.313109+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A tapered jeans made from cotton denim, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jeans. Fit/style: tapered. Material: cotton denim. Colour: Deep Plum (reference colour #664A70). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

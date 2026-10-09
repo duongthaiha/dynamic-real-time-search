@@ -1,0 +1,20 @@
+{
+  "productId": "PROD-000831",
+  "fingerprint": "165752e059ae71aedb068f4e493b6d899d41063f6e4c339ecbe7638c5ad3573d",
+  "sha256": "0c8e3677e320db796408266d35afefd5aae05e254ed9bc40cf334fa0c22d0fdb",
+  "imagePath": "images/prod-000831.png",
+  "generatedAt": "2026-09-25T08:37:13.847369+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Studio product photograph. Item: T-shirt. Style: regular. Material: organic cotton. Colour: Chocolate Brown (#654536). One complete garment laid flat, fully visible in a single front view. Plain light-grey background, soft lighting, realistic fabric and construction. Fictional unbranded product only, without people or text.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    },
+    "promptRevision": "reviewed-product-v2"
+  }
+}

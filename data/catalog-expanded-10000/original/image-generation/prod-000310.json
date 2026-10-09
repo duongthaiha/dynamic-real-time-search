@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000310",
+  "fingerprint": "fde6f1ce0dee39ddc729378a73852595a242504668cf6e21772092e917cf2086",
+  "sha256": "f72dee8c7beb4d7d6e5b565e50511f43da660b7013e9d485ceaee24f4a5503c9",
+  "imagePath": "images/prod-000310.png",
+  "generatedAt": "2026-09-24T15:14:14.389144+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A pleated skirt made from linen blend, finished with tonal hardware. Designed as a synthetic retail product for search and ranking demonstrations. Product type: skirt. Fit/style: pleated. Material: linen blend. Colour: Jet Black (reference colour #242424). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}

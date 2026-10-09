@@ -1,0 +1,19 @@
+{
+  "productId": "PROD-000258",
+  "fingerprint": "fb8128feb8f4cb88a11b680ab80fe0ff505cdc3bf5631da39a525464dd294df1",
+  "sha256": "251b997d5079c337dc1fc51c8bf7244c941272b206a8342de9db9d1ebaf83f65",
+  "imagePath": "images/prod-000258.png",
+  "generatedAt": "2026-09-24T15:05:32.927390+00:00",
+  "spec": {
+    "endpoint": "https://foundry-eastus-hd.services.ai.azure.com/mai/v1/images/generations",
+    "modelVersion": "2026-07-31",
+    "payload": {
+      "model": "MAI-Image-2.6",
+      "prompt": "Create one original photorealistic ecommerce product photograph. Product description: A regular jacket made from cotton twill, finished with clean finish. Designed as a synthetic retail product for search and ranking demonstrations. Product type: jacket. Fit/style: regular. Material: cotton twill. Colour: Sage Green (reference colour #8EA58B). A SINGLE camera view of ONE complete product only, fully visible, centered with generous margins on a warm light-grey seamless background. Use soft diffused studio lighting, realistic texture and construction, front-facing flat-lay or upright product presentation as appropriate. No collage, montage, split panels, extra views, detail cutouts, detached garment parts, repeated items, or multiple angles. Trousers have exactly two attached legs in a single complete garment. Footwear should be a matching pair in a single camera view. No people, mannequins, props, logos, brand names, text, labels, or watermarks. This is a fictional unbranded product, not a reproduction of any retailer's photo.",
+      "width": 1024,
+      "height": 1024,
+      "auto_aspect_ratio": false,
+      "web_grounding": false
+    }
+  }
+}
