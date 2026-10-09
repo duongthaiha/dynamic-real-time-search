@@ -9,4 +9,6 @@ __pycache__/
 .env
 .env.local
 .local/
-
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
